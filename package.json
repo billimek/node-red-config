@@ -1,0 +1,12 @@
+{
+    "name": "node-red-config",
+    "description": "Configuration for node-red project",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "flows.json",
+            "credentialsFile": "flows_cred.json"
+        }
+    }
+}
