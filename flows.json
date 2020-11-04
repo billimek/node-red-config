@@ -11427,7 +11427,7 @@
         "z": "af228686.65c8a8",
         "name": "stairs lights off?",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "outputs": 2,
         "halt_if": "on",
         "halt_if_type": "str",
@@ -12233,7 +12233,7 @@
         "name": "Alert if someone is sneaking out",
         "info": "",
         "x": 610,
-        "y": 920,
+        "y": 940,
         "wires": []
     }
 ]
