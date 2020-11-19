@@ -12267,25 +12267,25 @@
         ]
     },
     {
-        "id": "940bc6a.2f36338",
+        "id": "7be31340.2839bc",
         "type": "function",
-        "z": "43703bf3.b01b24",
+        "z": "af228686.65c8a8",
         "name": "turn_off",
         "func": "var service = \"turn_off\"\n\nmsg.payload = {\n    \"service\": service,\n}\nreturn [ msg ];\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 180,
-        "y": 720,
+        "x": 280,
+        "y": 1600,
         "wires": [
             [
-                "d33e7cf5.1ce0e"
+                "fca2b07f.64a26"
             ]
         ]
     },
     {
-        "id": "d33e7cf5.1ce0e",
+        "id": "fca2b07f.64a26",
         "type": "api-call-service",
-        "z": "43703bf3.b01b24",
+        "z": "af228686.65c8a8",
         "name": "basement stairs lights",
         "server": "8b52884a.b76658",
         "version": "1",
@@ -12299,18 +12299,18 @@
         "output_location": "payload",
         "output_location_type": "msg",
         "mustacheAltTags": false,
-        "x": 440,
-        "y": 720,
+        "x": 540,
+        "y": 1600,
         "wires": [
             [
-                "8297dae.1848728"
+                "2144e543.da2caa"
             ]
         ]
     },
     {
-        "id": "d8756fe.7188a9",
+        "id": "7c9badf8.37fea4",
         "type": "inject",
-        "z": "43703bf3.b01b24",
+        "z": "af228686.65c8a8",
         "name": "",
         "props": [
             {
@@ -12328,18 +12328,18 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
-        "y": 620,
+        "x": 100,
+        "y": 1600,
         "wires": [
             [
-                "940bc6a.2f36338"
+                "7be31340.2839bc"
             ]
         ]
     },
     {
-        "id": "8297dae.1848728",
+        "id": "2144e543.da2caa",
         "type": "debug",
-        "z": "43703bf3.b01b24",
+        "z": "af228686.65c8a8",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -12348,8 +12348,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 700,
-        "y": 720,
+        "x": 800,
+        "y": 1600,
         "wires": []
     }
 ]
