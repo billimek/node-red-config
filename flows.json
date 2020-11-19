@@ -10872,6 +10872,7 @@
         "type": "subflow:43703bf3.b01b24",
         "z": "af228686.65c8a8",
         "name": "",
+        "env": [],
         "x": 550,
         "y": 240,
         "wires": []
@@ -12264,5 +12265,91 @@
                 "dae80ca4.7cdc9"
             ]
         ]
+    },
+    {
+        "id": "940bc6a.2f36338",
+        "type": "function",
+        "z": "43703bf3.b01b24",
+        "name": "turn_off",
+        "func": "var service = \"turn_off\"\n\nmsg.payload = {\n    \"service\": service,\n}\nreturn [ msg ];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 180,
+        "y": 720,
+        "wires": [
+            [
+                "d33e7cf5.1ce0e"
+            ]
+        ]
+    },
+    {
+        "id": "d33e7cf5.1ce0e",
+        "type": "api-call-service",
+        "z": "43703bf3.b01b24",
+        "name": "basement stairs lights",
+        "server": "8b52884a.b76658",
+        "version": "1",
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "",
+        "entityId": "light.basement_stairs_dimmer",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "payload",
+        "output_location_type": "msg",
+        "mustacheAltTags": false,
+        "x": 440,
+        "y": 720,
+        "wires": [
+            [
+                "8297dae.1848728"
+            ]
+        ]
+    },
+    {
+        "id": "d8756fe.7188a9",
+        "type": "inject",
+        "z": "43703bf3.b01b24",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 620,
+        "wires": [
+            [
+                "940bc6a.2f36338"
+            ]
+        ]
+    },
+    {
+        "id": "8297dae.1848728",
+        "type": "debug",
+        "z": "43703bf3.b01b24",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 720,
+        "wires": []
     }
 ]
