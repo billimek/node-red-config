@@ -12292,7 +12292,7 @@
         "debugenabled": false,
         "service_domain": "switch",
         "service": "",
-        "entityId": "switch.basement_stairs_switch",
+        "entityId": "light.basement_stairs_dimmer",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
