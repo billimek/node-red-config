@@ -10590,7 +10590,7 @@
         "z": "afb0f186.cfb0d",
         "name": "US coronavirus confirmed",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -10602,7 +10602,7 @@
                 "value": ""
             }
         ],
-        "entityidfilter": "sensor.us_coronavirus_confirmed",
+        "entityidfilter": "sensor.us_coronavirus_deaths",
         "entityidfiltertype": "substring",
         "outputinitially": true,
         "state_type": "str",
