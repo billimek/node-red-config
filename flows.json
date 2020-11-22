@@ -10632,9 +10632,11 @@
         "type": "function",
         "z": "afb0f186.cfb0d",
         "name": "Coronavirus message tts",
-        "func": "var message = msg.payload + \" people in the US now infected with the Coronavirus\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n    }\n}\nreturn [ msg ];\n",
+        "func": "var message = msg.payload + \" people in the US now DEAD from the Coronavirus\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n    }\n}\nreturn [ msg ];\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
         "x": 750,
         "y": 500,
         "wires": [
