@@ -12057,8 +12057,7 @@
         "y": 540,
         "wires": [
             [
-                "ce427313.c8ce3",
-                "e67a79e.ef93988"
+                "ce427313.c8ce3"
             ]
         ]
     },
@@ -12083,44 +12082,9 @@
         "y": 540,
         "wires": [
             [
-                "f36487b8.7e8c48",
-                "c39f7f32.61f49"
+                "f36487b8.7e8c48"
             ]
         ]
-    },
-    {
-        "id": "e67a79e.ef93988",
-        "type": "debug",
-        "z": "4aedf9e8.044e08",
-        "name": "calender events",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 560,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "c39f7f32.61f49",
-        "type": "debug",
-        "z": "4aedf9e8.044e08",
-        "name": "Match output",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 750,
-        "y": 540,
-        "wires": []
     },
     {
         "id": "8de13723.a5d308",
