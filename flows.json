@@ -10588,7 +10588,7 @@
         "id": "5d68df15.4a20a",
         "type": "server-state-changed",
         "z": "afb0f186.cfb0d",
-        "name": "US coronavirus confirmed",
+        "name": "US coronavirus deaths",
         "server": "8b52884a.b76658",
         "version": 1,
         "exposeToHomeAssistant": false,
@@ -10619,7 +10619,7 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
-        "x": 130,
+        "x": 120,
         "y": 500,
         "wires": [
             [
