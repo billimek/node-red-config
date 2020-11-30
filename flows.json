@@ -12342,5 +12342,73 @@
                 "ff98d8ce.9b7338"
             ]
         ]
+    },
+    {
+        "id": "25f23ddb.6ec682",
+        "type": "inject",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 340,
+        "y": 1640,
+        "wires": [
+            [
+                "802ceb57.bdee18"
+            ]
+        ]
+    },
+    {
+        "id": "802ceb57.bdee18",
+        "type": "function",
+        "z": "af228686.65c8a8",
+        "name": "turn_off",
+        "func": "var service = \"turn_off\"\n\nmsg.payload = {\n    \"service\": service,\n}\nreturn [ msg ];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 1780,
+        "wires": [
+            [
+                "9fa85875.4e1008"
+            ]
+        ]
+    },
+    {
+        "id": "9fa85875.4e1008",
+        "type": "api-call-service",
+        "z": "af228686.65c8a8",
+        "name": "desk lights",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "",
+        "entityId": "switch.portable_outlet_e_switch_3",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "payload",
+        "output_location_type": "msg",
+        "mustacheAltTags": false,
+        "x": 600,
+        "y": 1780,
+        "wires": [
+            []
+        ]
     }
 ]
