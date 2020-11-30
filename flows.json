@@ -11285,7 +11285,7 @@
         "z": "af228686.65c8a8",
         "name": "main motion",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -12454,47 +12454,10 @@
         "y": 1340,
         "wires": [
             [
-                "5d1ac08f.2ae2b",
                 "83092d58.56334"
             ],
-            [
-                "22d7127e.fcbf7e"
-            ]
+            []
         ]
-    },
-    {
-        "id": "5d1ac08f.2ae2b",
-        "type": "debug",
-        "z": "af228686.65c8a8",
-        "name": "true",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 910,
-        "y": 1520,
-        "wires": []
-    },
-    {
-        "id": "22d7127e.fcbf7e",
-        "type": "debug",
-        "z": "af228686.65c8a8",
-        "name": "false",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 910,
-        "y": 1580,
-        "wires": []
     },
     {
         "id": "83092d58.56334",
@@ -12518,5 +12481,83 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "91d47683.a22478",
+        "type": "server-state-changed",
+        "z": "af228686.65c8a8",
+        "name": "wyze-3 motion?",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "switch.wyze_3_motion_detection",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "for": "10",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "x": 120,
+        "y": 1280,
+        "wires": [
+            [
+                "ad4eb7e7.1e34f8"
+            ],
+            [
+                "598c713d.62073"
+            ]
+        ]
+    },
+    {
+        "id": "ad4eb7e7.1e34f8",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "598c713d.62073",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 1300,
+        "wires": []
     }
 ]
