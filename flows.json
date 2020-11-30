@@ -10290,7 +10290,8 @@
                 "b520cc14.e3d0e",
                 "bb404911.ad8978",
                 "d0a97ae.0d59e88",
-                "cc4d6e76.6d591"
+                "cc4d6e76.6d591",
+                "ab752c4d.a1bdc"
             ]
         ]
     },
@@ -12299,114 +12300,24 @@
         ]
     },
     {
-        "id": "ff98d8ce.9b7338",
-        "type": "function",
-        "z": "43703bf3.b01b24",
-        "name": "turn_off",
-        "func": "var service = \"turn_off\"\n\nmsg.payload = {\n    \"service\": service,\n}\nreturn [ msg ];\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 160,
-        "y": 560,
-        "wires": [
-            [
-                "cc4d6e76.6d591"
-            ]
-        ]
-    },
-    {
-        "id": "a76a562b.c1a5d8",
-        "type": "inject",
-        "z": "43703bf3.b01b24",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 130,
-        "y": 420,
-        "wires": [
-            [
-                "ff98d8ce.9b7338"
-            ]
-        ]
-    },
-    {
-        "id": "25f23ddb.6ec682",
-        "type": "inject",
-        "z": "af228686.65c8a8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 340,
-        "y": 1640,
-        "wires": [
-            [
-                "802ceb57.bdee18"
-            ]
-        ]
-    },
-    {
-        "id": "802ceb57.bdee18",
-        "type": "function",
-        "z": "af228686.65c8a8",
-        "name": "turn_off",
-        "func": "var service = \"turn_off\"\n\nmsg.payload = {\n    \"service\": service,\n}\nreturn [ msg ];\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 370,
-        "y": 1780,
-        "wires": [
-            [
-                "9fa85875.4e1008"
-            ]
-        ]
-    },
-    {
-        "id": "9fa85875.4e1008",
+        "id": "ab752c4d.a1bdc",
         "type": "api-call-service",
-        "z": "af228686.65c8a8",
-        "name": "desk lights",
+        "z": "43703bf3.b01b24",
+        "name": "camera lights",
         "server": "8b52884a.b76658",
         "version": 1,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "",
-        "entityId": "switch.portable_outlet_e_switch_3",
+        "entityId": "switch.portable_outlet_e_switch_2",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
         "output_location": "payload",
         "output_location_type": "msg",
         "mustacheAltTags": false,
-        "x": 600,
-        "y": 1780,
+        "x": 390,
+        "y": 680,
         "wires": [
             []
         ]
