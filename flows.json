@@ -12453,11 +12453,11 @@
         "id": "d73e5cb1.21cf2",
         "type": "api-current-state",
         "z": "af228686.65c8a8",
-        "name": "",
+        "name": "desk lights on?",
         "server": "8b52884a.b76658",
         "version": 1,
         "outputs": 2,
-        "halt_if": "ON",
+        "halt_if": "on",
         "halt_if_type": "str",
         "halt_if_compare": "is",
         "override_topic": false,
@@ -12468,7 +12468,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "blockInputOverrides": false,
-        "x": 840,
+        "x": 740,
         "y": 1340,
         "wires": [
             [
