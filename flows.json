@@ -12384,41 +12384,25 @@
         "y": 1340,
         "wires": [
             [
-                "4fc98419.aaa83c",
                 "ec2d36d0.f17fb8"
             ]
         ]
     },
     {
-        "id": "4fc98419.aaa83c",
-        "type": "debug",
-        "z": "af228686.65c8a8",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 370,
-        "y": 1420,
-        "wires": []
-    },
-    {
         "id": "3871e31f.c0e8ac",
         "type": "debug",
         "z": "af228686.65c8a8",
-        "name": "",
+        "name": "motion?",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 950,
-        "y": 1360,
+        "x": 780,
+        "y": 1440,
         "wires": []
     },
     {
@@ -12431,7 +12415,7 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 550,
+        "x": 330,
         "y": 1340,
         "wires": [
             [
@@ -12456,12 +12440,77 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 740,
+        "x": 540,
         "y": 1340,
         "wires": [
             [
-                "3871e31f.c0e8ac"
+                "3871e31f.c0e8ac",
+                "d73e5cb1.21cf2"
             ]
         ]
+    },
+    {
+        "id": "d73e5cb1.21cf2",
+        "type": "api-current-state",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "outputs": 2,
+        "halt_if": "ON",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "switch.portable_outlet_e_switch_3",
+        "state_type": "str",
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "blockInputOverrides": false,
+        "x": 840,
+        "y": 1340,
+        "wires": [
+            [
+                "5d1ac08f.2ae2b"
+            ],
+            [
+                "22d7127e.fcbf7e"
+            ]
+        ]
+    },
+    {
+        "id": "5d1ac08f.2ae2b",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "true",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "22d7127e.fcbf7e",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "false",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 1380,
+        "wires": []
     }
 ]
