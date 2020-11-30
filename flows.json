@@ -12370,5 +12370,38 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "5da2f0fb.840db",
+        "type": "mqtt in",
+        "z": "af228686.65c8a8",
+        "name": "wyze-3 motion",
+        "topic": "camera/wyze-3/motion",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "649859a4.a17818",
+        "x": 130,
+        "y": 1340,
+        "wires": [
+            [
+                "4fc98419.aaa83c"
+            ]
+        ]
+    },
+    {
+        "id": "4fc98419.aaa83c",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 1320,
+        "wires": []
     }
 ]
