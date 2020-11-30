@@ -12389,23 +12389,6 @@
         ]
     },
     {
-        "id": "3871e31f.c0e8ac",
-        "type": "debug",
-        "z": "af228686.65c8a8",
-        "name": "motion?",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 780,
-        "y": 1440,
-        "wires": []
-    },
-    {
         "id": "ec2d36d0.f17fb8",
         "type": "rbe",
         "z": "af228686.65c8a8",
@@ -12444,7 +12427,6 @@
         "y": 1340,
         "wires": [
             [
-                "3871e31f.c0e8ac",
                 "d73e5cb1.21cf2"
             ]
         ]
@@ -12453,11 +12435,11 @@
         "id": "d73e5cb1.21cf2",
         "type": "api-current-state",
         "z": "af228686.65c8a8",
-        "name": "desk lights on?",
+        "name": "desk lights off?",
         "server": "8b52884a.b76658",
         "version": 1,
         "outputs": 2,
-        "halt_if": "on",
+        "halt_if": "off",
         "halt_if_type": "str",
         "halt_if_compare": "is",
         "override_topic": false,
@@ -12472,7 +12454,8 @@
         "y": 1340,
         "wires": [
             [
-                "5d1ac08f.2ae2b"
+                "5d1ac08f.2ae2b",
+                "83092d58.56334"
             ],
             [
                 "22d7127e.fcbf7e"
@@ -12492,8 +12475,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1170,
-        "y": 1320,
+        "x": 910,
+        "y": 1520,
         "wires": []
     },
     {
@@ -12509,8 +12492,31 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1170,
-        "y": 1380,
+        "x": 910,
+        "y": 1580,
         "wires": []
+    },
+    {
+        "id": "83092d58.56334",
+        "type": "api-call-service",
+        "z": "af228686.65c8a8",
+        "name": "turn on desk lights",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "turn_on",
+        "entityId": "switch.portable_outlet_e_switch_3",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 970,
+        "y": 1340,
+        "wires": [
+            []
+        ]
     }
 ]
