@@ -10292,7 +10292,8 @@
                 "bb404911.ad8978",
                 "d0a97ae.0d59e88",
                 "cc4d6e76.6d591",
-                "ab752c4d.a1bdc"
+                "ab752c4d.a1bdc",
+                "10f1ece0.fa3373"
             ]
         ]
     },
@@ -12342,6 +12343,29 @@
         "mustacheAltTags": false,
         "x": 920,
         "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "10f1ece0.fa3373",
+        "type": "api-call-service",
+        "z": "43703bf3.b01b24",
+        "name": "tree lights",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "",
+        "entityId": "switch.portable_outlet_d_switch",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "payload",
+        "output_location_type": "msg",
+        "mustacheAltTags": false,
+        "x": 380,
+        "y": 740,
         "wires": [
             []
         ]
