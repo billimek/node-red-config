@@ -12415,7 +12415,7 @@
         "y": 1340,
         "wires": [
             [
-                "3871e31f.c0e8ac"
+                "ec2d36d0.f17fb8"
             ]
         ]
     },
@@ -12431,8 +12431,51 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 490,
-        "y": 1340,
+        "x": 970,
+        "y": 1400,
         "wires": []
+    },
+    {
+        "id": "ec2d36d0.f17fb8",
+        "type": "rbe",
+        "z": "af228686.65c8a8",
+        "name": "state change",
+        "func": "rbei",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 630,
+        "y": 1500,
+        "wires": [
+            [
+                "e915233a.c4b9e"
+            ]
+        ]
+    },
+    {
+        "id": "e915233a.c4b9e",
+        "type": "switch",
+        "z": "af228686.65c8a8",
+        "name": "motion?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ON",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 800,
+        "y": 1500,
+        "wires": [
+            [
+                "3871e31f.c0e8ac"
+            ]
+        ]
     }
 ]
