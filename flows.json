@@ -7544,7 +7544,7 @@
         "z": "af228686.65c8a8",
         "name": "home?",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "outputs": 2,
         "halt_if": "home",
         "halt_if_type": "str",
@@ -7562,7 +7562,8 @@
         "wires": [
             [],
             [
-                "b5ce153f.7eca98"
+                "b5ce153f.7eca98",
+                "3af164aa.92a0ac"
             ]
         ]
     },
