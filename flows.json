@@ -11423,7 +11423,7 @@
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "x": 110,
+        "x": 130,
         "y": 1520,
         "wires": [
             [],
@@ -12506,27 +12506,10 @@
         "y": 1600,
         "wires": [
             [
-                "ad4eb7e7.1e34f8",
                 "432fde78.07eef"
             ],
             []
         ]
-    },
-    {
-        "id": "ad4eb7e7.1e34f8",
-        "type": "debug",
-        "z": "af228686.65c8a8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 430,
-        "y": 1700,
-        "wires": []
     },
     {
         "id": "432fde78.07eef",
