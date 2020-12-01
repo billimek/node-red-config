@@ -12494,7 +12494,7 @@
         "halt_if_compare": "is",
         "outputs": 2,
         "output_only_on_state_change": true,
-        "for": "2",
+        "for": "5",
         "forType": "num",
         "forUnits": "seconds",
         "ignorePrevStateNull": false,
@@ -12508,9 +12508,7 @@
             [
                 "ad4eb7e7.1e34f8"
             ],
-            [
-                "598c713d.62073"
-            ]
+            []
         ]
     },
     {
