@@ -12471,7 +12471,7 @@
         "id": "91d47683.a22478",
         "type": "server-state-changed",
         "z": "af228686.65c8a8",
-        "name": "wyze-3 motion?",
+        "name": "no wyze-3 motion for 1 min",
         "server": "8b52884a.b76658",
         "version": 1,
         "exposeToHomeAssistant": false,
@@ -12494,19 +12494,20 @@
         "halt_if_compare": "is",
         "outputs": 2,
         "output_only_on_state_change": true,
-        "for": "5",
+        "for": "1",
         "forType": "num",
-        "forUnits": "seconds",
+        "forUnits": "minutes",
         "ignorePrevStateNull": false,
         "ignorePrevStateUnknown": false,
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
-        "x": 120,
+        "x": 150,
         "y": 1600,
         "wires": [
             [
-                "ad4eb7e7.1e34f8"
+                "ad4eb7e7.1e34f8",
+                "432fde78.07eef"
             ],
             []
         ]
@@ -12523,24 +12524,31 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 390,
-        "y": 1600,
+        "x": 430,
+        "y": 1700,
         "wires": []
     },
     {
-        "id": "598c713d.62073",
-        "type": "debug",
+        "id": "432fde78.07eef",
+        "type": "api-call-service",
         "z": "af228686.65c8a8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 390,
-        "y": 1640,
-        "wires": []
+        "name": "turn off desk lights",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "turn_off",
+        "entityId": "switch.portable_outlet_e_switch_3",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 430,
+        "y": 1600,
+        "wires": [
+            []
+        ]
     }
 ]
