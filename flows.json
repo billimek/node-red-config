@@ -10647,8 +10647,7 @@
         "y": 500,
         "wires": [
             [
-                "c3ba738d.78e8a",
-                "24f12036.d66dc"
+                "c3ba738d.78e8a"
             ]
         ]
     },
@@ -11382,8 +11381,8 @@
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "x": 140,
-        "y": 1400,
+        "x": 120,
+        "y": 1460,
         "wires": [
             [],
             []
@@ -11424,8 +11423,8 @@
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "x": 130,
-        "y": 1460,
+        "x": 110,
+        "y": 1520,
         "wires": [
             [],
             []
@@ -11852,20 +11851,6 @@
                 "29c0f0d7.83eba"
             ]
         ]
-    },
-    {
-        "id": "24f12036.d66dc",
-        "type": "debug",
-        "z": "afb0f186.cfb0d",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "x": 970,
-        "y": 660,
-        "wires": []
     },
     {
         "id": "4bcefec3.1279b",
@@ -12500,7 +12485,7 @@
                 "value": ""
             }
         ],
-        "entityidfilter": "switch.wyze_3_motion_detection",
+        "entityidfilter": "binary_sensor.wyze_3_motion_sensor",
         "entityidfiltertype": "exact",
         "outputinitially": false,
         "state_type": "str",
@@ -12518,7 +12503,7 @@
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
         "x": 120,
-        "y": 1280,
+        "y": 1600,
         "wires": [
             [
                 "ad4eb7e7.1e34f8"
@@ -12540,8 +12525,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 520,
-        "y": 1260,
+        "x": 390,
+        "y": 1600,
         "wires": []
     },
     {
@@ -12556,8 +12541,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 510,
-        "y": 1300,
+        "x": 390,
+        "y": 1640,
         "wires": []
     }
 ]
