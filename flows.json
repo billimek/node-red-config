@@ -12533,5 +12533,57 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "8504f07c.6aad9",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "83666738.e98e78",
+        "type": "poll-state",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "updateinterval": "60",
+        "updateIntervalUnits": "seconds",
+        "outputinitially": false,
+        "outputonchanged": false,
+        "entity_id": "binary_sensor.wyze_3_motion_sensor",
+        "state_type": "str",
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "x": 270,
+        "y": 1800,
+        "wires": [
+            [
+                "8504f07c.6aad9"
+            ]
+        ]
     }
 ]
