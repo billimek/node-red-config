@@ -8771,7 +8771,7 @@
         "output_location": "payload",
         "output_location_type": "msg",
         "mustacheAltTags": false,
-        "x": 940,
+        "x": 930,
         "y": 760,
         "wires": [
             []
@@ -8794,7 +8794,7 @@
         "output_location": "payload",
         "output_location_type": "msg",
         "mustacheAltTags": false,
-        "x": 940,
+        "x": 930,
         "y": 820,
         "wires": [
             []
@@ -12535,78 +12535,6 @@
         "y": 1600,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "8504f07c.6aad9",
-        "type": "debug",
-        "z": "af228686.65c8a8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 870,
-        "y": 1780,
-        "wires": []
-    },
-    {
-        "id": "40fd8bce.8475d4",
-        "type": "api-current-state",
-        "z": "af228686.65c8a8",
-        "name": "",
-        "server": "8b52884a.b76658",
-        "version": 1,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "override_topic": false,
-        "entity_id": "binary_sensor.wyze_3_motion_sensor",
-        "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "blockInputOverrides": false,
-        "x": 490,
-        "y": 1780,
-        "wires": [
-            [
-                "8504f07c.6aad9"
-            ]
-        ]
-    },
-    {
-        "id": "50268f18.d0512",
-        "type": "inject",
-        "z": "af228686.65c8a8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 130,
-        "y": 1780,
-        "wires": [
-            [
-                "40fd8bce.8475d4"
-            ]
         ]
     },
     {
