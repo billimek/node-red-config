@@ -12533,5 +12533,34 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "2597a334.e899ac",
+        "type": "inject",
+        "z": "afb0f186.cfb0d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 490,
+        "y": 600,
+        "wires": [
+            [
+                "f06bec87.5e22f"
+            ]
+        ]
     }
 ]
