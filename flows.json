@@ -10638,7 +10638,7 @@
         "type": "function",
         "z": "afb0f186.cfb0d",
         "name": "Coronavirus message tts",
-        "func": "var message = msg.payload + \" people in the US now DEAD from the Coronavirus\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        language: 'zh'\n    }\n}\nreturn [ msg ];\n",
+        "func": "var message = msg.payload + \" people in the US now DEAD from the Coronavirus\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        language: 'de'\n    }\n}\nreturn [ msg ];\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -12532,35 +12532,6 @@
         "y": 1600,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "2597a334.e899ac",
-        "type": "inject",
-        "z": "afb0f186.cfb0d",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 490,
-        "y": 600,
-        "wires": [
-            [
-                "f06bec87.5e22f"
-            ]
         ]
     }
 ]
