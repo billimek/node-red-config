@@ -7061,7 +7061,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 560,
-        "y": 1680,
+        "y": 1880,
         "wires": [
             []
         ]
@@ -7075,7 +7075,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 560,
-        "y": 1740,
+        "y": 1940,
         "wires": [
             []
         ]
@@ -8038,7 +8038,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 560,
-        "y": 1800,
+        "y": 2000,
         "wires": [
             []
         ]
@@ -8052,7 +8052,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 560,
-        "y": 1860,
+        "y": 2060,
         "wires": [
             []
         ]
@@ -8093,7 +8093,7 @@
         "outputinitially": false,
         "state_type": "num",
         "x": 230,
-        "y": 1660,
+        "y": 1860,
         "wires": [
             [
                 "bf15d046.2721b"
@@ -8137,7 +8137,7 @@
         "outputinitially": false,
         "state_type": "num",
         "x": 220,
-        "y": 1720,
+        "y": 1920,
         "wires": [
             [
                 "13eee5ac.a4e0da"
@@ -12803,5 +12803,107 @@
         "x": 900,
         "y": 1580,
         "wires": []
+    },
+    {
+        "id": "c1b0882f.ec1b48",
+        "type": "trigger-state",
+        "z": "9143c7f2.16df18",
+        "name": "Jen home -> not_home (bluetooth)",
+        "server": "8b52884a.b76658",
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityid": "input_boolean.jen_occupancy",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "off",
+                "propertyValue": "new_state.state"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "on",
+                "propertyValue": "old_state.state"
+            }
+        ],
+        "outputs": 2,
+        "customoutputs": [],
+        "outputinitially": true,
+        "state_type": "str",
+        "x": 180,
+        "y": 1660,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e7895deb.f85fb",
+        "type": "trigger-state",
+        "z": "9143c7f2.16df18",
+        "name": "Jen not_home -> home (bluetooth)",
+        "server": "8b52884a.b76658",
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityid": "input_boolean.jen_occupancy",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "on",
+                "propertyValue": "new_state.state"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "off",
+                "propertyValue": "old_state.state"
+            }
+        ],
+        "outputs": 2,
+        "customoutputs": [],
+        "outputinitially": true,
+        "state_type": "str",
+        "x": 180,
+        "y": 1720,
+        "wires": [
+            [],
+            []
+        ]
     }
 ]
