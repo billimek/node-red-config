@@ -12745,7 +12745,7 @@
         "service_domain": "device_tracker",
         "service": "see",
         "entityId": "",
-        "data": "{\"dev_id\":\"jeffs_phone_bt \",\"location_name\":\"home\"}",
+        "data": "{\"dev_id\":\"jeffs_phone_bt\",\"location_name\":\"home\"}",
         "dataType": "json",
         "mergecontext": "",
         "output_location": "",
@@ -12874,7 +12874,7 @@
         "service_domain": "device_tracker",
         "service": "see",
         "entityId": "",
-        "data": "{\"dev_id\":\"jens_phone_bt \",\"location_name\":\"not_home\"}",
+        "data": "{\"dev_id\":\"jens_phone_bt\",\"location_name\":\"not_home\"}",
         "dataType": "json",
         "mergecontext": "",
         "output_location": "",
@@ -12897,7 +12897,7 @@
         "service_domain": "device_tracker",
         "service": "see",
         "entityId": "",
-        "data": "{\"dev_id\":\"jens_phone_bt \",\"location_name\":\"home\"}",
+        "data": "{\"dev_id\":\"jens_phone_bt\",\"location_name\":\"home\"}",
         "dataType": "json",
         "mergecontext": "",
         "output_location": "",
@@ -12934,7 +12934,7 @@
         "y": 1500,
         "wires": [
             [
-                "eeb8b22f.4f942"
+                "33a9ae.2d6d7652"
             ]
         ]
     }
