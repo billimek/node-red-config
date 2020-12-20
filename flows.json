@@ -12746,7 +12746,7 @@
         "debugenabled": false,
         "service_domain": "device_tracker",
         "service": "see",
-        "entityId": "jeff_bt",
+        "entityId": "",
         "data": "{\"dev_id\":\"jeff_bt\",\"location_name\":\"home\"}",
         "dataType": "json",
         "mergecontext": "",
