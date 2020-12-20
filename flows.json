@@ -12851,7 +12851,9 @@
         "x": 180,
         "y": 1660,
         "wires": [
-            [],
+            [
+                "2696659d.d3703a"
+            ],
             []
         ]
     },
@@ -12902,7 +12904,55 @@
         "x": 180,
         "y": 1720,
         "wires": [
-            [],
+            [
+                "d7b13820.4ec6d8"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "2696659d.d3703a",
+        "type": "api-call-service",
+        "z": "9143c7f2.16df18",
+        "name": "jen_bt not_home",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "device_tracker",
+        "service": "see",
+        "entityId": "",
+        "data": "{\"dev_id\":\"jen_bt\",\"location_name\":\"home\"}",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 570,
+        "y": 1660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d7b13820.4ec6d8",
+        "type": "api-call-service",
+        "z": "9143c7f2.16df18",
+        "name": "jen_bt home",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "device_tracker",
+        "service": "see",
+        "entityId": "",
+        "data": "{\"dev_id\":\"jen_bt\",\"location_name\":\"home\"}",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 550,
+        "y": 1720,
+        "wires": [
             []
         ]
     }
