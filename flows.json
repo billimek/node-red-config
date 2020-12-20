@@ -1333,7 +1333,7 @@
         "z": "9143c7f2.16df18",
         "name": "sliding door open?",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -4053,7 +4053,7 @@
         "z": "9143c7f2.16df18",
         "name": "Jeff's phone (wifi) not_home?",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -7066,8 +7066,8 @@
         "func": "var title = \"Presence\"\nvar message = \"Jeff leaving (btle)\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n    }\n}\nreturn [ msg ];",
         "outputs": 1,
         "noerr": 0,
-        "x": 560,
-        "y": 1880,
+        "x": 580,
+        "y": 2000,
         "wires": [
             []
         ]
@@ -7080,8 +7080,8 @@
         "func": "var title = \"Presence\"\nvar message = \"Jeff arriving (btle)\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n    }\n}\nreturn [ msg ];",
         "outputs": 1,
         "noerr": 0,
-        "x": 560,
-        "y": 1940,
+        "x": 580,
+        "y": 2060,
         "wires": [
             []
         ]
@@ -8043,8 +8043,8 @@
         "func": "var title = \"TEST\"\nvar distance = msg.payload\nvar message = \"Tesla away: \" + distance + \"m\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title\n    }\n}\nreturn [ msg ];",
         "outputs": 1,
         "noerr": 0,
-        "x": 560,
-        "y": 2000,
+        "x": 580,
+        "y": 2120,
         "wires": [
             []
         ]
@@ -8057,8 +8057,8 @@
         "func": "var title = \"TEST\"\nvar distance = msg.payload\nvar message = \"Tesla home: \" + distance + \"m\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title\n    }\n}\nreturn [ msg ];",
         "outputs": 1,
         "noerr": 0,
-        "x": 560,
-        "y": 2060,
+        "x": 580,
+        "y": 2180,
         "wires": [
             []
         ]
@@ -8099,7 +8099,7 @@
         "outputinitially": false,
         "state_type": "num",
         "x": 230,
-        "y": 1860,
+        "y": 2120,
         "wires": [
             [
                 "bf15d046.2721b"
@@ -8143,7 +8143,7 @@
         "outputinitially": false,
         "state_type": "num",
         "x": 220,
-        "y": 1920,
+        "y": 2180,
         "wires": [
             [
                 "13eee5ac.a4e0da"
@@ -12977,6 +12977,143 @@
         "statusType": "auto",
         "x": 1140,
         "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "f42a16fe.1a4c18",
+        "type": "api-call-service",
+        "z": "9143c7f2.16df18",
+        "name": "ansleys_phone_bt not_home",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "device_tracker",
+        "service": "see",
+        "entityId": "",
+        "data": "{\"dev_id\":\"ansleys_phone_bt\",\"location_name\":\"not_home\"}",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 600,
+        "y": 1780,
+        "wires": [
+            [
+                "a15bfd03.184cc"
+            ]
+        ]
+    },
+    {
+        "id": "91d891c6.aa4fc",
+        "type": "api-call-service",
+        "z": "9143c7f2.16df18",
+        "name": "ansleys_phone_bt home",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "device_tracker",
+        "service": "see",
+        "entityId": "",
+        "data": "{\"dev_id\":\"ansleys_phone_bt\",\"location_name\":\"home\"}",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 590,
+        "y": 1840,
+        "wires": [
+            [
+                "e1c36bac.687a18"
+            ]
+        ]
+    },
+    {
+        "id": "5ec9e6e1.d8f5c8",
+        "type": "trigger-state",
+        "z": "9143c7f2.16df18",
+        "name": "Ansley home -> not_home (bluetooth)",
+        "server": "8b52884a.b76658",
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityid": "input_boolean.ansley_occupancy",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "off",
+                "propertyValue": "new_state.state"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "on",
+                "propertyValue": "old_state.state"
+            }
+        ],
+        "outputs": 2,
+        "customoutputs": [],
+        "outputinitially": true,
+        "state_type": "str",
+        "x": 170,
+        "y": 1780,
+        "wires": [
+            [
+                "f42a16fe.1a4c18"
+            ],
+            [
+                "91d891c6.aa4fc"
+            ]
+        ]
+    },
+    {
+        "id": "a15bfd03.184cc",
+        "type": "debug",
+        "z": "9143c7f2.16df18",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "e1c36bac.687a18",
+        "type": "debug",
+        "z": "9143c7f2.16df18",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 1700,
         "wires": []
     }
 ]
