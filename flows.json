@@ -4617,7 +4617,7 @@
         "z": "9143c7f2.16df18",
         "name": "Jen came home",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -7001,7 +7001,8 @@
         "y": 1540,
         "wires": [
             [
-                "56dfba26.07b614"
+                "56dfba26.07b614",
+                "eeb8b22f.4f942"
             ],
             []
         ]
@@ -7045,7 +7046,8 @@
         "y": 1600,
         "wires": [
             [
-                "48bb12b0.1900dc"
+                "48bb12b0.1900dc",
+                "33a9ae.2d6d7652"
             ],
             []
         ]
@@ -7058,8 +7060,8 @@
         "func": "var title = \"Presence\"\nvar message = \"Jeff leaving (btle)\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n    }\n}\nreturn [ msg ];",
         "outputs": 1,
         "noerr": 0,
-        "x": 580,
-        "y": 1540,
+        "x": 560,
+        "y": 1680,
         "wires": [
             []
         ]
@@ -7072,8 +7074,8 @@
         "func": "var title = \"Presence\"\nvar message = \"Jeff arriving (btle)\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n    }\n}\nreturn [ msg ];",
         "outputs": 1,
         "noerr": 0,
-        "x": 580,
-        "y": 1600,
+        "x": 560,
+        "y": 1740,
         "wires": [
             []
         ]
@@ -8035,8 +8037,8 @@
         "func": "var title = \"TEST\"\nvar distance = msg.payload\nvar message = \"Tesla away: \" + distance + \"m\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title\n    }\n}\nreturn [ msg ];",
         "outputs": 1,
         "noerr": 0,
-        "x": 580,
-        "y": 1660,
+        "x": 560,
+        "y": 1800,
         "wires": [
             []
         ]
@@ -8049,8 +8051,8 @@
         "func": "var title = \"TEST\"\nvar distance = msg.payload\nvar message = \"Tesla home: \" + distance + \"m\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title\n    }\n}\nreturn [ msg ];",
         "outputs": 1,
         "noerr": 0,
-        "x": 580,
-        "y": 1720,
+        "x": 560,
+        "y": 1860,
         "wires": [
             []
         ]
@@ -12707,6 +12709,52 @@
             [
                 "fe1f1f4a.3f5bc"
             ]
+        ]
+    },
+    {
+        "id": "eeb8b22f.4f942",
+        "type": "api-call-service",
+        "z": "9143c7f2.16df18",
+        "name": "jeff_bt not_home",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "device_tracker",
+        "service": "see",
+        "entityId": "jeff_bt",
+        "data": "{\"dev_id\":\"jeff_bt\",\"location_name\":\"home\"}",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 570,
+        "y": 1540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "33a9ae.2d6d7652",
+        "type": "api-call-service",
+        "z": "9143c7f2.16df18",
+        "name": "jeff_bt home",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "device_tracker",
+        "service": "see",
+        "entityId": "jeff_bt",
+        "data": "{\"dev_id\":\"jeff_bt\",\"location_name\":\"home\"}",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 550,
+        "y": 1600,
+        "wires": [
+            []
         ]
     }
 ]
