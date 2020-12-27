@@ -13749,8 +13749,8 @@
             },
             {
                 "property": "entity_id",
-                "logic": "is",
-                "value": "person.jeff_billimek",
+                "logic": "starts_with",
+                "value": "person.",
                 "valueType": "str"
             }
         ],
@@ -13808,8 +13808,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 570,
-        "y": 2900,
+        "x": 590,
+        "y": 2920,
         "wires": []
     }
 ]
