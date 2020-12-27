@@ -13703,5 +13703,107 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "d211c227.0bb14",
+        "type": "combine-if",
+        "z": "29f6dc7c.662814",
+        "topic": "condition",
+        "name": "",
+        "timeout": 0,
+        "x": 1090,
+        "y": 460,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "dad01e9e.cd61f",
+        "type": "combine-logic",
+        "z": "29f6dc7c.662814",
+        "name": "",
+        "topic": "",
+        "operator": "and",
+        "defer": 250,
+        "timeout": 0,
+        "distinction": "topic",
+        "x": 990,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "adb1f0f7.b1c61",
+        "type": "ha-get-entities",
+        "z": "9143c7f2.16df18",
+        "server": "8b52884a.b76658",
+        "name": "",
+        "rules": [
+            {
+                "property": "state",
+                "logic": "is",
+                "value": "home",
+                "valueType": "str"
+            }
+        ],
+        "output_type": "array",
+        "output_empty_results": false,
+        "output_location_type": "msg",
+        "output_location": "payload",
+        "output_results_count": 1,
+        "x": 370,
+        "y": 2840,
+        "wires": [
+            [
+                "8908f293.b7829"
+            ]
+        ]
+    },
+    {
+        "id": "29230db.2f8dcf2",
+        "type": "inject",
+        "z": "9143c7f2.16df18",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 2820,
+        "wires": [
+            [
+                "adb1f0f7.b1c61"
+            ]
+        ]
+    },
+    {
+        "id": "8908f293.b7829",
+        "type": "debug",
+        "z": "9143c7f2.16df18",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 2900,
+        "wires": []
     }
 ]
