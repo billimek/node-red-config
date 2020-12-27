@@ -13750,7 +13750,7 @@
             {
                 "property": "entity_id",
                 "logic": "is",
-                "value": "person",
+                "value": "person.jeff_billimek",
                 "valueType": "str"
             }
         ],
