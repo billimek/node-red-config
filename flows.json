@@ -13633,7 +13633,7 @@
         "z": "29f6dc7c.662814",
         "name": "",
         "mode": "custom",
-        "build": "merged",
+        "build": "object",
         "property": "payload",
         "propertyType": "msg",
         "key": "topic",
