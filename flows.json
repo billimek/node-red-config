@@ -13765,12 +13765,10 @@
         "output_location_type": "msg",
         "output_location": "payload",
         "output_results_count": 1,
-        "x": 370,
-        "y": 2840,
+        "x": 350,
+        "y": 2920,
         "wires": [
-            [
-                "8908f293.b7829"
-            ]
+            []
         ]
     },
     {
@@ -13798,7 +13796,8 @@
         "y": 2820,
         "wires": [
             [
-                "adb1f0f7.b1c61"
+                "adb1f0f7.b1c61",
+                "d1db4e01.a6f81"
             ]
         ]
     },
@@ -13814,8 +13813,35 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 590,
+        "x": 810,
         "y": 2920,
         "wires": []
+    },
+    {
+        "id": "d1db4e01.a6f81",
+        "type": "ha-get-entities",
+        "z": "9143c7f2.16df18",
+        "server": "8b52884a.b76658",
+        "name": "",
+        "rules": [
+            {
+                "property": "entity_id",
+                "logic": "starts_with",
+                "value": "input_boolean.track_",
+                "valueType": "str"
+            }
+        ],
+        "output_type": "array",
+        "output_empty_results": false,
+        "output_location_type": "msg",
+        "output_location": "payload",
+        "output_results_count": 1,
+        "x": 370,
+        "y": 2840,
+        "wires": [
+            [
+                "8908f293.b7829"
+            ]
+        ]
     }
 ]
