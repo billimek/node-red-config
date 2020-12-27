@@ -5419,9 +5419,10 @@
         "id": "aa116aed.726218",
         "type": "api-current-state",
         "z": "75b62c93.dd5d84",
+        "d": true,
         "name": "home?",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "outputs": 2,
         "halt_if": "home",
         "halt_if_type": "str",
@@ -5486,7 +5487,8 @@
         "wires": [
             [],
             [
-                "aa116aed.726218"
+                "aa116aed.726218",
+                "f9984dec.1157b"
             ]
         ]
     },
@@ -5528,9 +5530,10 @@
         "id": "d8d2558c.c647a8",
         "type": "api-current-state",
         "z": "75b62c93.dd5d84",
+        "d": true,
         "name": "home?",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "outputs": 2,
         "halt_if": "home",
         "halt_if_type": "str",
@@ -5595,7 +5598,8 @@
         "wires": [
             [],
             [
-                "d8d2558c.c647a8"
+                "d8d2558c.c647a8",
+                "2f3e0f3c.f3db3"
             ]
         ]
     },
@@ -5626,9 +5630,10 @@
         "id": "5ba2f2e1.f603fc",
         "type": "api-current-state",
         "z": "75b62c93.dd5d84",
+        "d": true,
         "name": "home?",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "outputs": 2,
         "halt_if": "home",
         "halt_if_type": "str",
@@ -5676,7 +5681,8 @@
         "wires": [
             [],
             [
-                "5ba2f2e1.f603fc"
+                "5ba2f2e1.f603fc",
+                "59ec5f4a.d8bc9"
             ]
         ]
     },
@@ -5717,9 +5723,10 @@
         "id": "dfd317cd.c2e2e8",
         "type": "api-current-state",
         "z": "75b62c93.dd5d84",
+        "d": true,
         "name": "home?",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "outputs": 2,
         "halt_if": "home",
         "halt_if_type": "str",
@@ -5767,7 +5774,8 @@
         "wires": [
             [],
             [
-                "dfd317cd.c2e2e8"
+                "dfd317cd.c2e2e8",
+                "1dba506a.727e2"
             ]
         ]
     },
@@ -8447,7 +8455,8 @@
         "wires": [
             [
                 "65fb8035.02a31",
-                "d478b33.601d25"
+                "d478b33.601d25",
+                "60724780.ab97c8"
             ]
         ]
     },
@@ -9712,9 +9721,10 @@
         "id": "d478b33.601d25",
         "type": "api-current-state",
         "z": "75b62c93.dd5d84",
+        "d": true,
         "name": "home?",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "outputs": 2,
         "halt_if": "home",
         "halt_if_type": "str",
@@ -13610,6 +13620,89 @@
             [],
             [
                 "46cdb220.d99dbc"
+            ]
+        ]
+    },
+    {
+        "id": "f9984dec.1157b",
+        "type": "subflow:29f6dc7c.662814",
+        "z": "75b62c93.dd5d84",
+        "name": "",
+        "env": [],
+        "x": 770,
+        "y": 940,
+        "wires": [
+            [
+                "3ab2d709.6538b8"
+            ],
+            [
+                "c42a5b00.4342c8"
+            ]
+        ]
+    },
+    {
+        "id": "59ec5f4a.d8bc9",
+        "type": "subflow:29f6dc7c.662814",
+        "z": "75b62c93.dd5d84",
+        "name": "",
+        "env": [],
+        "x": 770,
+        "y": 980,
+        "wires": [
+            [
+                "a7875b7c.d961c8"
+            ],
+            [
+                "4cb25abb.6dc924"
+            ]
+        ]
+    },
+    {
+        "id": "60724780.ab97c8",
+        "type": "subflow:29f6dc7c.662814",
+        "z": "75b62c93.dd5d84",
+        "name": "",
+        "env": [],
+        "x": 770,
+        "y": 720,
+        "wires": [
+            [],
+            [
+                "519672b2.9eeb1c"
+            ]
+        ]
+    },
+    {
+        "id": "2f3e0f3c.f3db3",
+        "type": "subflow:29f6dc7c.662814",
+        "z": "75b62c93.dd5d84",
+        "name": "",
+        "env": [],
+        "x": 770,
+        "y": 1020,
+        "wires": [
+            [
+                "55f9ad38.78bbf4"
+            ],
+            [
+                "dba0b367.9cfa"
+            ]
+        ]
+    },
+    {
+        "id": "1dba506a.727e2",
+        "type": "subflow:29f6dc7c.662814",
+        "z": "75b62c93.dd5d84",
+        "name": "",
+        "env": [],
+        "x": 770,
+        "y": 1180,
+        "wires": [
+            [
+                "1423693d.38f4a7"
+            ],
+            [
+                "5a4230ac.531df"
             ]
         ]
     }
