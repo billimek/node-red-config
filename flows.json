@@ -13377,8 +13377,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
-        "y": 2760,
+        "x": 830,
+        "y": 2640,
         "wires": []
     },
     {
@@ -13393,8 +13393,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 790,
-        "y": 2840,
+        "x": 810,
+        "y": 2720,
         "wires": []
     },
     {
@@ -13765,8 +13765,8 @@
         "output_location_type": "msg",
         "output_location": "payload",
         "output_results_count": 1,
-        "x": 350,
-        "y": 2920,
+        "x": 370,
+        "y": 2960,
         "wires": [
             []
         ]
@@ -13813,8 +13813,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 930,
-        "y": 2920,
+        "x": 590,
+        "y": 3020,
         "wires": []
     },
     {
@@ -13822,7 +13822,7 @@
         "type": "ha-get-entities",
         "z": "9143c7f2.16df18",
         "server": "8b52884a.b76658",
-        "name": "",
+        "name": "get tracked people",
         "rules": [
             {
                 "property": "entity_id",
@@ -13837,17 +13837,40 @@
                 "valueType": "str"
             }
         ],
-        "output_type": "array",
+        "output_type": "split",
         "output_empty_results": false,
         "output_location_type": "msg",
         "output_location": "payload",
         "output_results_count": 1,
-        "x": 370,
-        "y": 2840,
+        "x": 390,
+        "y": 2820,
         "wires": [
             [
                 "8908f293.b7829"
             ]
+        ]
+    },
+    {
+        "id": "11bb647b.d7c32c",
+        "type": "switch",
+        "z": "9143c7f2.16df18",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 2840,
+        "wires": [
+            []
         ]
     }
 ]
