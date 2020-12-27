@@ -194,7 +194,7 @@
                 "y": 140,
                 "wires": [
                     {
-                        "id": "778ac8cc.cde2b8",
+                        "id": "626b893d.59dfa8",
                         "port": 0
                     }
                 ]
@@ -202,12 +202,7 @@
             {
                 "x": 1260,
                 "y": 260,
-                "wires": [
-                    {
-                        "id": "778ac8cc.cde2b8",
-                        "port": 1
-                    }
-                ]
+                "wires": []
             }
         ],
         "env": [],
@@ -13536,11 +13531,9 @@
         "y": 140,
         "wires": [
             [
-                "778ac8cc.cde2b8"
+                "626b893d.59dfa8"
             ],
-            [
-                "778ac8cc.cde2b8"
-            ]
+            []
         ]
     },
     {
@@ -13565,8 +13558,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 890,
-        "y": 520,
+        "x": 930,
+        "y": 360,
         "wires": [
             [],
             []
@@ -13598,11 +13591,9 @@
         "y": 200,
         "wires": [
             [
-                "778ac8cc.cde2b8"
+                "626b893d.59dfa8"
             ],
-            [
-                "778ac8cc.cde2b8"
-            ]
+            []
         ]
     },
     {
@@ -13631,27 +13622,34 @@
         "y": 260,
         "wires": [
             [
-                "778ac8cc.cde2b8"
+                "626b893d.59dfa8"
             ],
-            [
-                "778ac8cc.cde2b8"
-            ]
+            []
         ]
     },
     {
-        "id": "778ac8cc.cde2b8",
-        "type": "function",
+        "id": "626b893d.59dfa8",
+        "type": "join",
         "z": "29f6dc7c.662814",
         "name": "",
-        "func": "\nreturn msg;",
-        "outputs": 2,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 1100,
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "3",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 1090,
         "y": 200,
         "wires": [
-            [],
             []
         ]
     }
