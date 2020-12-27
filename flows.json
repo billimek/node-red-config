@@ -192,22 +192,12 @@
             {
                 "x": 1240,
                 "y": 60,
-                "wires": [
-                    {
-                        "id": "7d481b3a.4ce194",
-                        "port": 0
-                    }
-                ]
+                "wires": []
             },
             {
                 "x": 1240,
                 "y": 200,
-                "wires": [
-                    {
-                        "id": "7d481b3a.4ce194",
-                        "port": 1
-                    }
-                ]
+                "wires": []
             }
         ],
         "env": [],
@@ -13319,7 +13309,7 @@
         "y": 140,
         "wires": [
             [
-                "7d481b3a.4ce194"
+                "130a1049.f4969"
             ],
             []
         ]
@@ -13501,57 +13491,6 @@
         "x": 630,
         "y": 260,
         "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7d481b3a.4ce194",
-        "type": "trigger-state",
-        "z": "29f6dc7c.662814",
-        "name": "",
-        "server": "8b52884a.b76658",
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityid": "person.ansley_billimek",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
-        "constraints": [
-            {
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "current_state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "home",
-                "propertyValue": "new_state.state"
-            },
-            {
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "current_state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "not_home",
-                "propertyValue": "new_state.state"
-            }
-        ],
-        "outputs": 2,
-        "customoutputs": [],
-        "outputinitially": false,
-        "state_type": "str",
-        "x": 660,
-        "y": 380,
-        "wires": [
-            [],
             []
         ]
     }
