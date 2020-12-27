@@ -192,12 +192,22 @@
             {
                 "x": 1240,
                 "y": 60,
-                "wires": []
+                "wires": [
+                    {
+                        "id": "84c98e40.8a8eb",
+                        "port": 0
+                    }
+                ]
             },
             {
                 "x": 1240,
                 "y": 200,
-                "wires": []
+                "wires": [
+                    {
+                        "id": "84c98e40.8a8eb",
+                        "port": 1
+                    }
+                ]
             }
         ],
         "env": [],
@@ -13336,7 +13346,9 @@
         "x": 630,
         "y": 140,
         "wires": [
-            []
+            [
+                "84c98e40.8a8eb"
+            ]
         ]
     },
     {
@@ -13491,6 +13503,35 @@
         "x": 630,
         "y": 260,
         "wires": [
+            []
+        ]
+    },
+    {
+        "id": "84c98e40.8a8eb",
+        "type": "switch",
+        "z": "29f6dc7c.662814",
+        "name": "home?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "home",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "not_home",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 890,
+        "y": 140,
+        "wires": [
+            [],
             []
         ]
     }
