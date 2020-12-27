@@ -190,22 +190,22 @@
         ],
         "out": [
             {
-                "x": 1240,
-                "y": 60,
+                "x": 1260,
+                "y": 140,
                 "wires": [
                     {
-                        "id": "14765369.3990dd",
+                        "id": "778ac8cc.cde2b8",
                         "port": 0
                     }
                 ]
             },
             {
                 "x": 1240,
-                "y": 200,
+                "y": 260,
                 "wires": [
                     {
-                        "id": "d77d8bc.1076e78",
-                        "port": 0
+                        "id": "778ac8cc.cde2b8",
+                        "port": 1
                     }
                 ]
             }
@@ -13536,9 +13536,11 @@
         "y": 140,
         "wires": [
             [
-                "14765369.3990dd"
+                "778ac8cc.cde2b8"
             ],
-            []
+            [
+                "778ac8cc.cde2b8"
+            ]
         ]
     },
     {
@@ -13596,9 +13598,11 @@
         "y": 200,
         "wires": [
             [
-                "14765369.3990dd"
+                "778ac8cc.cde2b8"
             ],
-            []
+            [
+                "778ac8cc.cde2b8"
+            ]
         ]
     },
     {
@@ -13627,51 +13631,27 @@
         "y": 260,
         "wires": [
             [
-                "14765369.3990dd"
+                "778ac8cc.cde2b8"
             ],
-            []
+            [
+                "778ac8cc.cde2b8"
+            ]
         ]
     },
     {
-        "id": "14765369.3990dd",
-        "type": "join",
+        "id": "778ac8cc.cde2b8",
+        "type": "function",
         "z": "29f6dc7c.662814",
         "name": "",
-        "mode": "custom",
-        "build": "string",
-        "property": "payload",
-        "propertyType": "msg",
-        "key": "topic",
-        "joiner": "\\n",
-        "joinerType": "str",
-        "accumulate": false,
-        "timeout": "",
-        "count": "3",
-        "reduceRight": false,
-        "reduceExp": "",
-        "reduceInit": "",
-        "reduceInitType": "",
-        "reduceFixup": "",
-        "x": 1070,
-        "y": 40,
+        "func": "\nreturn msg;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1100,
+        "y": 200,
         "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d77d8bc.1076e78",
-        "type": "complete",
-        "z": "29f6dc7c.662814",
-        "name": "",
-        "scope": [
-            "130a1049.f4969",
-            "d3dac816.86c128",
-            "f4e256fe.bfc5e8"
-        ],
-        "uncaught": false,
-        "x": 1030,
-        "y": 360,
-        "wires": [
+            [],
             []
         ]
     }
