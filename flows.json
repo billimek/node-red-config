@@ -13525,7 +13525,7 @@
             }
         ],
         "checkall": "true",
-        "repair": true,
+        "repair": false,
         "outputs": 2,
         "x": 890,
         "y": 140,
@@ -13585,7 +13585,7 @@
             }
         ],
         "checkall": "true",
-        "repair": true,
+        "repair": false,
         "outputs": 2,
         "x": 890,
         "y": 200,
@@ -13616,7 +13616,7 @@
             }
         ],
         "checkall": "true",
-        "repair": true,
+        "repair": false,
         "outputs": 2,
         "x": 890,
         "y": 260,
@@ -13632,7 +13632,7 @@
         "type": "join",
         "z": "29f6dc7c.662814",
         "name": "",
-        "mode": "auto",
+        "mode": "custom",
         "build": "string",
         "property": "payload",
         "propertyType": "msg",
