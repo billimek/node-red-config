@@ -13746,6 +13746,12 @@
                 "logic": "is",
                 "value": "home",
                 "valueType": "str"
+            },
+            {
+                "property": "entity_id",
+                "logic": "is",
+                "value": "home",
+                "valueType": "str"
             }
         ],
         "output_type": "array",
