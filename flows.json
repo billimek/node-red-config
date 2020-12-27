@@ -13752,6 +13752,12 @@
                 "logic": "starts_with",
                 "value": "person.",
                 "valueType": "str"
+            },
+            {
+                "property": "entity_id",
+                "logic": "is",
+                "value": "input_boolean.track_ansley",
+                "valueType": "str"
             }
         ],
         "output_type": "array",
