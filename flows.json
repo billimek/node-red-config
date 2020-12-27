@@ -13302,7 +13302,7 @@
         "halt_if": "off",
         "halt_if_type": "str",
         "halt_if_compare": "is_not",
-        "override_topic": true,
+        "override_topic": false,
         "entity_id": "input_boolean.track_ansley",
         "state_type": "str",
         "state_location": "payload",
@@ -13314,7 +13314,7 @@
         "y": 140,
         "wires": [
             [
-                "130a1049.f4969"
+                "72cfd602.b96b88"
             ],
             []
         ]
@@ -13406,7 +13406,7 @@
         "halt_if": "off",
         "halt_if_type": "str",
         "halt_if_compare": "is_not",
-        "override_topic": true,
+        "override_topic": false,
         "entity_id": "input_boolean.track_jeff",
         "state_type": "str",
         "state_location": "payload",
@@ -13418,7 +13418,7 @@
         "y": 200,
         "wires": [
             [
-                "d3dac816.86c128"
+                "72cfd602.b96b88"
             ],
             []
         ]
@@ -13434,7 +13434,7 @@
         "halt_if": "off",
         "halt_if_type": "str",
         "halt_if_compare": "is_not",
-        "override_topic": true,
+        "override_topic": false,
         "entity_id": "input_boolean.track_jen",
         "state_type": "str",
         "state_location": "payload",
@@ -13446,7 +13446,7 @@
         "y": 260,
         "wires": [
             [
-                "f4e256fe.bfc5e8"
+                "72cfd602.b96b88"
             ],
             []
         ]
@@ -13641,16 +13641,45 @@
         "joinerType": "str",
         "accumulate": false,
         "timeout": "",
-        "count": "3",
+        "count": "",
         "reduceRight": false,
         "reduceExp": "",
         "reduceInit": "",
         "reduceInitType": "",
         "reduceFixup": "",
-        "x": 1090,
+        "x": 1110,
         "y": 200,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "72cfd602.b96b88",
+        "type": "change",
+        "z": "29f6dc7c.662814",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "complete",
+                "pt": "msg",
+                "to": "true",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 40,
+        "wires": [
+            [
+                "130a1049.f4969",
+                "d3dac816.86c128",
+                "f4e256fe.bfc5e8"
+            ]
         ]
     }
 ]
