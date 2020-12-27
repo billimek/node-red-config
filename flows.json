@@ -13813,7 +13813,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 810,
+        "x": 930,
         "y": 2920,
         "wires": []
     },
@@ -13828,6 +13828,12 @@
                 "property": "entity_id",
                 "logic": "starts_with",
                 "value": "input_boolean.track_",
+                "valueType": "str"
+            },
+            {
+                "property": "state",
+                "logic": "is",
+                "value": "on",
                 "valueType": "str"
             }
         ],
