@@ -194,15 +194,7 @@
                 "y": 60,
                 "wires": [
                     {
-                        "id": "130a1049.f4969",
-                        "port": 0
-                    },
-                    {
-                        "id": "d3dac816.86c128",
-                        "port": 0
-                    },
-                    {
-                        "id": "f4e256fe.bfc5e8",
+                        "id": "7d481b3a.4ce194",
                         "port": 0
                     }
                 ]
@@ -210,21 +202,16 @@
             {
                 "x": 1240,
                 "y": 200,
-                "wires": []
+                "wires": [
+                    {
+                        "id": "7d481b3a.4ce194",
+                        "port": 1
+                    }
+                ]
             }
         ],
         "env": [],
-        "color": "#DDAA99",
-        "status": {
-            "x": 1000,
-            "y": 400,
-            "wires": [
-                {
-                    "id": "130a1049.f4969",
-                    "port": 0
-                }
-            ]
-        }
+        "color": "#DDAA99"
     },
     {
         "id": "8b52884a.b76658",
@@ -13332,7 +13319,7 @@
         "y": 140,
         "wires": [
             [
-                "130a1049.f4969"
+                "7d481b3a.4ce194"
             ],
             []
         ]
@@ -13514,6 +13501,57 @@
         "x": 630,
         "y": 260,
         "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7d481b3a.4ce194",
+        "type": "trigger-state",
+        "z": "29f6dc7c.662814",
+        "name": "",
+        "server": "8b52884a.b76658",
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityid": "person.ansley_billimek",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "home",
+                "propertyValue": "new_state.state"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "not_home",
+                "propertyValue": "new_state.state"
+            }
+        ],
+        "outputs": 2,
+        "customoutputs": [],
+        "outputinitially": false,
+        "state_type": "str",
+        "x": 660,
+        "y": 380,
+        "wires": [
+            [],
             []
         ]
     }
