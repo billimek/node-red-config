@@ -173,11 +173,17 @@
         "category": "",
         "in": [
             {
-                "x": 50,
-                "y": 30,
+                "x": 100,
+                "y": 200,
                 "wires": [
                     {
-                        "id": "130a1049.f4969"
+                        "id": "ad77dc4c.32823"
+                    },
+                    {
+                        "id": "6cd320fa.c1848"
+                    },
+                    {
+                        "id": "68a507e8.f20bf8"
                     }
                 ]
             }
@@ -188,7 +194,15 @@
                 "y": 60,
                 "wires": [
                     {
-                        "id": "ad77dc4c.32823",
+                        "id": "130a1049.f4969",
+                        "port": 0
+                    },
+                    {
+                        "id": "d3dac816.86c128",
+                        "port": 0
+                    },
+                    {
+                        "id": "f4e256fe.bfc5e8",
                         "port": 0
                     }
                 ]
@@ -196,16 +210,16 @@
             {
                 "x": 1240,
                 "y": 200,
-                "wires": [
-                    {
-                        "id": "ad77dc4c.32823",
-                        "port": 1
-                    }
-                ]
+                "wires": []
             }
         ],
         "env": [],
-        "color": "#DDAA99"
+        "color": "#DDAA99",
+        "status": {
+            "x": 160,
+            "y": 30,
+            "wires": []
+        }
     },
     {
         "id": "8b52884a.b76658",
@@ -13202,8 +13216,8 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
-        "x": 150,
-        "y": 120,
+        "x": 190,
+        "y": 460,
         "wires": [
             []
         ]
@@ -13243,8 +13257,8 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
-        "x": 160,
-        "y": 180,
+        "x": 200,
+        "y": 520,
         "wires": [
             []
         ]
@@ -13284,8 +13298,8 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
-        "x": 160,
-        "y": 240,
+        "x": 200,
+        "y": 580,
         "wires": [
             []
         ]
@@ -13309,10 +13323,12 @@
         "entity_location": "data",
         "override_data": "msg",
         "blockInputOverrides": false,
-        "x": 490,
-        "y": 120,
+        "x": 310,
+        "y": 140,
         "wires": [
-            [],
+            [
+                "130a1049.f4969"
+            ],
             []
         ]
     },
@@ -13335,30 +13351,11 @@
         "entity_location": "data",
         "override_data": "msg",
         "blockInputOverrides": false,
-        "x": 670,
-        "y": 380,
+        "x": 630,
+        "y": 140,
         "wires": [
-            [
-                "438f9d5d.b68d64",
-                "ad77dc4c.32823"
-            ]
+            []
         ]
-    },
-    {
-        "id": "438f9d5d.b68d64",
-        "type": "debug",
-        "z": "29f6dc7c.662814",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 970,
-        "y": 400,
-        "wires": []
     },
     {
         "id": "b4e4a4d2.cc3ed8",
@@ -13408,5 +13405,111 @@
         "x": 790,
         "y": 2840,
         "wires": []
+    },
+    {
+        "id": "6cd320fa.c1848",
+        "type": "api-current-state",
+        "z": "29f6dc7c.662814",
+        "name": "track Jeff?",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is_not",
+        "override_topic": true,
+        "entity_id": "input_boolean.track_jeff",
+        "state_type": "str",
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "blockInputOverrides": false,
+        "x": 310,
+        "y": 200,
+        "wires": [
+            [
+                "d3dac816.86c128"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "68a507e8.f20bf8",
+        "type": "api-current-state",
+        "z": "29f6dc7c.662814",
+        "name": "track Jen?",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is_not",
+        "override_topic": true,
+        "entity_id": "input_boolean.track_jen",
+        "state_type": "str",
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "blockInputOverrides": false,
+        "x": 310,
+        "y": 260,
+        "wires": [
+            [
+                "f4e256fe.bfc5e8"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "d3dac816.86c128",
+        "type": "api-current-state",
+        "z": "29f6dc7c.662814",
+        "name": "",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "person.jeff_billimek",
+        "state_type": "str",
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "blockInputOverrides": false,
+        "x": 620,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f4e256fe.bfc5e8",
+        "type": "api-current-state",
+        "z": "29f6dc7c.662814",
+        "name": "",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "person.jennifer_billimek",
+        "state_type": "str",
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "blockInputOverrides": false,
+        "x": 630,
+        "y": 260,
+        "wires": [
+            []
+        ]
     }
 ]
