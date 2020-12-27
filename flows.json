@@ -173,17 +173,11 @@
         "category": "",
         "in": [
             {
-                "x": 100,
-                "y": 200,
+                "x": 60,
+                "y": 40,
                 "wires": [
                     {
-                        "id": "ad77dc4c.32823"
-                    },
-                    {
-                        "id": "6cd320fa.c1848"
-                    },
-                    {
-                        "id": "68a507e8.f20bf8"
+                        "id": "6303d5b7.53726c"
                     }
                 ]
             }
@@ -191,18 +185,23 @@
         "out": [
             {
                 "x": 1260,
-                "y": 140,
+                "y": 40,
                 "wires": [
                     {
-                        "id": "83ab8ae7.68de48",
+                        "id": "ab22106d.8bafb",
                         "port": 0
                     }
                 ]
             },
             {
                 "x": 1260,
-                "y": 260,
-                "wires": []
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "ab22106d.8bafb",
+                        "port": 1
+                    }
+                ]
             }
         ],
         "env": [],
@@ -13169,129 +13168,6 @@
         "wires": []
     },
     {
-        "id": "a5ba8715.4584e8",
-        "type": "server-state-changed",
-        "z": "29f6dc7c.662814",
-        "name": "ansley person state",
-        "server": "8b52884a.b76658",
-        "version": 1,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "person.ansley_billimek",
-        "entityidfiltertype": "exact",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 1,
-        "output_only_on_state_change": true,
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "x": 190,
-        "y": 460,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "568b7566.971fdc",
-        "type": "server-state-changed",
-        "z": "29f6dc7c.662814",
-        "name": "jeff person state",
-        "server": "8b52884a.b76658",
-        "version": 1,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "person.jeff_billimek",
-        "entityidfiltertype": "exact",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 1,
-        "output_only_on_state_change": true,
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "x": 200,
-        "y": 520,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "de13105a.67243",
-        "type": "server-state-changed",
-        "z": "29f6dc7c.662814",
-        "name": "jen person state",
-        "server": "8b52884a.b76658",
-        "version": 1,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "person.jennifer_billimek",
-        "entityidfiltertype": "exact",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 1,
-        "output_only_on_state_change": true,
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "x": 200,
-        "y": 580,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "ad77dc4c.32823",
         "type": "api-current-state",
         "z": "29f6dc7c.662814",
@@ -13310,11 +13186,10 @@
         "entity_location": "data",
         "override_data": "msg",
         "blockInputOverrides": false,
-        "x": 310,
+        "x": 290,
         "y": 140,
         "wires": [
             [
-                "72cfd602.b96b88",
                 "130a1049.f4969"
             ],
             []
@@ -13343,8 +13218,7 @@
         "y": 140,
         "wires": [
             [
-                "84c98e40.8a8eb",
-                "83ab8ae7.68de48"
+                "84c98e40.8a8eb"
             ]
         ]
     },
@@ -13416,11 +13290,10 @@
         "entity_location": "data",
         "override_data": "msg",
         "blockInputOverrides": false,
-        "x": 310,
+        "x": 290,
         "y": 200,
         "wires": [
             [
-                "72cfd602.b96b88",
                 "d3dac816.86c128"
             ],
             []
@@ -13445,11 +13318,10 @@
         "entity_location": "data",
         "override_data": "msg",
         "blockInputOverrides": false,
-        "x": 310,
+        "x": 290,
         "y": 260,
         "wires": [
             [
-                "72cfd602.b96b88",
                 "f4e256fe.bfc5e8"
             ],
             []
@@ -13478,8 +13350,7 @@
         "y": 200,
         "wires": [
             [
-                "10e9b1c5.34e31e",
-                "83ab8ae7.68de48"
+                "10e9b1c5.34e31e"
             ]
         ]
     },
@@ -13506,8 +13377,7 @@
         "y": 260,
         "wires": [
             [
-                "781bdbb4.5a2724",
-                "83ab8ae7.68de48"
+                "781bdbb4.5a2724"
             ]
         ]
     },
@@ -13539,35 +13409,6 @@
             [
                 "626b893d.59dfa8"
             ],
-            []
-        ]
-    },
-    {
-        "id": "26ba30fa.17e4b",
-        "type": "switch",
-        "z": "29f6dc7c.662814",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "home",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "not_home",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 930,
-        "y": 360,
-        "wires": [
-            [],
             []
         ]
     },
@@ -13655,81 +13496,6 @@
         "reduceFixup": "",
         "x": 1110,
         "y": 200,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "72cfd602.b96b88",
-        "type": "change",
-        "z": "29f6dc7c.662814",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "complete",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 530,
-        "y": 520,
-        "wires": [
-            [
-                "130a1049.f4969",
-                "d3dac816.86c128",
-                "f4e256fe.bfc5e8"
-            ]
-        ]
-    },
-    {
-        "id": "83ab8ae7.68de48",
-        "type": "rbe",
-        "z": "29f6dc7c.662814",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload",
-        "x": 890,
-        "y": 40,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d211c227.0bb14",
-        "type": "combine-if",
-        "z": "29f6dc7c.662814",
-        "topic": "condition",
-        "name": "",
-        "timeout": 0,
-        "x": 1090,
-        "y": 460,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
-        "id": "dad01e9e.cd61f",
-        "type": "combine-logic",
-        "z": "29f6dc7c.662814",
-        "name": "",
-        "topic": "",
-        "operator": "and",
-        "defer": 250,
-        "timeout": 0,
-        "distinction": "topic",
-        "x": 990,
-        "y": 560,
         "wires": [
             []
         ]
@@ -14056,5 +13822,88 @@
         "x": 1330,
         "y": 2980,
         "wires": []
+    },
+    {
+        "id": "ab22106d.8bafb",
+        "type": "switch",
+        "z": "29f6dc7c.662814",
+        "name": "home?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "home",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "not_home",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 890,
+        "y": 40,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6303d5b7.53726c",
+        "type": "api-current-state",
+        "z": "29f6dc7c.662814",
+        "name": "presence selection",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "input_select.presence",
+        "state_type": "str",
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "blockInputOverrides": false,
+        "x": 270,
+        "y": 40,
+        "wires": [
+            [
+                "3d6fbc9a.f077f4"
+            ]
+        ]
+    },
+    {
+        "id": "3d6fbc9a.f077f4",
+        "type": "api-current-state",
+        "z": "29f6dc7c.662814",
+        "name": "group status",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "group.{{payload}}",
+        "state_type": "str",
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "blockInputOverrides": false,
+        "x": 530,
+        "y": 40,
+        "wires": [
+            [
+                "ab22106d.8bafb"
+            ]
+        ]
     }
 ]
