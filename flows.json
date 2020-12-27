@@ -49,6 +49,13 @@
         "info": ""
     },
     {
+        "id": "949dcaf.6f2b638",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "b8b74cae.ffe4",
         "type": "subflow",
         "name": "open?",
@@ -1151,7 +1158,7 @@
         "z": "4aedf9e8.044e08",
         "name": "run?",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "outputs": 2,
         "halt_if": "on",
         "halt_if_type": "str",
@@ -13123,6 +13130,222 @@
         "statusType": "auto",
         "x": 880,
         "y": 2480,
+        "wires": []
+    },
+    {
+        "id": "8e49dd4a.aad0f",
+        "type": "server-state-changed",
+        "z": "949dcaf.6f2b638",
+        "name": "ansley person state",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "person.ansley_billimek",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": 0,
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "x": 230,
+        "y": 620,
+        "wires": [
+            [
+                "2514c6a7.ddc3ba"
+            ]
+        ]
+    },
+    {
+        "id": "817a60db.000d7",
+        "type": "server-state-changed",
+        "z": "949dcaf.6f2b638",
+        "name": "jeff person state",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "person.jeff_billimek",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": 0,
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "x": 220,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8ae3f67.a8a4208",
+        "type": "server-state-changed",
+        "z": "949dcaf.6f2b638",
+        "name": "jen person state",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "person.jennifer_billimek",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": 0,
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "x": 220,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2514c6a7.ddc3ba",
+        "type": "api-current-state",
+        "z": "949dcaf.6f2b638",
+        "name": "track Ansley?",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is_not",
+        "override_topic": true,
+        "entity_id": "input_boolean.track_ansley",
+        "state_type": "str",
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "blockInputOverrides": false,
+        "x": 590,
+        "y": 640,
+        "wires": [
+            [
+                "2ec48520.a0a03a"
+            ],
+            [
+                "10f6043c.ec65dc"
+            ]
+        ]
+    },
+    {
+        "id": "23cc2a5b.78af06",
+        "type": "inject",
+        "z": "949dcaf.6f2b638",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 390,
+        "y": 560,
+        "wires": [
+            [
+                "2514c6a7.ddc3ba"
+            ]
+        ]
+    },
+    {
+        "id": "2ec48520.a0a03a",
+        "type": "debug",
+        "z": "949dcaf.6f2b638",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "10f6043c.ec65dc",
+        "type": "debug",
+        "z": "949dcaf.6f2b638",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 680,
         "wires": []
     }
 ]
