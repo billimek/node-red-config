@@ -7306,7 +7306,8 @@
             [
                 "b5ce153f.7eca98",
                 "700f243b.725e6c",
-                "3af164aa.92a0ac"
+                "3af164aa.92a0ac",
+                "78d24791.853db8"
             ]
         ]
     },
@@ -7637,7 +7638,8 @@
             [],
             [
                 "b5ce153f.7eca98",
-                "3af164aa.92a0ac"
+                "3af164aa.92a0ac",
+                "78d24791.853db8"
             ]
         ]
     },
@@ -13744,6 +13746,29 @@
         "mustacheAltTags": false,
         "x": 400,
         "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "78d24791.853db8",
+        "type": "api-call-service",
+        "z": "af228686.65c8a8",
+        "name": "cabinet lights",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "",
+        "entityId": "group.sunroom_lights",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "payload",
+        "output_location_type": "msg",
+        "mustacheAltTags": false,
+        "x": 1150,
+        "y": 120,
         "wires": [
             []
         ]
