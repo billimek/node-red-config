@@ -7286,7 +7286,7 @@
         "output_location": "payload",
         "output_location_type": "msg",
         "mustacheAltTags": false,
-        "x": 930,
+        "x": 940,
         "y": 100,
         "wires": [
             []
@@ -10393,7 +10393,7 @@
         "output_location": "payload",
         "output_location_type": "msg",
         "mustacheAltTags": false,
-        "x": 390,
+        "x": 400,
         "y": 80,
         "wires": [
             []
@@ -12382,7 +12382,7 @@
         "output_location": "payload",
         "output_location_type": "msg",
         "mustacheAltTags": false,
-        "x": 390,
+        "x": 400,
         "y": 680,
         "wires": [
             []
@@ -13723,7 +13723,8 @@
             [],
             [
                 "b5ce153f.7eca98",
-                "3af164aa.92a0ac"
+                "3af164aa.92a0ac",
+                "78d24791.853db8"
             ]
         ]
     },
@@ -13754,7 +13755,7 @@
         "id": "78d24791.853db8",
         "type": "api-call-service",
         "z": "af228686.65c8a8",
-        "name": "cabinet lights",
+        "name": "sunroom lights",
         "server": "8b52884a.b76658",
         "version": 1,
         "debugenabled": false,
