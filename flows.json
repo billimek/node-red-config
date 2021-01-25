@@ -13773,5 +13773,172 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "2091a759.b069c8",
+        "type": "trigger",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "op1": "{\"service\":\"turn_on\"}",
+        "op2": "{\"service\":\"turn_off\"}",
+        "op1type": "json",
+        "op2type": "json",
+        "duration": "15",
+        "extend": true,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "outputs": 1,
+        "x": 790,
+        "y": 1700,
+        "wires": [
+            [
+                "354ecd58.630842"
+            ]
+        ]
+    },
+    {
+        "id": "5b3e37ab.c1c298",
+        "type": "mqtt in",
+        "z": "af228686.65c8a8",
+        "name": "wyze-3 motion",
+        "topic": "camera/wyze-3/motion",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "649859a4.a17818",
+        "x": 120,
+        "y": 1700,
+        "wires": [
+            [
+                "320c7a88.60ea16",
+                "35993163.737e1e"
+            ]
+        ]
+    },
+    {
+        "id": "320c7a88.60ea16",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "73a1bfe8.6840e",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "a2f0a75a.e39188",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "35993163.737e1e",
+        "type": "switch",
+        "z": "af228686.65c8a8",
+        "name": "motion?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ON",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 340,
+        "y": 1700,
+        "wires": [
+            [
+                "73a1bfe8.6840e",
+                "313fdb38.8f9714"
+            ]
+        ]
+    },
+    {
+        "id": "313fdb38.8f9714",
+        "type": "api-current-state",
+        "z": "af228686.65c8a8",
+        "name": "desk lights on?",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "switch.portable_outlet_e_switch_3",
+        "state_type": "str",
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "blockInputOverrides": false,
+        "x": 560,
+        "y": 1700,
+        "wires": [
+            [
+                "a2f0a75a.e39188",
+                "2091a759.b069c8"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "354ecd58.630842",
+        "type": "api-call-service",
+        "z": "af228686.65c8a8",
+        "name": "turn off desk lights",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "turn_off",
+        "entityId": "switch.portable_outlet_e_switch_3",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 1050,
+        "y": 1700,
+        "wires": [
+            []
+        ]
     }
 ]
