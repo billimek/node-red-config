@@ -12540,7 +12540,7 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 1130,
+        "x": 1230,
         "y": 1340,
         "wires": [
             []
@@ -13784,7 +13784,7 @@
         "op2": "{\"service\":\"turn_off\"}",
         "op1type": "json",
         "op2type": "json",
-        "duration": "5",
+        "duration": "10",
         "extend": true,
         "overrideDelay": false,
         "units": "s",
@@ -13792,7 +13792,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 920,
+        "x": 930,
         "y": 1340,
         "wires": [
             [
