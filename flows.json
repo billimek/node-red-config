@@ -12517,7 +12517,7 @@
         "y": 1340,
         "wires": [
             [
-                "83092d58.56334"
+                "71f227c0.43b6f8"
             ],
             []
         ]
@@ -12539,7 +12539,7 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 970,
+        "x": 1130,
         "y": 1340,
         "wires": [
             []
@@ -13939,6 +13939,29 @@
         "y": 1700,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "71f227c0.43b6f8",
+        "type": "trigger",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "op1": "{\"service\":\"turn_on\"}",
+        "op2": "{\"service\":\"turn_off\"}",
+        "op1type": "json",
+        "op2type": "json",
+        "duration": "15",
+        "extend": true,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "outputs": 1,
+        "x": 930,
+        "y": 1340,
+        "wires": [
+            [
+                "83092d58.56334"
+            ]
         ]
     }
 ]
