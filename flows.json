@@ -13784,7 +13784,7 @@
         "op2": "{\"service\":\"turn_off\"}",
         "op1type": "json",
         "op2type": "json",
-        "duration": "10",
+        "duration": "5",
         "extend": true,
         "overrideDelay": false,
         "units": "s",
@@ -13792,7 +13792,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 990,
+        "x": 980,
         "y": 1340,
         "wires": [
             [
