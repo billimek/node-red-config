@@ -49,6 +49,13 @@
         "info": ""
     },
     {
+        "id": "6385a2ce.a16d0c",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "b8b74cae.ffe4",
         "type": "subflow",
         "name": "open?",
@@ -252,6 +259,33 @@
         "id": "d02fa8ec.7c1538",
         "type": "googleCredentials",
         "name": "node-red google project"
+    },
+    {
+        "id": "3f5c82ac.348636",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "57ce5691.fd6e48",
+        "type": "server",
+        "name": "Home Assistant",
+        "addon": true
     },
     {
         "id": "738ad7f2.c345c8",
@@ -13916,37 +13950,379 @@
         ]
     },
     {
-        "id": "446f0ed1.4313d",
+        "id": "e48a29f2.c7e91",
         "type": "mqtt in",
-        "z": "ea946133.0085b",
-        "name": "Front Camera (frigate)",
+        "z": "6385a2ce.a16d0c",
+        "name": "",
         "topic": "frigate/events",
         "qos": "2",
         "datatype": "auto",
         "broker": "649859a4.a17818",
-        "x": 140,
-        "y": 780,
+        "x": 170,
+        "y": 180,
         "wires": [
             [
-                "54429d84.4975c4"
+                "9df79166.6c443"
             ]
         ]
     },
     {
-        "id": "54429d84.4975c4",
+        "id": "9df79166.6c443",
+        "type": "json",
+        "z": "6385a2ce.a16d0c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 330,
+        "y": 180,
+        "wires": [
+            [
+                "b4265be9.a1b578"
+            ]
+        ],
+        "info": "Convert JSON Strings to Objects"
+    },
+    {
+        "id": "b4265be9.a1b578",
+        "type": "rbe",
+        "z": "6385a2ce.a16d0c",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload.after.id",
+        "x": 470,
+        "y": 180,
+        "wires": [
+            [
+                "7fcd755f.3eb3ac"
+            ]
+        ],
+        "info": "Block any Messages that have  duplicate After ID.  Cuts down on multiple mqtt messages for the same notification"
+    },
+    {
+        "id": "75e669ab.c822f",
+        "type": "switch",
+        "z": "6385a2ce.a16d0c",
+        "name": "1.Front -- 2.Back cameras",
+        "property": "payload.after.camera",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "front",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "back",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 670,
+        "y": 300,
+        "wires": [
+            [],
+            []
+        ],
+        "info": "Change **front** and **back** Switch names to be the names of your cameras defined in the Frigate Config"
+    },
+    {
+        "id": "51be24a6.f68c9c",
+        "type": "mqtt in",
+        "z": "6385a2ce.a16d0c",
+        "name": "",
+        "topic": "frigate/events",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "649859a4.a17818",
+        "x": 170,
+        "y": 300,
+        "wires": [
+            [
+                "ecebcde4.262678"
+            ]
+        ]
+    },
+    {
+        "id": "ecebcde4.262678",
+        "type": "json",
+        "z": "6385a2ce.a16d0c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 330,
+        "y": 300,
+        "wires": [
+            [
+                "4c45fa7e.21cc64"
+            ]
+        ],
+        "info": "Convert JSON Strings to Objects"
+    },
+    {
+        "id": "4c45fa7e.21cc64",
+        "type": "rbe",
+        "z": "6385a2ce.a16d0c",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload.after.id",
+        "x": 470,
+        "y": 300,
+        "wires": [
+            [
+                "75e669ab.c822f"
+            ]
+        ],
+        "info": "Block any Messages that have  duplicate After ID.  Cuts down on multiple mqtt messages for the same notification"
+    },
+    {
+        "id": "a3ed0f30.68f8e",
+        "type": "mqtt in",
+        "z": "6385a2ce.a16d0c",
+        "name": "",
+        "topic": "frigate/events",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "649859a4.a17818",
+        "x": 170,
+        "y": 420,
+        "wires": [
+            [
+                "e7f9181a.ea88f8"
+            ]
+        ]
+    },
+    {
+        "id": "e7f9181a.ea88f8",
+        "type": "json",
+        "z": "6385a2ce.a16d0c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 330,
+        "y": 420,
+        "wires": [
+            [
+                "bdc5529d.c825d"
+            ]
+        ],
+        "info": "Convert JSON Strings to Objects"
+    },
+    {
+        "id": "bdc5529d.c825d",
+        "type": "rbe",
+        "z": "6385a2ce.a16d0c",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload.after.id",
+        "x": 470,
+        "y": 420,
+        "wires": [
+            [
+                "dee8ee79.d33d4"
+            ]
+        ],
+        "info": "Block any Messages that have  duplicate After ID.  Cuts down on multiple mqtt messages for the same notification"
+    },
+    {
+        "id": "dee8ee79.d33d4",
+        "type": "switch",
+        "z": "6385a2ce.a16d0c",
+        "name": "1.Person -- 2.Cat - Labels",
+        "property": "payload.after.label",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "person",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "cat",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 650,
+        "y": 420,
+        "wires": [
+            [
+                "68c5263c.a09718"
+            ],
+            [
+                "5ca07be7.4d4914"
+            ]
+        ],
+        "info": "Change **front** and **back** Switch names to be the names of your cameras defined in the Frigate Config"
+    },
+    {
+        "id": "5e4df689.517bb",
+        "type": "comment",
+        "z": "6385a2ce.a16d0c",
+        "name": "Notify Phone if Frigate Detects Something",
+        "info": "Flow to notify phone if Frigate detects something",
+        "x": 260,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "57e99f0.2a2dbe",
+        "type": "comment",
+        "z": "6385a2ce.a16d0c",
+        "name": "Automation Based on Frigate Camera Name",
+        "info": "Flow to action something based on the camera name that triggered detction",
+        "x": 270,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "1c24dc24.431ca4",
+        "type": "comment",
+        "z": "6385a2ce.a16d0c",
+        "name": "Automation Based on Frigate Label Name",
+        "info": "Flow to turn on light if person detected or just notify phone if Frigate detects a cat",
+        "x": 260,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "7111e437.ec6adc",
+        "type": "mqtt in",
+        "z": "6385a2ce.a16d0c",
+        "name": "",
+        "topic": "frigate/study/person",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "649859a4.a17818",
+        "x": 190,
+        "y": 580,
+        "wires": [
+            [
+                "e608767f.ba8178"
+            ]
+        ]
+    },
+    {
+        "id": "4e0afa20.37f074",
+        "type": "switch",
+        "z": "6385a2ce.a16d0c",
+        "name": "1.person > 0 -- 2. person=0",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "lte",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 640,
+        "y": 580,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e608767f.ba8178",
+        "type": "function",
+        "z": "6385a2ce.a16d0c",
+        "name": "To Number",
+        "func": "msg.payload = Number(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 410,
+        "y": 580,
+        "wires": [
+            [
+                "4e0afa20.37f074"
+            ]
+        ],
+        "info": "Convert msg.payload String to Number"
+    },
+    {
+        "id": "b3ddc950.0dde6",
+        "type": "comment",
+        "z": "6385a2ce.a16d0c",
+        "name": "Set an input boolean based on Label Count",
+        "info": "Flow to turn on light if person detected or just notify phone if Frigate detects a cat",
+        "x": 260,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "7fcd755f.3eb3ac",
         "type": "debug",
-        "z": "ea946133.0085b",
+        "z": "6385a2ce.a16d0c",
         "name": "",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
+        "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
-        "y": 800,
+        "x": 630,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "68c5263c.a09718",
+        "type": "debug",
+        "z": "6385a2ce.a16d0c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "5ca07be7.4d4914",
+        "type": "debug",
+        "z": "6385a2ce.a16d0c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 440,
         "wires": []
     }
 ]
