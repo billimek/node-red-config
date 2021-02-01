@@ -13802,7 +13802,7 @@
         "type": "mqtt in",
         "z": "ea946133.0085b",
         "name": "Porch Camera (frigate)",
-        "topic": "frigate/porch/*/#",
+        "topic": "frigate/porch/+/#",
         "qos": "2",
         "datatype": "auto",
         "broker": "649859a4.a17818",
@@ -13862,6 +13862,39 @@
         "statusType": "auto",
         "x": 450,
         "y": 860,
+        "wires": []
+    },
+    {
+        "id": "97e50d95.d56fe",
+        "type": "mqtt in",
+        "z": "ea946133.0085b",
+        "name": "Porch Camera (frigate)",
+        "topic": "frigate/porch/+",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "649859a4.a17818",
+        "x": 160,
+        "y": 920,
+        "wires": [
+            [
+                "4394bf4a.0543b"
+            ]
+        ]
+    },
+    {
+        "id": "4394bf4a.0543b",
+        "type": "debug",
+        "z": "ea946133.0085b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 960,
         "wires": []
     }
 ]
