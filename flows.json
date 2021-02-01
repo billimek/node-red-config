@@ -13914,5 +13914,39 @@
                 "69e6676b.787a18"
             ]
         ]
+    },
+    {
+        "id": "446f0ed1.4313d",
+        "type": "mqtt in",
+        "z": "ea946133.0085b",
+        "name": "Front Camera (frigate)",
+        "topic": "frigate/events",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "649859a4.a17818",
+        "x": 140,
+        "y": 780,
+        "wires": [
+            [
+                "54429d84.4975c4"
+            ]
+        ]
+    },
+    {
+        "id": "54429d84.4975c4",
+        "type": "debug",
+        "z": "ea946133.0085b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 800,
+        "wires": []
     }
 ]
