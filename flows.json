@@ -763,7 +763,7 @@
         "type": "mqtt in",
         "z": "ea946133.0085b",
         "name": "Porch Camera (frigate)",
-        "topic": "frigate/porch/#",
+        "topic": "frigate/porch/+",
         "qos": "2",
         "datatype": "auto",
         "broker": "649859a4.a17818",
@@ -9867,9 +9867,9 @@
         "propertyType": "msg",
         "rules": [
             {
-                "t": "eq",
-                "v": "ON",
-                "vt": "str"
+                "t": "gte",
+                "v": "1",
+                "vt": "num"
             }
         ],
         "checkall": "true",
@@ -13819,7 +13819,7 @@
         "type": "debug",
         "z": "ea946133.0085b",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -13852,7 +13852,7 @@
         "type": "debug",
         "z": "ea946133.0085b",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
