@@ -208,6 +208,68 @@
         "color": "#DDAA99"
     },
     {
+        "id": "2299e9e0.40f656",
+        "type": "subflow",
+        "name": "frigate camera",
+        "info": "",
+        "category": "",
+        "in": [],
+        "out": [
+            {
+                "x": 980,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "8858eb58.4a5e68",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 980,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "8858eb58.4a5e68",
+                        "port": 1
+                    }
+                ]
+            },
+            {
+                "x": 980,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "8858eb58.4a5e68",
+                        "port": 2
+                    }
+                ]
+            },
+            {
+                "x": 980,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "8858eb58.4a5e68",
+                        "port": 3
+                    }
+                ]
+            },
+            {
+                "x": 980,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "8858eb58.4a5e68",
+                        "port": 4
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "color": "#DDAA99"
+    },
+    {
         "id": "8b52884a.b76658",
         "type": "server",
         "name": "Home Assistant",
@@ -12721,7 +12783,7 @@
     {
         "id": "8858eb58.4a5e68",
         "type": "switch",
-        "z": "ea946133.0085b",
+        "z": "2299e9e0.40f656",
         "name": "1.front -- 2.porch -- 3. driveway -- 4. pool -- 5. basement",
         "property": "payload.after.camera",
         "propertyType": "msg",
@@ -12755,41 +12817,28 @@
         "checkall": "true",
         "repair": false,
         "outputs": 5,
-        "x": 710,
-        "y": 180,
+        "x": 690,
+        "y": 80,
         "wires": [
-            [
-                "36bc5b4d.f66c04",
-                "74a6c66e.9b3788"
-            ],
-            [
-                "f60616fd.8be358",
-                "202f9fb7.5baeb"
-            ],
-            [
-                "fd2dcebe.09fce",
-                "60c909a0.99eda8"
-            ],
-            [
-                "4fb82dd3.faff04"
-            ],
-            [
-                "79eb2197.7c7f6"
-            ]
+            [],
+            [],
+            [],
+            [],
+            []
         ],
         "info": "Change **front** and **back** Switch names to be the names of your cameras defined in the Frigate Config"
     },
     {
         "id": "1d657054.6f0ae",
         "type": "mqtt in",
-        "z": "ea946133.0085b",
+        "z": "2299e9e0.40f656",
         "name": "",
         "topic": "frigate/events",
         "qos": "2",
         "datatype": "auto",
         "broker": "649859a4.a17818",
-        "x": 110,
-        "y": 180,
+        "x": 90,
+        "y": 80,
         "wires": [
             [
                 "2357bb6d.b17e24"
@@ -12799,13 +12848,13 @@
     {
         "id": "2357bb6d.b17e24",
         "type": "json",
-        "z": "ea946133.0085b",
+        "z": "2299e9e0.40f656",
         "name": "",
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 270,
-        "y": 180,
+        "x": 250,
+        "y": 80,
         "wires": [
             [
                 "2e507a21.970b96"
@@ -12816,15 +12865,15 @@
     {
         "id": "2e507a21.970b96",
         "type": "rbe",
-        "z": "ea946133.0085b",
+        "z": "2299e9e0.40f656",
         "name": "",
         "func": "rbe",
         "gap": "",
         "start": "",
         "inout": "out",
         "property": "payload.after.id",
-        "x": 410,
-        "y": 180,
+        "x": 390,
+        "y": 80,
         "wires": [
             [
                 "8858eb58.4a5e68"
@@ -12835,11 +12884,11 @@
     {
         "id": "be7afd67.3bfa4",
         "type": "comment",
-        "z": "ea946133.0085b",
+        "z": "2299e9e0.40f656",
         "name": "Automation Based on Frigate Camera Name",
         "info": "Flow to action something based on the camera name that triggered detction",
-        "x": 210,
-        "y": 140,
+        "x": 190,
+        "y": 40,
         "wires": []
     },
     {
@@ -12854,7 +12903,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1050,
+        "x": 630,
         "y": 600,
         "wires": []
     },
@@ -12870,7 +12919,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1050,
+        "x": 630,
         "y": 640,
         "wires": []
     },
@@ -12886,7 +12935,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1050,
+        "x": 630,
         "y": 680,
         "wires": []
     },
@@ -12898,7 +12947,7 @@
         "func": "msg.payload = \"camera=front&trigger\";\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 2110,
+        "x": 1690,
         "y": 80,
         "wires": [
             [
@@ -12912,7 +12961,7 @@
         "z": "ea946133.0085b",
         "name": "run?",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "outputs": 2,
         "halt_if": "off",
         "halt_if_type": "str",
@@ -12925,7 +12974,7 @@
         "entity_location": "",
         "override_data": "none",
         "blockInputOverrides": false,
-        "x": 1050,
+        "x": 630,
         "y": 80,
         "wires": [
             [],
@@ -12949,7 +12998,7 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": true,
-        "x": 1860,
+        "x": 1440,
         "y": 80,
         "wires": [
             [
@@ -12965,7 +13014,7 @@
         "func": "msg.payload = \"camera=porch&trigger\";\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 2110,
+        "x": 1690,
         "y": 140,
         "wires": [
             [
@@ -12988,7 +13037,7 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": true,
-        "x": 1860,
+        "x": 1440,
         "y": 140,
         "wires": [
             [
@@ -13007,7 +13056,7 @@
         "endTime": "06:00",
         "startOffset": 0,
         "endOffset": 0,
-        "x": 1450,
+        "x": 1030,
         "y": 140,
         "wires": [
             [
@@ -13035,7 +13084,7 @@
         "entity_location": "",
         "override_data": "none",
         "blockInputOverrides": false,
-        "x": 1230,
+        "x": 810,
         "y": 140,
         "wires": [
             [
@@ -13052,7 +13101,7 @@
         "z": "ea946133.0085b",
         "name": "run?",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "outputs": 2,
         "halt_if": "off",
         "halt_if_type": "str",
@@ -13065,7 +13114,7 @@
         "entity_location": "",
         "override_data": "none",
         "blockInputOverrides": false,
-        "x": 1050,
+        "x": 630,
         "y": 140,
         "wires": [
             [],
@@ -13170,7 +13219,7 @@
         "entity_location": "",
         "override_data": "none",
         "blockInputOverrides": false,
-        "x": 1230,
+        "x": 810,
         "y": 260,
         "wires": [
             [],
@@ -13185,7 +13234,7 @@
         "z": "ea946133.0085b",
         "name": "run?",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "outputs": 2,
         "halt_if": "off",
         "halt_if_type": "str",
@@ -13198,7 +13247,7 @@
         "entity_location": "",
         "override_data": "none",
         "blockInputOverrides": false,
-        "x": 1050,
+        "x": 630,
         "y": 320,
         "wires": [
             [],
@@ -13226,7 +13275,7 @@
         "entity_location": "",
         "override_data": "none",
         "blockInputOverrides": false,
-        "x": 1230,
+        "x": 810,
         "y": 320,
         "wires": [
             [
@@ -13248,7 +13297,7 @@
         "endTime": "06:00",
         "startOffset": 0,
         "endOffset": 0,
-        "x": 1450,
+        "x": 1030,
         "y": 320,
         "wires": [
             [
@@ -13272,7 +13321,7 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": true,
-        "x": 1860,
+        "x": 1440,
         "y": 320,
         "wires": [
             [
@@ -13288,7 +13337,7 @@
         "func": "msg.payload = \"camera=pool&trigger\";\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 2110,
+        "x": 1690,
         "y": 320,
         "wires": [
             [
@@ -13304,7 +13353,7 @@
         "func": "msg.payload = \"camera=driveway&trigger\";\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 2120,
+        "x": 1700,
         "y": 260,
         "wires": [
             [
@@ -13327,7 +13376,7 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": true,
-        "x": 1860,
+        "x": 1440,
         "y": 260,
         "wires": [
             [
@@ -13346,7 +13395,7 @@
         "endTime": "09:00",
         "startOffset": 0,
         "endOffset": 0,
-        "x": 1650,
+        "x": 1230,
         "y": 200,
         "wires": [
             [],
@@ -13367,7 +13416,7 @@
         "thu": true,
         "fri": true,
         "sat": false,
-        "x": 1440,
+        "x": 1020,
         "y": 200,
         "wires": [
             [
@@ -13397,7 +13446,7 @@
         "entity_location": "",
         "override_data": "none",
         "blockInputOverrides": false,
-        "x": 1230,
+        "x": 810,
         "y": 200,
         "wires": [
             [
@@ -13414,7 +13463,7 @@
         "z": "ea946133.0085b",
         "name": "run?",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "outputs": 2,
         "halt_if": "off",
         "halt_if_type": "str",
@@ -13427,7 +13476,7 @@
         "entity_location": "",
         "override_data": "none",
         "blockInputOverrides": false,
-        "x": 1050,
+        "x": 630,
         "y": 200,
         "wires": [
             [],
@@ -13444,7 +13493,7 @@
         "func": "msg.payload = \"camera=basement&trigger\";\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 2120,
+        "x": 1700,
         "y": 380,
         "wires": [
             [
@@ -13467,7 +13516,7 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": true,
-        "x": 1860,
+        "x": 1440,
         "y": 380,
         "wires": [
             [
@@ -13481,7 +13530,7 @@
         "z": "ea946133.0085b",
         "name": "run?",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "outputs": 2,
         "halt_if": "off",
         "halt_if_type": "str",
@@ -13494,7 +13543,7 @@
         "entity_location": "",
         "override_data": "none",
         "blockInputOverrides": false,
-        "x": 1050,
+        "x": 630,
         "y": 380,
         "wires": [
             [],
@@ -14508,8 +14557,35 @@
         "qos": "",
         "retain": "",
         "broker": "649859a4.a17818",
-        "x": 2420,
+        "x": 2000,
         "y": 240,
         "wires": []
+    },
+    {
+        "id": "590b1e5e.bd3d2",
+        "type": "subflow:2299e9e0.40f656",
+        "z": "ea946133.0085b",
+        "x": 430,
+        "y": 200,
+        "wires": [
+            [
+                "36bc5b4d.f66c04",
+                "74a6c66e.9b3788"
+            ],
+            [
+                "f60616fd.8be358",
+                "202f9fb7.5baeb"
+            ],
+            [
+                "fd2dcebe.09fce",
+                "60c909a0.99eda8"
+            ],
+            [
+                "4fb82dd3.faff04"
+            ],
+            [
+                "79eb2197.7c7f6"
+            ]
+        ]
     }
 ]
