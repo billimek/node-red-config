@@ -13869,7 +13869,7 @@
         "type": "mqtt in",
         "z": "ea946133.0085b",
         "name": "Porch Camera (frigate)",
-        "topic": "frigate/porch/+",
+        "topic": "frigate/porch/+/",
         "qos": "2",
         "datatype": "auto",
         "broker": "649859a4.a17818",
