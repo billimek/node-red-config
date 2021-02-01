@@ -780,7 +780,7 @@
         "type": "mqtt in",
         "z": "ea946133.0085b",
         "name": "Driveway Camera (frigate)",
-        "topic": "frigate/driveway/#",
+        "topic": "frigate/driveway/+",
         "qos": "2",
         "datatype": "auto",
         "broker": "649859a4.a17818",
@@ -860,9 +860,9 @@
         "propertyType": "msg",
         "rules": [
             {
-                "t": "eq",
-                "v": "ON",
-                "vt": "str"
+                "t": "gte",
+                "v": "1",
+                "vt": "num"
             }
         ],
         "checkall": "true",
