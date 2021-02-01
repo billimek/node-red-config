@@ -49,13 +49,6 @@
         "info": ""
     },
     {
-        "id": "6385a2ce.a16d0c",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "b8b74cae.ffe4",
         "type": "subflow",
         "name": "open?",
@@ -776,427 +769,6 @@
         ]
     },
     {
-        "id": "2f902d29.65f162",
-        "type": "mqtt in",
-        "z": "ea946133.0085b",
-        "name": "Front Camera (frigate)",
-        "topic": "frigate/front/+",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "649859a4.a17818",
-        "x": 140,
-        "y": 60,
-        "wires": [
-            [
-                "f981233a.919ee"
-            ]
-        ]
-    },
-    {
-        "id": "dac685a2.2c81f8",
-        "type": "mqtt in",
-        "z": "ea946133.0085b",
-        "name": "Porch Camera (frigate)",
-        "topic": "frigate/porch/+",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "649859a4.a17818",
-        "x": 140,
-        "y": 140,
-        "wires": [
-            [
-                "5f4c0a08.6046e4"
-            ]
-        ]
-    },
-    {
-        "id": "12525f60.1cb281",
-        "type": "mqtt in",
-        "z": "ea946133.0085b",
-        "name": "Driveway Camera (frigate)",
-        "topic": "frigate/driveway/+",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "649859a4.a17818",
-        "x": 150,
-        "y": 220,
-        "wires": [
-            [
-                "4a3232d5.83a38c"
-            ]
-        ]
-    },
-    {
-        "id": "6b8b5f2f.4ae78",
-        "type": "mqtt in",
-        "z": "ea946133.0085b",
-        "name": "Pool Camera (frigate)",
-        "topic": "frigate/pool/+",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "649859a4.a17818",
-        "x": 140,
-        "y": 440,
-        "wires": [
-            [
-                "7f697fd9.9e767"
-            ]
-        ]
-    },
-    {
-        "id": "5d436f22.73ef",
-        "type": "mqtt in",
-        "z": "ea946133.0085b",
-        "name": "Basement Camera (frigate)",
-        "topic": "frigate/basement/+",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "649859a4.a17818",
-        "x": 150,
-        "y": 540,
-        "wires": [
-            [
-                "6c4e92b2.bf3b7c"
-            ]
-        ]
-    },
-    {
-        "id": "f981233a.919ee",
-        "type": "switch",
-        "z": "ea946133.0085b",
-        "name": "motion",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "gte",
-                "v": "1",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 350,
-        "y": 60,
-        "wires": [
-            [
-                "118c8baa.e4f2b4"
-            ]
-        ]
-    },
-    {
-        "id": "4a3232d5.83a38c",
-        "type": "switch",
-        "z": "ea946133.0085b",
-        "name": "motion",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "gte",
-                "v": "1",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 350,
-        "y": 220,
-        "wires": [
-            [
-                "2f55ba6.ba56a46"
-            ]
-        ]
-    },
-    {
-        "id": "7f697fd9.9e767",
-        "type": "switch",
-        "z": "ea946133.0085b",
-        "name": "motion",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "gte",
-                "v": "1",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 350,
-        "y": 440,
-        "wires": [
-            [
-                "becdac9d.28d67"
-            ]
-        ]
-    },
-    {
-        "id": "6c4e92b2.bf3b7c",
-        "type": "switch",
-        "z": "ea946133.0085b",
-        "name": "motion",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "gte",
-                "v": "1",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 350,
-        "y": 540,
-        "wires": [
-            [
-                "7365e499.488e4c"
-            ]
-        ]
-    },
-    {
-        "id": "cdcecccd.15beb",
-        "type": "function",
-        "z": "ea946133.0085b",
-        "name": "trigger basement camera (BI)",
-        "func": "msg.payload = \"camera=basement&trigger\";\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1620,
-        "y": 540,
-        "wires": [
-            [
-                "3f56c50a.db089a"
-            ]
-        ]
-    },
-    {
-        "id": "3f56c50a.db089a",
-        "type": "mqtt out",
-        "z": "ea946133.0085b",
-        "name": "trigger blue iris",
-        "topic": "BlueIris/admin",
-        "qos": "",
-        "retain": "",
-        "broker": "649859a4.a17818",
-        "x": 1880,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "fecab8f7.aa5b18",
-        "type": "function",
-        "z": "ea946133.0085b",
-        "name": "trigger porch camera (BI)",
-        "func": "msg.payload = \"camera=porch&trigger\";\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1610,
-        "y": 140,
-        "wires": [
-            [
-                "3f56c50a.db089a"
-            ]
-        ]
-    },
-    {
-        "id": "feaab13e.d12ba",
-        "type": "function",
-        "z": "ea946133.0085b",
-        "name": "trigger front camera (BI)",
-        "func": "msg.payload = \"camera=front&trigger\";\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1610,
-        "y": 60,
-        "wires": [
-            [
-                "3f56c50a.db089a"
-            ]
-        ]
-    },
-    {
-        "id": "69e6676b.787a18",
-        "type": "function",
-        "z": "ea946133.0085b",
-        "name": "trigger driveway camera (BI)",
-        "func": "msg.payload = \"camera=driveway&trigger\";\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1620,
-        "y": 220,
-        "wires": [
-            [
-                "3f56c50a.db089a"
-            ]
-        ]
-    },
-    {
-        "id": "d3be975d.234b68",
-        "type": "function",
-        "z": "ea946133.0085b",
-        "name": "trigger pool camera (BI)",
-        "func": "msg.payload = \"camera=pool&trigger\";\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1610,
-        "y": 440,
-        "wires": [
-            [
-                "3f56c50a.db089a"
-            ]
-        ]
-    },
-    {
-        "id": "118c8baa.e4f2b4",
-        "type": "api-current-state",
-        "z": "ea946133.0085b",
-        "name": "run?",
-        "server": "8b52884a.b76658",
-        "version": "1",
-        "outputs": 2,
-        "halt_if": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "override_topic": false,
-        "entity_id": "input_boolean.camera_front_notify",
-        "state_type": "str",
-        "state_location": "",
-        "override_payload": "none",
-        "entity_location": "",
-        "override_data": "none",
-        "blockInputOverrides": false,
-        "x": 510,
-        "y": 60,
-        "wires": [
-            [],
-            [
-                "5c413e07.4dd6e"
-            ]
-        ]
-    },
-    {
-        "id": "f66a0af1.123158",
-        "type": "api-current-state",
-        "z": "ea946133.0085b",
-        "name": "run?",
-        "server": "8b52884a.b76658",
-        "version": "1",
-        "outputs": 2,
-        "halt_if": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "override_topic": false,
-        "entity_id": "input_boolean.camera_porch_notify",
-        "state_type": "str",
-        "state_location": "",
-        "override_payload": "none",
-        "entity_location": "",
-        "override_data": "none",
-        "blockInputOverrides": false,
-        "x": 510,
-        "y": 140,
-        "wires": [
-            [],
-            [
-                "52638bf.b8eb974",
-                "d2ec3d2d.1ff07"
-            ]
-        ]
-    },
-    {
-        "id": "2f55ba6.ba56a46",
-        "type": "api-current-state",
-        "z": "ea946133.0085b",
-        "name": "run?",
-        "server": "8b52884a.b76658",
-        "version": "1",
-        "outputs": 2,
-        "halt_if": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "override_topic": false,
-        "entity_id": "input_boolean.camera_driveway_notify",
-        "state_type": "str",
-        "state_location": "",
-        "override_payload": "none",
-        "entity_location": "",
-        "override_data": "none",
-        "blockInputOverrides": false,
-        "x": 510,
-        "y": 220,
-        "wires": [
-            [],
-            [
-                "1bf8db6a.31e655",
-                "ea672af4.1c4ec8"
-            ]
-        ]
-    },
-    {
-        "id": "becdac9d.28d67",
-        "type": "api-current-state",
-        "z": "ea946133.0085b",
-        "name": "run?",
-        "server": "8b52884a.b76658",
-        "version": "1",
-        "outputs": 2,
-        "halt_if": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "override_topic": false,
-        "entity_id": "input_boolean.camera_pool_notify",
-        "state_type": "str",
-        "state_location": "",
-        "override_payload": "none",
-        "entity_location": "",
-        "override_data": "none",
-        "blockInputOverrides": false,
-        "x": 510,
-        "y": 440,
-        "wires": [
-            [],
-            [
-                "28c9cb8c.3c71c4",
-                "a6d2afe7.30e"
-            ]
-        ]
-    },
-    {
-        "id": "7365e499.488e4c",
-        "type": "api-current-state",
-        "z": "ea946133.0085b",
-        "name": "run?",
-        "server": "8b52884a.b76658",
-        "version": "1",
-        "outputs": 2,
-        "halt_if": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "override_topic": false,
-        "entity_id": "input_boolean.camera_basement_notify",
-        "state_type": "str",
-        "state_location": "",
-        "override_payload": "none",
-        "entity_location": "",
-        "override_data": "none",
-        "blockInputOverrides": false,
-        "x": 510,
-        "y": 540,
-        "wires": [
-            [],
-            [
-                "597591f8.6f36"
-            ]
-        ]
-    },
-    {
         "id": "ca516132.aac1d",
         "type": "api-current-state",
         "z": "afb0f186.cfb0d",
@@ -1280,106 +852,6 @@
                 "73c30e71.e8d46",
                 "de5bd3a9.a8a66"
             ]
-        ]
-    },
-    {
-        "id": "52638bf.b8eb974",
-        "type": "api-current-state",
-        "z": "ea946133.0085b",
-        "name": "not home?",
-        "server": "8b52884a.b76658",
-        "version": 1,
-        "outputs": 2,
-        "halt_if": "home",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "override_topic": false,
-        "entity_id": "sensor.anyone_home",
-        "state_type": "str",
-        "state_location": "",
-        "override_payload": "none",
-        "entity_location": "",
-        "override_data": "none",
-        "blockInputOverrides": false,
-        "x": 690,
-        "y": 140,
-        "wires": [
-            [
-                "be993a9b.fa2da8"
-            ],
-            [
-                "e390b74.0363c48"
-            ]
-        ]
-    },
-    {
-        "id": "28c9cb8c.3c71c4",
-        "type": "api-current-state",
-        "z": "ea946133.0085b",
-        "name": "not home?",
-        "server": "8b52884a.b76658",
-        "version": 1,
-        "outputs": 2,
-        "halt_if": "home",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "override_topic": false,
-        "entity_id": "sensor.anyone_home",
-        "state_type": "str",
-        "state_location": "",
-        "override_payload": "none",
-        "entity_location": "",
-        "override_data": "none",
-        "blockInputOverrides": false,
-        "x": 690,
-        "y": 440,
-        "wires": [
-            [
-                "1457ac16.ec37e4"
-            ],
-            [
-                "33a05787.a803f8"
-            ]
-        ]
-    },
-    {
-        "id": "be993a9b.fa2da8",
-        "type": "time-range-switch",
-        "z": "ea946133.0085b",
-        "name": "10pm-6am",
-        "lat": "33.95092",
-        "lon": "-84.44805",
-        "startTime": "22:00",
-        "endTime": "06:00",
-        "startOffset": 0,
-        "endOffset": 0,
-        "x": 1050,
-        "y": 160,
-        "wires": [
-            [
-                "e390b74.0363c48"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "1457ac16.ec37e4",
-        "type": "time-range-switch",
-        "z": "ea946133.0085b",
-        "name": "10pm-6am",
-        "lat": "33.95092",
-        "lon": "-84.44805",
-        "startTime": "22:00",
-        "endTime": "06:00",
-        "startOffset": 0,
-        "endOffset": 0,
-        "x": 930,
-        "y": 480,
-        "wires": [
-            [
-                "33a05787.a803f8"
-            ],
-            []
         ]
     },
     {
@@ -2829,36 +2301,6 @@
         "wires": []
     },
     {
-        "id": "1bf8db6a.31e655",
-        "type": "api-current-state",
-        "z": "ea946133.0085b",
-        "name": "not home?",
-        "server": "8b52884a.b76658",
-        "version": 1,
-        "outputs": 2,
-        "halt_if": "home",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "override_topic": false,
-        "entity_id": "sensor.anyone_home",
-        "state_type": "str",
-        "state_location": "",
-        "override_payload": "none",
-        "entity_location": "",
-        "override_data": "none",
-        "blockInputOverrides": false,
-        "x": 690,
-        "y": 220,
-        "wires": [
-            [
-                "74bd3f2f.925bb"
-            ],
-            [
-                "b3032466.28e548"
-            ]
-        ]
-    },
-    {
         "id": "857f47d0.3b4578",
         "type": "server-state-changed",
         "z": "2fad043e.317c8c",
@@ -2940,50 +2382,6 @@
         "wires": [
             [],
             []
-        ]
-    },
-    {
-        "id": "40113f5b.a57a5",
-        "type": "server-state-changed",
-        "z": "ea946133.0085b",
-        "name": "basement door open?",
-        "server": "8b52884a.b76658",
-        "version": "1",
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "binary_sensor.basement_door",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 2,
-        "output_only_on_state_change": false,
-        "for": "",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "x": 140,
-        "y": 620,
-        "wires": [
-            [],
-            [
-                "7365e499.488e4c"
-            ]
         ]
     },
     {
@@ -4770,49 +4168,6 @@
         ]
     },
     {
-        "id": "74bd3f2f.925bb",
-        "type": "weekday",
-        "z": "ea946133.0085b",
-        "name": "",
-        "sun": false,
-        "mon": true,
-        "tue": true,
-        "wed": true,
-        "thu": true,
-        "fri": true,
-        "sat": false,
-        "x": 880,
-        "y": 240,
-        "wires": [
-            [
-                "b44ba6d0.e09aa8"
-            ],
-            [
-                "b3032466.28e548"
-            ]
-        ]
-    },
-    {
-        "id": "b44ba6d0.e09aa8",
-        "type": "time-range-switch",
-        "z": "ea946133.0085b",
-        "name": "6:45am-9am",
-        "lat": "33.95092",
-        "lon": "-84.44805",
-        "startTime": "06:45",
-        "endTime": "09:00",
-        "startOffset": 0,
-        "endOffset": 0,
-        "x": 1050,
-        "y": 260,
-        "wires": [
-            [],
-            [
-                "b3032466.28e548"
-            ]
-        ]
-    },
-    {
         "id": "8872c7a2.6c8f68",
         "type": "mqtt in",
         "z": "9143c7f2.16df18",
@@ -4843,84 +4198,6 @@
         "wires": [
             [
                 "ff433106.9906a"
-            ]
-        ]
-    },
-    {
-        "id": "34fb2102.da255e",
-        "type": "mqtt in",
-        "z": "ea946133.0085b",
-        "name": "Jeff's Garage",
-        "topic": "og-jeff/OUT/STATE",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "649859a4.a17818",
-        "x": 110,
-        "y": 300,
-        "wires": [
-            [
-                "38f6313e.822fce"
-            ]
-        ]
-    },
-    {
-        "id": "92d0d009.53de7",
-        "type": "mqtt in",
-        "z": "ea946133.0085b",
-        "name": "Jen'sGarage",
-        "topic": "og-jen/OUT/STATE",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "649859a4.a17818",
-        "x": 110,
-        "y": 360,
-        "wires": [
-            [
-                "38f6313e.822fce"
-            ]
-        ]
-    },
-    {
-        "id": "38f6313e.822fce",
-        "type": "rbe",
-        "z": "ea946133.0085b",
-        "name": "state change",
-        "func": "rbei",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload",
-        "x": 330,
-        "y": 300,
-        "wires": [
-            [
-                "f8a13ca5.166fd"
-            ]
-        ]
-    },
-    {
-        "id": "f8a13ca5.166fd",
-        "type": "switch",
-        "z": "ea946133.0085b",
-        "name": "open?",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "OPEN",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 510,
-        "y": 300,
-        "wires": [
-            [
-                "d5070b7d.fe84b8",
-                "f553c79e.a0e728"
             ]
         ]
     },
@@ -7039,34 +6316,6 @@
         "x": 1250,
         "y": 2380,
         "wires": []
-    },
-    {
-        "id": "d5070b7d.fe84b8",
-        "type": "api-current-state",
-        "z": "ea946133.0085b",
-        "name": "not home?",
-        "server": "8b52884a.b76658",
-        "version": 1,
-        "outputs": 2,
-        "halt_if": "home",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "override_topic": false,
-        "entity_id": "sensor.anyone_home",
-        "state_type": "str",
-        "state_location": "",
-        "override_payload": "none",
-        "entity_location": "",
-        "override_data": "none",
-        "blockInputOverrides": false,
-        "x": 1050,
-        "y": 340,
-        "wires": [
-            [],
-            [
-                "b3032466.28e548"
-            ]
-        ]
     },
     {
         "id": "da4a802.356038",
@@ -9896,269 +9145,6 @@
         ]
     },
     {
-        "id": "5f4c0a08.6046e4",
-        "type": "switch",
-        "z": "ea946133.0085b",
-        "name": "motion",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "gte",
-                "v": "1",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 350,
-        "y": 140,
-        "wires": [
-            [
-                "f66a0af1.123158"
-            ]
-        ]
-    },
-    {
-        "id": "f2e284f8.d5a0d8",
-        "type": "api-call-service",
-        "z": "2fad043e.317c8c",
-        "name": "tf basement camera",
-        "server": "8b52884a.b76658",
-        "service_domain": "image_processing",
-        "service": "scan",
-        "data": "{\"entity_id\":\"image_processing.tensorflow_basement\"}",
-        "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
-        "x": 160,
-        "y": 4300,
-        "wires": [
-            [
-                "84c522d2.4ee53"
-            ]
-        ]
-    },
-    {
-        "id": "84c522d2.4ee53",
-        "type": "api-current-state",
-        "z": "2fad043e.317c8c",
-        "name": "tf basement camera?",
-        "server": "8b52884a.b76658",
-        "outputs": 2,
-        "halt_if": "0",
-        "halt_if_type": "num",
-        "halt_if_compare": "is",
-        "override_topic": true,
-        "entity_id": "image_processing.tensorflow_basement",
-        "state_type": "num",
-        "override_payload": true,
-        "override_data": true,
-        "x": 460,
-        "y": 4300,
-        "wires": [
-            [
-                "f570dd0f.3e4d5"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "e7f22b23.c37a48",
-        "type": "api-call-service",
-        "z": "2fad043e.317c8c",
-        "name": "tf pool camera",
-        "server": "8b52884a.b76658",
-        "service_domain": "image_processing",
-        "service": "scan",
-        "data": "{\"entity_id\":\"image_processing.tensorflow_pool\"}",
-        "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
-        "x": 180,
-        "y": 4240,
-        "wires": [
-            [
-                "73c4ca22.742014"
-            ]
-        ]
-    },
-    {
-        "id": "73c4ca22.742014",
-        "type": "api-current-state",
-        "z": "2fad043e.317c8c",
-        "name": "tf pool camera?",
-        "server": "8b52884a.b76658",
-        "outputs": 2,
-        "halt_if": "0",
-        "halt_if_type": "num",
-        "halt_if_compare": "is",
-        "override_topic": true,
-        "entity_id": "image_processing.tensorflow_pool",
-        "state_type": "num",
-        "override_payload": true,
-        "override_data": true,
-        "x": 440,
-        "y": 4240,
-        "wires": [
-            [
-                "f570dd0f.3e4d5"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "2d03f773.3db4e8",
-        "type": "api-call-service",
-        "z": "2fad043e.317c8c",
-        "name": "tf driveway camera",
-        "server": "8b52884a.b76658",
-        "service_domain": "image_processing",
-        "service": "scan",
-        "data": "{\"entity_id\":\"image_processing.tensorflow_driveway\"}",
-        "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
-        "x": 170,
-        "y": 4180,
-        "wires": [
-            [
-                "5feacc02.fbd1a4"
-            ]
-        ]
-    },
-    {
-        "id": "5feacc02.fbd1a4",
-        "type": "api-current-state",
-        "z": "2fad043e.317c8c",
-        "name": "tf driveway camera?",
-        "server": "8b52884a.b76658",
-        "outputs": 2,
-        "halt_if": "0",
-        "halt_if_type": "num",
-        "halt_if_compare": "is",
-        "override_topic": true,
-        "entity_id": "image_processing.tensorflow_driveway",
-        "state_type": "num",
-        "override_payload": true,
-        "override_data": true,
-        "x": 460,
-        "y": 4180,
-        "wires": [
-            [
-                "f570dd0f.3e4d5"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "f570dd0f.3e4d5",
-        "type": "api-call-service",
-        "z": "2fad043e.317c8c",
-        "name": "Notify Slack",
-        "server": "8b52884a.b76658",
-        "service_domain": "notify",
-        "service": "slack",
-        "data": "{\"message\":\"Driveway Camera Motion Alert\",\"title\":\"driveway_latest.jpg\",\"data\":{\"file\":{\"path\":\"/config/www/tensorflow/snapshot/driveway_latest.jpg\"}}}",
-        "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
-        "x": 750,
-        "y": 4300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "749001bc.9ffb8",
-        "type": "api-call-service",
-        "z": "2fad043e.317c8c",
-        "name": "tf porch camera",
-        "server": "8b52884a.b76658",
-        "service_domain": "image_processing",
-        "service": "scan",
-        "data": "{\"entity_id\":\"image_processing.tensorflow_porch\"}",
-        "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
-        "x": 140,
-        "y": 4120,
-        "wires": [
-            [
-                "1219d128.e0811f"
-            ]
-        ]
-    },
-    {
-        "id": "1219d128.e0811f",
-        "type": "api-current-state",
-        "z": "2fad043e.317c8c",
-        "name": "tf porch camera?",
-        "server": "8b52884a.b76658",
-        "outputs": 2,
-        "halt_if": "0",
-        "halt_if_type": "num",
-        "halt_if_compare": "is",
-        "override_topic": true,
-        "entity_id": "image_processing.tensorflow_porch",
-        "state_type": "num",
-        "override_payload": true,
-        "override_data": true,
-        "x": 450,
-        "y": 4120,
-        "wires": [
-            [
-                "f570dd0f.3e4d5"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "b751a7a3.f93748",
-        "type": "api-call-service",
-        "z": "2fad043e.317c8c",
-        "name": "tf front camera",
-        "server": "8b52884a.b76658",
-        "service_domain": "image_processing",
-        "service": "scan",
-        "data": "{\"entity_id\":\"image_processing.tensorflow_front\"}",
-        "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
-        "x": 140,
-        "y": 4060,
-        "wires": [
-            [
-                "e9f1da99.8a0b48"
-            ]
-        ]
-    },
-    {
-        "id": "e9f1da99.8a0b48",
-        "type": "api-current-state",
-        "z": "2fad043e.317c8c",
-        "name": "tf front camera?",
-        "server": "8b52884a.b76658",
-        "outputs": 2,
-        "halt_if": "0",
-        "halt_if_type": "num",
-        "halt_if_compare": "is",
-        "override_topic": true,
-        "entity_id": "image_processing.tensorflow_front",
-        "state_type": "num",
-        "override_payload": true,
-        "override_data": true,
-        "x": 440,
-        "y": 4060,
-        "wires": [
-            [
-                "f570dd0f.3e4d5"
-            ],
-            []
-        ]
-    },
-    {
         "id": "80ee1fdc.1e802",
         "type": "function",
         "z": "2fad043e.317c8c",
@@ -10185,40 +9171,6 @@
         "x": 440,
         "y": 1400,
         "wires": []
-    },
-    {
-        "id": "7852b6b2.a59308",
-        "type": "function",
-        "z": "2fad043e.317c8c",
-        "name": "format slack msg",
-        "func": "var baseUrl = \"https://frigate.eviljungle.com\"\nvar topic = msg.topic\nvar topicArray = topic.split(\"/\");\nvar camera = topicArray[1];\nvar object = topicArray[2];\nvar url = baseUrl + \"/\" + camera + \"/\" + object + \"/best.jpg\"\nvar url_title = camera + \"/\" + object;\nvar message = object + \" detected (\" + camera + \")\";\n\nmsg.payload = {\n    \"data\": {\n        message,\n        data: {\n            attachments: [\n                {\n                    title: url_title,\n                    image_url: url\n                },\n                ]\n        }\n    }\n}\nreturn [ msg ];\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 170,
-        "y": 4420,
-        "wires": [
-            [
-                "aa235900.81db18"
-            ]
-        ]
-    },
-    {
-        "id": "aa235900.81db18",
-        "type": "api-call-service",
-        "z": "2fad043e.317c8c",
-        "name": "Notify Slack",
-        "server": "8b52884a.b76658",
-        "service_domain": "notify",
-        "service": "slack",
-        "data": "",
-        "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
-        "x": 450,
-        "y": 4420,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "bca9942.41f0668",
@@ -13526,74 +12478,6 @@
         ]
     },
     {
-        "id": "a6d2afe7.30e",
-        "type": "subflow:29f6dc7c.662814",
-        "z": "ea946133.0085b",
-        "d": true,
-        "name": "",
-        "env": [],
-        "x": 670,
-        "y": 400,
-        "wires": [
-            [
-                "1457ac16.ec37e4"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "f553c79e.a0e728",
-        "type": "subflow:29f6dc7c.662814",
-        "z": "ea946133.0085b",
-        "d": true,
-        "name": "",
-        "env": [],
-        "x": 1030,
-        "y": 400,
-        "wires": [
-            [],
-            [
-                "b3032466.28e548"
-            ]
-        ]
-    },
-    {
-        "id": "d2ec3d2d.1ff07",
-        "type": "subflow:29f6dc7c.662814",
-        "z": "ea946133.0085b",
-        "d": true,
-        "name": "",
-        "env": [],
-        "x": 670,
-        "y": 100,
-        "wires": [
-            [
-                "be993a9b.fa2da8"
-            ],
-            [
-                "e390b74.0363c48"
-            ]
-        ]
-    },
-    {
-        "id": "ea672af4.1c4ec8",
-        "type": "subflow:29f6dc7c.662814",
-        "z": "ea946133.0085b",
-        "d": true,
-        "name": "",
-        "env": [],
-        "x": 670,
-        "y": 280,
-        "wires": [
-            [
-                "74bd3f2f.925bb"
-            ],
-            [
-                "b3032466.28e548"
-            ]
-        ]
-    },
-    {
         "id": "3ff0a0c.e3cf96",
         "type": "subflow:29f6dc7c.662814",
         "z": "4aedf9e8.044e08",
@@ -13835,178 +12719,10 @@
         ]
     },
     {
-        "id": "5c413e07.4dd6e",
-        "type": "delay",
-        "z": "ea946133.0085b",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "2",
-        "timeoutUnits": "minutes",
-        "rate": "1",
-        "nbRateUnits": "10",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "x": 1360,
-        "y": 60,
-        "wires": [
-            [
-                "feaab13e.d12ba"
-            ]
-        ]
-    },
-    {
-        "id": "597591f8.6f36",
-        "type": "delay",
-        "z": "ea946133.0085b",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "2",
-        "timeoutUnits": "minutes",
-        "rate": "1",
-        "nbRateUnits": "10",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "x": 1360,
-        "y": 540,
-        "wires": [
-            [
-                "cdcecccd.15beb"
-            ]
-        ]
-    },
-    {
-        "id": "33a05787.a803f8",
-        "type": "delay",
-        "z": "ea946133.0085b",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "2",
-        "timeoutUnits": "minutes",
-        "rate": "1",
-        "nbRateUnits": "10",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "x": 1360,
-        "y": 440,
-        "wires": [
-            [
-                "d3be975d.234b68"
-            ]
-        ]
-    },
-    {
-        "id": "e390b74.0363c48",
-        "type": "delay",
-        "z": "ea946133.0085b",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "2",
-        "timeoutUnits": "minutes",
-        "rate": "1",
-        "nbRateUnits": "10",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "x": 1360,
-        "y": 140,
-        "wires": [
-            [
-                "fecab8f7.aa5b18"
-            ]
-        ]
-    },
-    {
-        "id": "b3032466.28e548",
-        "type": "delay",
-        "z": "ea946133.0085b",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "2",
-        "timeoutUnits": "minutes",
-        "rate": "1",
-        "nbRateUnits": "10",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "x": 1360,
-        "y": 220,
-        "wires": [
-            [
-                "69e6676b.787a18"
-            ]
-        ]
-    },
-    {
-        "id": "e48a29f2.c7e91",
-        "type": "mqtt in",
-        "z": "6385a2ce.a16d0c",
-        "name": "",
-        "topic": "frigate/events",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "649859a4.a17818",
-        "x": 170,
-        "y": 180,
-        "wires": [
-            [
-                "9df79166.6c443"
-            ]
-        ]
-    },
-    {
-        "id": "9df79166.6c443",
-        "type": "json",
-        "z": "6385a2ce.a16d0c",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 330,
-        "y": 180,
-        "wires": [
-            [
-                "b4265be9.a1b578"
-            ]
-        ],
-        "info": "Convert JSON Strings to Objects"
-    },
-    {
-        "id": "b4265be9.a1b578",
-        "type": "rbe",
-        "z": "6385a2ce.a16d0c",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload.after.id",
-        "x": 470,
-        "y": 180,
-        "wires": [
-            [
-                "7fcd755f.3eb3ac"
-            ]
-        ],
-        "info": "Block any Messages that have  duplicate After ID.  Cuts down on multiple mqtt messages for the same notification"
-    },
-    {
-        "id": "75e669ab.c822f",
+        "id": "8858eb58.4a5e68",
         "type": "switch",
-        "z": "6385a2ce.a16d0c",
-        "name": "1.Front -- 2.Back cameras",
+        "z": "ea946133.0085b",
+        "name": "1.front -- 2.porch -- 3. driveway -- 4. pool -- 5. basement",
         "property": "payload.after.camera",
         "propertyType": "msg",
         "rules": [
@@ -14017,348 +12733,1760 @@
             },
             {
                 "t": "eq",
-                "v": "back",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 670,
-        "y": 300,
-        "wires": [
-            [
-                "89c041e4.da8ab"
-            ],
-            [
-                "d5b8be68.aad25"
-            ]
-        ],
-        "info": "Change **front** and **back** Switch names to be the names of your cameras defined in the Frigate Config"
-    },
-    {
-        "id": "51be24a6.f68c9c",
-        "type": "mqtt in",
-        "z": "6385a2ce.a16d0c",
-        "name": "",
-        "topic": "frigate/events",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "649859a4.a17818",
-        "x": 170,
-        "y": 300,
-        "wires": [
-            [
-                "ecebcde4.262678"
-            ]
-        ]
-    },
-    {
-        "id": "ecebcde4.262678",
-        "type": "json",
-        "z": "6385a2ce.a16d0c",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 330,
-        "y": 300,
-        "wires": [
-            [
-                "4c45fa7e.21cc64"
-            ]
-        ],
-        "info": "Convert JSON Strings to Objects"
-    },
-    {
-        "id": "4c45fa7e.21cc64",
-        "type": "rbe",
-        "z": "6385a2ce.a16d0c",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload.after.id",
-        "x": 470,
-        "y": 300,
-        "wires": [
-            [
-                "75e669ab.c822f"
-            ]
-        ],
-        "info": "Block any Messages that have  duplicate After ID.  Cuts down on multiple mqtt messages for the same notification"
-    },
-    {
-        "id": "a3ed0f30.68f8e",
-        "type": "mqtt in",
-        "z": "6385a2ce.a16d0c",
-        "name": "",
-        "topic": "frigate/events",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "649859a4.a17818",
-        "x": 170,
-        "y": 420,
-        "wires": [
-            [
-                "e7f9181a.ea88f8"
-            ]
-        ]
-    },
-    {
-        "id": "e7f9181a.ea88f8",
-        "type": "json",
-        "z": "6385a2ce.a16d0c",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 330,
-        "y": 420,
-        "wires": [
-            [
-                "bdc5529d.c825d"
-            ]
-        ],
-        "info": "Convert JSON Strings to Objects"
-    },
-    {
-        "id": "bdc5529d.c825d",
-        "type": "rbe",
-        "z": "6385a2ce.a16d0c",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload.after.id",
-        "x": 470,
-        "y": 420,
-        "wires": [
-            [
-                "dee8ee79.d33d4"
-            ]
-        ],
-        "info": "Block any Messages that have  duplicate After ID.  Cuts down on multiple mqtt messages for the same notification"
-    },
-    {
-        "id": "dee8ee79.d33d4",
-        "type": "switch",
-        "z": "6385a2ce.a16d0c",
-        "name": "1.Person -- 2.Cat - Labels",
-        "property": "payload.after.label",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "person",
+                "v": "porch",
                 "vt": "str"
             },
             {
                 "t": "eq",
-                "v": "cat",
+                "v": "driveway",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "pool",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "basement",
                 "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 2,
-        "x": 650,
-        "y": 420,
+        "outputs": 5,
+        "x": 710,
+        "y": 180,
         "wires": [
             [
-                "68c5263c.a09718"
+                "36bc5b4d.f66c04",
+                "74a6c66e.9b3788"
             ],
             [
-                "5ca07be7.4d4914"
+                "f60616fd.8be358",
+                "202f9fb7.5baeb"
+            ],
+            [
+                "fd2dcebe.09fce",
+                "60c909a0.99eda8"
+            ],
+            [
+                "4fb82dd3.faff04"
+            ],
+            [
+                "79eb2197.7c7f6"
             ]
         ],
         "info": "Change **front** and **back** Switch names to be the names of your cameras defined in the Frigate Config"
     },
     {
-        "id": "5e4df689.517bb",
-        "type": "comment",
-        "z": "6385a2ce.a16d0c",
-        "name": "Notify Phone if Frigate Detects Something",
-        "info": "Flow to notify phone if Frigate detects something",
-        "x": 260,
-        "y": 120,
-        "wires": []
+        "id": "1d657054.6f0ae",
+        "type": "mqtt in",
+        "z": "ea946133.0085b",
+        "name": "",
+        "topic": "frigate/events",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "649859a4.a17818",
+        "x": 110,
+        "y": 180,
+        "wires": [
+            [
+                "2357bb6d.b17e24"
+            ]
+        ]
     },
     {
-        "id": "57e99f0.2a2dbe",
+        "id": "2357bb6d.b17e24",
+        "type": "json",
+        "z": "ea946133.0085b",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 270,
+        "y": 180,
+        "wires": [
+            [
+                "2e507a21.970b96"
+            ]
+        ],
+        "info": "Convert JSON Strings to Objects"
+    },
+    {
+        "id": "2e507a21.970b96",
+        "type": "rbe",
+        "z": "ea946133.0085b",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload.after.id",
+        "x": 410,
+        "y": 180,
+        "wires": [
+            [
+                "8858eb58.4a5e68"
+            ]
+        ],
+        "info": "Block any Messages that have  duplicate After ID.  Cuts down on multiple mqtt messages for the same notification"
+    },
+    {
+        "id": "be7afd67.3bfa4",
         "type": "comment",
-        "z": "6385a2ce.a16d0c",
+        "z": "ea946133.0085b",
         "name": "Automation Based on Frigate Camera Name",
         "info": "Flow to action something based on the camera name that triggered detction",
-        "x": 270,
-        "y": 260,
+        "x": 210,
+        "y": 140,
         "wires": []
     },
     {
-        "id": "1c24dc24.431ca4",
-        "type": "comment",
-        "z": "6385a2ce.a16d0c",
-        "name": "Automation Based on Frigate Label Name",
-        "info": "Flow to turn on light if person detected or just notify phone if Frigate detects a cat",
-        "x": 260,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "7111e437.ec6adc",
-        "type": "mqtt in",
-        "z": "6385a2ce.a16d0c",
+        "id": "36bc5b4d.f66c04",
+        "type": "debug",
+        "z": "ea946133.0085b",
         "name": "",
-        "topic": "frigate/study/person",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "649859a4.a17818",
-        "x": 190,
-        "y": 580,
-        "wires": [
-            [
-                "e608767f.ba8178"
-            ]
-        ]
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 600,
+        "wires": []
     },
     {
-        "id": "4e0afa20.37f074",
-        "type": "switch",
-        "z": "6385a2ce.a16d0c",
-        "name": "1.person > 0 -- 2. person=0",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "gt",
-                "v": "0",
-                "vt": "num"
-            },
-            {
-                "t": "lte",
-                "v": "0",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 640,
-        "y": 580,
+        "id": "f60616fd.8be358",
+        "type": "debug",
+        "z": "ea946133.0085b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "fd2dcebe.09fce",
+        "type": "debug",
+        "z": "ea946133.0085b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "807d53eb.e265b",
+        "type": "function",
+        "z": "ea946133.0085b",
+        "name": "trigger front camera (BI)",
+        "func": "msg.payload = \"camera=front&trigger\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 2110,
+        "y": 80,
         "wires": [
-            [],
             []
         ]
     },
     {
-        "id": "e608767f.ba8178",
-        "type": "function",
-        "z": "6385a2ce.a16d0c",
-        "name": "To Number",
-        "func": "msg.payload = Number(msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 410,
-        "y": 580,
+        "id": "74a6c66e.9b3788",
+        "type": "api-current-state",
+        "z": "ea946133.0085b",
+        "name": "run?",
+        "server": "8b52884a.b76658",
+        "version": "1",
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "input_boolean.camera_front_notify",
+        "state_type": "str",
+        "state_location": "",
+        "override_payload": "none",
+        "entity_location": "",
+        "override_data": "none",
+        "blockInputOverrides": false,
+        "x": 1050,
+        "y": 80,
+        "wires": [
+            [],
+            [
+                "8ae554fc.f290b8"
+            ]
+        ]
+    },
+    {
+        "id": "8ae554fc.f290b8",
+        "type": "delay",
+        "z": "ea946133.0085b",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "2",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 1860,
+        "y": 80,
         "wires": [
             [
-                "4e0afa20.37f074"
+                "807d53eb.e265b"
             ]
+        ]
+    },
+    {
+        "id": "551b9747.0c2428",
+        "type": "function",
+        "z": "ea946133.0085b",
+        "name": "trigger porch camera (BI)",
+        "func": "msg.payload = \"camera=porch&trigger\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 2110,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8faf5cc1.5c41a",
+        "type": "delay",
+        "z": "ea946133.0085b",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "2",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 1860,
+        "y": 140,
+        "wires": [
+            [
+                "551b9747.0c2428"
+            ]
+        ]
+    },
+    {
+        "id": "3c2395cd.f242ca",
+        "type": "time-range-switch",
+        "z": "ea946133.0085b",
+        "name": "10pm-6am",
+        "lat": "33.95092",
+        "lon": "-84.44805",
+        "startTime": "22:00",
+        "endTime": "06:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 1450,
+        "y": 140,
+        "wires": [
+            [
+                "8faf5cc1.5c41a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c73198e9.b2deb8",
+        "type": "api-current-state",
+        "z": "ea946133.0085b",
+        "name": "not home?",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "outputs": 2,
+        "halt_if": "home",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "sensor.anyone_home",
+        "state_type": "str",
+        "state_location": "",
+        "override_payload": "none",
+        "entity_location": "",
+        "override_data": "none",
+        "blockInputOverrides": false,
+        "x": 1230,
+        "y": 140,
+        "wires": [
+            [
+                "3c2395cd.f242ca"
+            ],
+            [
+                "8faf5cc1.5c41a"
+            ]
+        ]
+    },
+    {
+        "id": "202f9fb7.5baeb",
+        "type": "api-current-state",
+        "z": "ea946133.0085b",
+        "name": "run?",
+        "server": "8b52884a.b76658",
+        "version": "1",
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "input_boolean.camera_porch_notify",
+        "state_type": "str",
+        "state_location": "",
+        "override_payload": "none",
+        "entity_location": "",
+        "override_data": "none",
+        "blockInputOverrides": false,
+        "x": 1050,
+        "y": 140,
+        "wires": [
+            [],
+            [
+                "c73198e9.b2deb8"
+            ]
+        ]
+    },
+    {
+        "id": "43491265.2b4ecc",
+        "type": "mqtt in",
+        "z": "ea946133.0085b",
+        "name": "Jeff's Garage",
+        "topic": "og-jeff/OUT/STATE",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "649859a4.a17818",
+        "x": 110,
+        "y": 280,
+        "wires": [
+            [
+                "37fbfc34.9d57b4"
+            ]
+        ]
+    },
+    {
+        "id": "6d58509e.01ccb",
+        "type": "mqtt in",
+        "z": "ea946133.0085b",
+        "name": "Jen'sGarage",
+        "topic": "og-jen/OUT/STATE",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "649859a4.a17818",
+        "x": 110,
+        "y": 340,
+        "wires": [
+            [
+                "37fbfc34.9d57b4"
+            ]
+        ]
+    },
+    {
+        "id": "37fbfc34.9d57b4",
+        "type": "rbe",
+        "z": "ea946133.0085b",
+        "name": "state change",
+        "func": "rbei",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 290,
+        "y": 280,
+        "wires": [
+            [
+                "9eba3988.94b6b8"
+            ]
+        ]
+    },
+    {
+        "id": "9eba3988.94b6b8",
+        "type": "switch",
+        "z": "ea946133.0085b",
+        "name": "open?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "OPEN",
+                "vt": "str"
+            }
         ],
-        "info": "Convert msg.payload String to Number"
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 450,
+        "y": 280,
+        "wires": [
+            [
+                "ee4b488e.276818"
+            ]
+        ]
     },
     {
-        "id": "b3ddc950.0dde6",
-        "type": "comment",
-        "z": "6385a2ce.a16d0c",
-        "name": "Set an input boolean based on Label Count",
-        "info": "Flow to turn on light if person detected or just notify phone if Frigate detects a cat",
-        "x": 260,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "7fcd755f.3eb3ac",
-        "type": "debug",
-        "z": "6385a2ce.a16d0c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 630,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "68c5263c.a09718",
-        "type": "debug",
-        "z": "6385a2ce.a16d0c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 870,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "5ca07be7.4d4914",
-        "type": "debug",
-        "z": "6385a2ce.a16d0c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 870,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "89c041e4.da8ab",
-        "type": "debug",
-        "z": "6385a2ce.a16d0c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 910,
+        "id": "ee4b488e.276818",
+        "type": "api-current-state",
+        "z": "ea946133.0085b",
+        "name": "not home?",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "outputs": 2,
+        "halt_if": "home",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "sensor.anyone_home",
+        "state_type": "str",
+        "state_location": "",
+        "override_payload": "none",
+        "entity_location": "",
+        "override_data": "none",
+        "blockInputOverrides": false,
+        "x": 1230,
         "y": 260,
+        "wires": [
+            [],
+            [
+                "f7432cb0.84a5e"
+            ]
+        ]
+    },
+    {
+        "id": "4fb82dd3.faff04",
+        "type": "api-current-state",
+        "z": "ea946133.0085b",
+        "name": "run?",
+        "server": "8b52884a.b76658",
+        "version": "1",
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "input_boolean.camera_pool_notify",
+        "state_type": "str",
+        "state_location": "",
+        "override_payload": "none",
+        "entity_location": "",
+        "override_data": "none",
+        "blockInputOverrides": false,
+        "x": 1050,
+        "y": 320,
+        "wires": [
+            [],
+            [
+                "6a9b4076.f0afc"
+            ]
+        ]
+    },
+    {
+        "id": "6a9b4076.f0afc",
+        "type": "api-current-state",
+        "z": "ea946133.0085b",
+        "name": "not home?",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "outputs": 2,
+        "halt_if": "home",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "sensor.anyone_home",
+        "state_type": "str",
+        "state_location": "",
+        "override_payload": "none",
+        "entity_location": "",
+        "override_data": "none",
+        "blockInputOverrides": false,
+        "x": 1230,
+        "y": 320,
+        "wires": [
+            [
+                "7a5f22bf.7e5bfc"
+            ],
+            [
+                "eaf45bf4.756e28"
+            ]
+        ]
+    },
+    {
+        "id": "7a5f22bf.7e5bfc",
+        "type": "time-range-switch",
+        "z": "ea946133.0085b",
+        "name": "10pm-6am",
+        "lat": "33.95092",
+        "lon": "-84.44805",
+        "startTime": "22:00",
+        "endTime": "06:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 1450,
+        "y": 320,
+        "wires": [
+            [
+                "eaf45bf4.756e28"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "eaf45bf4.756e28",
+        "type": "delay",
+        "z": "ea946133.0085b",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "2",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 1860,
+        "y": 320,
+        "wires": [
+            [
+                "62d09fe5.948ce"
+            ]
+        ]
+    },
+    {
+        "id": "62d09fe5.948ce",
+        "type": "function",
+        "z": "ea946133.0085b",
+        "name": "trigger pool camera (BI)",
+        "func": "msg.payload = \"camera=pool&trigger\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 2110,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6ef57559.1be93c",
+        "type": "function",
+        "z": "ea946133.0085b",
+        "name": "trigger driveway camera (BI)",
+        "func": "msg.payload = \"camera=driveway&trigger\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 2120,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f7432cb0.84a5e",
+        "type": "delay",
+        "z": "ea946133.0085b",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "2",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 1860,
+        "y": 260,
+        "wires": [
+            [
+                "6ef57559.1be93c"
+            ]
+        ]
+    },
+    {
+        "id": "fb9a68c4.5d6128",
+        "type": "time-range-switch",
+        "z": "ea946133.0085b",
+        "name": "6:45am-9am",
+        "lat": "33.95092",
+        "lon": "-84.44805",
+        "startTime": "06:45",
+        "endTime": "09:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 1650,
+        "y": 200,
+        "wires": [
+            [],
+            [
+                "f7432cb0.84a5e"
+            ]
+        ]
+    },
+    {
+        "id": "ff124fe7.97093",
+        "type": "weekday",
+        "z": "ea946133.0085b",
+        "name": "",
+        "sun": false,
+        "mon": true,
+        "tue": true,
+        "wed": true,
+        "thu": true,
+        "fri": true,
+        "sat": false,
+        "x": 1440,
+        "y": 200,
+        "wires": [
+            [
+                "fb9a68c4.5d6128"
+            ],
+            [
+                "f7432cb0.84a5e"
+            ]
+        ]
+    },
+    {
+        "id": "50264aaa.0cb994",
+        "type": "api-current-state",
+        "z": "ea946133.0085b",
+        "name": "not home?",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "outputs": 2,
+        "halt_if": "home",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "sensor.anyone_home",
+        "state_type": "str",
+        "state_location": "",
+        "override_payload": "none",
+        "entity_location": "",
+        "override_data": "none",
+        "blockInputOverrides": false,
+        "x": 1230,
+        "y": 200,
+        "wires": [
+            [
+                "ff124fe7.97093"
+            ],
+            [
+                "f7432cb0.84a5e"
+            ]
+        ]
+    },
+    {
+        "id": "60c909a0.99eda8",
+        "type": "api-current-state",
+        "z": "ea946133.0085b",
+        "name": "run?",
+        "server": "8b52884a.b76658",
+        "version": "1",
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "input_boolean.camera_driveway_notify",
+        "state_type": "str",
+        "state_location": "",
+        "override_payload": "none",
+        "entity_location": "",
+        "override_data": "none",
+        "blockInputOverrides": false,
+        "x": 1050,
+        "y": 200,
+        "wires": [
+            [],
+            [
+                "50264aaa.0cb994"
+            ]
+        ]
+    },
+    {
+        "id": "fd5c63f5.50f9a",
+        "type": "function",
+        "z": "ea946133.0085b",
+        "name": "trigger basement camera (BI)",
+        "func": "msg.payload = \"camera=basement&trigger\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 2120,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4fcc2e7f.8b12f",
+        "type": "delay",
+        "z": "ea946133.0085b",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "2",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 1860,
+        "y": 380,
+        "wires": [
+            [
+                "fd5c63f5.50f9a"
+            ]
+        ]
+    },
+    {
+        "id": "79eb2197.7c7f6",
+        "type": "api-current-state",
+        "z": "ea946133.0085b",
+        "name": "run?",
+        "server": "8b52884a.b76658",
+        "version": "1",
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "input_boolean.camera_basement_notify",
+        "state_type": "str",
+        "state_location": "",
+        "override_payload": "none",
+        "entity_location": "",
+        "override_data": "none",
+        "blockInputOverrides": false,
+        "x": 1050,
+        "y": 380,
+        "wires": [
+            [],
+            [
+                "4fcc2e7f.8b12f"
+            ]
+        ]
+    },
+    {
+        "id": "258059a1.6f22a6",
+        "type": "server-state-changed",
+        "z": "ea946133.0085b",
+        "name": "basement door open?",
+        "server": "8b52884a.b76658",
+        "version": "1",
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.basement_door",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": false,
+        "for": "",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "x": 140,
+        "y": 400,
+        "wires": [
+            [],
+            [
+                "79eb2197.7c7f6"
+            ]
+        ]
+    },
+    {
+        "id": "a534a995.cd0548",
+        "type": "mqtt in",
+        "z": "2fad043e.317c8c",
+        "name": "Front Camera (frigate)",
+        "topic": "frigate/front/+",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "649859a4.a17818",
+        "x": 160,
+        "y": 4040,
+        "wires": [
+            [
+                "dd0e1842.d27588"
+            ]
+        ]
+    },
+    {
+        "id": "f68d0662.c23318",
+        "type": "mqtt in",
+        "z": "2fad043e.317c8c",
+        "name": "Porch Camera (frigate)",
+        "topic": "frigate/porch/+",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "649859a4.a17818",
+        "x": 160,
+        "y": 4120,
+        "wires": [
+            [
+                "a27b2c33.8df7c"
+            ]
+        ]
+    },
+    {
+        "id": "9c945f9e.bf1eb",
+        "type": "mqtt in",
+        "z": "2fad043e.317c8c",
+        "name": "Driveway Camera (frigate)",
+        "topic": "frigate/driveway/+",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "649859a4.a17818",
+        "x": 170,
+        "y": 4200,
+        "wires": [
+            [
+                "f9e02c55.2efc6"
+            ]
+        ]
+    },
+    {
+        "id": "db2f2b62.916038",
+        "type": "mqtt in",
+        "z": "2fad043e.317c8c",
+        "name": "Pool Camera (frigate)",
+        "topic": "frigate/pool/+",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "649859a4.a17818",
+        "x": 160,
+        "y": 4420,
+        "wires": [
+            [
+                "dddf1bf2.849c38"
+            ]
+        ]
+    },
+    {
+        "id": "e7a33d1.ba5c6c",
+        "type": "mqtt in",
+        "z": "2fad043e.317c8c",
+        "name": "Basement Camera (frigate)",
+        "topic": "frigate/basement/+",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "649859a4.a17818",
+        "x": 170,
+        "y": 4520,
+        "wires": [
+            [
+                "5a6bb6fd.4ebb28"
+            ]
+        ]
+    },
+    {
+        "id": "dd0e1842.d27588",
+        "type": "switch",
+        "z": "2fad043e.317c8c",
+        "name": "motion",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 370,
+        "y": 4040,
+        "wires": [
+            [
+                "cb09b24e.6f2c8"
+            ]
+        ]
+    },
+    {
+        "id": "f9e02c55.2efc6",
+        "type": "switch",
+        "z": "2fad043e.317c8c",
+        "name": "motion",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 370,
+        "y": 4200,
+        "wires": [
+            [
+                "1d5197f6.b7f2e8"
+            ]
+        ]
+    },
+    {
+        "id": "dddf1bf2.849c38",
+        "type": "switch",
+        "z": "2fad043e.317c8c",
+        "name": "motion",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 370,
+        "y": 4420,
+        "wires": [
+            [
+                "61946aa1.8c8ea4"
+            ]
+        ]
+    },
+    {
+        "id": "5a6bb6fd.4ebb28",
+        "type": "switch",
+        "z": "2fad043e.317c8c",
+        "name": "motion",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 370,
+        "y": 4520,
+        "wires": [
+            [
+                "51ac765b.81be68"
+            ]
+        ]
+    },
+    {
+        "id": "a273464b.ecddc8",
+        "type": "function",
+        "z": "2fad043e.317c8c",
+        "name": "trigger basement camera (BI)",
+        "func": "msg.payload = \"camera=basement&trigger\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1640,
+        "y": 4520,
+        "wires": [
+            [
+                "57947b5f.c25b14"
+            ]
+        ]
+    },
+    {
+        "id": "57947b5f.c25b14",
+        "type": "mqtt out",
+        "z": "2fad043e.317c8c",
+        "name": "trigger blue iris",
+        "topic": "BlueIris/admin",
+        "qos": "",
+        "retain": "",
+        "broker": "649859a4.a17818",
+        "x": 1900,
+        "y": 4200,
         "wires": []
     },
     {
-        "id": "d5b8be68.aad25",
-        "type": "debug",
-        "z": "6385a2ce.a16d0c",
+        "id": "41d3ab69.280584",
+        "type": "function",
+        "z": "2fad043e.317c8c",
+        "name": "trigger porch camera (BI)",
+        "func": "msg.payload = \"camera=porch&trigger\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1630,
+        "y": 4120,
+        "wires": [
+            [
+                "57947b5f.c25b14"
+            ]
+        ]
+    },
+    {
+        "id": "14b07406.daad8c",
+        "type": "function",
+        "z": "2fad043e.317c8c",
+        "name": "trigger front camera (BI)",
+        "func": "msg.payload = \"camera=front&trigger\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1630,
+        "y": 4040,
+        "wires": [
+            [
+                "57947b5f.c25b14"
+            ]
+        ]
+    },
+    {
+        "id": "1e440e97.31b281",
+        "type": "function",
+        "z": "2fad043e.317c8c",
+        "name": "trigger driveway camera (BI)",
+        "func": "msg.payload = \"camera=driveway&trigger\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1640,
+        "y": 4200,
+        "wires": [
+            [
+                "57947b5f.c25b14"
+            ]
+        ]
+    },
+    {
+        "id": "f250d1f1.570b6",
+        "type": "function",
+        "z": "2fad043e.317c8c",
+        "name": "trigger pool camera (BI)",
+        "func": "msg.payload = \"camera=pool&trigger\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1630,
+        "y": 4420,
+        "wires": [
+            [
+                "57947b5f.c25b14"
+            ]
+        ]
+    },
+    {
+        "id": "cb09b24e.6f2c8",
+        "type": "api-current-state",
+        "z": "2fad043e.317c8c",
+        "name": "run?",
+        "server": "8b52884a.b76658",
+        "version": "1",
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "input_boolean.camera_front_notify",
+        "state_type": "str",
+        "state_location": "",
+        "override_payload": "none",
+        "entity_location": "",
+        "override_data": "none",
+        "blockInputOverrides": false,
+        "x": 530,
+        "y": 4040,
+        "wires": [
+            [],
+            [
+                "9cfa1512.6e86b8"
+            ]
+        ]
+    },
+    {
+        "id": "2cb2f42c.aa631c",
+        "type": "api-current-state",
+        "z": "2fad043e.317c8c",
+        "name": "run?",
+        "server": "8b52884a.b76658",
+        "version": "1",
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "input_boolean.camera_porch_notify",
+        "state_type": "str",
+        "state_location": "",
+        "override_payload": "none",
+        "entity_location": "",
+        "override_data": "none",
+        "blockInputOverrides": false,
+        "x": 530,
+        "y": 4120,
+        "wires": [
+            [],
+            [
+                "188e1252.539f2e",
+                "3ed83b45.7c19b4"
+            ]
+        ]
+    },
+    {
+        "id": "1d5197f6.b7f2e8",
+        "type": "api-current-state",
+        "z": "2fad043e.317c8c",
+        "name": "run?",
+        "server": "8b52884a.b76658",
+        "version": "1",
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "input_boolean.camera_driveway_notify",
+        "state_type": "str",
+        "state_location": "",
+        "override_payload": "none",
+        "entity_location": "",
+        "override_data": "none",
+        "blockInputOverrides": false,
+        "x": 530,
+        "y": 4200,
+        "wires": [
+            [],
+            [
+                "9a2c13f8.a2213",
+                "2b27e4cd.820e9c"
+            ]
+        ]
+    },
+    {
+        "id": "61946aa1.8c8ea4",
+        "type": "api-current-state",
+        "z": "2fad043e.317c8c",
+        "name": "run?",
+        "server": "8b52884a.b76658",
+        "version": "1",
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "input_boolean.camera_pool_notify",
+        "state_type": "str",
+        "state_location": "",
+        "override_payload": "none",
+        "entity_location": "",
+        "override_data": "none",
+        "blockInputOverrides": false,
+        "x": 530,
+        "y": 4420,
+        "wires": [
+            [],
+            [
+                "5ed10630.87bc58",
+                "ef2c6f9e.76cc9"
+            ]
+        ]
+    },
+    {
+        "id": "51ac765b.81be68",
+        "type": "api-current-state",
+        "z": "2fad043e.317c8c",
+        "name": "run?",
+        "server": "8b52884a.b76658",
+        "version": "1",
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "input_boolean.camera_basement_notify",
+        "state_type": "str",
+        "state_location": "",
+        "override_payload": "none",
+        "entity_location": "",
+        "override_data": "none",
+        "blockInputOverrides": false,
+        "x": 530,
+        "y": 4520,
+        "wires": [
+            [],
+            [
+                "9212364c.0d2678"
+            ]
+        ]
+    },
+    {
+        "id": "188e1252.539f2e",
+        "type": "api-current-state",
+        "z": "2fad043e.317c8c",
+        "name": "not home?",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "outputs": 2,
+        "halt_if": "home",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "sensor.anyone_home",
+        "state_type": "str",
+        "state_location": "",
+        "override_payload": "none",
+        "entity_location": "",
+        "override_data": "none",
+        "blockInputOverrides": false,
+        "x": 710,
+        "y": 4120,
+        "wires": [
+            [
+                "5b6a963b.0fd858"
+            ],
+            [
+                "df753634.2ec788"
+            ]
+        ]
+    },
+    {
+        "id": "5ed10630.87bc58",
+        "type": "api-current-state",
+        "z": "2fad043e.317c8c",
+        "name": "not home?",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "outputs": 2,
+        "halt_if": "home",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "sensor.anyone_home",
+        "state_type": "str",
+        "state_location": "",
+        "override_payload": "none",
+        "entity_location": "",
+        "override_data": "none",
+        "blockInputOverrides": false,
+        "x": 710,
+        "y": 4420,
+        "wires": [
+            [
+                "3d589072.88acc"
+            ],
+            [
+                "57607cb3.b950f4"
+            ]
+        ]
+    },
+    {
+        "id": "5b6a963b.0fd858",
+        "type": "time-range-switch",
+        "z": "2fad043e.317c8c",
+        "name": "10pm-6am",
+        "lat": "33.95092",
+        "lon": "-84.44805",
+        "startTime": "22:00",
+        "endTime": "06:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 1070,
+        "y": 4140,
+        "wires": [
+            [
+                "df753634.2ec788"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "3d589072.88acc",
+        "type": "time-range-switch",
+        "z": "2fad043e.317c8c",
+        "name": "10pm-6am",
+        "lat": "33.95092",
+        "lon": "-84.44805",
+        "startTime": "22:00",
+        "endTime": "06:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 950,
+        "y": 4460,
+        "wires": [
+            [
+                "57607cb3.b950f4"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "9a2c13f8.a2213",
+        "type": "api-current-state",
+        "z": "2fad043e.317c8c",
+        "name": "not home?",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "outputs": 2,
+        "halt_if": "home",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "sensor.anyone_home",
+        "state_type": "str",
+        "state_location": "",
+        "override_payload": "none",
+        "entity_location": "",
+        "override_data": "none",
+        "blockInputOverrides": false,
+        "x": 710,
+        "y": 4200,
+        "wires": [
+            [
+                "10f2f77e.8d0e69"
+            ],
+            [
+                "93cb8038.29519"
+            ]
+        ]
+    },
+    {
+        "id": "3411b327.96b4ac",
+        "type": "server-state-changed",
+        "z": "2fad043e.317c8c",
+        "name": "basement door open?",
+        "server": "8b52884a.b76658",
+        "version": "1",
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.basement_door",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": false,
+        "for": "",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "x": 160,
+        "y": 4600,
+        "wires": [
+            [],
+            [
+                "51ac765b.81be68"
+            ]
+        ]
+    },
+    {
+        "id": "10f2f77e.8d0e69",
+        "type": "weekday",
+        "z": "2fad043e.317c8c",
         "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 910,
-        "y": 320,
-        "wires": []
+        "sun": false,
+        "mon": true,
+        "tue": true,
+        "wed": true,
+        "thu": true,
+        "fri": true,
+        "sat": false,
+        "x": 900,
+        "y": 4220,
+        "wires": [
+            [
+                "5d94e0f3.91d8d"
+            ],
+            [
+                "93cb8038.29519"
+            ]
+        ]
+    },
+    {
+        "id": "5d94e0f3.91d8d",
+        "type": "time-range-switch",
+        "z": "2fad043e.317c8c",
+        "name": "6:45am-9am",
+        "lat": "33.95092",
+        "lon": "-84.44805",
+        "startTime": "06:45",
+        "endTime": "09:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 1070,
+        "y": 4240,
+        "wires": [
+            [],
+            [
+                "93cb8038.29519"
+            ]
+        ]
+    },
+    {
+        "id": "800b119b.5a365",
+        "type": "mqtt in",
+        "z": "2fad043e.317c8c",
+        "name": "Jeff's Garage",
+        "topic": "og-jeff/OUT/STATE",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "649859a4.a17818",
+        "x": 130,
+        "y": 4280,
+        "wires": [
+            [
+                "3feface4.653134"
+            ]
+        ]
+    },
+    {
+        "id": "ce360a27.84f538",
+        "type": "mqtt in",
+        "z": "2fad043e.317c8c",
+        "name": "Jen'sGarage",
+        "topic": "og-jen/OUT/STATE",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "649859a4.a17818",
+        "x": 130,
+        "y": 4340,
+        "wires": [
+            [
+                "3feface4.653134"
+            ]
+        ]
+    },
+    {
+        "id": "3feface4.653134",
+        "type": "rbe",
+        "z": "2fad043e.317c8c",
+        "name": "state change",
+        "func": "rbei",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 350,
+        "y": 4280,
+        "wires": [
+            [
+                "3986e791.84ec78"
+            ]
+        ]
+    },
+    {
+        "id": "3986e791.84ec78",
+        "type": "switch",
+        "z": "2fad043e.317c8c",
+        "name": "open?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "OPEN",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 530,
+        "y": 4280,
+        "wires": [
+            [
+                "8265af08.9768d",
+                "73a9627e.88651c"
+            ]
+        ]
+    },
+    {
+        "id": "8265af08.9768d",
+        "type": "api-current-state",
+        "z": "2fad043e.317c8c",
+        "name": "not home?",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "outputs": 2,
+        "halt_if": "home",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "sensor.anyone_home",
+        "state_type": "str",
+        "state_location": "",
+        "override_payload": "none",
+        "entity_location": "",
+        "override_data": "none",
+        "blockInputOverrides": false,
+        "x": 1070,
+        "y": 4320,
+        "wires": [
+            [],
+            [
+                "93cb8038.29519"
+            ]
+        ]
+    },
+    {
+        "id": "a27b2c33.8df7c",
+        "type": "switch",
+        "z": "2fad043e.317c8c",
+        "name": "motion",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 370,
+        "y": 4120,
+        "wires": [
+            [
+                "2cb2f42c.aa631c"
+            ]
+        ]
+    },
+    {
+        "id": "ef2c6f9e.76cc9",
+        "type": "subflow:29f6dc7c.662814",
+        "z": "2fad043e.317c8c",
+        "d": true,
+        "name": "",
+        "env": [],
+        "x": 690,
+        "y": 4380,
+        "wires": [
+            [
+                "3d589072.88acc"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "73a9627e.88651c",
+        "type": "subflow:29f6dc7c.662814",
+        "z": "2fad043e.317c8c",
+        "d": true,
+        "name": "",
+        "env": [],
+        "x": 1050,
+        "y": 4380,
+        "wires": [
+            [],
+            [
+                "93cb8038.29519"
+            ]
+        ]
+    },
+    {
+        "id": "3ed83b45.7c19b4",
+        "type": "subflow:29f6dc7c.662814",
+        "z": "2fad043e.317c8c",
+        "d": true,
+        "name": "",
+        "env": [],
+        "x": 690,
+        "y": 4080,
+        "wires": [
+            [
+                "5b6a963b.0fd858"
+            ],
+            [
+                "df753634.2ec788"
+            ]
+        ]
+    },
+    {
+        "id": "2b27e4cd.820e9c",
+        "type": "subflow:29f6dc7c.662814",
+        "z": "2fad043e.317c8c",
+        "d": true,
+        "name": "",
+        "env": [],
+        "x": 690,
+        "y": 4260,
+        "wires": [
+            [
+                "10f2f77e.8d0e69"
+            ],
+            [
+                "93cb8038.29519"
+            ]
+        ]
+    },
+    {
+        "id": "9cfa1512.6e86b8",
+        "type": "delay",
+        "z": "2fad043e.317c8c",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "2",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 1380,
+        "y": 4040,
+        "wires": [
+            [
+                "14b07406.daad8c"
+            ]
+        ]
+    },
+    {
+        "id": "9212364c.0d2678",
+        "type": "delay",
+        "z": "2fad043e.317c8c",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "2",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 1380,
+        "y": 4520,
+        "wires": [
+            [
+                "a273464b.ecddc8"
+            ]
+        ]
+    },
+    {
+        "id": "57607cb3.b950f4",
+        "type": "delay",
+        "z": "2fad043e.317c8c",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "2",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 1380,
+        "y": 4420,
+        "wires": [
+            [
+                "f250d1f1.570b6"
+            ]
+        ]
+    },
+    {
+        "id": "df753634.2ec788",
+        "type": "delay",
+        "z": "2fad043e.317c8c",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "2",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 1380,
+        "y": 4120,
+        "wires": [
+            [
+                "41d3ab69.280584"
+            ]
+        ]
+    },
+    {
+        "id": "93cb8038.29519",
+        "type": "delay",
+        "z": "2fad043e.317c8c",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "2",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 1380,
+        "y": 4200,
+        "wires": [
+            [
+                "1e440e97.31b281"
+            ]
+        ]
     }
 ]
