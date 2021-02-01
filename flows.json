@@ -14027,8 +14027,12 @@
         "x": 670,
         "y": 300,
         "wires": [
-            [],
-            []
+            [
+                "89c041e4.da8ab"
+            ],
+            [
+                "d5b8be68.aad25"
+            ]
         ],
         "info": "Change **front** and **back** Switch names to be the names of your cameras defined in the Frigate Config"
     },
@@ -14323,6 +14327,38 @@
         "statusType": "auto",
         "x": 870,
         "y": 440,
+        "wires": []
+    },
+    {
+        "id": "89c041e4.da8ab",
+        "type": "debug",
+        "z": "6385a2ce.a16d0c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "d5b8be68.aad25",
+        "type": "debug",
+        "z": "6385a2ce.a16d0c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 320,
         "wires": []
     }
 ]
