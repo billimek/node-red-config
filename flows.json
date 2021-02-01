@@ -13813,5 +13813,72 @@
         "x": 620,
         "y": 680,
         "wires": []
+    },
+    {
+        "id": "e82fa3a6.76d69",
+        "type": "mqtt in",
+        "z": "ea946133.0085b",
+        "name": "Porch Camera (frigate)",
+        "topic": "frigate/porch/*/#",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "649859a4.a17818",
+        "x": 160,
+        "y": 760,
+        "wires": [
+            [
+                "8a447593.9b9428"
+            ]
+        ]
+    },
+    {
+        "id": "8a447593.9b9428",
+        "type": "debug",
+        "z": "ea946133.0085b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "8251e72a.af5f48",
+        "type": "mqtt in",
+        "z": "ea946133.0085b",
+        "name": "Porch Camera (frigate)",
+        "topic": "frigate/porch/person/#",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "649859a4.a17818",
+        "x": 160,
+        "y": 840,
+        "wires": [
+            [
+                "5c0ebc87.481c44"
+            ]
+        ]
+    },
+    {
+        "id": "5c0ebc87.481c44",
+        "type": "debug",
+        "z": "ea946133.0085b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 860,
+        "wires": []
     }
 ]
