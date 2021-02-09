@@ -596,7 +596,9 @@
         "x": 530,
         "y": 140,
         "wires": [
-            [],
+            [
+                "8d782ee4.3daf1"
+            ],
             [
                 "8d782ee4.3daf1"
             ]
@@ -748,7 +750,9 @@
         "x": 530,
         "y": 420,
         "wires": [
-            [],
+            [
+                "f36487b8.7e8c48"
+            ],
             [
                 "f36487b8.7e8c48"
             ]
@@ -780,7 +784,7 @@
         "z": "4aedf9e8.044e08",
         "name": "alarm disarmed?",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "outputs": 2,
         "halt_if": "disarmed",
         "halt_if_type": "str",
@@ -893,7 +897,7 @@
         "z": "4aedf9e8.044e08",
         "name": "run?",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "outputs": 2,
         "halt_if": "on",
         "halt_if_type": "str",
@@ -9553,7 +9557,7 @@
         "z": "afb0f186.cfb0d",
         "name": "alarm disarmed?",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "outputs": 2,
         "halt_if": "disarmed",
         "halt_if_type": "str",
