@@ -316,33 +316,6 @@
         "name": "node-red google project"
     },
     {
-        "id": "3f5c82ac.348636",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "localhost",
-        "port": "1883",
-        "clientid": "",
-        "usetls": false,
-        "compatmode": true,
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": ""
-    },
-    {
-        "id": "57ce5691.fd6e48",
-        "type": "server",
-        "name": "Home Assistant",
-        "addon": true
-    },
-    {
         "id": "738ad7f2.c345c8",
         "type": "api-call-service",
         "z": "afb0f186.cfb0d",
