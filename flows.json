@@ -10338,7 +10338,6 @@
         "wires": [
             [],
             [
-                "77d5e9b9.af18b8",
                 "843d814.b26168"
             ]
         ]
@@ -10363,24 +10362,6 @@
         "x": 1130,
         "y": 1120,
         "wires": [
-            []
-        ]
-    },
-    {
-        "id": "77d5e9b9.af18b8",
-        "type": "light-scheduler-filter",
-        "z": "af228686.65c8a8",
-        "settings": "f26da246.74a7f",
-        "events": "[{\"start\":{\"dow\":1,\"mod\":900},\"end\":{\"dow\":2,\"mod\":0}},{\"start\":{\"dow\":2,\"mod\":900},\"end\":{\"dow\":3,\"mod\":0}},{\"start\":{\"dow\":3,\"mod\":900},\"end\":{\"dow\":4,\"mod\":0}},{\"start\":{\"dow\":4,\"mod\":900},\"end\":{\"dow\":5,\"mod\":0}},{\"start\":{\"dow\":5,\"mod\":900},\"end\":{\"dow\":6,\"mod\":0}},{\"start\":{\"dow\":6,\"mod\":900},\"end\":{\"dow\":0,\"mod\":0}},{\"start\":{\"dow\":0,\"mod\":900},\"end\":{\"dow\":1,\"mod\":0}},{\"start\":{\"dow\":1,\"mod\":300},\"end\":{\"dow\":1,\"mod\":660}},{\"start\":{\"dow\":2,\"mod\":300},\"end\":{\"dow\":2,\"mod\":660}},{\"start\":{\"dow\":3,\"mod\":300},\"end\":{\"dow\":3,\"mod\":660}},{\"start\":{\"dow\":4,\"mod\":300},\"end\":{\"dow\":4,\"mod\":660}},{\"start\":{\"dow\":5,\"mod\":300},\"end\":{\"dow\":5,\"mod\":660}},{\"start\":{\"dow\":6,\"mod\":300},\"end\":{\"dow\":6,\"mod\":660}},{\"start\":{\"dow\":0,\"mod\":300},\"end\":{\"dow\":0,\"mod\":660}}]",
-        "name": "dark? (filter)",
-        "onlyWhenDark": true,
-        "scheduleRndMax": 0,
-        "sunElevationThreshold": "10",
-        "sunShowElevationInStatus": true,
-        "x": 330,
-        "y": 1220,
-        "wires": [
-            [],
             []
         ]
     },
@@ -10424,7 +10405,6 @@
         "wires": [
             [],
             [
-                "77d5e9b9.af18b8",
                 "843d814.b26168"
             ]
         ]
