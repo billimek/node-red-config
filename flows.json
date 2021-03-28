@@ -10438,18 +10438,19 @@
         "op2": "{\"service\":\"turn_off\"}",
         "op1type": "json",
         "op2type": "json",
-        "duration": "15",
+        "duration": "5",
         "extend": true,
+        "overrideDelay": false,
         "units": "min",
         "reset": "",
         "bytopic": "all",
+        "topic": "topic",
         "outputs": 1,
         "x": 810,
         "y": 1120,
         "wires": [
             [
-                "3d46e445.a5868c",
-                "6ace62ea.1ef48c"
+                "3d46e445.a5868c"
             ]
         ]
     },
@@ -14482,51 +14483,6 @@
         "wires": [
             [
                 "ee4b488e.276818"
-            ]
-        ]
-    },
-    {
-        "id": "6ace62ea.1ef48c",
-        "type": "debug",
-        "z": "af228686.65c8a8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1000,
-        "y": 1180,
-        "wires": []
-    },
-    {
-        "id": "dea59029.365a",
-        "type": "inject",
-        "z": "af228686.65c8a8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 130,
-        "y": 1080,
-        "wires": [
-            [
-                "843d814.b26168"
             ]
         ]
     }
