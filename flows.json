@@ -6588,8 +6588,8 @@
         "output_location": "payload",
         "output_location_type": "msg",
         "mustacheAltTags": false,
-        "x": 920,
-        "y": 1260,
+        "x": 980,
+        "y": 1560,
         "wires": [
             []
         ]
@@ -10435,90 +10435,6 @@
         ]
     },
     {
-        "id": "b769bdd3.636d",
-        "type": "trigger-state",
-        "z": "af228686.65c8a8",
-        "name": "upstairs motion",
-        "server": "8b52884a.b76658",
-        "entityid": "binary_sensor.upstairs_motion",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
-        "constraints": [
-            {
-                "id": "fgdp42012to",
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "current_state",
-                "propertyValue": "new_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "on"
-            },
-            {
-                "id": "p8m8zrtpvac",
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "previous_state",
-                "propertyValue": "old_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "off"
-            }
-        ],
-        "outputs": 2,
-        "customoutputs": [],
-        "outputinitially": false,
-        "state_type": "str",
-        "x": 120,
-        "y": 1460,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
-        "id": "6849e059.72022",
-        "type": "trigger-state",
-        "z": "af228686.65c8a8",
-        "name": "main motion",
-        "server": "8b52884a.b76658",
-        "entityid": "binary_sensor.main_motion",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
-        "constraints": [
-            {
-                "id": "fgdp42012to",
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "current_state",
-                "propertyValue": "new_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "on"
-            },
-            {
-                "id": "p8m8zrtpvac",
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "previous_state",
-                "propertyValue": "old_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "off"
-            }
-        ],
-        "outputs": 2,
-        "customoutputs": [],
-        "outputinitially": false,
-        "state_type": "str",
-        "x": 130,
-        "y": 1520,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
         "id": "843d814.b26168",
         "type": "api-current-state",
         "z": "af228686.65c8a8",
@@ -11454,7 +11370,7 @@
         "datatype": "auto",
         "broker": "649859a4.a17818",
         "x": 130,
-        "y": 1340,
+        "y": 1240,
         "wires": [
             [
                 "ec2d36d0.f17fb8"
@@ -11472,7 +11388,7 @@
         "inout": "out",
         "property": "payload",
         "x": 330,
-        "y": 1340,
+        "y": 1240,
         "wires": [
             [
                 "e915233a.c4b9e"
@@ -11497,7 +11413,7 @@
         "repair": false,
         "outputs": 1,
         "x": 540,
-        "y": 1340,
+        "y": 1240,
         "wires": [
             [
                 "71f227c0.43b6f8"
@@ -11522,7 +11438,7 @@
         "output_location_type": "none",
         "mustacheAltTags": false,
         "x": 930,
-        "y": 1340,
+        "y": 1240,
         "wires": [
             []
         ]
@@ -11562,8 +11478,8 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
-        "x": 150,
-        "y": 1600,
+        "x": 170,
+        "y": 1320,
         "wires": [
             [
                 "432fde78.07eef"
@@ -11588,8 +11504,8 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 430,
-        "y": 1600,
+        "x": 930,
+        "y": 1320,
         "wires": [
             []
         ]
@@ -12706,7 +12622,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 730,
-        "y": 1340,
+        "y": 1240,
         "wires": [
             [
                 "83092d58.56334"
