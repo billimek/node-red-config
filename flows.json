@@ -10304,7 +10304,7 @@
         "z": "af228686.65c8a8",
         "name": "upstairs motion",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -10360,7 +10360,7 @@
         "output_location": "payload",
         "output_location_type": "msg",
         "mustacheAltTags": false,
-        "x": 950,
+        "x": 1130,
         "y": 1120,
         "wires": [
             []
@@ -10444,11 +10444,12 @@
         "reset": "",
         "bytopic": "all",
         "outputs": 1,
-        "x": 730,
+        "x": 810,
         "y": 1120,
         "wires": [
             [
-                "3d46e445.a5868c"
+                "3d46e445.a5868c",
+                "6ace62ea.1ef48c"
             ]
         ]
     },
@@ -14483,5 +14484,21 @@
                 "ee4b488e.276818"
             ]
         ]
+    },
+    {
+        "id": "6ace62ea.1ef48c",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 1180,
+        "wires": []
     }
 ]
