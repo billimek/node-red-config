@@ -10857,65 +10857,6 @@
         ]
     },
     {
-        "id": "4bcefec3.1279b",
-        "type": "function",
-        "z": "afb0f186.cfb0d",
-        "name": "Test iOS msg",
-        "func": "// var action = msg.payload\n\n// var category = \"alarm\"\nvar title = \"Test push\"\nvar message = \"Testing iOS push notification\"\n\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n    }\n}\nreturn [ msg ];\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 490,
-        "y": 860,
-        "wires": [
-            [
-                "e76940aa.fe8fa"
-            ]
-        ]
-    },
-    {
-        "id": "e76940aa.fe8fa",
-        "type": "api-call-service",
-        "z": "afb0f186.cfb0d",
-        "name": "notify jeff iOS",
-        "server": "8b52884a.b76658",
-        "version": "1",
-        "debugenabled": false,
-        "service_domain": "notify",
-        "service": "mobile_app_jeffs_xs",
-        "entityId": "",
-        "data": "",
-        "dataType": "json",
-        "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
-        "mustacheAltTags": false,
-        "x": 820,
-        "y": 860,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9c892a11.11b8f8",
-        "type": "inject",
-        "z": "afb0f186.cfb0d",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 240,
-        "y": 860,
-        "wires": [
-            [
-                "4bcefec3.1279b"
-            ]
-        ]
-    },
-    {
         "id": "f1b4871e.0645f8",
         "type": "bigtimer",
         "z": "4aedf9e8.044e08",
