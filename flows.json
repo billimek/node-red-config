@@ -14121,9 +14121,9 @@
         ]
     },
     {
-        "id": "91659899.4fc7f8",
+        "id": "117b4fd1.34647",
         "type": "server-state-changed",
-        "z": "28a3a43c.a2b35c",
+        "z": "af228686.65c8a8",
         "name": "upstairs motion",
         "server": "8b52884a.b76658",
         "version": 1,
@@ -14155,20 +14155,19 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
-        "x": 100,
-        "y": 100,
+        "x": 120,
+        "y": 1180,
         "wires": [
             [],
             [
-                "1ae6f26d.b4cb0e",
-                "2324014b.46282e"
+                "e1f00c73.48341"
             ]
         ]
     },
     {
-        "id": "2c98372b.901658",
+        "id": "1e6b61d6.291ade",
         "type": "api-call-service",
-        "z": "28a3a43c.a2b35c",
+        "z": "af228686.65c8a8",
         "name": "foyer stairs lights",
         "server": "8b52884a.b76658",
         "version": "1",
@@ -14182,16 +14181,16 @@
         "output_location": "payload",
         "output_location_type": "msg",
         "mustacheAltTags": false,
-        "x": 1010,
-        "y": 40,
+        "x": 1030,
+        "y": 1120,
         "wires": [
             []
         ]
     },
     {
-        "id": "ac7a24c9.ce1e68",
+        "id": "e52b4bd4.919968",
         "type": "server-state-changed",
-        "z": "28a3a43c.a2b35c",
+        "z": "af228686.65c8a8",
         "name": "main motion",
         "server": "8b52884a.b76658",
         "version": 1,
@@ -14223,20 +14222,19 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
-        "x": 110,
-        "y": 40,
+        "x": 130,
+        "y": 1120,
         "wires": [
             [],
             [
-                "1ae6f26d.b4cb0e",
-                "2324014b.46282e"
+                "e1f00c73.48341"
             ]
         ]
     },
     {
-        "id": "80fb19c1.bb5d78",
+        "id": "3d4e398c.df8de6",
         "type": "trigger",
-        "z": "28a3a43c.a2b35c",
+        "z": "af228686.65c8a8",
         "name": "",
         "op1": "{\"service\":\"turn_on\"}",
         "op2": "{\"service\":\"turn_off\"}",
@@ -14250,19 +14248,18 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 790,
-        "y": 40,
+        "x": 810,
+        "y": 1120,
         "wires": [
             [
-                "2c98372b.901658",
-                "d101b686.382ac8"
+                "1e6b61d6.291ade"
             ]
         ]
     },
     {
-        "id": "1ae6f26d.b4cb0e",
+        "id": "e1f00c73.48341",
         "type": "api-current-state",
-        "z": "28a3a43c.a2b35c",
+        "z": "af228686.65c8a8",
         "name": "stairs lights off?",
         "server": "8b52884a.b76658",
         "version": 1,
@@ -14278,20 +14275,19 @@
         "entity_location": "data",
         "override_data": "msg",
         "blockInputOverrides": false,
-        "x": 320,
-        "y": 40,
+        "x": 340,
+        "y": 1120,
         "wires": [
             [],
             [
-                "f8ae64c5.6ed658",
-                "b8e48860.d99408"
+                "da31800d.4585a"
             ]
         ]
     },
     {
-        "id": "f8ae64c5.6ed658",
+        "id": "da31800d.4585a",
         "type": "time-range-switch",
-        "z": "28a3a43c.a2b35c",
+        "z": "af228686.65c8a8",
         "name": "11pm-7:30am",
         "lat": "33.95092",
         "lon": "-84.44805",
@@ -14299,82 +14295,13 @@
         "endTime": "07:30",
         "startOffset": 0,
         "endOffset": 0,
-        "x": 540,
-        "y": 40,
+        "x": 560,
+        "y": 1120,
         "wires": [
             [],
             [
-                "80fb19c1.bb5d78",
-                "ac490b5e.d066f8"
+                "3d4e398c.df8de6"
             ]
         ]
-    },
-    {
-        "id": "2324014b.46282e",
-        "type": "debug",
-        "z": "28a3a43c.a2b35c",
-        "name": "motion log",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 270,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "b8e48860.d99408",
-        "type": "debug",
-        "z": "28a3a43c.a2b35c",
-        "name": "lights off?",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 460,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "ac490b5e.d066f8",
-        "type": "debug",
-        "z": "28a3a43c.a2b35c",
-        "name": "11pm-7:30am?",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "d101b686.382ac8",
-        "type": "debug",
-        "z": "28a3a43c.a2b35c",
-        "name": "trigger 5m",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 920,
-        "y": 180,
-        "wires": []
     }
 ]
