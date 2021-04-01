@@ -49,13 +49,6 @@
         "info": ""
     },
     {
-        "id": "28a3a43c.a2b35c",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "b8b74cae.ffe4",
         "type": "subflow",
         "name": "open?",
