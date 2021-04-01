@@ -49,6 +49,13 @@
         "info": ""
     },
     {
+        "id": "28a3a43c.a2b35c",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "b8b74cae.ffe4",
         "type": "subflow",
         "name": "open?",
@@ -10299,190 +10306,6 @@
         ]
     },
     {
-        "id": "d9e56224.4c844",
-        "type": "server-state-changed",
-        "z": "af228686.65c8a8",
-        "name": "upstairs motion",
-        "server": "8b52884a.b76658",
-        "version": 1,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "binary_sensor.upstairs_motion",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 2,
-        "output_only_on_state_change": false,
-        "for": "",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "x": 120,
-        "y": 1180,
-        "wires": [
-            [],
-            [
-                "843d814.b26168"
-            ]
-        ]
-    },
-    {
-        "id": "3d46e445.a5868c",
-        "type": "api-call-service",
-        "z": "af228686.65c8a8",
-        "name": "foyer stairs lights",
-        "server": "8b52884a.b76658",
-        "version": "1",
-        "debugenabled": false,
-        "service_domain": "light",
-        "service": "",
-        "entityId": "light.foyer_stairs_dimmer",
-        "data": "",
-        "dataType": "json",
-        "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
-        "mustacheAltTags": false,
-        "x": 1030,
-        "y": 1120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a8a49668.0b8318",
-        "type": "server-state-changed",
-        "z": "af228686.65c8a8",
-        "name": "main motion",
-        "server": "8b52884a.b76658",
-        "version": 1,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "binary_sensor.main_motion",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 2,
-        "output_only_on_state_change": false,
-        "for": "",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "x": 130,
-        "y": 1120,
-        "wires": [
-            [],
-            [
-                "843d814.b26168"
-            ]
-        ]
-    },
-    {
-        "id": "4c648b96.9b2204",
-        "type": "trigger",
-        "z": "af228686.65c8a8",
-        "name": "",
-        "op1": "{\"service\":\"turn_on\"}",
-        "op2": "{\"service\":\"turn_off\"}",
-        "op1type": "json",
-        "op2type": "json",
-        "duration": "5",
-        "extend": true,
-        "overrideDelay": false,
-        "units": "min",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 810,
-        "y": 1120,
-        "wires": [
-            [
-                "3d46e445.a5868c"
-            ]
-        ]
-    },
-    {
-        "id": "843d814.b26168",
-        "type": "api-current-state",
-        "z": "af228686.65c8a8",
-        "name": "stairs lights off?",
-        "server": "8b52884a.b76658",
-        "version": 1,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "override_topic": true,
-        "entity_id": "light.foyer_stairs_dimmer",
-        "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "blockInputOverrides": false,
-        "x": 340,
-        "y": 1120,
-        "wires": [
-            [],
-            [
-                "95b4f771.6e6b18"
-            ]
-        ]
-    },
-    {
-        "id": "95b4f771.6e6b18",
-        "type": "time-range-switch",
-        "z": "af228686.65c8a8",
-        "name": "11pm-7:30am",
-        "lat": "33.95092",
-        "lon": "-84.44805",
-        "startTime": "23:00",
-        "endTime": "07:30",
-        "startOffset": 0,
-        "endOffset": 0,
-        "x": 560,
-        "y": 1120,
-        "wires": [
-            [],
-            [
-                "4c648b96.9b2204"
-            ]
-        ]
-    },
-    {
         "id": "9c10550.dd717a8",
         "type": "bigtimer",
         "z": "75b62c93.dd5d84",
@@ -14296,5 +14119,262 @@
                 "ee4b488e.276818"
             ]
         ]
+    },
+    {
+        "id": "91659899.4fc7f8",
+        "type": "server-state-changed",
+        "z": "28a3a43c.a2b35c",
+        "name": "upstairs motion",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.upstairs_motion",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": false,
+        "for": "",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "x": 100,
+        "y": 100,
+        "wires": [
+            [],
+            [
+                "1ae6f26d.b4cb0e",
+                "2324014b.46282e"
+            ]
+        ]
+    },
+    {
+        "id": "2c98372b.901658",
+        "type": "api-call-service",
+        "z": "28a3a43c.a2b35c",
+        "name": "foyer stairs lights",
+        "server": "8b52884a.b76658",
+        "version": "1",
+        "debugenabled": false,
+        "service_domain": "light",
+        "service": "",
+        "entityId": "light.foyer_stairs_dimmer",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "payload",
+        "output_location_type": "msg",
+        "mustacheAltTags": false,
+        "x": 1010,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ac7a24c9.ce1e68",
+        "type": "server-state-changed",
+        "z": "28a3a43c.a2b35c",
+        "name": "main motion",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.main_motion",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": false,
+        "for": "",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "x": 110,
+        "y": 40,
+        "wires": [
+            [],
+            [
+                "1ae6f26d.b4cb0e",
+                "2324014b.46282e"
+            ]
+        ]
+    },
+    {
+        "id": "80fb19c1.bb5d78",
+        "type": "trigger",
+        "z": "28a3a43c.a2b35c",
+        "name": "",
+        "op1": "{\"service\":\"turn_on\"}",
+        "op2": "{\"service\":\"turn_off\"}",
+        "op1type": "json",
+        "op2type": "json",
+        "duration": "5",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 790,
+        "y": 40,
+        "wires": [
+            [
+                "2c98372b.901658",
+                "d101b686.382ac8"
+            ]
+        ]
+    },
+    {
+        "id": "1ae6f26d.b4cb0e",
+        "type": "api-current-state",
+        "z": "28a3a43c.a2b35c",
+        "name": "stairs lights off?",
+        "server": "8b52884a.b76658",
+        "version": 1,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": true,
+        "entity_id": "light.foyer_stairs_dimmer",
+        "state_type": "str",
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "blockInputOverrides": false,
+        "x": 320,
+        "y": 40,
+        "wires": [
+            [],
+            [
+                "f8ae64c5.6ed658",
+                "b8e48860.d99408"
+            ]
+        ]
+    },
+    {
+        "id": "f8ae64c5.6ed658",
+        "type": "time-range-switch",
+        "z": "28a3a43c.a2b35c",
+        "name": "11pm-7:30am",
+        "lat": "33.95092",
+        "lon": "-84.44805",
+        "startTime": "23:00",
+        "endTime": "07:30",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 540,
+        "y": 40,
+        "wires": [
+            [],
+            [
+                "80fb19c1.bb5d78",
+                "ac490b5e.d066f8"
+            ]
+        ]
+    },
+    {
+        "id": "2324014b.46282e",
+        "type": "debug",
+        "z": "28a3a43c.a2b35c",
+        "name": "motion log",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 270,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "b8e48860.d99408",
+        "type": "debug",
+        "z": "28a3a43c.a2b35c",
+        "name": "lights off?",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "ac490b5e.d066f8",
+        "type": "debug",
+        "z": "28a3a43c.a2b35c",
+        "name": "11pm-7:30am?",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "d101b686.382ac8",
+        "type": "debug",
+        "z": "28a3a43c.a2b35c",
+        "name": "trigger 5m",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 180,
+        "wires": []
     }
 ]
