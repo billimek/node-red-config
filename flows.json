@@ -6577,7 +6577,7 @@
         "z": "af228686.65c8a8",
         "name": "tree lights",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "",
@@ -8094,7 +8094,7 @@
         "z": "af228686.65c8a8",
         "name": "basement water",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -8106,7 +8106,7 @@
                 "value": ""
             }
         ],
-        "entityidfilter": "binary_sensor.basement_water_sensor_a_contact",
+        "entityidfilter": "binary_sensor.basement_water_sensor_a_water_alarm",
         "entityidfiltertype": "substring",
         "outputinitially": false,
         "state_type": "str",
