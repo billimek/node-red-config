@@ -11254,7 +11254,7 @@
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_off",
-        "entityId": "switch.outlet_e",
+        "entityId": "switch.outlet_e_2",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
