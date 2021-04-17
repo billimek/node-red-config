@@ -11187,7 +11187,7 @@
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_on",
-        "entityId": "switch.portable_outlet_e_switch_3",
+        "entityId": "switch.outlet_e_2",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
