@@ -14296,34 +14296,5 @@
                 "3d4e398c.df8de6"
             ]
         ]
-    },
-    {
-        "id": "5e77de82.f2cb7",
-        "type": "inject",
-        "z": "af228686.65c8a8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 330,
-        "y": 1420,
-        "wires": [
-            [
-                "432fde78.07eef"
-            ]
-        ]
     }
 ]
