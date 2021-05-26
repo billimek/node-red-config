@@ -6662,7 +6662,7 @@
         "z": "af228686.65c8a8",
         "name": "garage door open?",
         "server": "8b52884a.b76658",
-        "version": "1",
+        "version": 1,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -14295,35 +14295,6 @@
             [],
             [
                 "3d4e398c.df8de6"
-            ]
-        ]
-    },
-    {
-        "id": "5a34bb71.3fa0a4",
-        "type": "inject",
-        "z": "af228686.65c8a8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 110,
-        "y": 560,
-        "wires": [
-            [
-                "21e174ab.aeac7c"
             ]
         ]
     }
