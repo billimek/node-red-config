@@ -14167,7 +14167,7 @@
         "server": "8b52884a.b76658",
         "version": 1,
         "debugenabled": false,
-        "service_domain": "switch",
+        "service_domain": "light",
         "service": "",
         "entityId": "light.stairs_2",
         "data": "",
