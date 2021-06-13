@@ -11171,12 +11171,10 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 540,
+        "x": 520,
         "y": 1240,
         "wires": [
-            [
-                "71f227c0.43b6f8"
-            ]
+            []
         ]
     },
     {
@@ -11196,8 +11194,8 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 930,
-        "y": 1240,
+        "x": 530,
+        "y": 1300,
         "wires": [
             []
         ]
@@ -11238,7 +11236,7 @@
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
         "x": 150,
-        "y": 1320,
+        "y": 1380,
         "wires": [
             [
                 "432fde78.07eef"
@@ -11264,7 +11262,7 @@
         "output_location_type": "none",
         "mustacheAltTags": false,
         "x": 930,
-        "y": 1320,
+        "y": 1380,
         "wires": [
             []
         ]
@@ -12380,8 +12378,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 730,
-        "y": 1240,
+        "x": 330,
+        "y": 1300,
         "wires": [
             [
                 "83092d58.56334"
@@ -14306,7 +14304,7 @@
         "id": "2d7bf4f2.d92e6c",
         "type": "server-state-changed",
         "z": "af228686.65c8a8",
-        "name": "",
+        "name": "wyze-3 motion",
         "server": "8b52884a.b76658",
         "version": 1,
         "exposeToHomeAssistant": false,
@@ -14337,8 +14335,8 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
-        "x": 240,
-        "y": 1400,
+        "x": 110,
+        "y": 1300,
         "wires": [
             [
                 "71f227c0.43b6f8"
