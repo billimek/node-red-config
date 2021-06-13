@@ -14242,10 +14242,13 @@
         "reset": "",
         "bytopic": "all",
         "topic": "topic",
-        "outputs": 1,
+        "outputs": 2,
         "x": 810,
         "y": 1120,
         "wires": [
+            [
+                "1e6b61d6.291ade"
+            ],
             [
                 "1e6b61d6.291ade"
             ]
