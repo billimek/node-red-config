@@ -12383,8 +12383,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 350,
-        "y": 1320,
+        "x": 230,
+        "y": 1480,
         "wires": [
             []
         ]
