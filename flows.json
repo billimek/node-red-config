@@ -11132,7 +11132,8 @@
         "y": 1240,
         "wires": [
             [
-                "ec2d36d0.f17fb8"
+                "ec2d36d0.f17fb8",
+                "264b9189.bc052e"
             ]
         ]
     },
@@ -14361,6 +14362,22 @@
         "statusType": "auto",
         "x": 500,
         "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "264b9189.bc052e",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 1360,
         "wires": []
     }
 ]
