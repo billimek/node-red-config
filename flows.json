@@ -14332,18 +14332,35 @@
         "for": 0,
         "forType": "num",
         "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
+        "ignorePrevStateNull": true,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
         "x": 110,
         "y": 1300,
         "wires": [
             [
-                "71f227c0.43b6f8"
+                "71f227c0.43b6f8",
+                "c7552aad.8274c8"
             ],
             []
         ]
+    },
+    {
+        "id": "c7552aad.8274c8",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 1460,
+        "wires": []
     }
 ]
