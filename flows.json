@@ -11129,7 +11129,7 @@
         "datatype": "auto",
         "broker": "649859a4.a17818",
         "x": 110,
-        "y": 1240,
+        "y": 1260,
         "wires": [
             [
                 "ec2d36d0.f17fb8"
@@ -11147,7 +11147,7 @@
         "inout": "out",
         "property": "payload",
         "x": 330,
-        "y": 1240,
+        "y": 1260,
         "wires": [
             [
                 "e915233a.c4b9e"
@@ -11172,7 +11172,7 @@
         "repair": false,
         "outputs": 1,
         "x": 520,
-        "y": 1240,
+        "y": 1260,
         "wires": [
             [
                 "83092d58.56334"
@@ -11197,7 +11197,7 @@
         "output_location_type": "none",
         "mustacheAltTags": false,
         "x": 770,
-        "y": 1300,
+        "y": 1260,
         "wires": [
             []
         ]
@@ -11238,7 +11238,7 @@
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
         "x": 150,
-        "y": 1380,
+        "y": 1340,
         "wires": [
             [
                 "432fde78.07eef"
@@ -11263,8 +11263,8 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 930,
-        "y": 1380,
+        "x": 770,
+        "y": 1340,
         "wires": [
             []
         ]
@@ -14299,66 +14299,5 @@
                 "3d4e398c.df8de6"
             ]
         ]
-    },
-    {
-        "id": "2d7bf4f2.d92e6c",
-        "type": "server-state-changed",
-        "z": "af228686.65c8a8",
-        "name": "wyze-3 motion",
-        "server": "8b52884a.b76658",
-        "version": 1,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "binary_sensor.wyze_3_motion_sensor",
-        "entityidfiltertype": "exact",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "ON",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 2,
-        "output_only_on_state_change": true,
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": true,
-        "ignorePrevStateUnknown": true,
-        "ignorePrevStateUnavailable": true,
-        "ignoreCurrentStateUnknown": true,
-        "ignoreCurrentStateUnavailable": true,
-        "x": 110,
-        "y": 1300,
-        "wires": [
-            [
-                "c7552aad.8274c8",
-                "83092d58.56334"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "c7552aad.8274c8",
-        "type": "debug",
-        "z": "af228686.65c8a8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 500,
-        "y": 1460,
-        "wires": []
     }
 ]
