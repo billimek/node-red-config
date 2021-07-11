@@ -7743,7 +7743,7 @@
         "y": 160,
         "wires": [
             [
-                "b98bed87.b9424"
+                "310b007d.3a5eb"
             ],
             []
         ]
@@ -7870,26 +7870,6 @@
                 "3af164aa.92a0ac",
                 "78d24791.853db8"
             ]
-        ]
-    },
-    {
-        "id": "b98bed87.b9424",
-        "type": "light-scheduler-filter",
-        "z": "af228686.65c8a8",
-        "settings": "f26da246.74a7f",
-        "events": "[{\"start\":{\"dow\":1,\"mod\":900},\"end\":{\"dow\":2,\"mod\":0}},{\"start\":{\"dow\":2,\"mod\":900},\"end\":{\"dow\":3,\"mod\":0}},{\"start\":{\"dow\":3,\"mod\":900},\"end\":{\"dow\":4,\"mod\":0}},{\"start\":{\"dow\":4,\"mod\":900},\"end\":{\"dow\":5,\"mod\":0}},{\"start\":{\"dow\":5,\"mod\":900},\"end\":{\"dow\":6,\"mod\":0}},{\"start\":{\"dow\":6,\"mod\":900},\"end\":{\"dow\":0,\"mod\":0}},{\"start\":{\"dow\":0,\"mod\":900},\"end\":{\"dow\":1,\"mod\":0}}]",
-        "name": "dark? (filter)",
-        "onlyWhenDark": true,
-        "scheduleRndMax": 0,
-        "sunElevationThreshold": "10",
-        "sunShowElevationInStatus": true,
-        "x": 330,
-        "y": 160,
-        "wires": [
-            [
-                "c3884fae.62ca4"
-            ],
-            []
         ]
     },
     {
@@ -8167,48 +8147,6 @@
         ]
     },
     {
-        "id": "aeb0b243.17cee",
-        "type": "light-scheduler",
-        "z": "af228686.65c8a8",
-        "settings": "f26da246.74a7f",
-        "events": "[{\"start\":{\"dow\":1,\"mod\":330},\"end\":{\"dow\":2,\"mod\":0}},{\"start\":{\"dow\":2,\"mod\":330},\"end\":{\"dow\":3,\"mod\":0}},{\"start\":{\"dow\":3,\"mod\":330},\"end\":{\"dow\":4,\"mod\":0}},{\"start\":{\"dow\":4,\"mod\":330},\"end\":{\"dow\":5,\"mod\":0}},{\"start\":{\"dow\":5,\"mod\":330},\"end\":{\"dow\":6,\"mod\":0}},{\"start\":{\"dow\":6,\"mod\":330},\"end\":{\"dow\":0,\"mod\":0}},{\"start\":{\"dow\":0,\"mod\":330},\"end\":{\"dow\":1,\"mod\":0}}]",
-        "topic": "service",
-        "name": "dark?",
-        "onPayload": "turn_on",
-        "onPayloadType": "str",
-        "offPayload": "turn_off",
-        "offPayloadType": "str",
-        "onlyWhenDark": true,
-        "scheduleRndMax": 0,
-        "sunElevationThreshold": "10",
-        "sunShowElevationInStatus": true,
-        "outputfreq": "output.statechange",
-        "x": 310,
-        "y": 100,
-        "wires": [
-            [
-                "710faff9.f3bb5"
-            ]
-        ]
-    },
-    {
-        "id": "710faff9.f3bb5",
-        "type": "function",
-        "z": "af228686.65c8a8",
-        "name": "format",
-        "func": "var input = msg.payload\n\nmsg.payload = {\n    \"service\": input,\n}\nreturn [ msg ];\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 530,
-        "y": 100,
-        "wires": [
-            [
-                "f6e6a362.ad7e6",
-                "f5cb1a9d.0227e8"
-            ]
-        ]
-    },
-    {
         "id": "f6e6a362.ad7e6",
         "type": "api-current-state",
         "z": "af228686.65c8a8",
@@ -8250,8 +8188,7 @@
         "y": 40,
         "wires": [
             [
-                "53aba614.8eed08",
-                "aeb0b243.17cee"
+                "53aba614.8eed08"
             ]
         ]
     },
@@ -14363,24 +14300,6 @@
         ]
     },
     {
-        "id": "f5cb1a9d.0227e8",
-        "type": "subflow:29f6dc7c.662814",
-        "z": "af228686.65c8a8",
-        "d": true,
-        "name": "",
-        "env": [],
-        "x": 710,
-        "y": 60,
-        "wires": [
-            [],
-            [
-                "b5ce153f.7eca98",
-                "3af164aa.92a0ac",
-                "78d24791.853db8"
-            ]
-        ]
-    },
-    {
         "id": "ea25edb9.d9596",
         "type": "api-call-service",
         "z": "43703bf3.b01b24",
@@ -16408,225 +16327,6 @@
         ]
     },
     {
-        "id": "5ec55898.e2bcc8",
-        "type": "trigger-state",
-        "z": "af228686.65c8a8",
-        "name": "not_home -> home",
-        "server": "8b52884a.b76658",
-        "version": 0,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityid": "sensor.anyone_home",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
-        "constraints": [
-            {
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "current_state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "home",
-                "propertyValue": "new_state.state"
-            },
-            {
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "previous_state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "not_home",
-                "propertyValue": "old_state.state"
-            }
-        ],
-        "outputs": 2,
-        "customoutputs": [],
-        "outputinitially": false,
-        "state_type": "str",
-        "x": 110,
-        "y": 2000,
-        "wires": [
-            [
-                "15f9d193.671a2e"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "cba9b213.37324",
-        "type": "api-call-service",
-        "z": "af228686.65c8a8",
-        "name": "cabinet lights",
-        "server": "8b52884a.b76658",
-        "version": 3,
-        "debugenabled": false,
-        "service_domain": "switch",
-        "service": "",
-        "entityId": "group.cabinet_lights",
-        "data": "",
-        "dataType": "json",
-        "mergecontext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "data"
-            }
-        ],
-        "queue": "none",
-        "x": 970,
-        "y": 1940,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "38fef95b.ebb3a6",
-        "type": "function",
-        "z": "af228686.65c8a8",
-        "name": "turn_on",
-        "func": "var service = \"turn_on\"\n\nmsg.payload = {\n    \"service\": service,\n}\nreturn [ msg ];\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 580,
-        "y": 2000,
-        "wires": [
-            [
-                "cba9b213.37324",
-                "3a8ff52.b087d0a",
-                "54532bed.573964",
-                "9b2a763.d450a88"
-            ]
-        ]
-    },
-    {
-        "id": "a1ae43f2.cda57",
-        "type": "api-current-state",
-        "z": "af228686.65c8a8",
-        "name": "home?",
-        "server": "8b52884a.b76658",
-        "version": 2,
-        "outputs": 2,
-        "halt_if": "home",
-        "halt_if_type": "str",
-        "halt_if_compare": "is_not",
-        "entity_id": "sensor.anyone_home",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [],
-        "x": 750,
-        "y": 1940,
-        "wires": [
-            [],
-            [
-                "cba9b213.37324",
-                "54532bed.573964",
-                "9b2a763.d450a88"
-            ]
-        ]
-    },
-    {
-        "id": "3a8ff52.b087d0a",
-        "type": "api-call-service",
-        "z": "af228686.65c8a8",
-        "name": "foyer stairs lights",
-        "server": "8b52884a.b76658",
-        "version": 3,
-        "debugenabled": false,
-        "service_domain": "light",
-        "service": "",
-        "entityId": "light.stairs_2",
-        "data": "",
-        "dataType": "json",
-        "mergecontext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "data"
-            }
-        ],
-        "queue": "none",
-        "x": 990,
-        "y": 2000,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "54532bed.573964",
-        "type": "api-call-service",
-        "z": "af228686.65c8a8",
-        "name": "tree lights",
-        "server": "8b52884a.b76658",
-        "version": 3,
-        "debugenabled": false,
-        "service_domain": "switch",
-        "service": "",
-        "entityId": "switch.outlet_d",
-        "data": "",
-        "dataType": "json",
-        "mergecontext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "data"
-            }
-        ],
-        "queue": "none",
-        "x": 960,
-        "y": 2060,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9b2a763.d450a88",
-        "type": "api-call-service",
-        "z": "af228686.65c8a8",
-        "name": "sunroom lights",
-        "server": "8b52884a.b76658",
-        "version": 3,
-        "debugenabled": false,
-        "service_domain": "switch",
-        "service": "",
-        "entityId": "group.sunroom_lights",
-        "data": "",
-        "dataType": "json",
-        "mergecontext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "data"
-            }
-        ],
-        "queue": "none",
-        "x": 1200,
-        "y": 1960,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "b0c432b9.2864f",
         "type": "api-current-state",
         "z": "af228686.65c8a8",
@@ -16733,10 +16433,64 @@
         "wires": []
     },
     {
-        "id": "e18893d5.ec933",
+        "id": "9b2922c6.8ae06",
+        "type": "function",
+        "z": "af228686.65c8a8",
+        "name": "format",
+        "func": "var input = msg.payload\n\nif (input <= 15000) {\n    msg.payload = {\n        \"service\": \"turn_on\"\n    }\n}\nelse {\n   msg.payload = {\n        \"service\": \"turn_off\"\n    } \n}\n\nreturn [ msg ];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 2120,
+        "wires": [
+            [
+                "cbb91eea.7a8b2"
+            ]
+        ]
+    },
+    {
+        "id": "cbb91eea.7a8b2",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "7140f661.f7cf98",
+        "type": "function",
+        "z": "af228686.65c8a8",
+        "name": "format",
+        "func": "var input = msg.payload\n\nif (input <= 15000) {\n    msg.payload = {\n        \"service\": \"turn_on\"\n    }\n}\nelse {\n   msg.payload = {\n        \"service\": \"turn_off\"\n    } \n}\n\nreturn [ msg ];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 100,
+        "wires": [
+            [
+                "f6e6a362.ad7e6"
+            ]
+        ]
+    },
+    {
+        "id": "641573de.543e8c",
         "type": "server-state-changed",
         "z": "af228686.65c8a8",
-        "name": "light <= 15000 lux",
+        "name": "light <= 15000",
         "server": "8b52884a.b76658",
         "version": 3,
         "exposeToHomeAssistant": false,
@@ -16787,20 +16541,22 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 350,
-        "y": 1940,
+        "x": 330,
+        "y": 100,
         "wires": [
             [
-                "c7cd2e9d.256a"
+                "7140f661.f7cf98"
             ],
-            []
+            [
+                "7140f661.f7cf98"
+            ]
         ]
     },
     {
-        "id": "15f9d193.671a2e",
+        "id": "310b007d.3a5eb",
         "type": "api-current-state",
         "z": "af228686.65c8a8",
-        "name": "light <= 15000 lux",
+        "name": "light <= 15000",
         "server": "8b52884a.b76658",
         "version": 2,
         "outputs": 2,
@@ -16829,67 +16585,13 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 350,
-        "y": 2000,
+        "x": 320,
+        "y": 160,
         "wires": [
             [
-                "38fef95b.ebb3a6"
+                "c3884fae.62ca4"
             ],
             []
-        ]
-    },
-    {
-        "id": "9b2922c6.8ae06",
-        "type": "function",
-        "z": "af228686.65c8a8",
-        "name": "format",
-        "func": "var input = msg.payload\n\nif (input <= 15000) {\n    msg.payload = {\n        \"service\": \"turn_on\"\n    }\n}\nelse {\n   msg.payload = {\n        \"service\": \"turn_off\"\n    } \n}\n\nreturn [ msg ];\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 550,
-        "y": 2120,
-        "wires": [
-            [
-                "cbb91eea.7a8b2"
-            ]
-        ]
-    },
-    {
-        "id": "cbb91eea.7a8b2",
-        "type": "debug",
-        "z": "af228686.65c8a8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 730,
-        "y": 2140,
-        "wires": []
-    },
-    {
-        "id": "c7cd2e9d.256a",
-        "type": "function",
-        "z": "af228686.65c8a8",
-        "name": "format",
-        "func": "var input = msg.payload\n\nif (input <= 15000) {\n    msg.payload = {\n        \"service\": \"turn_on\"\n    }\n}\nelse {\n   msg.payload = {\n        \"service\": \"turn_off\"\n    } \n}\n\nreturn [ msg ];\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 570,
-        "y": 1940,
-        "wires": [
-            [
-                "a1ae43f2.cda57"
-            ]
         ]
     }
 ]
