@@ -16748,17 +16748,7 @@
         "entityid": "sensor.smartweather_brightness",
         "entityidfiltertype": "exact",
         "debugenabled": true,
-        "constraints": [
-            {
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "current_state",
-                "comparatorType": "<=",
-                "comparatorValueDatatype": "num",
-                "comparatorValue": "25000",
-                "propertyValue": "new_state.state"
-            }
-        ],
+        "constraints": [],
         "outputs": 4,
         "customoutputs": [
             {
