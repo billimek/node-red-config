@@ -16411,7 +16411,7 @@
         "id": "2124c8c9.3e1748",
         "type": "server-state-changed",
         "z": "af228686.65c8a8",
-        "name": "brightness",
+        "name": "brightness > 10000 lux",
         "server": "8b52884a.b76658",
         "version": 3,
         "exposeToHomeAssistant": false,
@@ -16462,7 +16462,7 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 110,
+        "x": 150,
         "y": 1580,
         "wires": [
             [
@@ -16503,6 +16503,104 @@
         "statusType": "auto",
         "x": 320,
         "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "44875ed3.fb32e",
+        "type": "server-state-changed",
+        "z": "af228686.65c8a8",
+        "name": "brightness",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "sensor.smartweather_brightness",
+        "entityidfiltertype": "exact",
+        "outputinitially": true,
+        "state_type": "str",
+        "haltifstate": "10000",
+        "halt_if_type": "num",
+        "halt_if_compare": "lte",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "for": 0,
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 120,
+        "y": 1760,
+        "wires": [
+            [
+                "81b45478.eabbc8"
+            ],
+            [
+                "f9056c42.00a23"
+            ]
+        ]
+    },
+    {
+        "id": "f9056c42.00a23",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 310,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "81b45478.eabbc8",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 330,
+        "y": 1840,
         "wires": []
     }
 ]
