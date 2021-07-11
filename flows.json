@@ -16757,7 +16757,7 @@
                 "messageValueType": "json",
                 "comparatorPropertyType": "current_state",
                 "comparatorType": "<=",
-                "comparatorValue": "25000",
+                "comparatorValue": "28000",
                 "comparatorValueDataType": "num",
                 "comparatorPropertyValue": "new_state.state"
             },
@@ -16767,7 +16767,7 @@
                 "messageValueType": "json",
                 "comparatorPropertyType": "current_state",
                 "comparatorType": ">",
-                "comparatorValue": "25000",
+                "comparatorValue": "28000",
                 "comparatorValueDataType": "num",
                 "comparatorPropertyValue": "new_state.state"
             }
