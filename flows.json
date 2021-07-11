@@ -16747,7 +16747,7 @@
         ],
         "entityid": "sensor.smartweather_brightness",
         "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "debugenabled": true,
         "constraints": [
             {
                 "targetType": "this_entity",
