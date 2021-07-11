@@ -275,6 +275,7 @@
         "name": "Home Assistant",
         "version": 1,
         "legacy": false,
+        "addon": false,
         "rejectUnauthorizedCerts": true,
         "ha_boolean": "y|yes|true|on|home|open",
         "connectionDelay": true,
