@@ -8225,7 +8225,7 @@
         "sunElevationThreshold": 6,
         "sunShowElevationInStatus": true,
         "outputfreq": "output.statechange.startup",
-        "x": 330,
+        "x": 350,
         "y": 40,
         "wires": [
             [
@@ -16490,7 +16490,7 @@
         "id": "641573de.543e8c",
         "type": "server-state-changed",
         "z": "af228686.65c8a8",
-        "name": "light <= 15000",
+        "name": "light <= 15000 lux",
         "server": "8b52884a.b76658",
         "version": 3,
         "exposeToHomeAssistant": false,
@@ -16556,7 +16556,7 @@
         "id": "310b007d.3a5eb",
         "type": "api-current-state",
         "z": "af228686.65c8a8",
-        "name": "light <= 15000",
+        "name": "light <= 15000 lux",
         "server": "8b52884a.b76658",
         "version": 2,
         "outputs": 2,
@@ -16585,7 +16585,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 320,
+        "x": 330,
         "y": 160,
         "wires": [
             [
