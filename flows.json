@@ -16757,6 +16757,15 @@
                 "comparatorValueDatatype": "num",
                 "comparatorValue": "<= 25000",
                 "propertyValue": "new_state.state"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "comparatorType": ">",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "25000",
+                "propertyValue": "new_state.state"
             }
         ],
         "outputs": 4,
