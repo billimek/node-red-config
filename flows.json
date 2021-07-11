@@ -16310,19 +16310,13 @@
             {
                 "property": "payload",
                 "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
+                "value": "{\t\"service\": \"turn_off\"\t}",
+                "valueType": "jsonata"
             },
             {
                 "property": "payload",
                 "propertyType": "msg",
-                "value": "{\t\"service\": \"turn_off\"\t}",
+                "value": "{\t\"service\": \"turn_on\"\t}",
                 "valueType": "jsonata"
             }
         ],
