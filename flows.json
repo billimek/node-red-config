@@ -16755,7 +16755,7 @@
                 "propertyType": "current_state",
                 "comparatorType": "<=",
                 "comparatorValueDatatype": "num",
-                "comparatorValue": "<= 25000",
+                "comparatorValue": "25000",
                 "propertyValue": "new_state.state"
             },
             {
