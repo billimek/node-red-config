@@ -16726,5 +16726,172 @@
             ],
             []
         ]
+    },
+    {
+        "id": "714ef253.a7815c",
+        "type": "trigger-state",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "server": "8b52884a.b76658",
+        "version": 0,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityid": "sensor.smartweather_brightness",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "<= 25000",
+                "propertyValue": "new_state.state"
+            }
+        ],
+        "outputs": 4,
+        "customoutputs": [
+            {
+                "messageType": "payload",
+                "messageValue": "\"service\": \"turn_on\"",
+                "messageValueType": "json",
+                "comparatorPropertyType": "current_state",
+                "comparatorType": "<=",
+                "comparatorValue": "25000",
+                "comparatorValueDataType": "num",
+                "comparatorPropertyValue": "new_state.state"
+            },
+            {
+                "messageType": "payload",
+                "messageValue": "\"service\": \"turn_off\"",
+                "messageValueType": "json",
+                "comparatorPropertyType": "current_state",
+                "comparatorType": ">",
+                "comparatorValue": "25000",
+                "comparatorValueDataType": "num",
+                "comparatorPropertyValue": "new_state.state"
+            }
+        ],
+        "outputinitially": true,
+        "state_type": "num",
+        "x": 430,
+        "y": 1960,
+        "wires": [
+            [
+                "93be095a.48ce78"
+            ],
+            [
+                "c5c9c150.5635d"
+            ],
+            [
+                "554b6cde.9c1784"
+            ],
+            [
+                "d075b082.1e35"
+            ]
+        ]
+    },
+    {
+        "id": "93be095a.48ce78",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "c5c9c150.5635d",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "554b6cde.9c1784",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 1980,
+        "wires": []
+    },
+    {
+        "id": "d075b082.1e35",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "dcb3112.dd948f",
+        "type": "inject",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 1880,
+        "wires": [
+            [
+                "714ef253.a7815c"
+            ]
+        ]
     }
 ]
