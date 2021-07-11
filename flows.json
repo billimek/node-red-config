@@ -16707,22 +16707,6 @@
         ]
     },
     {
-        "id": "adcf15e.890fee8",
-        "type": "function",
-        "z": "af228686.65c8a8",
-        "name": "format",
-        "func": "var input = msg.payload\n\nmsg.payload = {\n    \"service\": input,\n}\nreturn [ msg ];\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 570,
-        "y": 1940,
-        "wires": [
-            [
-                "a1ae43f2.cda57"
-            ]
-        ]
-    },
-    {
         "id": "a1ae43f2.cda57",
         "type": "api-current-state",
         "z": "af228686.65c8a8",
@@ -17003,7 +16987,7 @@
         "y": 1940,
         "wires": [
             [
-                "adcf15e.890fee8"
+                "c7cd2e9d.256a"
             ],
             []
         ]
@@ -17084,5 +17068,24 @@
         "x": 730,
         "y": 2140,
         "wires": []
+    },
+    {
+        "id": "c7cd2e9d.256a",
+        "type": "function",
+        "z": "af228686.65c8a8",
+        "name": "format",
+        "func": "var input = msg.payload\n\nif (input <= 15000) {\n    msg.payload = {\n        \"service\": \"turn_on\"\n    }\n}\nelse {\n   msg.payload = {\n        \"service\": \"turn_off\"\n    } \n}\n\nreturn [ msg ];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 1940,
+        "wires": [
+            [
+                "a1ae43f2.cda57"
+            ]
+        ]
     }
 ]
