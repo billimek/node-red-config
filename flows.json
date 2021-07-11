@@ -16322,7 +16322,7 @@
             {
                 "property": "payload",
                 "propertyType": "msg",
-                "value": "\"service\": \"turn_off\"",
+                "value": "{\t\"service\": \"turn_off\"\t}",
                 "valueType": "jsonata"
             }
         ],
