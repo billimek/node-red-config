@@ -7739,7 +7739,7 @@
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "x": 130,
+        "x": 110,
         "y": 100,
         "wires": [
             [
