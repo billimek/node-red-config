@@ -7739,8 +7739,8 @@
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "x": 110,
-        "y": 220,
+        "x": 130,
+        "y": 100,
         "wires": [
             [
                 "310b007d.3a5eb",
@@ -7862,8 +7862,8 @@
         "func": "var service = \"turn_on\"\n\nmsg.payload = {\n    \"service\": service,\n}\nreturn [ msg ];\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 540,
-        "y": 220,
+        "x": 560,
+        "y": 100,
         "wires": [
             [
                 "b5ce153f.7eca98",
@@ -8155,19 +8155,18 @@
         "outputs": 2,
         "halt_if": "home",
         "halt_if_type": "str",
-        "halt_if_compare": "is_not",
+        "halt_if_compare": "is",
         "entity_id": "sensor.anyone_home",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [],
-        "x": 710,
-        "y": 100,
+        "x": 730,
+        "y": 280,
         "wires": [
-            [],
             [
-                "b5ce153f.7eca98",
                 "78d24791.853db8"
-            ]
+            ],
+            []
         ]
     },
     {
@@ -11687,7 +11686,7 @@
         ],
         "queue": "none",
         "x": 950,
-        "y": 220,
+        "y": 100,
         "wires": [
             []
         ]
@@ -14322,7 +14321,7 @@
         ],
         "queue": "none",
         "x": 940,
-        "y": 100,
+        "y": 220,
         "wires": [
             []
         ]
@@ -16446,11 +16445,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 100,
+        "x": 550,
+        "y": 220,
         "wires": [
             [
-                "f6e6a362.ad7e6"
+                "b9d8ec1d.5e933"
             ]
         ]
     },
@@ -16509,8 +16508,8 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 330,
-        "y": 100,
+        "x": 350,
+        "y": 220,
         "wires": [
             [
                 "7140f661.f7cf98"
@@ -16553,8 +16552,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 330,
-        "y": 220,
+        "x": 350,
+        "y": 100,
         "wires": [
             [
                 "c3884fae.62ca4"
@@ -16617,8 +16616,8 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 340,
-        "y": 160,
+        "x": 360,
+        "y": 280,
         "wires": [
             [
                 "b32fd572.89fd78"
@@ -16661,8 +16660,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 340,
-        "y": 280,
+        "x": 360,
+        "y": 160,
         "wires": [
             [
                 "983f55d6.ee1868"
@@ -16678,8 +16677,8 @@
         "func": "var service = \"turn_on\"\n\nmsg.payload = {\n    \"service\": service,\n}\nreturn [ msg ];\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 540,
-        "y": 280,
+        "x": 560,
+        "y": 160,
         "wires": [
             [
                 "78d24791.853db8"
@@ -16697,12 +16696,36 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 160,
+        "x": 550,
+        "y": 280,
         "wires": [
             [
                 "f6e6a362.ad7e6"
             ]
+        ]
+    },
+    {
+        "id": "b9d8ec1d.5e933",
+        "type": "api-current-state",
+        "z": "af228686.65c8a8",
+        "name": "home?",
+        "server": "8b52884a.b76658",
+        "version": 2,
+        "outputs": 2,
+        "halt_if": "home",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "sensor.anyone_home",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [],
+        "x": 730,
+        "y": 220,
+        "wires": [
+            [
+                "b5ce153f.7eca98"
+            ],
+            []
         ]
     }
 ]
