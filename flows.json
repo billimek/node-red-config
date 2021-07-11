@@ -16411,7 +16411,7 @@
         "id": "2124c8c9.3e1748",
         "type": "server-state-changed",
         "z": "af228686.65c8a8",
-        "name": "light >= 10000 lux",
+        "name": "light >= 15000 lux",
         "server": "8b52884a.b76658",
         "version": 3,
         "exposeToHomeAssistant": false,
@@ -16429,7 +16429,7 @@
         "entityidfiltertype": "exact",
         "outputinitially": true,
         "state_type": "num",
-        "haltifstate": "10000",
+        "haltifstate": "15000",
         "halt_if_type": "num",
         "halt_if_compare": "gte",
         "outputs": 2,
@@ -16509,7 +16509,7 @@
         "id": "44875ed3.fb32e",
         "type": "server-state-changed",
         "z": "af228686.65c8a8",
-        "name": "light <= 10000 lux",
+        "name": "light <= 15000 lux",
         "server": "8b52884a.b76658",
         "version": 3,
         "exposeToHomeAssistant": false,
@@ -16527,7 +16527,7 @@
         "entityidfiltertype": "exact",
         "outputinitially": true,
         "state_type": "num",
-        "haltifstate": "10000",
+        "haltifstate": "15000",
         "halt_if_type": "num",
         "halt_if_compare": "lte",
         "outputs": 2,
@@ -16842,11 +16842,11 @@
         "id": "b0c432b9.2864f",
         "type": "api-current-state",
         "z": "af228686.65c8a8",
-        "name": "light <= 10000 lux",
+        "name": "light <= 15000 lux",
         "server": "8b52884a.b76658",
         "version": 2,
         "outputs": 2,
-        "halt_if": "10000",
+        "halt_if": "15000",
         "halt_if_type": "num",
         "halt_if_compare": "lte",
         "entity_id": "sensor.smartweather_brightness",
@@ -16875,7 +16875,8 @@
         "y": 2120,
         "wires": [
             [
-                "7b7f13b1.a9f53c"
+                "7b7f13b1.a9f53c",
+                "9b2922c6.8ae06"
             ],
             [
                 "df47824.45a138"
@@ -16923,7 +16924,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 490,
+        "x": 530,
         "y": 2200,
         "wires": []
     },
@@ -16947,7 +16948,7 @@
         "id": "e18893d5.ec933",
         "type": "server-state-changed",
         "z": "af228686.65c8a8",
-        "name": "light <= 10000 lux",
+        "name": "light <= 15000 lux",
         "server": "8b52884a.b76658",
         "version": 3,
         "exposeToHomeAssistant": false,
@@ -16965,7 +16966,7 @@
         "entityidfiltertype": "exact",
         "outputinitially": true,
         "state_type": "num",
-        "haltifstate": "10000",
+        "haltifstate": "15000",
         "halt_if_type": "num",
         "halt_if_compare": "lte",
         "outputs": 2,
@@ -17011,11 +17012,11 @@
         "id": "15f9d193.671a2e",
         "type": "api-current-state",
         "z": "af228686.65c8a8",
-        "name": "light <= 10000 lux",
+        "name": "light <= 15000 lux",
         "server": "8b52884a.b76658",
         "version": 2,
         "outputs": 2,
-        "halt_if": "10000",
+        "halt_if": "15000",
         "halt_if_type": "num",
         "halt_if_compare": "lte",
         "entity_id": "sensor.smartweather_brightness",
@@ -17048,5 +17049,40 @@
             ],
             []
         ]
+    },
+    {
+        "id": "9b2922c6.8ae06",
+        "type": "function",
+        "z": "af228686.65c8a8",
+        "name": "format",
+        "func": "var input = msg.payload\n\nif (input <= 15000) {\n    msg.payload = {\n        \"service\": \"turn_on\"\n    }\n}\nelse {\n   msg.payload = {\n        \"service\": \"turn_off\"\n    } \n}\n\nreturn [ msg ];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 2120,
+        "wires": [
+            [
+                "cbb91eea.7a8b2"
+            ]
+        ]
+    },
+    {
+        "id": "cbb91eea.7a8b2",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 2140,
+        "wires": []
     }
 ]
