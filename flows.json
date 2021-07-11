@@ -16318,6 +16318,12 @@
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "entity"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "\"service\": \"turn_off\"",
+                "valueType": "jsonata"
             }
         ],
         "override_topic": false,
