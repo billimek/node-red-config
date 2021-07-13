@@ -16331,7 +16331,7 @@
         ],
         "entityidfilter": "sensor.smartweather_brightness_filtered",
         "entityidfiltertype": "exact",
-        "outputinitially": true,
+        "outputinitially": false,
         "state_type": "num",
         "haltifstate": "25000",
         "halt_if_type": "num",
@@ -16344,8 +16344,8 @@
         "ignorePrevStateNull": false,
         "ignorePrevStateUnknown": false,
         "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
         "outputProperties": [
             {
                 "property": "payload",
@@ -16452,8 +16452,8 @@
         "ignorePrevStateNull": false,
         "ignorePrevStateUnknown": false,
         "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
         "outputProperties": [
             {
                 "property": "payload",
