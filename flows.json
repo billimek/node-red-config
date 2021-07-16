@@ -16738,5 +16738,62 @@
         "x": 930,
         "y": 460,
         "wires": []
+    },
+    {
+        "id": "aeb0b243.17cee",
+        "type": "light-scheduler",
+        "z": "af228686.65c8a8",
+        "settings": "f26da246.74a7f",
+        "events": "[{\"start\":{\"dow\":1,\"mod\":330},\"end\":{\"dow\":2,\"mod\":0}},{\"start\":{\"dow\":2,\"mod\":330},\"end\":{\"dow\":3,\"mod\":0}},{\"start\":{\"dow\":3,\"mod\":330},\"end\":{\"dow\":4,\"mod\":0}},{\"start\":{\"dow\":4,\"mod\":330},\"end\":{\"dow\":5,\"mod\":0}},{\"start\":{\"dow\":5,\"mod\":330},\"end\":{\"dow\":6,\"mod\":0}},{\"start\":{\"dow\":6,\"mod\":330},\"end\":{\"dow\":0,\"mod\":0}},{\"start\":{\"dow\":0,\"mod\":330},\"end\":{\"dow\":1,\"mod\":0}}]",
+        "topic": "service",
+        "name": "dark?",
+        "onPayload": "turn_on",
+        "onPayloadType": "str",
+        "offPayload": "turn_off",
+        "offPayloadType": "str",
+        "onlyWhenDark": true,
+        "scheduleRndMax": 0,
+        "sunElevationThreshold": "10",
+        "sunShowElevationInStatus": true,
+        "outputfreq": "output.statechange",
+        "x": 1070,
+        "y": 520,
+        "wires": [
+            [
+                "710faff9.f3bb5"
+            ]
+        ]
+    },
+    {
+        "id": "710faff9.f3bb5",
+        "type": "function",
+        "z": "af228686.65c8a8",
+        "name": "format",
+        "func": "var input = msg.payload\n\nmsg.payload = {\n    \"service\": input,\n}\nreturn [ msg ];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1290,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b98bed87.b9424",
+        "type": "light-scheduler-filter",
+        "z": "af228686.65c8a8",
+        "settings": "f26da246.74a7f",
+        "events": "[{\"start\":{\"dow\":1,\"mod\":900},\"end\":{\"dow\":2,\"mod\":0}},{\"start\":{\"dow\":2,\"mod\":900},\"end\":{\"dow\":3,\"mod\":0}},{\"start\":{\"dow\":3,\"mod\":900},\"end\":{\"dow\":4,\"mod\":0}},{\"start\":{\"dow\":4,\"mod\":900},\"end\":{\"dow\":5,\"mod\":0}},{\"start\":{\"dow\":5,\"mod\":900},\"end\":{\"dow\":6,\"mod\":0}},{\"start\":{\"dow\":6,\"mod\":900},\"end\":{\"dow\":0,\"mod\":0}},{\"start\":{\"dow\":0,\"mod\":900},\"end\":{\"dow\":1,\"mod\":0}}]",
+        "name": "dark? (filter)",
+        "onlyWhenDark": true,
+        "scheduleRndMax": 0,
+        "sunElevationThreshold": "10",
+        "sunShowElevationInStatus": true,
+        "x": 1150,
+        "y": 460,
+        "wires": [
+            [],
+            []
+        ]
     }
 ]
