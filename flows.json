@@ -16744,8 +16744,8 @@
         "y": 1840,
         "wires": [
             [
-                "7a55b1bfc909ca56",
-                "1b8824cb5e1c2174"
+                "1b8824cb5e1c2174",
+                "c2b47815d0599fa9"
             ]
         ]
     },
@@ -16814,6 +16814,31 @@
         "y": 1760,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "c2b47815d0599fa9",
+        "type": "trigger",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "1",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "ON",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 650,
+        "y": 1640,
+        "wires": [
+            [
+                "6b17b4325f705555"
+            ]
         ]
     }
 ]
