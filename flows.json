@@ -16750,23 +16750,6 @@
         ]
     },
     {
-        "id": "7a55b1bfc909ca56",
-        "type": "function",
-        "z": "af228686.65c8a8",
-        "name": "OFF> 10 mins?",
-        "func": "var epochMS = new Date().getTime();\nvar minsToCheck = 10;\nvar minutesInMS = 60000;\nvar initTimeMS = global.get('cover.jen_garage_door_mqtt.initTimeMS') || epochMS;\nvar duration = epochMS - initTimeMS\nglobal.set('cover.jen_garage_door_mqtt.durationTimeMS',duration);\n\nif ((duration) >= (minutesInMS*minsToCheck)) {\n  return [ msg ];\n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 740,
-        "y": 1840,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "1b8824cb5e1c2174",
         "type": "debug",
         "z": "af228686.65c8a8",
@@ -16799,24 +16782,6 @@
         "wires": []
     },
     {
-        "id": "34e290a18afe3c0f",
-        "type": "rbe",
-        "z": "af228686.65c8a8",
-        "name": "state change",
-        "func": "rbei",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "",
-        "x": 610,
-        "y": 1760,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "c2b47815d0599fa9",
         "type": "trigger",
         "z": "af228686.65c8a8",
@@ -16825,16 +16790,16 @@
         "op2": "0",
         "op1type": "str",
         "op2type": "str",
-        "duration": "1",
+        "duration": "10",
         "extend": true,
         "overrideDelay": false,
-        "units": "min",
+        "units": "s",
         "reset": "ON",
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 650,
-        "y": 1640,
+        "x": 610,
+        "y": 1840,
         "wires": [
             [
                 "6b17b4325f705555"
