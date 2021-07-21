@@ -12861,7 +12861,7 @@
         "qos": "2",
         "datatype": "auto",
         "broker": "649859a4.a17818",
-        "x": 110,
+        "x": 130,
         "y": 1340,
         "wires": [
             [
@@ -14300,7 +14300,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 170,
+        "x": 530,
         "y": 1520,
         "wires": [
             []
