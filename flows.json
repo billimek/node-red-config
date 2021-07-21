@@ -16719,8 +16719,7 @@
         "y": 1840,
         "wires": [
             [
-                "5bc0cce1b1285650",
-                "08f8ef01b4714d3c"
+                "5bc0cce1b1285650"
             ]
         ]
     },
@@ -16728,7 +16727,7 @@
         "id": "5bc0cce1b1285650",
         "type": "switch",
         "z": "af228686.65c8a8",
-        "name": "open?",
+        "name": "motion?",
         "property": "payload",
         "propertyType": "msg",
         "rules": [
@@ -16741,7 +16740,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 350,
+        "x": 360,
         "y": 1840,
         "wires": [
             [
@@ -16766,22 +16765,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "08f8ef01b4714d3c",
-        "type": "debug",
-        "z": "af228686.65c8a8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 400,
-        "y": 1940,
-        "wires": []
     },
     {
         "id": "1b8824cb5e1c2174",
@@ -16814,5 +16797,23 @@
         "x": 950,
         "y": 1940,
         "wires": []
+    },
+    {
+        "id": "34e290a18afe3c0f",
+        "type": "rbe",
+        "z": "af228686.65c8a8",
+        "name": "state change",
+        "func": "rbei",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "",
+        "x": 610,
+        "y": 1760,
+        "wires": [
+            []
+        ]
     }
 ]
