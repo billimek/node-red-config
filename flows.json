@@ -16730,7 +16730,7 @@
         "op2": "turn_off",
         "op1type": "str",
         "op2type": "str",
-        "duration": "10",
+        "duration": "1",
         "extend": true,
         "overrideDelay": false,
         "units": "min",
