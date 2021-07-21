@@ -16777,8 +16777,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 950,
-        "y": 1940,
+        "x": 930,
+        "y": 1800,
         "wires": []
     },
     {
@@ -16797,13 +16797,32 @@
         "reset": "ON",
         "bytopic": "all",
         "topic": "topic",
-        "outputs": 1,
+        "outputs": 2,
         "x": 610,
         "y": 1840,
         "wires": [
             [
                 "6b17b4325f705555"
+            ],
+            [
+                "0f5ff716dd99c2df"
             ]
         ]
+    },
+    {
+        "id": "0f5ff716dd99c2df",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 1880,
+        "wires": []
     }
 ]
