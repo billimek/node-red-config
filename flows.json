@@ -16766,50 +16766,5 @@
                 "c2b47815d0599fa9"
             ]
         ]
-    },
-    {
-        "id": "982febaabe345280",
-        "type": "inject",
-        "z": "af228686.65c8a8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1230,
-        "y": 200,
-        "wires": [
-            [
-                "a79978dd9339f3ec"
-            ]
-        ]
-    },
-    {
-        "id": "a79978dd9339f3ec",
-        "type": "function",
-        "z": "af228686.65c8a8",
-        "name": "turn_on",
-        "func": "var service = \"turn_on\"\n\nmsg.payload = {\n    \"service\": service,\n}\nreturn [ msg ];\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1300,
-        "y": 300,
-        "wires": [
-            [
-                "78d24791.853db8"
-            ]
-        ]
     }
 ]
