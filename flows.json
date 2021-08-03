@@ -14231,7 +14231,7 @@
         "server": "8b52884a.b76658",
         "version": 3,
         "debugenabled": false,
-        "service_domain": "switch",
+        "service_domain": "light",
         "service": "",
         "entityId": "group.sunroom_lights",
         "data": "",
