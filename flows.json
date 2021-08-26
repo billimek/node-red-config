@@ -16792,7 +16792,7 @@
         "version": 3,
         "debugenabled": true,
         "service_domain": "notify",
-        "service": "mobile_app_jeffs_xs",
+        "service": "mobile_app_jeffsxs",
         "entityId": "",
         "data": "",
         "dataType": "json",
