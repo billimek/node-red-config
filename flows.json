@@ -16766,5 +16766,80 @@
                 "c2b47815d0599fa9"
             ]
         ]
+    },
+    {
+        "id": "c0652852eac2a83e",
+        "type": "function",
+        "z": "75b62c93.dd5d84",
+        "name": "Jen's garage open msg",
+        "func": "var category = \"garage2\";\nvar name = \"Jen's\";\nvar title = \"Jen's Garage Door\";\nvar openTimeinMS = global.get('cover.jen_garage_door_mqtt.durationTimeMS') || 0;\nvar message = name + \" garage door has remained open for about \" + millisecondsToStr(openTimeinMS)\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n        data: {\n            push: {\n                category: category,\n                sound: \"US-EN-Morgan-Freeman-Garage-Door-Opened.wav\"\n            }\n        }\n    }\n}\nreturn [ msg ];\n\nfunction millisecondsToStr (milliseconds) {\n    // TIP: to find current time in milliseconds, use:\n    // var  current_time_milliseconds = new Date().getTime();\n\n    function numberEnding (number) {\n        return (number > 1) ? 's' : '';\n    }\n\n    var temp = Math.floor(milliseconds / 1000);\n    var years = Math.floor(temp / 31536000);\n    if (years) {\n        return years + ' year' + numberEnding(years);\n    }\n    //TODO: Months! Maybe weeks? \n    var days = Math.floor((temp %= 31536000) / 86400);\n    if (days) {\n        return days + ' day' + numberEnding(days);\n    }\n    var hours = Math.floor((temp %= 86400) / 3600);\n    if (hours) {\n        return hours + ' hour' + numberEnding(hours);\n    }\n    var minutes = Math.floor((temp %= 3600) / 60);\n    if (minutes) {\n        return minutes + ' minute' + numberEnding(minutes);\n    }\n    var seconds = temp % 60;\n    if (seconds) {\n        return seconds + ' second' + numberEnding(seconds);\n    }\n    return 'less than a second'; //'just now' //or other string you like;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1590,
+        "y": 1140,
+        "wires": [
+            [
+                "014a910f640285b2"
+            ]
+        ]
+    },
+    {
+        "id": "014a910f640285b2",
+        "type": "api-call-service",
+        "z": "75b62c93.dd5d84",
+        "name": "notify jeff iOS",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "notify",
+        "service": "mobile_app_jeffs_xs",
+        "entityId": "",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "data"
+            }
+        ],
+        "queue": "none",
+        "x": 1860,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d97c1bf52930b519",
+        "type": "inject",
+        "z": "75b62c93.dd5d84",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1410,
+        "y": 1080,
+        "wires": [
+            [
+                "c0652852eac2a83e"
+            ]
+        ]
     }
 ]
