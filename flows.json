@@ -16790,7 +16790,7 @@
         "name": "notify jeff iOS",
         "server": "8b52884a.b76658",
         "version": 3,
-        "debugenabled": false,
+        "debugenabled": true,
         "service_domain": "notify",
         "service": "mobile_app_jeffs_xs",
         "entityId": "",
@@ -16810,7 +16810,9 @@
         "x": 1860,
         "y": 1140,
         "wires": [
-            []
+            [
+                "75e4081a9d7380a0"
+            ]
         ]
     },
     {
@@ -16841,5 +16843,21 @@
                 "c0652852eac2a83e"
             ]
         ]
+    },
+    {
+        "id": "75e4081a9d7380a0",
+        "type": "debug",
+        "z": "75b62c93.dd5d84",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2000,
+        "y": 980,
+        "wires": []
     }
 ]
