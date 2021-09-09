@@ -9404,7 +9404,7 @@
                 "value": ""
             }
         ],
-        "entityidfilter": "binary_sensor.basement_water_sensor_a_water_alarm",
+        "entityidfilter": "binary_sensor.water_sensor_a_water_alarm_water_leak_detected",
         "entityidfiltertype": "substring",
         "outputinitially": false,
         "state_type": "str",
@@ -9444,10 +9444,13 @@
         "x": 120,
         "y": 840,
         "wires": [
-            [],
+            [
+                "2723fbb4731db087"
+            ],
             [
                 "a779d8f0.785008",
-                "e1af3f7c.67365"
+                "e1af3f7c.67365",
+                "aec102b037bb6257"
             ]
         ]
     },
@@ -16766,5 +16769,37 @@
                 "c2b47815d0599fa9"
             ]
         ]
+    },
+    {
+        "id": "2723fbb4731db087",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "aec102b037bb6257",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 330,
+        "y": 780,
+        "wires": []
     }
 ]
