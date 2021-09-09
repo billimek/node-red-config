@@ -10213,7 +10213,7 @@
                 "value": ""
             }
         ],
-        "entityidfilter": "binary_sensor.sump_pump_water_sensor_b_water_alarm",
+        "entityidfilter": "binary_sensor.water_sensor_b_water_alarm_water_leak_detected",
         "entityidfiltertype": "substring",
         "outputinitially": false,
         "state_type": "str",
