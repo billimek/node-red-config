@@ -1019,7 +1019,7 @@
         "retain": "",
         "broker": "649859a4.a17818",
         "x": 1110,
-        "y": 840,
+        "y": 1000,
         "wires": []
     },
     {
@@ -1091,7 +1091,7 @@
             }
         ],
         "x": 230,
-        "y": 600,
+        "y": 760,
         "wires": [
             [],
             [
@@ -1157,7 +1157,7 @@
             }
         ],
         "x": 220,
-        "y": 660,
+        "y": 820,
         "wires": [
             [],
             [
@@ -1223,7 +1223,7 @@
             }
         ],
         "x": 240,
-        "y": 720,
+        "y": 880,
         "wires": [
             [],
             [
@@ -1289,7 +1289,7 @@
             }
         ],
         "x": 220,
-        "y": 780,
+        "y": 940,
         "wires": [
             [],
             [
@@ -1355,7 +1355,7 @@
             }
         ],
         "x": 230,
-        "y": 840,
+        "y": 1000,
         "wires": [
             [],
             [
@@ -1400,7 +1400,7 @@
             }
         ],
         "x": 850,
-        "y": 860,
+        "y": 1020,
         "wires": [
             [],
             [
@@ -3843,7 +3843,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 860,
-        "y": 820,
+        "y": 980,
         "wires": [
             [
                 "46cdb220.d99dbc"
@@ -4451,7 +4451,7 @@
             }
         ],
         "x": 200,
-        "y": 220,
+        "y": 280,
         "wires": [
             [],
             [
@@ -4516,7 +4516,7 @@
             }
         ],
         "x": 200,
-        "y": 280,
+        "y": 340,
         "wires": [
             [],
             [
@@ -4581,7 +4581,7 @@
             }
         ],
         "x": 210,
-        "y": 960,
+        "y": 1120,
         "wires": [
             [],
             [
@@ -4646,7 +4646,7 @@
             }
         ],
         "x": 210,
-        "y": 1020,
+        "y": 1180,
         "wires": [
             [],
             [
@@ -4711,7 +4711,7 @@
             }
         ],
         "x": 210,
-        "y": 1140,
+        "y": 1300,
         "wires": [
             [],
             [
@@ -4776,7 +4776,7 @@
             }
         ],
         "x": 210,
-        "y": 1200,
+        "y": 1360,
         "wires": [
             [],
             [
@@ -4801,7 +4801,7 @@
         "randomUnits": "seconds",
         "drop": false,
         "x": 580,
-        "y": 540,
+        "y": 700,
         "wires": [
             [
                 "16f12e62.2031d2",
@@ -4825,7 +4825,7 @@
         "randomUnits": "seconds",
         "drop": false,
         "x": 580,
-        "y": 600,
+        "y": 760,
         "wires": [
             [
                 "16f12e62.2031d2",
@@ -4889,7 +4889,7 @@
             }
         ],
         "x": 220,
-        "y": 1340,
+        "y": 1500,
         "wires": [
             [
                 "4c5a09c0.3a0ee8"
@@ -4924,7 +4924,7 @@
         ],
         "queue": "none",
         "x": 880,
-        "y": 1380,
+        "y": 1540,
         "wires": [
             []
         ]
@@ -4938,7 +4938,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 580,
-        "y": 1340,
+        "y": 1500,
         "wires": [
             [
                 "31b8c785.cc1828"
@@ -4970,7 +4970,7 @@
         ],
         "queue": "none",
         "x": 880,
-        "y": 1440,
+        "y": 1600,
         "wires": [
             []
         ]
@@ -5031,7 +5031,7 @@
             }
         ],
         "x": 240,
-        "y": 1400,
+        "y": 1560,
         "wires": [
             [],
             [
@@ -5048,7 +5048,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 580,
-        "y": 1400,
+        "y": 1560,
         "wires": [
             []
         ]
@@ -5109,7 +5109,7 @@
             }
         ],
         "x": 240,
-        "y": 1460,
+        "y": 1620,
         "wires": [
             [],
             [
@@ -5126,7 +5126,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 580,
-        "y": 1460,
+        "y": 1620,
         "wires": [
             [
                 "31b8c785.cc1828"
@@ -5143,7 +5143,7 @@
         "datatype": "auto",
         "broker": "649859a4.a17818",
         "x": 250,
-        "y": 420,
+        "y": 580,
         "wires": [
             [
                 "ff433106.9906a"
@@ -5160,7 +5160,7 @@
         "datatype": "auto",
         "broker": "649859a4.a17818",
         "x": 250,
-        "y": 480,
+        "y": 640,
         "wires": [
             [
                 "ff433106.9906a"
@@ -7611,7 +7611,7 @@
         "outputinitially": true,
         "state_type": "str",
         "x": 180,
-        "y": 1540,
+        "y": 1700,
         "wires": [
             [
                 "56dfba26.07b614",
@@ -7660,7 +7660,7 @@
         "outputinitially": true,
         "state_type": "str",
         "x": 180,
-        "y": 1600,
+        "y": 1760,
         "wires": [
             [],
             []
@@ -7675,7 +7675,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 580,
-        "y": 2000,
+        "y": 2160,
         "wires": [
             []
         ]
@@ -7689,7 +7689,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 580,
-        "y": 2060,
+        "y": 2220,
         "wires": [
             []
         ]
@@ -8087,7 +8087,7 @@
         "z": "9143c7f2.16df18",
         "name": "",
         "x": 590,
-        "y": 460,
+        "y": 620,
         "wires": [
             [
                 "16f12e62.2031d2",
@@ -8644,7 +8644,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 580,
-        "y": 2120,
+        "y": 2280,
         "wires": [
             []
         ]
@@ -8658,7 +8658,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 580,
-        "y": 2180,
+        "y": 2340,
         "wires": [
             []
         ]
@@ -8700,7 +8700,7 @@
         "outputinitially": false,
         "state_type": "num",
         "x": 230,
-        "y": 2120,
+        "y": 2280,
         "wires": [
             [
                 "bf15d046.2721b"
@@ -8745,7 +8745,7 @@
         "outputinitially": false,
         "state_type": "num",
         "x": 220,
-        "y": 2180,
+        "y": 2340,
         "wires": [
             [
                 "13eee5ac.a4e0da"
@@ -13141,7 +13141,7 @@
             }
         ],
         "x": 190,
-        "y": 340,
+        "y": 400,
         "wires": [
             [],
             [
@@ -13206,7 +13206,7 @@
             }
         ],
         "x": 200,
-        "y": 1080,
+        "y": 1240,
         "wires": [
             [],
             [
@@ -13271,7 +13271,7 @@
             }
         ],
         "x": 200,
-        "y": 1260,
+        "y": 1420,
         "wires": [
             [],
             [
@@ -13298,7 +13298,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 590,
-        "y": 1540,
+        "y": 1700,
         "wires": [
             []
         ]
@@ -13321,7 +13321,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 580,
-        "y": 1600,
+        "y": 1760,
         "wires": [
             []
         ]
@@ -13372,7 +13372,7 @@
         "outputinitially": true,
         "state_type": "str",
         "x": 180,
-        "y": 1660,
+        "y": 1820,
         "wires": [
             [
                 "2696659d.d3703a"
@@ -13428,7 +13428,7 @@
         "outputinitially": true,
         "state_type": "str",
         "x": 180,
-        "y": 1720,
+        "y": 1880,
         "wires": [
             [],
             []
@@ -13452,7 +13452,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 590,
-        "y": 1660,
+        "y": 1820,
         "wires": [
             []
         ]
@@ -13475,7 +13475,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 580,
-        "y": 1720,
+        "y": 1880,
         "wires": [
             []
         ]
@@ -13498,7 +13498,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 600,
-        "y": 1780,
+        "y": 1940,
         "wires": [
             []
         ]
@@ -13521,7 +13521,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 590,
-        "y": 1840,
+        "y": 2000,
         "wires": [
             []
         ]
@@ -13572,7 +13572,7 @@
         "outputinitially": true,
         "state_type": "str",
         "x": 170,
-        "y": 1780,
+        "y": 1940,
         "wires": [
             [
                 "f42a16fe.1a4c18"
@@ -14127,7 +14127,7 @@
         "name": "",
         "env": [],
         "x": 830,
-        "y": 920,
+        "y": 1080,
         "wires": [
             [],
             [
@@ -16765,6 +16765,132 @@
             [
                 "c2b47815d0599fa9"
             ]
+        ]
+    },
+    {
+        "id": "f840e2c95233ef90",
+        "type": "server-state-changed",
+        "z": "9143c7f2.16df18",
+        "name": "Brinley's phone (wifi) not_home?",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "device_tracker.brinleythebest",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "home",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": false,
+        "for": "",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 190,
+        "y": 220,
+        "wires": [
+            [],
+            [
+                "16f12e62.2031d2"
+            ]
+        ]
+    },
+    {
+        "id": "7face52c913f58cc",
+        "type": "server-state-changed",
+        "z": "9143c7f2.16df18",
+        "name": "Brinley's phone (gps) not_home?",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "device_tracker.brinleythebest_2",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "home",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": false,
+        "for": "",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 190,
+        "y": 460,
+        "wires": [
+            [],
+            []
         ]
     }
 ]
