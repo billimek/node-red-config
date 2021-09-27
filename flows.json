@@ -2856,7 +2856,7 @@
         "version": 3,
         "debugenabled": false,
         "service_domain": "notify",
-        "service": "mobile_app_jeffsxs",
+        "service": "mobile_app_jeffsphone",
         "entityId": "",
         "data": "",
         "dataType": "json",
@@ -4283,7 +4283,7 @@
                 "value": ""
             }
         ],
-        "entityidfilter": "device_tracker.jeffs_xs",
+        "entityidfilter": "device_tracker.jeffsphone_2",
         "entityidfiltertype": "substring",
         "outputinitially": false,
         "state_type": "str",
@@ -4413,7 +4413,7 @@
                 "value": ""
             }
         ],
-        "entityidfilter": "device_tracker.jeffs_xs_2",
+        "entityidfilter": "device_tracker.jeffsphone",
         "entityidfiltertype": "substring",
         "outputinitially": false,
         "state_type": "str",
@@ -4543,7 +4543,7 @@
                 "value": ""
             }
         ],
-        "entityidfilter": "device_tracker.jeffs_xs",
+        "entityidfilter": "device_tracker.jeffsphone_2",
         "entityidfiltertype": "substring",
         "outputinitially": false,
         "state_type": "str",
@@ -4673,7 +4673,7 @@
                 "value": ""
             }
         ],
-        "entityidfilter": "device_tracker.jeffs_xs_2",
+        "entityidfilter": "device_tracker.jeffsphone",
         "entityidfiltertype": "substring",
         "outputinitially": false,
         "state_type": "str",
@@ -4908,7 +4908,7 @@
         "version": 3,
         "debugenabled": false,
         "service_domain": "notify",
-        "service": "mobile_app_jeffsxs",
+        "service": "mobile_app_jeffsphone",
         "entityId": "",
         "data": "",
         "dataType": "json",
