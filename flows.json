@@ -10071,6 +10071,35 @@
         ]
     },
     {
+        "id": "2d5793e33f294b11",
+        "type": "inject",
+        "z": "75b62c93.dd5d84",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 1200,
+        "wires": [
+            [
+                "3310dcd2.e1fbe4"
+            ]
+        ]
+    },
+    {
         "id": "dd155455.bc9c28",
         "type": "trigger-state",
         "z": "af228686.65c8a8",
