@@ -2266,7 +2266,7 @@
         "wires": [
             [],
             [
-                "8ae554fc.f290b8"
+                "52870129545ab276"
             ]
         ]
     },
@@ -2303,7 +2303,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 1530,
-        "y": 100,
+        "y": 160,
         "wires": [
             [
                 "8b018174.c0b2d"
@@ -2327,7 +2327,7 @@
         "drop": true,
         "outputs": 1,
         "x": 1280,
-        "y": 100,
+        "y": 160,
         "wires": [
             [
                 "551b9747.0c2428"
@@ -2346,7 +2346,7 @@
         "startOffset": 0,
         "endOffset": 0,
         "x": 870,
-        "y": 100,
+        "y": 160,
         "wires": [
             [
                 "8faf5cc1.5c41a"
@@ -2370,7 +2370,7 @@
         "blockInputOverrides": false,
         "outputProperties": [],
         "x": 630,
-        "y": 100,
+        "y": 160,
         "wires": [
             [
                 "3c2395cd.f242ca"
@@ -2396,7 +2396,7 @@
         "blockInputOverrides": false,
         "outputProperties": [],
         "x": 470,
-        "y": 100,
+        "y": 160,
         "wires": [
             [],
             [
@@ -2415,7 +2415,7 @@
         "broker": "649859a4.a17818",
         "inputs": 0,
         "x": 90,
-        "y": 240,
+        "y": 300,
         "wires": [
             [
                 "7abf053c.d523dc"
@@ -2433,7 +2433,7 @@
         "broker": "649859a4.a17818",
         "inputs": 0,
         "x": 90,
-        "y": 300,
+        "y": 360,
         "wires": [
             [
                 "7abf053c.d523dc"
@@ -2456,7 +2456,7 @@
         "blockInputOverrides": false,
         "outputProperties": [],
         "x": 630,
-        "y": 220,
+        "y": 280,
         "wires": [
             [],
             [
@@ -2480,7 +2480,7 @@
         "blockInputOverrides": false,
         "outputProperties": [],
         "x": 470,
-        "y": 280,
+        "y": 340,
         "wires": [
             [],
             [
@@ -2504,7 +2504,7 @@
         "blockInputOverrides": false,
         "outputProperties": [],
         "x": 630,
-        "y": 280,
+        "y": 340,
         "wires": [
             [
                 "7a5f22bf.7e5bfc"
@@ -2526,7 +2526,7 @@
         "startOffset": 0,
         "endOffset": 0,
         "x": 870,
-        "y": 280,
+        "y": 340,
         "wires": [
             [
                 "eaf45bf4.756e28"
@@ -2551,7 +2551,7 @@
         "drop": true,
         "outputs": 1,
         "x": 1280,
-        "y": 280,
+        "y": 340,
         "wires": [
             [
                 "62d09fe5.948ce"
@@ -2567,7 +2567,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 1530,
-        "y": 280,
+        "y": 340,
         "wires": [
             [
                 "8b018174.c0b2d"
@@ -2583,7 +2583,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 1540,
-        "y": 220,
+        "y": 280,
         "wires": [
             [
                 "8b018174.c0b2d"
@@ -2607,7 +2607,7 @@
         "drop": true,
         "outputs": 1,
         "x": 1280,
-        "y": 220,
+        "y": 280,
         "wires": [
             [
                 "6ef57559.1be93c"
@@ -2626,7 +2626,7 @@
         "startOffset": 0,
         "endOffset": 0,
         "x": 1070,
-        "y": 160,
+        "y": 220,
         "wires": [
             [],
             [
@@ -2647,7 +2647,7 @@
         "fri": true,
         "sat": false,
         "x": 860,
-        "y": 160,
+        "y": 220,
         "wires": [
             [
                 "fb9a68c4.5d6128"
@@ -2673,7 +2673,7 @@
         "blockInputOverrides": false,
         "outputProperties": [],
         "x": 630,
-        "y": 160,
+        "y": 220,
         "wires": [
             [
                 "ff124fe7.97093"
@@ -2699,7 +2699,7 @@
         "blockInputOverrides": false,
         "outputProperties": [],
         "x": 470,
-        "y": 160,
+        "y": 220,
         "wires": [
             [],
             [
@@ -2716,7 +2716,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 1540,
-        "y": 340,
+        "y": 400,
         "wires": [
             [
                 "8b018174.c0b2d"
@@ -2740,7 +2740,7 @@
         "drop": true,
         "outputs": 1,
         "x": 1280,
-        "y": 340,
+        "y": 400,
         "wires": [
             [
                 "fd5c63f5.50f9a"
@@ -2763,7 +2763,7 @@
         "blockInputOverrides": false,
         "outputProperties": [],
         "x": 470,
-        "y": 340,
+        "y": 400,
         "wires": [
             [],
             [
@@ -2827,7 +2827,7 @@
             }
         ],
         "x": 120,
-        "y": 360,
+        "y": 420,
         "wires": [
             [],
             [
@@ -2845,7 +2845,7 @@
         "retain": "",
         "broker": "649859a4.a17818",
         "x": 1840,
-        "y": 200,
+        "y": 260,
         "wires": []
     },
     {
@@ -2853,7 +2853,7 @@
         "type": "subflow:2299e9e0.40f656",
         "z": "ea946133.0085b",
         "x": 270,
-        "y": 160,
+        "y": 220,
         "wires": [
             [
                 "74a6c66e.9b3788"
@@ -2878,7 +2878,7 @@
         "z": "ea946133.0085b",
         "name": "",
         "x": 290,
-        "y": 240,
+        "y": 300,
         "wires": [
             [
                 "ee4b488e.276818"
@@ -2897,10 +2897,73 @@
         "startOffset": 0,
         "endOffset": 0,
         "x": 1070,
-        "y": 220,
+        "y": 280,
         "wires": [
             [
                 "f7432cb0.84a5e"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "52870129545ab276",
+        "type": "weekday",
+        "z": "ea946133.0085b",
+        "name": "",
+        "sun": false,
+        "mon": true,
+        "tue": true,
+        "wed": true,
+        "thu": true,
+        "fri": true,
+        "sat": false,
+        "x": 860,
+        "y": 40,
+        "wires": [
+            [
+                "7ffc610b45d8bf1d"
+            ],
+            [
+                "471a474943d29911"
+            ]
+        ]
+    },
+    {
+        "id": "7ffc610b45d8bf1d",
+        "type": "time-range-switch",
+        "z": "ea946133.0085b",
+        "name": "6:45am-9am",
+        "lat": "33.95092",
+        "lon": "-84.44805",
+        "startTime": "06:45",
+        "endTime": "09:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 1070,
+        "y": 40,
+        "wires": [
+            [],
+            [
+                "8ae554fc.f290b8"
+            ]
+        ]
+    },
+    {
+        "id": "471a474943d29911",
+        "type": "time-range-switch",
+        "z": "ea946133.0085b",
+        "name": "10pm-6am",
+        "lat": "33.95092",
+        "lon": "-84.44805",
+        "startTime": "22:00",
+        "endTime": "06:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 1070,
+        "y": 100,
+        "wires": [
+            [
+                "8ae554fc.f290b8"
             ],
             []
         ]
