@@ -2358,7 +2358,7 @@
         "id": "c73198e9.b2deb8",
         "type": "api-current-state",
         "z": "ea946133.0085b",
-        "name": "not home?",
+        "name": "home?",
         "server": "8b52884a.b76658",
         "version": 2,
         "outputs": 2,
@@ -2369,7 +2369,7 @@
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [],
-        "x": 650,
+        "x": 630,
         "y": 100,
         "wires": [
             [
@@ -2444,7 +2444,7 @@
         "id": "ee4b488e.276818",
         "type": "api-current-state",
         "z": "ea946133.0085b",
-        "name": "not home?",
+        "name": "home?",
         "server": "8b52884a.b76658",
         "version": 2,
         "outputs": 2,
@@ -2455,7 +2455,7 @@
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [],
-        "x": 650,
+        "x": 630,
         "y": 220,
         "wires": [
             [],
@@ -2492,7 +2492,7 @@
         "id": "6a9b4076.f0afc",
         "type": "api-current-state",
         "z": "ea946133.0085b",
-        "name": "not home?",
+        "name": "home?",
         "server": "8b52884a.b76658",
         "version": 2,
         "outputs": 2,
@@ -2503,7 +2503,7 @@
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [],
-        "x": 650,
+        "x": 630,
         "y": 280,
         "wires": [
             [
@@ -2653,7 +2653,7 @@
                 "fb9a68c4.5d6128"
             ],
             [
-                "f7432cb0.84a5e"
+                "38ccb4536abb805d"
             ]
         ]
     },
@@ -2661,7 +2661,7 @@
         "id": "50264aaa.0cb994",
         "type": "api-current-state",
         "z": "ea946133.0085b",
-        "name": "not home?",
+        "name": "home?",
         "server": "8b52884a.b76658",
         "version": 2,
         "outputs": 2,
@@ -2672,7 +2672,7 @@
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [],
-        "x": 650,
+        "x": 630,
         "y": 160,
         "wires": [
             [
@@ -2883,6 +2883,26 @@
             [
                 "ee4b488e.276818"
             ]
+        ]
+    },
+    {
+        "id": "38ccb4536abb805d",
+        "type": "time-range-switch",
+        "z": "ea946133.0085b",
+        "name": "10pm-6am",
+        "lat": "33.95092",
+        "lon": "-84.44805",
+        "startTime": "22:00",
+        "endTime": "06:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 1070,
+        "y": 220,
+        "wires": [
+            [
+                "f7432cb0.84a5e"
+            ],
+            []
         ]
     },
     {
