@@ -11373,7 +11373,7 @@
         ],
         "queue": "none",
         "x": 950,
-        "y": 300,
+        "y": 340,
         "wires": [
             []
         ]
@@ -12261,7 +12261,9 @@
         "wires": [
             [
                 "b5ce153f.7eca98",
-                "78d24791.853db8"
+                "78d24791.853db8",
+                "a391482ef40c1b75",
+                "47b848e8ac632ede"
             ],
             []
         ]
@@ -12511,6 +12513,66 @@
             [
                 "c2b47815d0599fa9"
             ]
+        ]
+    },
+    {
+        "id": "a391482ef40c1b75",
+        "type": "api-call-service",
+        "z": "af228686.65c8a8",
+        "name": "foyer tree lights",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "",
+        "entityId": "switch.outlet_d",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "data"
+            }
+        ],
+        "queue": "none",
+        "x": 940,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "47b848e8ac632ede",
+        "type": "api-call-service",
+        "z": "af228686.65c8a8",
+        "name": "sunroom tree lights",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "",
+        "entityId": "switch.outlet_f",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "data"
+            }
+        ],
+        "queue": "none",
+        "x": 950,
+        "y": 300,
+        "wires": [
+            []
         ]
     },
     {
