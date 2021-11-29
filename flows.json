@@ -508,7 +508,8 @@
                 "d0a97ae.0d59e88",
                 "cc4d6e76.6d591",
                 "ab752c4d.a1bdc",
-                "ea25edb9.d9596"
+                "ea25edb9.d9596",
+                "10f1ece0.fa3373"
             ]
         ]
     },
@@ -536,7 +537,7 @@
             }
         ],
         "queue": "none",
-        "x": 390,
+        "x": 400,
         "y": 80,
         "wires": [
             []
@@ -836,7 +837,7 @@
             }
         ],
         "queue": "none",
-        "x": 390,
+        "x": 400,
         "y": 680,
         "wires": [
             []
@@ -846,13 +847,13 @@
         "id": "10f1ece0.fa3373",
         "type": "api-call-service",
         "z": "43703bf3.b01b24",
-        "name": "tree lights",
+        "name": "sunroom tree lights",
         "server": "8b52884a.b76658",
         "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "",
-        "entityId": "switch.outlet_d",
+        "entityId": "switch.outlet_f",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
@@ -866,8 +867,8 @@
             }
         ],
         "queue": "none",
-        "x": 380,
-        "y": 860,
+        "x": 410,
+        "y": 800,
         "wires": [
             []
         ]
