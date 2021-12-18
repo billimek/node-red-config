@@ -8808,7 +8808,7 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 560,
+        "x": 550,
         "y": 1280,
         "wires": [
             [],
@@ -8827,7 +8827,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 1060,
-        "y": 1220,
+        "y": 1240,
         "wires": [
             []
         ]
@@ -8836,14 +8836,14 @@
         "id": "dae80ca4.7cdc9",
         "type": "api-current-state",
         "z": "75b62c93.dd5d84",
-        "name": "Jeff's car missing?",
+        "name": "Jen's car missing?",
         "server": "8b52884a.b76658",
         "version": 2,
         "outputs": 2,
         "halt_if": "on",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "entity_id": "binary_sensor.og_jeff_vehicle",
+        "entity_id": "binary_sensor.og_jen_vehicle",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
@@ -9072,7 +9072,7 @@
             }
         ],
         "queue": "none",
-        "x": 1070,
+        "x": 1060,
         "y": 1340,
         "wires": [
             []
@@ -9774,7 +9774,7 @@
         "odd": false,
         "even": false,
         "x": 140,
-        "y": 1480,
+        "y": 1780,
         "wires": [
             [
                 "2b32108e.ca6c4"
@@ -9818,7 +9818,7 @@
             }
         ],
         "x": 350,
-        "y": 1480,
+        "y": 1780,
         "wires": [
             [],
             [
@@ -9862,7 +9862,7 @@
             }
         ],
         "x": 560,
-        "y": 1660,
+        "y": 1960,
         "wires": [
             [],
             [
@@ -9907,7 +9907,7 @@
             }
         ],
         "x": 560,
-        "y": 1480,
+        "y": 1780,
         "wires": [
             [],
             [
@@ -9926,7 +9926,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 820,
-        "y": 1600,
+        "y": 1900,
         "wires": [
             [
                 "b3cce24d.11415"
@@ -9942,7 +9942,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 830,
-        "y": 1540,
+        "y": 1840,
         "wires": [
             [
                 "f15ae5b4.cdfb08",
@@ -9975,7 +9975,7 @@
         ],
         "queue": "none",
         "x": 1160,
-        "y": 1540,
+        "y": 1840,
         "wires": [
             []
         ]
@@ -10005,7 +10005,7 @@
         ],
         "queue": "none",
         "x": 1170,
-        "y": 1660,
+        "y": 1960,
         "wires": [
             []
         ]
@@ -10035,7 +10035,7 @@
         ],
         "queue": "none",
         "x": 1160,
-        "y": 1600,
+        "y": 1900,
         "wires": [
             []
         ]
@@ -10065,7 +10065,7 @@
         ],
         "queue": "none",
         "x": 830,
-        "y": 1480,
+        "y": 1780,
         "wires": [
             []
         ]
@@ -10095,7 +10095,7 @@
         ],
         "queue": "none",
         "x": 830,
-        "y": 1780,
+        "y": 2080,
         "wires": [
             []
         ]
@@ -10109,7 +10109,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 820,
-        "y": 1720,
+        "y": 2020,
         "wires": [
             [
                 "b3cce24d.11415"
@@ -10125,7 +10125,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 830,
-        "y": 1660,
+        "y": 1960,
         "wires": [
             [
                 "f15ae5b4.cdfb08",
@@ -10261,6 +10261,461 @@
             ],
             [
                 "5a4230ac.531df"
+            ]
+        ]
+    },
+    {
+        "id": "fa129b64feae8703",
+        "type": "api-current-state",
+        "z": "75b62c93.dd5d84",
+        "name": "Jeff's garage open?",
+        "server": "8b52884a.b76658",
+        "version": 2,
+        "outputs": 2,
+        "halt_if": "open",
+        "halt_if_type": "str",
+        "halt_if_compare": "is_not",
+        "entity_id": "cover.jeffs_garage_mqtt",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 550,
+        "y": 1500,
+        "wires": [
+            [],
+            [
+                "4a8a02ef01c7c4ef",
+                "61d42149a3a69f35"
+            ]
+        ]
+    },
+    {
+        "id": "4a8a02ef01c7c4ef",
+        "type": "function",
+        "z": "75b62c93.dd5d84",
+        "name": "Format iOS message",
+        "func": "var title = \"AUTO GARAGE\"\nvar message = \"Closing Garage Door!\"\nvar category = \"garage\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n        data: {\n            push: {\n                category: category\n            }\n        }\n    }\n}\nreturn [ msg ];",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1060,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f9e76b1193d26b84",
+        "type": "api-current-state",
+        "z": "75b62c93.dd5d84",
+        "name": "Jeff's car missing?",
+        "server": "8b52884a.b76658",
+        "version": 2,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "binary_sensor.og_jeff_vehicle",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 810,
+        "y": 1560,
+        "wires": [
+            [],
+            [
+                "e9036f58403e7bf5",
+                "2a59b815d14d37e5"
+            ]
+        ]
+    },
+    {
+        "id": "c7ae60c376d599de",
+        "type": "api-current-state",
+        "z": "75b62c93.dd5d84",
+        "name": "Jeff's garage closed?",
+        "server": "8b52884a.b76658",
+        "version": 2,
+        "outputs": 2,
+        "halt_if": "closed",
+        "halt_if_type": "str",
+        "halt_if_compare": "is_not",
+        "entity_id": "cover.jeff_garage_door",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 560,
+        "y": 1560,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e9036f58403e7bf5",
+        "type": "function",
+        "z": "75b62c93.dd5d84",
+        "name": "Format iOS message",
+        "func": "var title = \"AUTO GARAGE\"\nvar message = \"Opening Garage Door!\"\nvar category = \"garage_open\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n        data: {\n            push: {\n                category: category\n            }\n        }\n    }\n}\nreturn [ msg ];",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1060,
+        "y": 1620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a2a5fc231a27191f",
+        "type": "api-current-state",
+        "z": "75b62c93.dd5d84",
+        "name": "run?",
+        "server": "8b52884a.b76658",
+        "version": 2,
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_boolean.auto_garage_doors",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 350,
+        "y": 1500,
+        "wires": [
+            [],
+            [
+                "fa129b64feae8703"
+            ]
+        ]
+    },
+    {
+        "id": "61d42149a3a69f35",
+        "type": "api-call-service",
+        "z": "75b62c93.dd5d84",
+        "name": "close jeff's garage door",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "cover",
+        "service": "close_cover",
+        "entityId": "cover.jeff_garage_door",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "data"
+            }
+        ],
+        "queue": "none",
+        "x": 1070,
+        "y": 1500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cf4031a35dcfb6ae",
+        "type": "api-current-state",
+        "z": "75b62c93.dd5d84",
+        "name": "run?",
+        "server": "8b52884a.b76658",
+        "version": 2,
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_boolean.auto_garage_doors",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 350,
+        "y": 1560,
+        "wires": [
+            [],
+            [
+                "c7ae60c376d599de",
+                "b75c6ce94adde31c"
+            ]
+        ]
+    },
+    {
+        "id": "2a59b815d14d37e5",
+        "type": "api-call-service",
+        "z": "75b62c93.dd5d84",
+        "name": "open jeff's garage door",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "cover",
+        "service": "open_cover",
+        "entityId": "cover.jeff_garage_door",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "data"
+            }
+        ],
+        "queue": "none",
+        "x": 1060,
+        "y": 1560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "66536cb612d3be87",
+        "type": "trigger-state",
+        "z": "75b62c93.dd5d84",
+        "name": "tesla2 away (>50m)",
+        "server": "8b52884a.b76658",
+        "version": 0,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityid": "proximity.home_tesla2",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "comparatorType": ">",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "50",
+                "propertyValue": "new_state.state"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "comparatorType": "<=",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "50",
+                "propertyValue": "old_state.state"
+            }
+        ],
+        "outputs": 2,
+        "customoutputs": [],
+        "outputinitially": false,
+        "state_type": "num",
+        "x": 130,
+        "y": 1500,
+        "wires": [
+            [
+                "a2a5fc231a27191f"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "bcb174cd97f93313",
+        "type": "trigger-state",
+        "z": "75b62c93.dd5d84",
+        "name": "tesla2 home (<=75m)",
+        "server": "8b52884a.b76658",
+        "version": 0,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityid": "proximity.home_tesla2",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "comparatorType": "<=",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "75",
+                "propertyValue": "new_state.state"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "comparatorType": ">",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "75",
+                "propertyValue": "old_state.state"
+            }
+        ],
+        "outputs": 2,
+        "customoutputs": [],
+        "outputinitially": false,
+        "state_type": "num",
+        "x": 120,
+        "y": 1560,
+        "wires": [
+            [
+                "cf4031a35dcfb6ae"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "b75c6ce94adde31c",
+        "type": "api-current-state",
+        "z": "75b62c93.dd5d84",
+        "name": "Jeff's garage closed?",
+        "server": "8b52884a.b76658",
+        "version": 2,
+        "outputs": 2,
+        "halt_if": "closed",
+        "halt_if_type": "str",
+        "halt_if_compare": "is_not",
+        "entity_id": "cover.jeffs_garage_mqtt",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 560,
+        "y": 1620,
+        "wires": [
+            [],
+            [
+                "f9e76b1193d26b84"
             ]
         ]
     },
