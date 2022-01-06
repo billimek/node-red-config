@@ -11930,7 +11930,6 @@
         "id": "78d24791.853db8",
         "type": "api-call-service",
         "z": "af228686.65c8a8",
-        "d": true,
         "name": "sunroom lights",
         "server": "8b52884a.b76658",
         "version": 3,
