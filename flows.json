@@ -12752,6 +12752,7 @@
         "id": "a391482ef40c1b75",
         "type": "api-call-service",
         "z": "af228686.65c8a8",
+        "d": true,
         "name": "foyer tree lights",
         "server": "8b52884a.b76658",
         "version": 3,
