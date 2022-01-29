@@ -11906,6 +11906,7 @@
         "id": "432fde78.07eef",
         "type": "api-call-service",
         "z": "af228686.65c8a8",
+        "d": true,
         "name": "turn off desk lights",
         "server": "8b52884a.b76658",
         "version": 3,
