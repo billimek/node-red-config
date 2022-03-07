@@ -2857,7 +2857,7 @@
         "type": "function",
         "z": "ea946133.0085b",
         "name": "Format iOS message",
-        "func": "var title = \"Front\"\nvar status = msg.payload;\nvar message = \"message\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n        data: {\n            entity_id: camera.front_2\n        }\n    }\n}    \n\nreturn [ msg ];",
+        "func": "var title = \"Front\"\nvar status = msg.payload;\nvar message = \"message\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n        data: {\n            'entity_id': camera.front_2\n        }\n    }\n}    \n\nreturn [ msg ];\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
