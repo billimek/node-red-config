@@ -57,6 +57,14 @@
         "env": []
     },
     {
+        "id": "bd3b762d2f0ddb2b",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "b8b74cae.ffe4",
         "type": "subflow",
         "name": "open?",
@@ -18010,12 +18018,10 @@
                 "valueType": "jsonata"
             }
         ],
-        "x": 320,
+        "x": 220,
         "y": 460,
         "wires": [
-            [
-                "f5a07f13.d9b48"
-            ]
+            []
         ]
     },
     {
@@ -18066,12 +18072,10 @@
         "nl": false,
         "rap": false,
         "inputs": 0,
-        "x": 250,
+        "x": 150,
         "y": 300,
         "wires": [
-            [
-                "918f76bd.2d4248"
-            ]
+            []
         ]
     },
     {
@@ -18582,6 +18586,550 @@
         "wires": [
             [
                 "d4047b74.fbb8d8"
+            ]
+        ]
+    },
+    {
+        "id": "d73275f4eb3f381f",
+        "type": "server-events",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "",
+        "server": "",
+        "version": 1,
+        "event_type": "ios.notification_action_fired",
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "$outputData(\"eventData\").event_type",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "event_type",
+                "propertyType": "msg",
+                "value": "$outputData(\"eventData\").event_type",
+                "valueType": "jsonata"
+            }
+        ],
+        "x": 340,
+        "y": 440,
+        "wires": [
+            [
+                "fd6260dc7e2e25bb"
+            ]
+        ]
+    },
+    {
+        "id": "fd6260dc7e2e25bb",
+        "type": "switch",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "Action",
+        "property": "payload.event.actionName",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "SENDSTILLANDCLIP",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 570,
+        "y": 440,
+        "wires": [
+            [
+                "1632384636810fdf"
+            ]
+        ]
+    },
+    {
+        "id": "264b232ceb6ec528",
+        "type": "comment",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "Camera alert actionable notifications",
+        "info": "",
+        "x": 340,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "8d26f96193192deb",
+        "type": "mqtt in",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "",
+        "topic": "frigate/events",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "649859a4.a17818",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 270,
+        "y": 280,
+        "wires": [
+            [
+                "8e26f89a283928fb"
+            ]
+        ]
+    },
+    {
+        "id": "8e26f89a283928fb",
+        "type": "json",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 406,
+        "y": 280,
+        "wires": [
+            [
+                "3b42f3c07a2c1e6a"
+            ]
+        ]
+    },
+    {
+        "id": "3b42f3c07a2c1e6a",
+        "type": "switch",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "filter",
+        "property": "payload.type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "new",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "end",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 536,
+        "y": 280,
+        "wires": [
+            [
+                "78508652fae813b8"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "cc27853af0fb4b9c",
+        "type": "comment",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "Frigate notifications",
+        "info": " - ",
+        "x": 290,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "78508652fae813b8",
+        "type": "function",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "Format notification",
+        "func": "ha_external_url = \"https://hass.eviljungle.com\";\nmsg.event_id = msg.payload.after.id;\nmsg.clip = ha_external_url + \"/api/frigate/notifications/\" + msg.event_id + \"/\" + msg.payload.after.camera + \"/clip.mp4\";\nmsg.thumbnail = ha_external_url + \"/api/frigate/notifications/\" + msg.event_id + \"/thumbnail.jpg?format=ios\";\nmsg.topic = msg.payload.after.camera + \"-\" + msg.payload.after.label;\nmsg.relativetime = msg.relativetime || \"7 minutes\";\n\nswitch (msg.payload.after.camera) {\n case('doorbell'):\n msg.verb = \"at\";\n msg.location = 'front door';\n break;\n case('backyard_nw'):\n msg.verb = \"in\";\n msg.location = \"back yard\";\n break;\n case('backyard'):\n msg.verb = \"in\";\n msg.location = \"back yard\";\n break;\n case('backporch'):\n msg.verb = \"at\";\n msg.location = \"back porch\";\n msg.relativetime = \"15 minutes\";\n break;\n case('driveway'):\n msg.verb = \"in\";\n msg.location = \"driveway\";\n break;\n case('garage'):\n msg.verb = \"in\";\n msg.location = \"garage\";\n break;\n default:\n msg.verb = \"in\";\n msg.location = msg.payload.after.camera;\n}\n\nmsg.message = \"A \" + msg.payload.after.label + \" is \" + msg.verb + \" the \" + msg.location;\n\nmsg.payload = { data: {'message': msg.message, data: { 'entity_id': \"camera.\" + msg.payload.after.camera, action_data: { 'entity_id': \"camera.\" + msg.payload.after.camera, 'url': msg.clip, 'message': msg.message, 'screenshot': msg.thumbnail }, push: { 'category': 'camera', 'thread-id': 'home-security' }, attachment: { 'url': msg.thumbnail } } } };\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 280,
+        "wires": [
+            [
+                "3a19a565f6fb9415"
+            ]
+        ]
+    },
+    {
+        "id": "1632384636810fdf",
+        "type": "function",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "Format message",
+        "func": "msg.url = msg.payload.event.action_data.url;\nmsg.phone = msg.payload.event.sourceDeviceID;\n\nmsg.payload_msg = { data: {'message': 'Press and hold for still picture, click for video clip', data: { 'url': msg.url, attachment: { 'url': msg.payload.event.action_data.screenshot } } } };\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 730,
+        "y": 440,
+        "wires": [
+            [
+                "ba0786258ad4bd29"
+            ]
+        ]
+    },
+    {
+        "id": "ed8db58e1e72cfda",
+        "type": "comment",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "Send still picture and video clip",
+        "info": "",
+        "x": 770,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "f372dee1477ceee0",
+        "type": "comment",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "Notify",
+        "info": "",
+        "x": 1350,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "21f113fea91bcb55",
+        "type": "change",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload_msg",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1410,
+        "y": 440,
+        "wires": [
+            [
+                "d86e49d0825452bb"
+            ]
+        ]
+    },
+    {
+        "id": "3a19a565f6fb9415",
+        "type": "rbe",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "event_id",
+        "topi": "topic",
+        "x": 850,
+        "y": 280,
+        "wires": [
+            [
+                "4e54ec268055eb8b"
+            ]
+        ]
+    },
+    {
+        "id": "430e208c81429691",
+        "type": "debug",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "Frigate notification",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "4e54ec268055eb8b",
+        "type": "function",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "Rate Limiter",
+        "func": "// Defaults to 10 minutes, overridable with msg.ratelimitms\n// Will limit per topic (including by null ones)\nvar interval = msg.ratelimitms || (1000*60*10); // minimum interval between messages (ms)\nvar countToTrigger = msg.countToTrigger || 1;\nvar lastReleasedKey = \"lastReleased_\" + (msg.topic.replace(/ /g, \"_\") || \"null_topic\");\nvar lastHitKey = \"lastHit_\" + (msg.topic.replace(/ /g, \"_\") || \"null_topic\");\nvar cntKey = \"count_\" + (msg.topic.replace(/ /g, \"_\") || \"null_topic\");\nvar lastReleased = (context.get(lastReleasedKey) || 0);\nvar lastHit = (context.get(lastHitKey) || 0);\nvar now = Date.now();\nif (now-lastHit > interval) {\n node.warn(\"resetting count, too far apart.\");\n context.set(cntKey,0); // Clear hits, too far apart.\n}\ncontext.set(lastHitKey,now);\nif (now-lastReleased > interval) {\n var count = (context.get(cntKey) || 0);\n count++;\n if (count >= countToTrigger) {\n context.set(lastReleasedKey,now);\n context.set(cntKey,0);\n node.status({fill:\"green\",shape:\"ring\",text:\"passed on\"});\n return msg;\n } else {\n node.status({fill:\"red\",shape:\"ring\",text:\"Waiting for \" + \n (countToTrigger - count) + \" more hits.\"});\n context.set(cntKey,count);\n return null;\n }\n} else {\n var timeLeft = (interval - (now-lastReleased)) / 1000; \n node.status({fill:\"red\",shape:\"ring\",text:\"blocked for \" + timeLeft + \" seconds\"});\n return null;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 990,
+        "y": 280,
+        "wires": [
+            [
+                "bb79e02493b19905",
+                "430e208c81429691"
+            ]
+        ]
+    },
+    {
+        "id": "ba9c3076d2397167",
+        "type": "comment",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "Limits notifications per camera-object",
+        "info": " - ",
+        "x": 950,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "bb79e02493b19905",
+        "type": "api-call-service",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "Notify Family (ios)",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "notify",
+        "service": "mobile_app_jeffsphone",
+        "entityId": "",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "data"
+            }
+        ],
+        "queue": "none",
+        "x": 1190,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d86e49d0825452bb",
+        "type": "api-call-service",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "Notify Family (ios)",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "notify",
+        "service": "mobile_app_jeffsphone",
+        "entityId": "",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "data"
+            }
+        ],
+        "queue": "none",
+        "x": 1650,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ba0786258ad4bd29",
+        "type": "http request",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "Clip HTTP check",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "849977e5.257f68",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 970,
+        "y": 440,
+        "wires": [
+            [
+                "bac007e240eddea2"
+            ]
+        ]
+    },
+    {
+        "id": "bac007e240eddea2",
+        "type": "switch",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "Clip ready?",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1150,
+        "y": 440,
+        "wires": [
+            [
+                "606d044142be92c8",
+                "21f113fea91bcb55"
+            ],
+            [
+                "884f1bd72805d539"
+            ]
+        ]
+    },
+    {
+        "id": "606d044142be92c8",
+        "type": "change",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "Reset counter",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1380,
+        "y": 540,
+        "wires": [
+            [
+                "884f1bd72805d539"
+            ]
+        ]
+    },
+    {
+        "id": "7480c9023ceed3d1",
+        "type": "comment",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "Reset counter after max loops or succesfull delivery",
+        "info": "",
+        "x": 1490,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "ccdad6a67f6621cb",
+        "type": "comment",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "Try again until clip is ready",
+        "info": "",
+        "x": 1410,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "a9a13e7210acdbbf",
+        "type": "delay",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 1500,
+        "y": 640,
+        "wires": [
+            [
+                "bd97873ca1c77417"
+            ]
+        ]
+    },
+    {
+        "id": "bd97873ca1c77417",
+        "type": "switch",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "Over 8",
+        "property": "count",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "8",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1630,
+        "y": 640,
+        "wires": [
+            [
+                "606d044142be92c8"
+            ],
+            [
+                "ba0786258ad4bd29"
+            ]
+        ]
+    },
+    {
+        "id": "884f1bd72805d539",
+        "type": "counter",
+        "z": "bd3b762d2f0ddb2b",
+        "name": "",
+        "init": "0",
+        "step": "1",
+        "lower": "",
+        "upper": "",
+        "mode": "increment",
+        "outputs": "1",
+        "x": 1360,
+        "y": 640,
+        "wires": [
+            [
+                "a9a13e7210acdbbf"
             ]
         ]
     }
