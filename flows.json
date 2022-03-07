@@ -18115,7 +18115,8 @@
         "y": 300,
         "wires": [
             [
-                "3eeecad.42ad936"
+                "3eeecad.42ad936",
+                "c9967a42f7f41324"
             ],
             []
         ]
@@ -18487,5 +18488,21 @@
                 "93c02068.87b53"
             ]
         ]
+    },
+    {
+        "id": "c9967a42f7f41324",
+        "type": "debug",
+        "z": "f2f0e75f03ca9ea4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 160,
+        "wires": []
     }
 ]
