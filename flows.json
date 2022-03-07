@@ -18594,7 +18594,7 @@
         "type": "server-events",
         "z": "bd3b762d2f0ddb2b",
         "name": "",
-        "server": "",
+        "server": "8b52884a.b76658",
         "version": 1,
         "event_type": "ios.notification_action_fired",
         "exposeToHomeAssistant": false,
