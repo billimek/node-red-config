@@ -18157,11 +18157,12 @@
         "type": "function",
         "z": "f2f0e75f03ca9ea4",
         "name": "Format message",
-        "func": "msg.url = msg.payload.event.action_data.url;\nmsg.phone = msg.payload.event.sourceDeviceID;\n\nmsg.payload_msg = { data: {'message': 'Press and hold for still picture, click for video clip', data: { 'url': msg.url, attachment: { 'url': msg.payload.event.action_data.screenshot } } } };\n\nreturn msg;",
+        "func": "msg.url = msg.payload.event.action_data.url;\nmsg.phone = msg.payload.event.sourceDeviceID;\n\nmsg.payload_msg = {\n    data: {\n        'message': 'Press and hold for still picture, click for video clip',\n        data: {\n            'url': msg.url,\n            attachment: {\n                'url': msg.payload.event.action_data.screenshot\n            }\n        }\n    }\n};\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 710,
         "y": 460,
         "wires": [
