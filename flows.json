@@ -2305,8 +2305,7 @@
         "wires": [
             [],
             [
-                "c73198e9.b2deb8",
-                "6da10cc90e83b35c"
+                "c73198e9.b2deb8"
             ]
         ]
     },
@@ -2767,8 +2766,7 @@
         "y": 220,
         "wires": [
             [
-                "74a6c66e.9b3788",
-                "e3e35017117aa54a"
+                "74a6c66e.9b3788"
             ],
             [
                 "202f9fb7.5baeb"
@@ -2879,135 +2877,6 @@
             ],
             []
         ]
-    },
-    {
-        "id": "28039fb14fa25464",
-        "type": "function",
-        "z": "ea946133.0085b",
-        "name": "Format iOS message",
-        "func": "var title = \"Front\"\nvar status = msg.payload;\nvar message = \"message\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n        data: {\n            'entity_id': 'camera.front_2'\n        }\n    }\n}    \n\nreturn [ msg ];\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1220,
-        "y": 640,
-        "wires": [
-            [
-                "097bf53e0496fea5",
-                "6afedac14d0b242f"
-            ]
-        ]
-    },
-    {
-        "id": "097bf53e0496fea5",
-        "type": "api-call-service",
-        "z": "ea946133.0085b",
-        "name": "notify jeff iOS",
-        "server": "8b52884a.b76658",
-        "version": 3,
-        "debugenabled": false,
-        "service_domain": "notify",
-        "service": "mobile_app_jeffsphone",
-        "entityId": "",
-        "data": "",
-        "dataType": "json",
-        "mergecontext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "data"
-            }
-        ],
-        "queue": "none",
-        "x": 1480,
-        "y": 640,
-        "wires": [
-            [
-                "c05735e072d87ada"
-            ]
-        ]
-    },
-    {
-        "id": "d00f67a16fd5cd2e",
-        "type": "inject",
-        "z": "ea946133.0085b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 840,
-        "y": 540,
-        "wires": [
-            [
-                "28039fb14fa25464"
-            ]
-        ]
-    },
-    {
-        "id": "6afedac14d0b242f",
-        "type": "debug",
-        "z": "ea946133.0085b",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1470,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "c05735e072d87ada",
-        "type": "debug",
-        "z": "ea946133.0085b",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1710,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "e3e35017117aa54a",
-        "type": "debug",
-        "z": "ea946133.0085b",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 670,
-        "y": 660,
-        "wires": []
     },
     {
         "id": "6da10cc90e83b35c",
