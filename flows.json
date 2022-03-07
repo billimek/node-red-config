@@ -292,7 +292,7 @@
         "version": 1,
         "legacy": false,
         "addon": false,
-        "rejectUnauthorizedCerts": true,
+        "rejectUnauthorizedCerts": false,
         "ha_boolean": "y|yes|true|on|home|open",
         "connectionDelay": true,
         "cacheJson": true
