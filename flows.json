@@ -18434,26 +18434,6 @@
         "wires": []
     },
     {
-        "id": "f0cbe067.17d2d",
-        "type": "counter",
-        "z": "f2f0e75f03ca9ea4",
-        "d": true,
-        "name": "",
-        "init": "0",
-        "step": "1",
-        "lower": "",
-        "upper": "",
-        "mode": "increment",
-        "outputs": "1",
-        "x": 1250,
-        "y": 740,
-        "wires": [
-            [
-                "7a6177b9.874598"
-            ]
-        ]
-    },
-    {
         "id": "7a6177b9.874598",
         "type": "delay",
         "z": "f2f0e75f03ca9ea4",
