@@ -336,26 +336,6 @@
         "name": "node-red google project"
     },
     {
-        "id": "4238db6e.227ed4",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "127.0.0.1",
-        "port": "1883",
-        "clientid": "homeassistant",
-        "usetls": false,
-        "compatmode": false,
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "closeTopic": "",
-        "closePayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": ""
-    },
-    {
         "id": "849977e5.257f68",
         "type": "tls-config",
         "name": "HASS-TLS",
