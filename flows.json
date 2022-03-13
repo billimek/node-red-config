@@ -3901,7 +3901,7 @@
         "version": 3,
         "debugenabled": false,
         "service_domain": "notify",
-        "service": "mobile_app_jennifers_xs_max",
+        "service": "mobile_app_jensphone",
         "entityId": "",
         "data": "",
         "dataType": "json",
