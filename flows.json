@@ -9024,8 +9024,8 @@
             [],
             [
                 "92e131b8.3d212",
-                "641b36ed21d58ac5",
-                "042e51ca6a326e48"
+                "042e51ca6a326e48",
+                "37408e3a8468eb90"
             ]
         ]
     },
@@ -10935,8 +10935,8 @@
         "type": "mqtt out",
         "z": "75b62c93.dd5d84",
         "name": "Close Jen's Garage",
-        "topic": "og-jen/IN/close",
-        "qos": "2",
+        "topic": "og-jen/IN/STATE",
+        "qos": "",
         "retain": "",
         "respTopic": "",
         "contentType": "",
@@ -10944,8 +10944,8 @@
         "correl": "",
         "expiry": "",
         "broker": "649859a4.a17818",
-        "x": 1330,
-        "y": 1220,
+        "x": 1610,
+        "y": 1200,
         "wires": []
     },
     {
@@ -10992,6 +10992,25 @@
         "x": 1310,
         "y": 1340,
         "wires": []
+    },
+    {
+        "id": "37408e3a8468eb90",
+        "type": "function",
+        "z": "75b62c93.dd5d84",
+        "name": "close",
+        "func": "msg.payload = \"close\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1330,
+        "y": 1220,
+        "wires": [
+            [
+                "641b36ed21d58ac5"
+            ]
+        ]
     },
     {
         "id": "dd155455.bc9c28",
