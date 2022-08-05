@@ -10934,7 +10934,7 @@
         "type": "mqtt out",
         "z": "75b62c93.dd5d84",
         "name": "Close Jen's Garage",
-        "topic": "og-jen/IN/CLOSE",
+        "topic": "og-jen/IN/close",
         "qos": "2",
         "retain": "",
         "respTopic": "",
@@ -10943,8 +10943,8 @@
         "correl": "",
         "expiry": "",
         "broker": "649859a4.a17818",
-        "x": 1350,
-        "y": 1260,
+        "x": 1330,
+        "y": 1220,
         "wires": []
     },
     {
