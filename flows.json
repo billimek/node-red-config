@@ -9024,7 +9024,6 @@
             [],
             [
                 "92e131b8.3d212",
-                "042e51ca6a326e48",
                 "37408e3a8468eb90"
             ]
         ]
@@ -10978,27 +10977,11 @@
         ]
     },
     {
-        "id": "042e51ca6a326e48",
-        "type": "debug",
-        "z": "75b62c93.dd5d84",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1310,
-        "y": 1340,
-        "wires": []
-    },
-    {
         "id": "37408e3a8468eb90",
         "type": "function",
         "z": "75b62c93.dd5d84",
         "name": "close",
-        "func": "msg.payload = \"CLOSED\";\nreturn msg;\n",
+        "func": "msg.payload = \"close\";\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
