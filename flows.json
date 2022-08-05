@@ -10998,7 +10998,7 @@
         "type": "function",
         "z": "75b62c93.dd5d84",
         "name": "close",
-        "func": "msg.payload = \"close\";\nreturn msg;\n",
+        "func": "msg.payload = \"CLOSED\";\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
