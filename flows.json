@@ -343,6 +343,21 @@
         "verifyservercert": false
     },
     {
+        "id": "d369385a16ca904f",
+        "type": "ical-config",
+        "url": "https://outlook.live.com/owa/calendar/7379d835-5635-4b31-928c-ebc4b4d98c32/aa26d81b-1e50-4372-9ec1-eb57c0d99bd8/cid-C27B260AD1EE03C7/calendar.ics",
+        "caldav": "",
+        "caltype": "ical",
+        "name": "Jeff's Cal",
+        "replacedates": false,
+        "usecache": true,
+        "username": "",
+        "password": "",
+        "calendar": "",
+        "pastWeeks": "0",
+        "futureWeeks": "4"
+    },
+    {
         "id": "4b2cdbdc.3114a4",
         "type": "rbe",
         "z": "b8b74cae.ffe4",
@@ -2255,6 +2270,103 @@
                 "df49345d.517b08"
             ]
         ]
+    },
+    {
+        "id": "7561d2534ee56cae",
+        "type": "ical-upcoming",
+        "z": "afb0f186.cfb0d",
+        "confignode": "d369385a16ca904f",
+        "timeout": "",
+        "timeoutUnits": "seconds",
+        "cron": "",
+        "name": "Jeff's Cal",
+        "offsettype": "",
+        "offset": "",
+        "offsetUnitstype": "",
+        "offsetUnits": "",
+        "eventtypes": "events",
+        "eventtypestype": "eventtypes",
+        "calendar": "",
+        "calendartype": "str",
+        "triggertype": "trigger",
+        "trigger": "always",
+        "timezone": "",
+        "timezonetype": "str",
+        "dateformat": "{ \"timeStyle\": \"short\", \"dateStyle\": \"short\" }",
+        "dateformattype": "json",
+        "language": "en",
+        "languagetype": "language",
+        "filterProperty": "summary",
+        "filterPropertytype": "filterProperty",
+        "filterOperator": "between",
+        "filterOperatortype": "filterOperator",
+        "filtertype": "str",
+        "filter2type": "str",
+        "filter2": "",
+        "filter": "",
+        "checkall": false,
+        "endpreview": "",
+        "endpreviewUnits": "",
+        "previewtype": "num",
+        "preview": "",
+        "previewUnitstype": "previewUnits",
+        "previewUnits": "days",
+        "pastviewtype": "num",
+        "pastview": "",
+        "pastviewUnits": "days",
+        "pastviewUnitstype": "pastviewUnits",
+        "x": 220,
+        "y": 540,
+        "wires": [
+            [
+                "0c4208cdf689afbd"
+            ]
+        ]
+    },
+    {
+        "id": "116b657f561e3d31",
+        "type": "inject",
+        "z": "afb0f186.cfb0d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 420,
+        "wires": [
+            [
+                "7561d2534ee56cae"
+            ]
+        ]
+    },
+    {
+        "id": "0c4208cdf689afbd",
+        "type": "debug",
+        "z": "afb0f186.cfb0d",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 560,
+        "wires": []
     },
     {
         "id": "807d53eb.e265b",
