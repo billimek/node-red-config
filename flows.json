@@ -2312,15 +2312,14 @@
         "previewUnitstype": "previewUnits",
         "previewUnits": "days",
         "pastviewtype": "num",
-        "pastview": "1",
+        "pastview": "0",
         "pastviewUnits": "days",
         "pastviewUnitstype": "pastviewUnits",
         "x": 220,
         "y": 540,
         "wires": [
             [
-                "0c4208cdf689afbd",
-                "e145c22dcc11bbc7"
+                "0c4208cdf689afbd"
             ]
         ]
     },
@@ -2371,47 +2370,6 @@
         "wires": []
     },
     {
-        "id": "e145c22dcc11bbc7",
-        "type": "switch",
-        "z": "afb0f186.cfb0d",
-        "name": "Cleaning?",
-        "property": "$lookup(payload, \"summary\")\t",
-        "propertyType": "jsonata",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "house cleaning",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 280,
-        "y": 640,
-        "wires": [
-            [
-                "60e181f870b56bc3"
-            ]
-        ]
-    },
-    {
-        "id": "60e181f870b56bc3",
-        "type": "debug",
-        "z": "afb0f186.cfb0d",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 440,
-        "y": 660,
-        "wires": []
-    },
-    {
         "id": "37d99614366f65c2",
         "type": "ical-upcoming",
         "z": "afb0f186.cfb0d",
@@ -2452,7 +2410,7 @@
         "previewUnitstype": "previewUnits",
         "previewUnits": "days",
         "pastviewtype": "num",
-        "pastview": "1",
+        "pastview": "0",
         "pastviewUnits": "days",
         "pastviewUnitstype": "pastviewUnits",
         "x": 280,
