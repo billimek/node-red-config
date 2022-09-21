@@ -2272,172 +2272,6 @@
         ]
     },
     {
-        "id": "7561d2534ee56cae",
-        "type": "ical-upcoming",
-        "z": "afb0f186.cfb0d",
-        "confignode": "d369385a16ca904f",
-        "timeout": "",
-        "timeoutUnits": "seconds",
-        "cron": "",
-        "name": "Jeff's Cal",
-        "offsettype": "",
-        "offset": "",
-        "offsetUnitstype": "",
-        "offsetUnits": "",
-        "eventtypes": "events",
-        "eventtypestype": "eventtypes",
-        "calendar": "",
-        "calendartype": "str",
-        "triggertype": "trigger",
-        "trigger": "match",
-        "timezone": "UTC",
-        "timezonetype": "str",
-        "dateformat": "{ \"timeStyle\": \"short\", \"dateStyle\": \"short\" }",
-        "dateformattype": "json",
-        "language": "en",
-        "languagetype": "language",
-        "filterProperty": "summary",
-        "filterPropertytype": "filterProperty",
-        "filterOperator": "between",
-        "filterOperatortype": "filterOperator",
-        "filtertype": "str",
-        "filter2type": "str",
-        "filter2": "",
-        "filter": "house cleaning",
-        "checkall": false,
-        "endpreview": "",
-        "endpreviewUnits": "",
-        "previewtype": "num",
-        "preview": "1",
-        "previewUnitstype": "previewUnits",
-        "previewUnits": "days",
-        "pastviewtype": "num",
-        "pastview": "0",
-        "pastviewUnits": "days",
-        "pastviewUnitstype": "pastviewUnits",
-        "x": 220,
-        "y": 540,
-        "wires": [
-            [
-                "0c4208cdf689afbd"
-            ]
-        ]
-    },
-    {
-        "id": "116b657f561e3d31",
-        "type": "inject",
-        "z": "afb0f186.cfb0d",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
-        "y": 420,
-        "wires": [
-            [
-                "7561d2534ee56cae",
-                "37d99614366f65c2"
-            ]
-        ]
-    },
-    {
-        "id": "0c4208cdf689afbd",
-        "type": "debug",
-        "z": "afb0f186.cfb0d",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 460,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "37d99614366f65c2",
-        "type": "ical-upcoming",
-        "z": "afb0f186.cfb0d",
-        "confignode": "d369385a16ca904f",
-        "timeout": "",
-        "timeoutUnits": "seconds",
-        "cron": "",
-        "name": "Jeff's Cal",
-        "offsettype": "",
-        "offset": "",
-        "offsetUnitstype": "",
-        "offsetUnits": "",
-        "eventtypes": "events",
-        "eventtypestype": "eventtypes",
-        "calendar": "",
-        "calendartype": "str",
-        "triggertype": "trigger",
-        "trigger": "always",
-        "timezone": "UTC",
-        "timezonetype": "str",
-        "dateformat": "{ \"timeStyle\": \"short\", \"dateStyle\": \"short\" }",
-        "dateformattype": "json",
-        "language": "en",
-        "languagetype": "language",
-        "filterProperty": "summary",
-        "filterPropertytype": "filterProperty",
-        "filterOperator": "between",
-        "filterOperatortype": "filterOperator",
-        "filtertype": "str",
-        "filter2type": "str",
-        "filter2": "",
-        "filter": "house cleaning",
-        "checkall": false,
-        "endpreview": "",
-        "endpreviewUnits": "",
-        "previewtype": "num",
-        "preview": "1",
-        "previewUnitstype": "previewUnits",
-        "previewUnits": "days",
-        "pastviewtype": "num",
-        "pastview": "1",
-        "pastviewUnits": "days",
-        "pastviewUnitstype": "pastviewUnits",
-        "x": 280,
-        "y": 480,
-        "wires": [
-            [
-                "47e23996f39e275c"
-            ]
-        ]
-    },
-    {
-        "id": "47e23996f39e275c",
-        "type": "debug",
-        "z": "afb0f186.cfb0d",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 460,
-        "y": 480,
-        "wires": []
-    },
-    {
         "id": "807d53eb.e265b",
         "type": "function",
         "z": "ea946133.0085b",
@@ -5497,54 +5331,10 @@
         "y": 540,
         "wires": [
             [
-                "a58f31c1.f84bd"
+                "b10170a8c7d48e42"
             ],
             [],
             []
-        ]
-    },
-    {
-        "id": "a58f31c1.f84bd",
-        "type": "listEventsOnDays",
-        "z": "4aedf9e8.044e08",
-        "name": "Fetch Cal",
-        "googleCredentials": "d02fa8ec.7c1538",
-        "calendarIds": "[{\"id\":\"jeff@billimek.com\",\"name\":\"Jeff Billimek\"}]",
-        "timezoneOffsetHours": "-5",
-        "daysOffsetStart": "0",
-        "daysOffsetEnd": "0",
-        "refreshInterval": 0,
-        "x": 360,
-        "y": 540,
-        "wires": [
-            [
-                "ce427313.c8ce3"
-            ]
-        ]
-    },
-    {
-        "id": "ce427313.c8ce3",
-        "type": "switch",
-        "z": "4aedf9e8.044e08",
-        "name": "Cleaning?",
-        "property": "$lookup(payload, \"summary\")\t",
-        "propertyType": "jsonata",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "house cleaning",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 540,
-        "y": 540,
-        "wires": [
-            [
-                "f36487b8.7e8c48"
-            ]
         ]
     },
     {
@@ -5758,6 +5548,58 @@
             [],
             [
                 "fe046407.ab0868"
+            ]
+        ]
+    },
+    {
+        "id": "b10170a8c7d48e42",
+        "type": "ical-upcoming",
+        "z": "4aedf9e8.044e08",
+        "confignode": "d369385a16ca904f",
+        "timeout": "",
+        "timeoutUnits": "seconds",
+        "cron": "",
+        "name": "Jeff's Cal",
+        "offsettype": "",
+        "offset": "",
+        "offsetUnitstype": "",
+        "offsetUnits": "",
+        "eventtypes": "events",
+        "eventtypestype": "eventtypes",
+        "calendar": "",
+        "calendartype": "str",
+        "triggertype": "trigger",
+        "trigger": "match",
+        "timezone": "UTC",
+        "timezonetype": "str",
+        "dateformat": "{ \"timeStyle\": \"short\", \"dateStyle\": \"short\" }",
+        "dateformattype": "json",
+        "language": "en",
+        "languagetype": "language",
+        "filterProperty": "summary",
+        "filterPropertytype": "filterProperty",
+        "filterOperator": "between",
+        "filterOperatortype": "filterOperator",
+        "filtertype": "str",
+        "filter2type": "str",
+        "filter2": "",
+        "filter": "house cleaning",
+        "checkall": false,
+        "endpreview": "",
+        "endpreviewUnits": "",
+        "previewtype": "num",
+        "preview": "1",
+        "previewUnitstype": "previewUnits",
+        "previewUnits": "days",
+        "pastviewtype": "num",
+        "pastview": "0",
+        "pastviewUnits": "days",
+        "pastviewUnitstype": "pastviewUnits",
+        "x": 540,
+        "y": 540,
+        "wires": [
+            [
+                "f36487b8.7e8c48"
             ]
         ]
     },
