@@ -2349,7 +2349,8 @@
         "y": 420,
         "wires": [
             [
-                "7561d2534ee56cae"
+                "7561d2534ee56cae",
+                "37d99614366f65c2"
             ]
         ]
     },
@@ -2408,6 +2409,74 @@
         "statusType": "auto",
         "x": 440,
         "y": 660,
+        "wires": []
+    },
+    {
+        "id": "37d99614366f65c2",
+        "type": "ical-upcoming",
+        "z": "afb0f186.cfb0d",
+        "confignode": "d369385a16ca904f",
+        "timeout": "",
+        "timeoutUnits": "seconds",
+        "cron": "",
+        "name": "Jeff's Cal",
+        "offsettype": "",
+        "offset": "",
+        "offsetUnitstype": "",
+        "offsetUnits": "",
+        "eventtypes": "events",
+        "eventtypestype": "eventtypes",
+        "calendar": "",
+        "calendartype": "str",
+        "triggertype": "trigger",
+        "trigger": "always",
+        "timezone": "UTC",
+        "timezonetype": "str",
+        "dateformat": "{ \"timeStyle\": \"short\", \"dateStyle\": \"short\" }",
+        "dateformattype": "json",
+        "language": "en",
+        "languagetype": "language",
+        "filterProperty": "summary",
+        "filterPropertytype": "filterProperty",
+        "filterOperator": "between",
+        "filterOperatortype": "filterOperator",
+        "filtertype": "str",
+        "filter2type": "str",
+        "filter2": "",
+        "filter": "house cleaning",
+        "checkall": false,
+        "endpreview": "",
+        "endpreviewUnits": "",
+        "previewtype": "num",
+        "preview": "",
+        "previewUnitstype": "previewUnits",
+        "previewUnits": "days",
+        "pastviewtype": "num",
+        "pastview": "10",
+        "pastviewUnits": "hours",
+        "pastviewUnitstype": "pastviewUnits",
+        "x": 280,
+        "y": 480,
+        "wires": [
+            [
+                "47e23996f39e275c"
+            ]
+        ]
+    },
+    {
+        "id": "47e23996f39e275c",
+        "type": "debug",
+        "z": "afb0f186.cfb0d",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 480,
         "wires": []
     },
     {
