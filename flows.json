@@ -5605,7 +5605,7 @@
         "y": 1440,
         "wires": [
             [
-                "331c8cae4d3d4b70"
+                "e79346f3e599cb6d"
             ]
         ]
     },
@@ -5649,6 +5649,25 @@
         "wires": [
             [
                 "e90c9cbfd8b5740f"
+            ]
+        ]
+    },
+    {
+        "id": "e79346f3e599cb6d",
+        "type": "function",
+        "z": "4aedf9e8.044e08",
+        "name": "Jen's garage open msg",
+        "func": "var category = \"garage2\";\nvar name = \"Jen's\";\nvar title = \"Jen's Garage Door\";\nvar openTimeinMS = global.get('cover.jen_garage_door_mqtt.durationTimeMS') || 0;\nvar message = name + \" garage door has remained open for about \" + millisecondsToStr(openTimeinMS)\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n        data: {\n            push: {\n                category: category,\n                sound: \"US-EN-Morgan-Freeman-Garage-Door-Opened.wav\"\n            }\n        }\n    }\n}\nreturn [ msg ];\n\nfunction millisecondsToStr (milliseconds) {\n    // TIP: to find current time in milliseconds, use:\n    // var  current_time_milliseconds = new Date().getTime();\n\n    function numberEnding (number) {\n        return (number > 1) ? 's' : '';\n    }\n\n    var temp = Math.floor(milliseconds / 1000);\n    var years = Math.floor(temp / 31536000);\n    if (years) {\n        return years + ' year' + numberEnding(years);\n    }\n    //TODO: Months! Maybe weeks? \n    var days = Math.floor((temp %= 31536000) / 86400);\n    if (days) {\n        return days + ' day' + numberEnding(days);\n    }\n    var hours = Math.floor((temp %= 86400) / 3600);\n    if (hours) {\n        return hours + ' hour' + numberEnding(hours);\n    }\n    var minutes = Math.floor((temp %= 3600) / 60);\n    if (minutes) {\n        return minutes + ' minute' + numberEnding(minutes);\n    }\n    var seconds = temp % 60;\n    if (seconds) {\n        return seconds + ' second' + numberEnding(seconds);\n    }\n    return 'less than a second'; //'just now' //or other string you like;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 1580,
+        "wires": [
+            [
+                "331c8cae4d3d4b70"
             ]
         ]
     },
