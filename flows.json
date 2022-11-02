@@ -2972,7 +2972,9 @@
             [
                 "79eb2197.7c7f6"
             ],
-            []
+            [
+                "19b955d32fd245d4"
+            ]
         ]
     },
     {
@@ -3161,7 +3163,7 @@
             }
         ],
         "x": 160,
-        "y": 540,
+        "y": 600,
         "wires": [
             [
                 "8721154325fec325"
@@ -3186,7 +3188,7 @@
         "repair": false,
         "outputs": 1,
         "x": 390,
-        "y": 540,
+        "y": 600,
         "wires": [
             [
                 "435c61743abf4a4b"
@@ -3200,7 +3202,7 @@
         "name": "Camera alert actionable notifications",
         "info": "",
         "x": 160,
-        "y": 500,
+        "y": 560,
         "wires": []
     },
     {
@@ -3215,7 +3217,7 @@
         "finalize": "",
         "libs": [],
         "x": 550,
-        "y": 540,
+        "y": 600,
         "wires": [
             [
                 "7e89a22f06815403"
@@ -3229,7 +3231,7 @@
         "name": "Send still picture and video clip",
         "info": "",
         "x": 590,
-        "y": 500,
+        "y": 560,
         "wires": []
     },
     {
@@ -3239,7 +3241,7 @@
         "name": "Notify",
         "info": "",
         "x": 1170,
-        "y": 500,
+        "y": 560,
         "wires": []
     },
     {
@@ -3262,7 +3264,7 @@
         "to": "",
         "reg": false,
         "x": 1230,
-        "y": 540,
+        "y": 600,
         "wires": [
             [
                 "8cfcf54f29835dc8"
@@ -3296,7 +3298,7 @@
         ],
         "queue": "none",
         "x": 1470,
-        "y": 540,
+        "y": 600,
         "wires": [
             []
         ]
@@ -3315,7 +3317,7 @@
         "proxy": "",
         "authType": "",
         "x": 790,
-        "y": 540,
+        "y": 600,
         "wires": [
             [
                 "7052f4026ca3b978"
@@ -3343,7 +3345,7 @@
         "repair": false,
         "outputs": 2,
         "x": 970,
-        "y": 540,
+        "y": 600,
         "wires": [
             [
                 "35a5279bd89d5403",
@@ -3374,7 +3376,7 @@
         "to": "",
         "reg": false,
         "x": 1200,
-        "y": 640,
+        "y": 700,
         "wires": [
             [
                 "64ac179eb3cf6d1d"
@@ -3388,7 +3390,7 @@
         "name": "Reset counter after max loops or succesfull delivery",
         "info": "",
         "x": 1310,
-        "y": 600,
+        "y": 660,
         "wires": []
     },
     {
@@ -3398,7 +3400,7 @@
         "name": "Try again until clip is ready",
         "info": "",
         "x": 1230,
-        "y": 700,
+        "y": 760,
         "wires": []
     },
     {
@@ -3418,7 +3420,7 @@
         "drop": false,
         "outputs": 1,
         "x": 1320,
-        "y": 740,
+        "y": 800,
         "wires": [
             [
                 "3ebb293c8655fae9"
@@ -3446,7 +3448,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1450,
-        "y": 740,
+        "y": 800,
         "wires": [
             [
                 "35a5279bd89d5403"
@@ -3468,7 +3470,7 @@
         "mode": "increment",
         "outputs": "1",
         "x": 1180,
-        "y": 740,
+        "y": 800,
         "wires": [
             [
                 "b09534de07c1ed7d"
@@ -3490,6 +3492,76 @@
         "y": 220,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "01925e49acb5f7e1",
+        "type": "function",
+        "z": "ea946133.0085b",
+        "name": "trigger doorbell camera (BI)",
+        "func": "msg.payload = \"camera=doorbell&trigger\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1540,
+        "y": 460,
+        "wires": [
+            [
+                "8b018174.c0b2d"
+            ]
+        ]
+    },
+    {
+        "id": "db02a469f64cd4ca",
+        "type": "delay",
+        "z": "ea946133.0085b",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "2",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "outputs": 1,
+        "x": 1280,
+        "y": 460,
+        "wires": [
+            [
+                "01925e49acb5f7e1"
+            ]
+        ]
+    },
+    {
+        "id": "19b955d32fd245d4",
+        "type": "api-current-state",
+        "z": "ea946133.0085b",
+        "name": "run?",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_boolean.camera_doorbell_notify",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [],
+        "for": 0,
+        "forType": "num",
+        "forUnits": "minutes",
+        "x": 470,
+        "y": 460,
+        "wires": [
+            [],
+            [
+                "db02a469f64cd4ca"
+            ]
         ]
     },
     {
