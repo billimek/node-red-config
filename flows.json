@@ -5768,7 +5768,7 @@
         "timeout": "",
         "timeoutUnits": "seconds",
         "cron": "",
-        "name": "No cleaning scheduled",
+        "name": "Cleaning scheduled",
         "offsettype": "",
         "offset": "",
         "offsetUnitstype": "",
@@ -5778,7 +5778,7 @@
         "calendar": "",
         "calendartype": "str",
         "triggertype": "trigger",
-        "trigger": "nomatch",
+        "trigger": "match",
         "timezone": "UTC",
         "timezonetype": "str",
         "dateformat": "{ \"timeStyle\": \"short\", \"dateStyle\": \"short\" }",
@@ -5808,7 +5808,7 @@
         "y": 1560,
         "wires": [
             [
-                "69d0aded096cfda8"
+                "aa4e1a98addc09a2"
             ]
         ]
     },
@@ -5824,8 +5824,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 560,
-        "y": 1620,
+        "x": 700,
+        "y": 1640,
         "wires": []
     },
     {
@@ -5856,6 +5856,47 @@
                 "db91788ba2ebaea8"
             ]
         ]
+    },
+    {
+        "id": "aa4e1a98addc09a2",
+        "type": "switch",
+        "z": "4aedf9e8.044e08",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 550,
+        "y": 1460,
+        "wires": [
+            [
+                "342ab2fea863e257"
+            ]
+        ]
+    },
+    {
+        "id": "342ab2fea863e257",
+        "type": "debug",
+        "z": "4aedf9e8.044e08",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 1500,
+        "wires": []
     },
     {
         "id": "46cdb220.d99dbc",
