@@ -5598,7 +5598,7 @@
         "timeout": "",
         "timeoutUnits": "seconds",
         "cron": "",
-        "name": "Jeff's Cal",
+        "name": "Cleaning Scheduled",
         "offsettype": "",
         "offset": "",
         "offsetUnitstype": "",
@@ -5634,7 +5634,7 @@
         "pastview": "12",
         "pastviewUnits": "hours",
         "pastviewUnitstype": "pastviewUnits",
-        "x": 540,
+        "x": 580,
         "y": 540,
         "wires": [
             [
@@ -5650,7 +5650,7 @@
         "timeout": "",
         "timeoutUnits": "seconds",
         "cron": "",
-        "name": "Jeff's Cal",
+        "name": "No cleaning scheduled",
         "offsettype": "",
         "offset": "",
         "offsetUnitstype": "",
@@ -5660,7 +5660,7 @@
         "calendar": "",
         "calendartype": "str",
         "triggertype": "trigger",
-        "trigger": "match",
+        "trigger": "nomatch",
         "timezone": "UTC",
         "timezonetype": "str",
         "dateformat": "{ \"timeStyle\": \"short\", \"dateStyle\": \"short\" }",
@@ -5686,8 +5686,8 @@
         "pastview": "12",
         "pastviewUnits": "hours",
         "pastviewUnitstype": "pastviewUnits",
-        "x": 820,
-        "y": 340,
+        "x": 860,
+        "y": 380,
         "wires": [
             [
                 "892a8bfd.69c738",
@@ -5707,9 +5707,38 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1140,
-        "y": 200,
+        "x": 1120,
+        "y": 440,
         "wires": []
+    },
+    {
+        "id": "a3d33510fd04f33e",
+        "type": "inject",
+        "z": "4aedf9e8.044e08",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 360,
+        "y": 240,
+        "wires": [
+            [
+                "513f0dbe.940124"
+            ]
+        ]
     },
     {
         "id": "46cdb220.d99dbc",
