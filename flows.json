@@ -216,8 +216,8 @@
         "in": [],
         "out": [
             {
-                "x": 980,
-                "y": 80,
+                "x": 1060,
+                "y": 40,
                 "wires": [
                     {
                         "id": "8858eb58.4a5e68",
@@ -226,7 +226,7 @@
                 ]
             },
             {
-                "x": 980,
+                "x": 1120,
                 "y": 80,
                 "wires": [
                     {
@@ -236,8 +236,8 @@
                 ]
             },
             {
-                "x": 980,
-                "y": 80,
+                "x": 1120,
+                "y": 140,
                 "wires": [
                     {
                         "id": "8858eb58.4a5e68",
@@ -246,8 +246,8 @@
                 ]
             },
             {
-                "x": 980,
-                "y": 80,
+                "x": 1120,
+                "y": 200,
                 "wires": [
                     {
                         "id": "8858eb58.4a5e68",
@@ -256,23 +256,24 @@
                 ]
             },
             {
-                "x": 980,
-                "y": 80,
+                "x": 1120,
+                "y": 260,
                 "wires": [
                     {
                         "id": "8858eb58.4a5e68",
                         "port": 4
-                    },
+                    }
+                ]
+            },
+            {
+                "x": 1120,
+                "y": 320,
+                "wires": [
                     {
                         "id": "8858eb58.4a5e68",
                         "port": 5
                     }
                 ]
-            },
-            {
-                "x": 160,
-                "y": 30,
-                "wires": []
             }
         ],
         "env": [],
@@ -1609,7 +1610,7 @@
         "id": "8858eb58.4a5e68",
         "type": "switch",
         "z": "2299e9e0.40f656",
-        "name": "1.front -- 2.porch -- 3. driveway -- 4. pool -- 5. basement",
+        "name": "1.front -- 2.porch -- 3. driveway -- 4. pool -- 5. basement -- 6. doorbell",
         "property": "payload.after.camera",
         "propertyType": "msg",
         "rules": [
@@ -1647,7 +1648,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 6,
-        "x": 690,
+        "x": 730,
         "y": 80,
         "wires": [
             [],
