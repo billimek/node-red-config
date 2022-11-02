@@ -4641,7 +4641,7 @@
                 "type": "msg"
             }
         ],
-        "x": 990,
+        "x": 1050,
         "y": 340,
         "wires": [
             [
@@ -4677,7 +4677,7 @@
             }
         ],
         "queue": "none",
-        "x": 1260,
+        "x": 1240,
         "y": 340,
         "wires": [
             []
@@ -5015,7 +5015,6 @@
         "wires": [
             [],
             [
-                "892a8bfd.69c738",
                 "dba11aed.2b5e28"
             ]
         ]
@@ -5468,13 +5467,15 @@
         "endTime": "13:00",
         "startOffset": 0,
         "endOffset": 0,
-        "x": 1010,
-        "y": 200,
+        "x": 830,
+        "y": 280,
         "wires": [
             [
                 "e8cea7e30d09b0d4"
             ],
-            []
+            [
+                "892a8bfd.69c738"
+            ]
         ]
     },
     {
@@ -5719,63 +5720,12 @@
         "pastview": "12",
         "pastviewUnits": "hours",
         "pastviewUnitstype": "pastviewUnits",
-        "x": 1000,
-        "y": 280,
+        "x": 820,
+        "y": 340,
         "wires": [
             [
-                "e5db24b23685d311"
+                "892a8bfd.69c738"
             ]
-        ]
-    },
-    {
-        "id": "e5db24b23685d311",
-        "type": "function",
-        "z": "4aedf9e8.044e08",
-        "name": "Alarm iOS msg",
-        "func": "var time = timeStamp();\n\nvar category = \"alarm\"\nvar title = \"DEBUG\"\nvar message = \"Cleaning calendar filter triggered as expected on  \" + time\n\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n        data: {\n            push: {\n                category: category\n            }\n        }\n    }\n}\nreturn [ msg ];\n\n\nfunction timeStamp() {\n// Create a date object with the current time\n  var now = new Date();\n\n// Create an array with the current month, day and time\n  var date = [ now.getMonth() + 1, now.getDate(), now.getFullYear() ];\n\n// Create an array with the current hour, minute and second\n  var time = [ now.getHours(), now.getMinutes(), now.getSeconds() ];\n\n// Determine AM or PM suffix based on the hour\n  var suffix = ( time[0] < 12 ) ? \"AM\" : \"PM\";\n\n// Convert hour from military time\n  time[0] = ( time[0] < 12 ) ? time[0] : time[0] - 12;\n\n// If hour is 0, set it to 12\n  time[0] = time[0] || 12;\n\n// If seconds and minutes are less than 10, add a zero\n  for ( var i = 1; i < 3; i++ ) {\n    if ( time[i] < 10 ) {\n      time[i] = \"0\" + time[i];\n    }\n  }\n\n// Return the formatted string\n//   return date.join(\"/\") + \" \" + time.join(\":\") + \" \" + suffix;\n  return time.join(\":\") + \" \" + suffix;\n}",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1240,
-        "y": 280,
-        "wires": [
-            [
-                "64f6e0349befac1e"
-            ]
-        ]
-    },
-    {
-        "id": "64f6e0349befac1e",
-        "type": "api-call-service",
-        "z": "4aedf9e8.044e08",
-        "name": "notify jeff iOS",
-        "server": "8b52884a.b76658",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "notify",
-        "service": "mobile_app_jeffsphone",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "",
-        "dataType": "json",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "data"
-            }
-        ],
-        "queue": "none",
-        "x": 1440,
-        "y": 280,
-        "wires": [
-            []
         ]
     },
     {
