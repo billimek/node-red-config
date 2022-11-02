@@ -5650,7 +5650,7 @@
         "timeout": "",
         "timeoutUnits": "seconds",
         "cron": "",
-        "name": "No cleaning scheduled",
+        "name": "Cleaning scheduled",
         "offsettype": "",
         "offset": "",
         "offsetUnitstype": "",
@@ -5686,30 +5686,13 @@
         "pastview": "12",
         "pastviewUnits": "hours",
         "pastviewUnitstype": "pastviewUnits",
-        "x": 860,
-        "y": 380,
+        "x": 1080,
+        "y": 280,
         "wires": [
             [
-                "892a8bfd.69c738",
-                "7b3bfedb3d94a091"
+                "e3eced460211d893"
             ]
         ]
-    },
-    {
-        "id": "7b3bfedb3d94a091",
-        "type": "debug",
-        "z": "4aedf9e8.044e08",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1120,
-        "y": 440,
-        "wires": []
     },
     {
         "id": "a3d33510fd04f33e",
@@ -5898,6 +5881,31 @@
         "x": 720,
         "y": 1500,
         "wires": []
+    },
+    {
+        "id": "e3eced460211d893",
+        "type": "switch",
+        "z": "4aedf9e8.044e08",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1290,
+        "y": 280,
+        "wires": [
+            [
+                "892a8bfd.69c738"
+            ]
+        ]
     },
     {
         "id": "46cdb220.d99dbc",
