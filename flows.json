@@ -336,11 +336,6 @@
         "longitude": "-84.44805"
     },
     {
-        "id": "d02fa8ec.7c1538",
-        "type": "googleCredentials",
-        "name": "node-red google project"
-    },
-    {
         "id": "849977e5.257f68",
         "type": "tls-config",
         "name": "HASS-TLS",
