@@ -5015,7 +5015,8 @@
         "wires": [
             [],
             [
-                "892a8bfd.69c738"
+                "892a8bfd.69c738",
+                "dba11aed.2b5e28"
             ]
         ]
     },
@@ -5457,54 +5458,6 @@
         ]
     },
     {
-        "id": "8de13723.a5d308",
-        "type": "listEventsOnDays",
-        "z": "4aedf9e8.044e08",
-        "name": "Fetch Cal",
-        "googleCredentials": "d02fa8ec.7c1538",
-        "calendarIds": "[{\"id\":\"jeff@billimek.com\",\"name\":\"Jeff Billimek\"}]",
-        "timezoneOffsetHours": "-5",
-        "daysOffsetStart": "0",
-        "daysOffsetEnd": "0",
-        "refreshInterval": 0,
-        "x": 1020,
-        "y": 240,
-        "wires": [
-            [
-                "aaa7449e.7de358"
-            ]
-        ]
-    },
-    {
-        "id": "aaa7449e.7de358",
-        "type": "switch",
-        "z": "4aedf9e8.044e08",
-        "name": "Cleaning?",
-        "property": "$lookup(payload, \"summary\")\t",
-        "propertyType": "jsonata",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "house cleaning",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1020,
-        "y": 180,
-        "wires": [
-            [],
-            [
-                "892a8bfd.69c738"
-            ]
-        ]
-    },
-    {
         "id": "dba11aed.2b5e28",
         "type": "time-range-switch",
         "z": "4aedf9e8.044e08",
@@ -5515,11 +5468,11 @@
         "endTime": "13:00",
         "startOffset": 0,
         "endOffset": 0,
-        "x": 1030,
-        "y": 280,
+        "x": 1010,
+        "y": 200,
         "wires": [
             [
-                "8de13723.a5d308"
+                "e8cea7e30d09b0d4"
             ],
             []
         ]
@@ -5720,6 +5673,109 @@
             [
                 "f36487b8.7e8c48"
             ]
+        ]
+    },
+    {
+        "id": "e8cea7e30d09b0d4",
+        "type": "ical-upcoming",
+        "z": "4aedf9e8.044e08",
+        "confignode": "d369385a16ca904f",
+        "timeout": "",
+        "timeoutUnits": "seconds",
+        "cron": "",
+        "name": "Jeff's Cal",
+        "offsettype": "",
+        "offset": "",
+        "offsetUnitstype": "",
+        "offsetUnits": "",
+        "eventtypes": "events",
+        "eventtypestype": "eventtypes",
+        "calendar": "",
+        "calendartype": "str",
+        "triggertype": "trigger",
+        "trigger": "match",
+        "timezone": "UTC",
+        "timezonetype": "str",
+        "dateformat": "{ \"timeStyle\": \"short\", \"dateStyle\": \"short\" }",
+        "dateformattype": "json",
+        "language": "en",
+        "languagetype": "language",
+        "filterProperty": "summary",
+        "filterPropertytype": "filterProperty",
+        "filterOperator": "between",
+        "filterOperatortype": "filterOperator",
+        "filtertype": "str",
+        "filter2type": "str",
+        "filter2": "",
+        "filter": "house cleaning",
+        "checkall": false,
+        "endpreview": "",
+        "endpreviewUnits": "",
+        "previewtype": "num",
+        "preview": "1",
+        "previewUnitstype": "previewUnits",
+        "previewUnits": "days",
+        "pastviewtype": "num",
+        "pastview": "12",
+        "pastviewUnits": "hours",
+        "pastviewUnitstype": "pastviewUnits",
+        "x": 1000,
+        "y": 280,
+        "wires": [
+            [
+                "e5db24b23685d311"
+            ]
+        ]
+    },
+    {
+        "id": "e5db24b23685d311",
+        "type": "function",
+        "z": "4aedf9e8.044e08",
+        "name": "Alarm iOS msg",
+        "func": "var time = timeStamp();\n\nvar category = \"alarm\"\nvar title = \"DEBUG\"\nvar message = \"Cleaning calendar filter triggered as expected on  \" + time\n\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n        data: {\n            push: {\n                category: category\n            }\n        }\n    }\n}\nreturn [ msg ];\n\n\nfunction timeStamp() {\n// Create a date object with the current time\n  var now = new Date();\n\n// Create an array with the current month, day and time\n  var date = [ now.getMonth() + 1, now.getDate(), now.getFullYear() ];\n\n// Create an array with the current hour, minute and second\n  var time = [ now.getHours(), now.getMinutes(), now.getSeconds() ];\n\n// Determine AM or PM suffix based on the hour\n  var suffix = ( time[0] < 12 ) ? \"AM\" : \"PM\";\n\n// Convert hour from military time\n  time[0] = ( time[0] < 12 ) ? time[0] : time[0] - 12;\n\n// If hour is 0, set it to 12\n  time[0] = time[0] || 12;\n\n// If seconds and minutes are less than 10, add a zero\n  for ( var i = 1; i < 3; i++ ) {\n    if ( time[i] < 10 ) {\n      time[i] = \"0\" + time[i];\n    }\n  }\n\n// Return the formatted string\n//   return date.join(\"/\") + \" \" + time.join(\":\") + \" \" + suffix;\n  return time.join(\":\") + \" \" + suffix;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1240,
+        "y": 280,
+        "wires": [
+            [
+                "64f6e0349befac1e"
+            ]
+        ]
+    },
+    {
+        "id": "64f6e0349befac1e",
+        "type": "api-call-service",
+        "z": "4aedf9e8.044e08",
+        "name": "notify jeff iOS",
+        "server": "8b52884a.b76658",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "notify",
+        "service": "mobile_app_jeffsphone",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "data"
+            }
+        ],
+        "queue": "none",
+        "x": 1440,
+        "y": 280,
+        "wires": [
+            []
         ]
     },
     {
