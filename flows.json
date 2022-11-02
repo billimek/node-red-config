@@ -262,11 +262,16 @@
                     {
                         "id": "8858eb58.4a5e68",
                         "port": 4
+                    },
+                    {
+                        "id": "8858eb58.4a5e68",
+                        "port": 5
                     }
                 ]
             }
         ],
         "env": [],
+        "meta": {},
         "color": "#DDAA99"
     },
     {
@@ -1627,14 +1632,20 @@
                 "t": "eq",
                 "v": "basement",
                 "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "doorbell",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 5,
+        "outputs": 6,
         "x": 690,
         "y": 80,
         "wires": [
+            [],
             [],
             [],
             [],
