@@ -5741,6 +5741,123 @@
         ]
     },
     {
+        "id": "db91788ba2ebaea8",
+        "type": "time-range-switch",
+        "z": "4aedf9e8.044e08",
+        "name": "8:31am-1pm",
+        "lat": "33.95092",
+        "lon": "-84.44805",
+        "startTime": "08:31",
+        "endTime": "13:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 270,
+        "y": 1460,
+        "wires": [
+            [
+                "ca46dea9a69bbe80"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ca46dea9a69bbe80",
+        "type": "ical-upcoming",
+        "z": "4aedf9e8.044e08",
+        "confignode": "d369385a16ca904f",
+        "timeout": "",
+        "timeoutUnits": "seconds",
+        "cron": "",
+        "name": "No cleaning scheduled",
+        "offsettype": "",
+        "offset": "",
+        "offsetUnitstype": "",
+        "offsetUnits": "",
+        "eventtypes": "events",
+        "eventtypestype": "eventtypes",
+        "calendar": "",
+        "calendartype": "str",
+        "triggertype": "trigger",
+        "trigger": "nomatch",
+        "timezone": "UTC",
+        "timezonetype": "str",
+        "dateformat": "{ \"timeStyle\": \"short\", \"dateStyle\": \"short\" }",
+        "dateformattype": "json",
+        "language": "en",
+        "languagetype": "language",
+        "filterProperty": "summary",
+        "filterPropertytype": "filterProperty",
+        "filterOperator": "between",
+        "filterOperatortype": "filterOperator",
+        "filtertype": "str",
+        "filter2type": "str",
+        "filter2": "",
+        "filter": "house cleaning",
+        "checkall": false,
+        "endpreview": "",
+        "endpreviewUnits": "",
+        "previewtype": "num",
+        "preview": "1",
+        "previewUnitstype": "previewUnits",
+        "previewUnits": "days",
+        "pastviewtype": "num",
+        "pastview": "12",
+        "pastviewUnits": "hours",
+        "pastviewUnitstype": "pastviewUnits",
+        "x": 300,
+        "y": 1560,
+        "wires": [
+            [
+                "69d0aded096cfda8"
+            ]
+        ]
+    },
+    {
+        "id": "69d0aded096cfda8",
+        "type": "debug",
+        "z": "4aedf9e8.044e08",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "4a334d2a309c2501",
+        "type": "inject",
+        "z": "4aedf9e8.044e08",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 1320,
+        "wires": [
+            [
+                "db91788ba2ebaea8"
+            ]
+        ]
+    },
+    {
         "id": "46cdb220.d99dbc",
         "type": "mqtt out",
         "z": "9143c7f2.16df18",
