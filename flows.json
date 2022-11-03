@@ -284,7 +284,7 @@
         "id": "8b52884a.b76658",
         "type": "server",
         "name": "Home Assistant",
-        "version": 4,
+        "version": 5,
         "addon": false,
         "rejectUnauthorizedCerts": false,
         "ha_boolean": "y|yes|true|on|home|open",
@@ -300,7 +300,8 @@
         "statusMonth": "short",
         "statusDay": "numeric",
         "statusHourCycle": "h23",
-        "statusTimeFormat": "h:m"
+        "statusTimeFormat": "h:m",
+        "enableGlobalContextStore": true
     },
     {
         "id": "649859a4.a17818",
@@ -3123,7 +3124,8 @@
         "z": "ea946133.0085b",
         "name": "",
         "server": "8b52884a.b76658",
-        "version": 1,
+        "version": 2,
+        "eventType": "ios.notification_action_fired",
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -3156,7 +3158,6 @@
                 "valueType": "jsonata"
             }
         ],
-        "event_type": "ios.notification_action_fired",
         "x": 160,
         "y": 600,
         "wires": [
