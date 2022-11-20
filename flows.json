@@ -14489,8 +14489,8 @@
         "comment": "",
         "lat": "33.94519",
         "lon": "-84.45379",
-        "starttime": "420",
-        "endtime": "435",
+        "starttime": "1005",
+        "endtime": "1020",
         "starttime2": 0,
         "endtime2": 0,
         "startoff": "0",
@@ -14498,8 +14498,8 @@
         "startoff2": "",
         "endoff2": "",
         "offs": 0,
-        "outtext1": "",
-        "outtext2": "",
+        "outtext1": "turn_on",
+        "outtext2": "turn_off",
         "timeout": 1440,
         "sun": true,
         "mon": true,
@@ -14602,13 +14602,49 @@
         "atstart": true,
         "odd": false,
         "even": false,
-        "x": 220,
-        "y": 2040,
+        "x": 280,
+        "y": 2180,
         "wires": [
-            [],
-            [],
+            [
+                "c7a92603720f0f8c"
+            ],
+            [
+                "e76f43b1cb4a297c"
+            ],
             []
         ]
+    },
+    {
+        "id": "c7a92603720f0f8c",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "e76f43b1cb4a297c",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 2220,
+        "wires": []
     },
     {
         "id": "f9971550.66b808",
