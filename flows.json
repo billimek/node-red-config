@@ -14483,8 +14483,8 @@
         "type": "bigtimer",
         "z": "af228686.65c8a8",
         "outtopic": "",
-        "outpayload1": "1",
-        "outpayload2": "",
+        "outpayload1": "turn_on",
+        "outpayload2": "turn_off",
         "name": "7am every day",
         "comment": "",
         "lat": "33.94519",
@@ -14645,6 +14645,35 @@
         "x": 600,
         "y": 2220,
         "wires": []
+    },
+    {
+        "id": "96584f2166ccc742",
+        "type": "inject",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 2040,
+        "wires": [
+            [
+                "c975d5d8e0766551"
+            ]
+        ]
     },
     {
         "id": "f9971550.66b808",
