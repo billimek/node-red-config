@@ -14483,8 +14483,8 @@
         "type": "bigtimer",
         "z": "af228686.65c8a8",
         "outtopic": "",
-        "outpayload1": "",
-        "outpayload2": "",
+        "outpayload1": "ON",
+        "outpayload2": "OFF",
         "name": "7am every day",
         "comment": "",
         "lat": "33.94519",
@@ -14602,7 +14602,7 @@
         "atstart": true,
         "odd": false,
         "even": false,
-        "x": 280,
+        "x": 200,
         "y": 2180,
         "wires": [
             [
@@ -14627,8 +14627,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
-        "y": 2120,
+        "x": 480,
+        "y": 2320,
         "wires": []
     },
     {
@@ -14643,8 +14643,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 660,
-        "y": 2260,
+        "x": 460,
+        "y": 2400,
         "wires": []
     },
     {
@@ -14704,8 +14704,8 @@
             }
         ],
         "queue": "none",
-        "x": 830,
-        "y": 2140,
+        "x": 750,
+        "y": 2180,
         "wires": [
             []
         ]
@@ -14715,14 +14715,14 @@
         "type": "function",
         "z": "af228686.65c8a8",
         "name": "format",
-        "func": "var input = msg.payload\n\nif (input = \"1\") {\n    msg.payload = {\n        \"service\": \"turn_on\"\n    }\n}\nelse {\n   msg.payload = {\n        \"service\": \"turn_off\"\n    } \n}\n\nreturn [ msg ];\n",
+        "func": "var input = msg.payload\n\nif (input = \"ON\") {\n    msg.payload = {\n        \"service\": \"turn_on\"\n    }\n}\nelse {\n   msg.payload = {\n        \"service\": \"turn_off\"\n    } \n}\n\nreturn [ msg ];\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 470,
-        "y": 2080,
+        "x": 390,
+        "y": 2180,
         "wires": [
             [
                 "65aaa16a3541d226",
