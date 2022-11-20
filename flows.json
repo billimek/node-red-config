@@ -14286,9 +14286,7 @@
         "x": 400,
         "y": 1860,
         "wires": [
-            [
-                "927fadb7724af52e"
-            ]
+            []
         ]
     },
     {
@@ -14473,9 +14471,7 @@
         "x": 400,
         "y": 1940,
         "wires": [
-            [
-                "927fadb7724af52e"
-            ]
+            []
         ]
     },
     {
@@ -14485,12 +14481,12 @@
         "outtopic": "",
         "outpayload1": "ON",
         "outpayload2": "OFF",
-        "name": "7am every day",
+        "name": "7am-9pm every day",
         "comment": "",
         "lat": "33.94519",
         "lon": "-84.45379",
-        "starttime": "1020",
-        "endtime": "1035",
+        "starttime": "420",
+        "endtime": "1260",
         "starttime2": 0,
         "endtime2": 0,
         "startoff": "0",
@@ -14602,32 +14598,15 @@
         "atstart": false,
         "odd": false,
         "even": false,
-        "x": 200,
+        "x": 220,
         "y": 2180,
         "wires": [
             [
-                "c7a92603720f0f8c",
                 "2877b87527c56f10"
             ],
             [],
             []
         ]
-    },
-    {
-        "id": "c7a92603720f0f8c",
-        "type": "debug",
-        "z": "af228686.65c8a8",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 480,
-        "y": 2320,
-        "wires": []
     },
     {
         "id": "96584f2166ccc742",
@@ -14707,26 +14686,9 @@
         "y": 2180,
         "wires": [
             [
-                "65aaa16a3541d226",
-                "5dd9caaf2a233ce3"
+                "65aaa16a3541d226"
             ]
         ]
-    },
-    {
-        "id": "5dd9caaf2a233ce3",
-        "type": "debug",
-        "z": "af228686.65c8a8",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 740,
-        "y": 2360,
-        "wires": []
     },
     {
         "id": "f9971550.66b808",
