@@ -14474,7 +14474,8 @@
         "y": 1680,
         "wires": [
             [
-                "91ed12a995f4bd7f"
+                "91ed12a995f4bd7f",
+                "2afc5bcc1f5a98dd"
             ]
         ]
     },
@@ -14509,6 +14510,40 @@
         "queue": "none",
         "x": 760,
         "y": 1680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2afc5bcc1f5a98dd",
+        "type": "api-call-service",
+        "z": "af228686.65c8a8",
+        "name": "sunroom tree lights",
+        "server": "8b52884a.b76658",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.outlet_g"
+        ],
+        "data": "",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "data"
+            }
+        ],
+        "queue": "none",
+        "x": 770,
+        "y": 1740,
         "wires": [
             []
         ]
