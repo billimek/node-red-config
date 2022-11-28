@@ -11915,7 +11915,7 @@
             }
         ],
         "queue": "none",
-        "x": 940,
+        "x": 930,
         "y": 160,
         "wires": [
             []
@@ -14403,6 +14403,113 @@
         "y": 2220,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "22a3cb52faf37e5e",
+        "type": "function",
+        "z": "af228686.65c8a8",
+        "name": "format",
+        "func": "var input = msg.payload\n\nmsg.payload = {\n    \"service\": input,\n}\nreturn [ msg ];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 2340,
+        "wires": [
+            [
+                "635f7a6bcfc55727"
+            ]
+        ]
+    },
+    {
+        "id": "635f7a6bcfc55727",
+        "type": "api-current-state",
+        "z": "af228686.65c8a8",
+        "name": "home?",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "home",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "sensor.anyone_home",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [],
+        "for": 0,
+        "forType": "num",
+        "forUnits": "minutes",
+        "x": 630,
+        "y": 2340,
+        "wires": [
+            [
+                "8d1d4f5445b6f9af"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "8d1d4f5445b6f9af",
+        "type": "api-call-service",
+        "z": "af228686.65c8a8",
+        "name": "foyer tree lights",
+        "server": "8b52884a.b76658",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.outlet_f_2",
+            "switch.outlet_f"
+        ],
+        "data": "",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "data"
+            }
+        ],
+        "queue": "none",
+        "x": 840,
+        "y": 2340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fbb2e5d7c50f748c",
+        "type": "inject",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 2340,
+        "wires": [
+            [
+                "22a3cb52faf37e5e"
+            ]
         ]
     },
     {
