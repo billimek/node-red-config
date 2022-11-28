@@ -946,7 +946,7 @@
         "server": "8b52884a.b76658",
         "version": 5,
         "debugenabled": false,
-        "domain": "switch",
+        "domain": "light",
         "service": "",
         "areaId": [],
         "deviceId": [],
@@ -1004,6 +1004,51 @@
         "y": 740,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "f2f685be092aba30",
+        "type": "function",
+        "z": "43703bf3.b01b24",
+        "name": "turn_off",
+        "func": "var service = \"turn_off\"\n\nmsg.payload = {\n    \"service\": service,\n}\nreturn [ msg ];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 180,
+        "y": 680,
+        "wires": [
+            [
+                "10f1ece0.fa3373"
+            ]
+        ]
+    },
+    {
+        "id": "fe897884a9a9bb6b",
+        "type": "inject",
+        "z": "43703bf3.b01b24",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 440,
+        "wires": [
+            [
+                "f2f685be092aba30"
+            ]
         ]
     },
     {
