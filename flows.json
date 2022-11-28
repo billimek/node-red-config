@@ -14461,7 +14461,6 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "switch.outlet_f_2",
             "switch.outlet_f"
         ],
         "data": "",
