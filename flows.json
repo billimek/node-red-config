@@ -14461,6 +14461,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
+            "switch.outlet_f_2",
             "switch.outlet_f"
         ],
         "data": "",
@@ -14483,31 +14484,47 @@
         ]
     },
     {
-        "id": "fbb2e5d7c50f748c",
+        "id": "4a639c937ecf53e6",
+        "type": "light-scheduler",
+        "z": "af228686.65c8a8",
+        "settings": "f26da246.74a7f",
+        "events": "[{\"start\":{\"dow\":1,\"mod\":330},\"end\":{\"dow\":2,\"mod\":0}},{\"start\":{\"dow\":2,\"mod\":330},\"end\":{\"dow\":3,\"mod\":0}},{\"start\":{\"dow\":3,\"mod\":330},\"end\":{\"dow\":4,\"mod\":0}},{\"start\":{\"dow\":4,\"mod\":330},\"end\":{\"dow\":5,\"mod\":0}},{\"start\":{\"dow\":5,\"mod\":330},\"end\":{\"dow\":6,\"mod\":0}},{\"start\":{\"dow\":6,\"mod\":330},\"end\":{\"dow\":0,\"mod\":0}},{\"start\":{\"dow\":0,\"mod\":330},\"end\":{\"dow\":1,\"mod\":0}}]",
+        "topic": "service",
+        "name": "dark?",
+        "onPayload": "turn_on",
+        "onPayloadType": "str",
+        "offPayload": "turn_off",
+        "offPayloadType": "str",
+        "onlyWhenDark": true,
+        "scheduleRndMax": 0,
+        "sunElevationThreshold": "10",
+        "sunShowElevationInStatus": true,
+        "outputfreq": "output.statechange",
+        "x": 330,
+        "y": 2460,
+        "wires": [
+            [
+                "22a3cb52faf37e5e"
+            ]
+        ]
+    },
+    {
+        "id": "0e65ad99ede9bf96",
         "type": "inject",
         "z": "af228686.65c8a8",
         "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 240,
-        "y": 2340,
+        "payload": "auto",
+        "payloadType": "str",
+        "x": 110,
+        "y": 2460,
         "wires": [
             [
-                "22a3cb52faf37e5e"
+                "4a639c937ecf53e6"
             ]
         ]
     },
