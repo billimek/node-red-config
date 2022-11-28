@@ -14075,7 +14075,6 @@
         "id": "a391482ef40c1b75",
         "type": "api-call-service",
         "z": "af228686.65c8a8",
-        "d": true,
         "name": "foyer tree lights",
         "server": "8b52884a.b76658",
         "version": 5,
@@ -14085,7 +14084,8 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "switch.outlet_d"
+            "switch.outlet_f_2",
+            "switch.outlet_f"
         ],
         "data": "",
         "dataType": "json",
