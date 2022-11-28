@@ -14110,7 +14110,6 @@
         "id": "47b848e8ac632ede",
         "type": "api-call-service",
         "z": "af228686.65c8a8",
-        "d": true,
         "name": "sunroom tree lights",
         "server": "8b52884a.b76658",
         "version": 5,
@@ -14120,7 +14119,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "switch.outlet_f"
+            "light.outlet_g"
         ],
         "data": "",
         "dataType": "json",
