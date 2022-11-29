@@ -11915,7 +11915,7 @@
             }
         ],
         "queue": "none",
-        "x": 930,
+        "x": 940,
         "y": 160,
         "wires": [
             []
@@ -14112,7 +14112,7 @@
         "server": "8b52884a.b76658",
         "version": 5,
         "debugenabled": false,
-        "domain": "switch",
+        "domain": "light",
         "service": "",
         "areaId": [],
         "deviceId": [],
