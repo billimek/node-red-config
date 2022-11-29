@@ -14474,7 +14474,8 @@
         "y": 1680,
         "wires": [
             [
-                "91ed12a995f4bd7f"
+                "91ed12a995f4bd7f",
+                "2afc5bcc1f5a98dd"
             ]
         ]
     },
@@ -14521,7 +14522,7 @@
         "server": "8b52884a.b76658",
         "version": 5,
         "debugenabled": false,
-        "domain": "switch",
+        "domain": "light",
         "service": "",
         "areaId": [],
         "deviceId": [],
@@ -14545,6 +14546,35 @@
         "y": 1740,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "39cbc21bc5f5cb7c",
+        "type": "inject",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 1780,
+        "wires": [
+            [
+                "8ade14719bcf7be2"
+            ]
         ]
     },
     {
