@@ -5833,8 +5833,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
-        "y": 1320,
+        "x": 100,
+        "y": 1460,
         "wires": [
             [
                 "db91788ba2ebaea8"
@@ -5906,6 +5906,165 @@
                 "892a8bfd.69c738"
             ]
         ]
+    },
+    {
+        "id": "bc8e3d1fcc7fd767",
+        "type": "time-range-switch",
+        "z": "4aedf9e8.044e08",
+        "name": "8:31am-1pm",
+        "lat": "33.95092",
+        "lon": "-84.44805",
+        "startTime": "08:31",
+        "endTime": "13:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 270,
+        "y": 1720,
+        "wires": [
+            [
+                "be4b4f22ae9b36d1"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "be4b4f22ae9b36d1",
+        "type": "ical-upcoming",
+        "z": "4aedf9e8.044e08",
+        "confignode": "d369385a16ca904f",
+        "timeout": "",
+        "timeoutUnits": "seconds",
+        "cron": "",
+        "name": "Cleaning scheduled",
+        "offsettype": "",
+        "offset": "",
+        "offsetUnitstype": "",
+        "offsetUnits": "",
+        "eventtypes": "events",
+        "eventtypestype": "eventtypes",
+        "calendar": "",
+        "calendartype": "str",
+        "triggertype": "trigger",
+        "trigger": "match",
+        "timezone": "UTC",
+        "timezonetype": "str",
+        "dateformat": "{ \"timeStyle\": \"short\", \"dateStyle\": \"short\" }",
+        "dateformattype": "json",
+        "language": "en",
+        "languagetype": "language",
+        "filterProperty": "summary",
+        "filterPropertytype": "filterProperty",
+        "filterOperator": "between",
+        "filterOperatortype": "filterOperator",
+        "filtertype": "str",
+        "filter2type": "str",
+        "filter2": "",
+        "filter": "blah",
+        "checkall": false,
+        "endpreview": "",
+        "endpreviewUnits": "",
+        "previewtype": "num",
+        "preview": "1",
+        "previewUnitstype": "previewUnits",
+        "previewUnits": "days",
+        "pastviewtype": "num",
+        "pastview": "12",
+        "pastviewUnits": "hours",
+        "pastviewUnitstype": "pastviewUnits",
+        "x": 300,
+        "y": 1820,
+        "wires": [
+            [
+                "db829188b0cd6510",
+                "0dc2e3d70abd2f88"
+            ]
+        ]
+    },
+    {
+        "id": "0dc2e3d70abd2f88",
+        "type": "debug",
+        "z": "4aedf9e8.044e08",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "30f381e7c05a161d",
+        "type": "inject",
+        "z": "4aedf9e8.044e08",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 1720,
+        "wires": [
+            [
+                "bc8e3d1fcc7fd767"
+            ]
+        ]
+    },
+    {
+        "id": "db829188b0cd6510",
+        "type": "switch",
+        "z": "4aedf9e8.044e08",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 550,
+        "y": 1720,
+        "wires": [
+            [
+                "745b56128d22542a"
+            ]
+        ]
+    },
+    {
+        "id": "745b56128d22542a",
+        "type": "debug",
+        "z": "4aedf9e8.044e08",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 1760,
+        "wires": []
     },
     {
         "id": "46cdb220.d99dbc",
