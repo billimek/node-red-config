@@ -10257,32 +10257,41 @@
         "id": "32d7f.835aa2818",
         "type": "trigger-state",
         "z": "75b62c93.dd5d84",
-        "name": "tesla home (<=75m)",
+        "name": "tesla home (<=100m)",
         "server": "8b52884a.b76658",
         "version": 2,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
         "entityid": "proximity.home_tesla",
         "entityidfiltertype": "exact",
         "debugenabled": false,
         "constraints": [
             {
-                "id": "gwjmcau7nhf",
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "current_state",
                 "propertyValue": "new_state.state",
                 "comparatorType": "<=",
                 "comparatorValueDatatype": "num",
-                "comparatorValue": "75"
+                "comparatorValue": "100"
             },
             {
-                "id": "tlyhwoxxc7l",
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "previous_state",
                 "propertyValue": "old_state.state",
                 "comparatorType": ">",
                 "comparatorValueDatatype": "num",
-                "comparatorValue": "75"
+                "comparatorValue": "100"
             }
         ],
         "inputs": 1,
@@ -10291,7 +10300,7 @@
         "outputinitially": false,
         "state_type": "num",
         "enableInput": true,
-        "x": 120,
+        "x": 130,
         "y": 1340,
         "wires": [
             [
@@ -11774,7 +11783,7 @@
         "id": "bcb174cd97f93313",
         "type": "trigger-state",
         "z": "75b62c93.dd5d84",
-        "name": "tesla2 home (<=75m)",
+        "name": "tesla2 home (<=100m)",
         "server": "8b52884a.b76658",
         "version": 2,
         "exposeToHomeAssistant": false,
@@ -11796,19 +11805,19 @@
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "current_state",
+                "propertyValue": "new_state.state",
                 "comparatorType": "<=",
                 "comparatorValueDatatype": "num",
-                "comparatorValue": "75",
-                "propertyValue": "new_state.state"
+                "comparatorValue": "100"
             },
             {
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
                 "comparatorType": ">",
                 "comparatorValueDatatype": "num",
-                "comparatorValue": "75",
-                "propertyValue": "old_state.state"
+                "comparatorValue": "100"
             }
         ],
         "inputs": 1,
