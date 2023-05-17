@@ -8610,12 +8610,22 @@
         "name": "not_home -> home",
         "server": "8b52884a.b76658",
         "version": 2,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
         "entityid": "sensor.anyone_home",
         "entityidfiltertype": "exact",
         "debugenabled": false,
         "constraints": [
             {
-                "id": "n16bzdqj6p",
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "current_state",
@@ -8625,7 +8635,6 @@
                 "comparatorValue": "home"
             },
             {
-                "id": "1cv3kmbt40v",
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "previous_state",
@@ -8635,12 +8644,12 @@
                 "comparatorValue": "not_home"
             }
         ],
-        "inputs": 1,
+        "inputs": 0,
         "outputs": 2,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
+        "enableInput": false,
         "x": 230,
         "y": 2620,
         "wires": [
@@ -8711,12 +8720,22 @@
         "name": "not_home -> home",
         "server": "8b52884a.b76658",
         "version": 2,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
         "entityid": "sensor.anyone_home",
         "entityidfiltertype": "exact",
         "debugenabled": false,
         "constraints": [
             {
-                "id": "n16bzdqj6p",
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "current_state",
@@ -8726,7 +8745,6 @@
                 "comparatorValue": "home"
             },
             {
-                "id": "1cv3kmbt40v",
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "previous_state",
@@ -8736,12 +8754,12 @@
                 "comparatorValue": "not_home"
             }
         ],
-        "inputs": 1,
+        "inputs": 0,
         "outputs": 2,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
+        "enableInput": false,
         "x": 230,
         "y": 2680,
         "wires": [
