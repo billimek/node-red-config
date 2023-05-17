@@ -6469,8 +6469,7 @@
         "wires": [
             [],
             [
-                "46cdb220.d99dbc",
-                "469781aedaa638a3"
+                "46cdb220.d99dbc"
             ]
         ]
     },
@@ -8602,33 +8601,6 @@
             [
                 "fe1f1f4a.3f5bc"
             ]
-        ]
-    },
-    {
-        "id": "469781aedaa638a3",
-        "type": "api-call-service",
-        "z": "9143c7f2.16df18",
-        "name": "set ecobee home",
-        "server": "8b52884a.b76658",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "ecobee",
-        "service": "resume_program",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "climate.upstairs"
-        ],
-        "data": "{\"resume_all\":\"true\"}",
-        "dataType": "json",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1110,
-        "y": 1060,
-        "wires": [
-            []
         ]
     },
     {
