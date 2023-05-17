@@ -6516,8 +6516,7 @@
         "wires": [
             [],
             [
-                "5b3f844.f2cf77c",
-                "50781fd86f378b6c"
+                "5b3f844.f2cf77c"
             ]
         ]
     },
@@ -7728,7 +7727,7 @@
         "outputinitially": false,
         "state_type": "num",
         "enableInput": true,
-        "x": 220,
+        "x": 230,
         "y": 2500,
         "wires": [
             [
@@ -8606,33 +8605,6 @@
         ]
     },
     {
-        "id": "50781fd86f378b6c",
-        "type": "api-call-service",
-        "z": "9143c7f2.16df18",
-        "name": "set ecobee away",
-        "server": "8b52884a.b76658",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "climate",
-        "service": "set_preset_mode",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "climate.upstairs"
-        ],
-        "data": "{\"preset_mode\":\"away\"}",
-        "dataType": "json",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1110,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "469781aedaa638a3",
         "type": "api-call-service",
         "z": "9143c7f2.16df18",
@@ -8656,6 +8628,154 @@
         "x": 1110,
         "y": 1060,
         "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d6e25a1f777ad5b3",
+        "type": "trigger-state",
+        "z": "9143c7f2.16df18",
+        "name": "not_home -> home",
+        "server": "8b52884a.b76658",
+        "version": 2,
+        "entityid": "sensor.anyone_home",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
+        "constraints": [
+            {
+                "id": "n16bzdqj6p",
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "home"
+            },
+            {
+                "id": "1cv3kmbt40v",
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "not_home"
+            }
+        ],
+        "inputs": 1,
+        "outputs": 2,
+        "customoutputs": [],
+        "outputinitially": false,
+        "state_type": "str",
+        "enableInput": true,
+        "x": 230,
+        "y": 2620,
+        "wires": [
+            [
+                "20a6330cc73c1a7c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "20a6330cc73c1a7c",
+        "type": "api-call-service",
+        "z": "9143c7f2.16df18",
+        "name": "set ecobee away",
+        "server": "8b52884a.b76658",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "climate",
+        "service": "set_preset_mode",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "climate.upstairs"
+        ],
+        "data": "{\"preset_mode\":\"away\"}",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 570,
+        "y": 2620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "521868ea42064502",
+        "type": "api-call-service",
+        "z": "9143c7f2.16df18",
+        "name": "set ecobee home",
+        "server": "8b52884a.b76658",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "ecobee",
+        "service": "resume_program",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "climate.upstairs"
+        ],
+        "data": "{\"resume_all\":\"true\"}",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 570,
+        "y": 2680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3458d66bc0af61cd",
+        "type": "trigger-state",
+        "z": "9143c7f2.16df18",
+        "name": "not_home -> home",
+        "server": "8b52884a.b76658",
+        "version": 2,
+        "entityid": "sensor.anyone_home",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
+        "constraints": [
+            {
+                "id": "n16bzdqj6p",
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "home"
+            },
+            {
+                "id": "1cv3kmbt40v",
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "not_home"
+            }
+        ],
+        "inputs": 1,
+        "outputs": 2,
+        "customoutputs": [],
+        "outputinitially": false,
+        "state_type": "str",
+        "enableInput": true,
+        "x": 230,
+        "y": 2680,
+        "wires": [
+            [
+                "521868ea42064502"
+            ],
             []
         ]
     },
