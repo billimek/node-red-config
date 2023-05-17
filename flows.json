@@ -6469,7 +6469,8 @@
         "wires": [
             [],
             [
-                "46cdb220.d99dbc"
+                "46cdb220.d99dbc",
+                "469781aedaa638a3"
             ]
         ]
     },
@@ -6515,7 +6516,8 @@
         "wires": [
             [],
             [
-                "5b3f844.f2cf77c"
+                "5b3f844.f2cf77c",
+                "50781fd86f378b6c"
             ]
         ]
     },
@@ -8601,6 +8603,60 @@
             [
                 "fe1f1f4a.3f5bc"
             ]
+        ]
+    },
+    {
+        "id": "50781fd86f378b6c",
+        "type": "api-call-service",
+        "z": "9143c7f2.16df18",
+        "name": "set ecobee away",
+        "server": "8b52884a.b76658",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "climate",
+        "service": "set_preset_mode",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "climate.upstairs"
+        ],
+        "data": "{\"preset_mode\":\"away\"}",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1110,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "469781aedaa638a3",
+        "type": "api-call-service",
+        "z": "9143c7f2.16df18",
+        "name": "set ecobee home",
+        "server": "8b52884a.b76658",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "ecobee",
+        "service": "resume_program",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "climate.upstairs"
+        ],
+        "data": "{\"resume_all\":\"true\"}",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1110,
+        "y": 1060,
+        "wires": [
+            []
         ]
     },
     {
