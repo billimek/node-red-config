@@ -14470,12 +14470,12 @@
         "outtopic": "",
         "outpayload1": "ON",
         "outpayload2": "OFF",
-        "name": "7am-9pm",
+        "name": "7am-9:30pm",
         "comment": "",
         "lat": "33.94519",
         "lon": "-84.45379",
         "starttime": "540",
-        "endtime": "1140",
+        "endtime": "1290",
         "starttime2": 0,
         "endtime2": 0,
         "startoff": "0",
@@ -14587,7 +14587,7 @@
         "atstart": true,
         "odd": false,
         "even": false,
-        "x": 140,
+        "x": 150,
         "y": 1580,
         "wires": [
             [
