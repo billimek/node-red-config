@@ -11266,7 +11266,7 @@
             }
         ],
         "queue": "none",
-        "x": 1160,
+        "x": 1150,
         "y": 1840,
         "wires": [
             []
@@ -11300,7 +11300,7 @@
             }
         ],
         "queue": "none",
-        "x": 1170,
+        "x": 1160,
         "y": 1960,
         "wires": [
             []
@@ -11332,7 +11332,7 @@
             }
         ],
         "queue": "none",
-        "x": 1160,
+        "x": 1150,
         "y": 1900,
         "wires": [
             []
@@ -12180,7 +12180,7 @@
         "for": 0,
         "forType": "num",
         "forUnits": "minutes",
-        "x": 370,
+        "x": 390,
         "y": 2240,
         "wires": [
             [],
@@ -12215,7 +12215,7 @@
             }
         ],
         "queue": "none",
-        "x": 970,
+        "x": 1150,
         "y": 2240,
         "wires": [
             []
@@ -12247,7 +12247,7 @@
             }
         ],
         "queue": "none",
-        "x": 970,
+        "x": 1150,
         "y": 2180,
         "wires": [
             []
@@ -12265,11 +12265,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
+        "x": 830,
         "y": 2240,
         "wires": [
             [
-                "a365d182a4141f8f"
+                "a365d182a4141f8f",
+                "95bf51ad6c63a929"
             ]
         ]
     },
@@ -12285,11 +12286,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
+        "x": 830,
         "y": 2180,
         "wires": [
             [
-                "a365d182a4141f8f"
+                "a365d182a4141f8f",
+                "95bf51ad6c63a929"
             ]
         ]
     },
@@ -12330,39 +12332,10 @@
         "for": 0,
         "forType": "num",
         "forUnits": "minutes",
-        "x": 370,
+        "x": 390,
         "y": 2180,
         "wires": [
             [],
-            [
-                "fb22ec4b258c5f21"
-            ]
-        ]
-    },
-    {
-        "id": "44786b2d78ee0a10",
-        "type": "inject",
-        "z": "75b62c93.dd5d84",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 260,
-        "y": 2020,
-        "wires": [
             [
                 "fb22ec4b258c5f21"
             ]
