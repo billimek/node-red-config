@@ -3723,7 +3723,7 @@
         "type": "function",
         "z": "ea946133.0085b",
         "name": "frigate iOS msg",
-        "func": "var title = \"(test) frigate msg title\"\nvar message = \"(test) frigate message body\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n        data: {\n            push: {\n                image: 'https://your.public.hass.address.com/api/frigate/notifications/{{trigger.payload_json[\"after\"][\"id\"]}}/thumbnail.jpg',\n                tag: '{{trigger.payload_json[\"after\"][\"id\"]}}'\n            }\n        }\n    }\n}\nreturn [ msg ];\n",
+        "func": "var title = \"(test) frigate msg title\"\nvar message = \"(test) frigate message body\"\nvar url = 'https://hass.eviljungle.com.com/api/frigate/notifications/{{trigger.payload_json[\"after\"][\"id\"]}}/thumbnail.jpg'\n\nmsg.payload = {\n    data: {\n        message,\n        title,\n        data: {\n            url: url,\n            attachment: {\n                'url': msg.payload.event.action_data.screenshot\n            }\n        }\n    }\n}\nreturn [msg];\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -3832,6 +3832,24 @@
             [
                 "b04df73cc7f10d02"
             ]
+        ]
+    },
+    {
+        "id": "13ae9e664191b8a7",
+        "type": "function",
+        "z": "ea946133.0085b",
+        "name": "Format message",
+        "func": "var title = \"(test) frigate msg title\"\nvar message = \"(test) frigate message body\"\nvar url = 'https://hass.eviljungle.com.com/api/frigate/notifications/{{trigger.payload_json[\"after\"][\"id\"]}}/thumbnail.jpg'\n\nmsg.payload = {\n    data: {\n        message,\n        title,\n        data: {\n            url: url,\n            attachment: {\n                'url': msg.payload.event.action_data.screenshot\n            }\n        }\n    }\n}\nreturn [msg];\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 150,
+        "y": 1340,
+        "wires": [
+            []
         ]
     },
     {
