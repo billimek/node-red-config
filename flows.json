@@ -3719,6 +3719,122 @@
         "wires": []
     },
     {
+        "id": "b04df73cc7f10d02",
+        "type": "function",
+        "z": "ea946133.0085b",
+        "name": "frigate iOS msg",
+        "func": "var title = \"(test) frigate msg title\"\nvar message = \"(test) frigate message body\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n        data: {\n            push: {\n                image: 'https://your.public.hass.address.com/api/frigate/notifications/{{trigger.payload_json[\"after\"][\"id\"]}}/thumbnail.jpg',\n                tag: '{{trigger.payload_json[\"after\"][\"id\"]}}'\n            }\n        }\n    }\n}\nreturn [ msg ];\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 140,
+        "y": 1260,
+        "wires": [
+            [
+                "49f08b21b529f8dc",
+                "50b7958835cf7fcd"
+            ]
+        ]
+    },
+    {
+        "id": "50b7958835cf7fcd",
+        "type": "api-call-service",
+        "z": "ea946133.0085b",
+        "name": "notify jeff iOS",
+        "server": "8b52884a.b76658",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "notify",
+        "service": "mobile_app_jeffsphone",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "data"
+            }
+        ],
+        "queue": "none",
+        "x": 520,
+        "y": 1280,
+        "wires": [
+            [
+                "ea2705a39a58b1d3"
+            ]
+        ]
+    },
+    {
+        "id": "49f08b21b529f8dc",
+        "type": "debug",
+        "z": "ea946133.0085b",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "ea2705a39a58b1d3",
+        "type": "debug",
+        "z": "ea946133.0085b",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "ce759de9e0f4ce20",
+        "type": "inject",
+        "z": "ea946133.0085b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 80,
+        "y": 1180,
+        "wires": [
+            [
+                "b04df73cc7f10d02"
+            ]
+        ]
+    },
+    {
         "id": "6cb23d50.77ced4",
         "type": "bigtimer",
         "z": "4aedf9e8.044e08",
