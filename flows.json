@@ -3576,7 +3576,8 @@
         "y": 1000,
         "wires": [
             [
-                "bd4498e7b396f74a"
+                "bd4498e7b396f74a",
+                "8cb017de698f418e"
             ]
         ]
     },
@@ -3686,16 +3687,59 @@
         "id": "b5590538b50c0166",
         "type": "debug",
         "z": "ea946133.0085b",
-        "name": "debug 6",
+        "name": "post flow",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 1220,
         "y": 980,
+        "wires": []
+    },
+    {
+        "id": "4b0aad7ae135f6cf",
+        "type": "api-call-service",
+        "z": "ea946133.0085b",
+        "name": "",
+        "server": "",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "",
+        "service": "",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 710,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8cb017de698f418e",
+        "type": "debug",
+        "z": "ea946133.0085b",
+        "name": "mqtt direct",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 310,
+        "y": 1140,
         "wires": []
     },
     {
