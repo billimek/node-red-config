@@ -3121,6 +3121,7 @@
         "id": "8d6cb36c463bf460",
         "type": "server-events",
         "z": "ea946133.0085b",
+        "d": true,
         "name": "",
         "server": "8b52884a.b76658",
         "version": 2,
@@ -3699,31 +3700,6 @@
         "x": 1220,
         "y": 980,
         "wires": []
-    },
-    {
-        "id": "4b0aad7ae135f6cf",
-        "type": "api-call-service",
-        "z": "ea946133.0085b",
-        "name": "",
-        "server": "",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "",
-        "service": "",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 710,
-        "y": 1120,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "8cb017de698f418e",
