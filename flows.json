@@ -3126,6 +3126,7 @@
         "version": 2,
         "eventType": "ios.notification_action_fired",
         "exposeToHomeAssistant": false,
+        "eventData": "",
         "haConfig": [
             {
                 "property": "name",
@@ -3207,6 +3208,7 @@
         "name": "Format message",
         "func": "msg.url = msg.payload.event.action_data.url;\nmsg.phone = msg.payload.event.sourceDeviceID;\n\nmsg.payload_msg = {\n    data: {\n        'message': 'Press and hold for still picture, click for video clip',\n        data: {\n            'url': msg.url,\n            attachment: {\n                'url': msg.payload.event.action_data.screenshot\n            }\n        }\n    }\n};\n\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -3270,6 +3272,7 @@
         "id": "8cfcf54f29835dc8",
         "type": "api-call-service",
         "z": "ea946133.0085b",
+        "d": true,
         "name": "Notify Family (ios)",
         "server": "8b52884a.b76658",
         "version": 5,
@@ -3558,6 +3561,142 @@
                 "db02a469f64cd4ca"
             ]
         ]
+    },
+    {
+        "id": "a5fd9b6532643ccb",
+        "type": "mqtt in",
+        "z": "ea946133.0085b",
+        "name": "",
+        "topic": "frigate/events",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "649859a4.a17818",
+        "inputs": 0,
+        "x": 90,
+        "y": 1000,
+        "wires": [
+            [
+                "bd4498e7b396f74a"
+            ]
+        ]
+    },
+    {
+        "id": "bd4498e7b396f74a",
+        "type": "json",
+        "z": "ea946133.0085b",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 250,
+        "y": 1000,
+        "wires": [
+            [
+                "7f5ebbda67e170cf"
+            ]
+        ],
+        "info": "Convert JSON Strings to Objects"
+    },
+    {
+        "id": "7f5ebbda67e170cf",
+        "type": "rbe",
+        "z": "ea946133.0085b",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload.after.id",
+        "x": 390,
+        "y": 1000,
+        "wires": [
+            [
+                "4739a0be90f5c7e1"
+            ]
+        ],
+        "info": "Block any Messages that have  duplicate After ID.  Cuts down on multiple mqtt messages for the same notification"
+    },
+    {
+        "id": "4739a0be90f5c7e1",
+        "type": "switch",
+        "z": "ea946133.0085b",
+        "name": "1.front -- 2.porch -- 3. driveway -- 4. pool -- 5. basement -- 6. doorbell",
+        "property": "payload.after.camera",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "front",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "porch",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "driveway",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "pool",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "basement",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "doorbell",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 6,
+        "x": 730,
+        "y": 1000,
+        "wires": [
+            [
+                "b5590538b50c0166"
+            ],
+            [
+                "b5590538b50c0166"
+            ],
+            [
+                "b5590538b50c0166"
+            ],
+            [
+                "b5590538b50c0166"
+            ],
+            [
+                "b5590538b50c0166"
+            ],
+            [
+                "b5590538b50c0166"
+            ]
+        ],
+        "info": "Change **front** and **back** Switch names to be the names of your cameras defined in the Frigate Config"
+    },
+    {
+        "id": "b5590538b50c0166",
+        "type": "debug",
+        "z": "ea946133.0085b",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 980,
+        "wires": []
     },
     {
         "id": "6cb23d50.77ced4",
