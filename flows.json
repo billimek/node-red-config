@@ -216,7 +216,7 @@
         "in": [],
         "out": [
             {
-                "x": 1060,
+                "x": 1040,
                 "y": 40,
                 "wires": [
                     {
@@ -226,8 +226,8 @@
                 ]
             },
             {
-                "x": 1120,
-                "y": 80,
+                "x": 1040,
+                "y": 100,
                 "wires": [
                     {
                         "id": "8858eb58.4a5e68",
@@ -236,8 +236,8 @@
                 ]
             },
             {
-                "x": 1120,
-                "y": 140,
+                "x": 1040,
+                "y": 160,
                 "wires": [
                     {
                         "id": "8858eb58.4a5e68",
@@ -246,8 +246,8 @@
                 ]
             },
             {
-                "x": 1120,
-                "y": 200,
+                "x": 1040,
+                "y": 220,
                 "wires": [
                     {
                         "id": "8858eb58.4a5e68",
@@ -256,8 +256,8 @@
                 ]
             },
             {
-                "x": 1120,
-                "y": 260,
+                "x": 1040,
+                "y": 280,
                 "wires": [
                     {
                         "id": "8858eb58.4a5e68",
@@ -266,8 +266,8 @@
                 ]
             },
             {
-                "x": 1120,
-                "y": 320,
+                "x": 1040,
+                "y": 340,
                 "wires": [
                     {
                         "id": "8858eb58.4a5e68",
@@ -1630,7 +1630,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 6,
-        "x": 730,
+        "x": 630,
         "y": 80,
         "wires": [
             [],
@@ -1643,44 +1643,6 @@
         "info": "Change **front** and **back** Switch names to be the names of your cameras defined in the Frigate Config"
     },
     {
-        "id": "1d657054.6f0ae",
-        "type": "mqtt in",
-        "z": "2299e9e0.40f656",
-        "d": true,
-        "name": "",
-        "topic": "frigate/events",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "649859a4.a17818",
-        "nl": false,
-        "rap": false,
-        "inputs": 0,
-        "x": 90,
-        "y": 80,
-        "wires": [
-            [
-                "2357bb6d.b17e24"
-            ]
-        ]
-    },
-    {
-        "id": "2357bb6d.b17e24",
-        "type": "json",
-        "z": "2299e9e0.40f656",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 250,
-        "y": 80,
-        "wires": [
-            [
-                "2e507a21.970b96"
-            ]
-        ],
-        "info": "Convert JSON Strings to Objects"
-    },
-    {
         "id": "2e507a21.970b96",
         "type": "rbe",
         "z": "2299e9e0.40f656",
@@ -1690,7 +1652,7 @@
         "start": "",
         "inout": "out",
         "property": "payload.after.id",
-        "x": 390,
+        "x": 270,
         "y": 80,
         "wires": [
             [
@@ -1722,7 +1684,7 @@
         "rap": false,
         "inputs": 0,
         "x": 90,
-        "y": 140,
+        "y": 80,
         "wires": [
             [
                 "2e507a21.970b96"
