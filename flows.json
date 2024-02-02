@@ -3079,7 +3079,6 @@
         "id": "21d2ce1df5dc424c",
         "type": "api-call-service",
         "z": "ea946133.0085b",
-        "d": true,
         "name": "Notify Jeff (ios)",
         "server": "8b52884a.b76658",
         "version": 5,
@@ -3124,8 +3123,7 @@
         "y": 780,
         "wires": [
             [
-                "21d2ce1df5dc424c",
-                "6bd4f0ba78753628"
+                "21d2ce1df5dc424c"
             ]
         ]
     },
@@ -3267,31 +3265,6 @@
         "x": 1400,
         "y": 900,
         "wires": []
-    },
-    {
-        "id": "6bd4f0ba78753628",
-        "type": "api-call-service",
-        "z": "ea946133.0085b",
-        "name": "Notify Jeff (ios)",
-        "server": "8b52884a.b76658",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "notify",
-        "service": "mobile_app_jeffsphone",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "",
-        "dataType": "json",
-        "mergeContext": "",
-        "mustacheAltTags": true,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1840,
-        "y": 860,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "6cb23d50.77ced4",
