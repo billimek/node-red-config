@@ -2949,7 +2949,7 @@
                 "83349109c2e10d57",
                 "dcfcfca18cb08cb9",
                 "8b129a4a8a0a5b78",
-                "a02ac2d8216f80fc"
+                "9ef5505f222e183e"
             ],
             [
                 "60c909a0.99eda8"
@@ -3380,6 +3380,22 @@
         "x": 440,
         "y": 780,
         "wires": []
+    },
+    {
+        "id": "9ef5505f222e183e",
+        "type": "json",
+        "z": "ea946133.0085b",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 950,
+        "y": 540,
+        "wires": [
+            [
+                "a02ac2d8216f80fc"
+            ]
+        ]
     },
     {
         "id": "6cb23d50.77ced4",
