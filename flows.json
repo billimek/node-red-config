@@ -3387,8 +3387,8 @@
         "z": "ea946133.0085b",
         "name": "",
         "property": "payload",
-        "action": "",
-        "pretty": true,
+        "action": "str",
+        "pretty": false,
         "x": 950,
         "y": 540,
         "wires": [
