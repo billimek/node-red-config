@@ -337,19 +337,6 @@
         "longitude": "-84.44805"
     },
     {
-        "id": "849977e5.257f68",
-        "type": "tls-config",
-        "name": "HASS-TLS",
-        "cert": "",
-        "key": "",
-        "ca": "",
-        "certname": "",
-        "keyname": "",
-        "caname": "",
-        "servername": "",
-        "verifyservercert": false
-    },
-    {
         "id": "d369385a16ca904f",
         "type": "ical-config",
         "url": "https://outlook.live.com/owa/calendar/7379d835-5635-4b31-928c-ebc4b4d98c32/aa26d81b-1e50-4372-9ec1-eb57c0d99bd8/cid-C27B260AD1EE03C7/calendar.ics",
