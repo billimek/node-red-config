@@ -3217,7 +3217,9 @@
         "x": 1110,
         "y": 860,
         "wires": [
-            []
+            [
+                "0697907885474251"
+            ]
         ]
     },
     {
@@ -3248,6 +3250,22 @@
                 "439642e9d0cd96f8"
             ]
         ]
+    },
+    {
+        "id": "0697907885474251",
+        "type": "debug",
+        "z": "ea946133.0085b",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1400,
+        "y": 900,
+        "wires": []
     },
     {
         "id": "6cb23d50.77ced4",
