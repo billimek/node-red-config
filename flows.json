@@ -3346,6 +3346,43 @@
         "wires": []
     },
     {
+        "id": "b1ac9e39e2652cb6",
+        "type": "mqtt in",
+        "z": "ea946133.0085b",
+        "name": "",
+        "topic": "frigate/events",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "649859a4.a17818",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 270,
+        "y": 600,
+        "wires": [
+            [
+                "a02ac2d8216f80fc",
+                "86bc91a203de077e"
+            ]
+        ]
+    },
+    {
+        "id": "86bc91a203de077e",
+        "type": "debug",
+        "z": "ea946133.0085b",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 780,
+        "wires": []
+    },
+    {
         "id": "6cb23d50.77ced4",
         "type": "bigtimer",
         "z": "4aedf9e8.044e08",
