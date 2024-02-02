@@ -3388,7 +3388,7 @@
         "name": "",
         "property": "payload",
         "action": "",
-        "pretty": false,
+        "pretty": true,
         "x": 950,
         "y": 540,
         "wires": [
