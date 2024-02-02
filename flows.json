@@ -2948,7 +2948,8 @@
                 "202f9fb7.5baeb",
                 "83349109c2e10d57",
                 "dcfcfca18cb08cb9",
-                "a02ac2d8216f80fc"
+                "a02ac2d8216f80fc",
+                "8b129a4a8a0a5b78"
             ],
             [
                 "60c909a0.99eda8"
@@ -3326,6 +3327,22 @@
         "broker": "649859a4.a17818",
         "x": 1180,
         "y": 600,
+        "wires": []
+    },
+    {
+        "id": "8b129a4a8a0a5b78",
+        "type": "debug",
+        "z": "ea946133.0085b",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 820,
         "wires": []
     },
     {
