@@ -1646,6 +1646,7 @@
         "id": "1d657054.6f0ae",
         "type": "mqtt in",
         "z": "2299e9e0.40f656",
+        "d": true,
         "name": "",
         "topic": "frigate/events",
         "qos": "2",
@@ -1707,6 +1708,26 @@
         "x": 190,
         "y": 40,
         "wires": []
+    },
+    {
+        "id": "007a6ebeb398b6ee",
+        "type": "mqtt in",
+        "z": "2299e9e0.40f656",
+        "name": "",
+        "topic": "frigate/events",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "649859a4.a17818",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 90,
+        "y": 140,
+        "wires": [
+            [
+                "2e507a21.970b96"
+            ]
+        ]
     },
     {
         "id": "738ad7f2.c345c8",
