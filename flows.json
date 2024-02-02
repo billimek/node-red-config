@@ -2857,26 +2857,7 @@
         "name": "basement door open?",
         "server": "8b52884a.b76658",
         "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "binary_sensor.basement_door",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
         "outputs": 2,
-        "output_only_on_state_change": false,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -2905,6 +2886,25 @@
                 "valueType": "triggerId"
             }
         ],
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.basement_door",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "output_only_on_state_change": false,
         "x": 120,
         "y": 660,
         "wires": [
@@ -3281,7 +3281,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{{payload}}",
+        "data": "",
         "dataType": "json",
         "mergeContext": "",
         "mustacheAltTags": true,
@@ -3958,26 +3958,7 @@
         "name": "Alarm Triggered",
         "server": "8b52884a.b76658",
         "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "alarm_control_panel.alarm_panel",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "triggered",
-        "halt_if_type": "str",
-        "halt_if_compare": "is_not",
         "outputs": 2,
-        "output_only_on_state_change": false,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -4006,6 +3987,25 @@
                 "valueType": "triggerId"
             }
         ],
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "alarm_control_panel.alarm_panel",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "triggered",
+        "halt_if_type": "str",
+        "halt_if_compare": "is_not",
+        "output_only_on_state_change": false,
         "x": 140,
         "y": 1000,
         "wires": [
@@ -4244,9 +4244,8 @@
         "name": "home -> not_home",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "sensor.anyone_home",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "m9qiqujd83",
@@ -4269,12 +4268,13 @@
                 "comparatorValue": "home"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "sensor.anyone_home",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 130,
         "y": 340,
         "wires": [
@@ -4390,9 +4390,8 @@
         "name": "not_home -> home",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "sensor.anyone_home",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "n16bzdqj6p",
@@ -4415,12 +4414,13 @@
                 "comparatorValue": "not_home"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "sensor.anyone_home",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 130,
         "y": 640,
         "wires": [
@@ -4862,9 +4862,8 @@
         "name": "Alarm Disarmed",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "alarm_control_panel.alarm_panel",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "u92ykgxcnd",
@@ -4887,12 +4886,13 @@
                 "comparatorValue": "disarmed"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "alarm_control_panel.alarm_panel",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 140,
         "y": 820,
         "wires": [
@@ -4909,9 +4909,8 @@
         "name": "Alarm Armed",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "alarm_control_panel.alarm_panel",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "ty01v74n8h",
@@ -4934,12 +4933,13 @@
                 "comparatorValue": "^armed.*"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "alarm_control_panel.alarm_panel",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 150,
         "y": 760,
         "wires": [
@@ -5838,6 +5838,35 @@
         "name": "sliding door open?",
         "server": "8b52884a.b76658",
         "version": 4,
+        "outputs": 2,
+        "for": "",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -5856,36 +5885,7 @@
         "haltifstate": "off",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
         "output_only_on_state_change": false,
-        "for": "",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
         "x": 230,
         "y": 760,
         "wires": [
@@ -5904,6 +5904,35 @@
         "name": "sun-room door open?",
         "server": "8b52884a.b76658",
         "version": 4,
+        "outputs": 2,
+        "for": "",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -5922,36 +5951,7 @@
         "haltifstate": "off",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
         "output_only_on_state_change": false,
-        "for": "",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
         "x": 220,
         "y": 820,
         "wires": [
@@ -5970,6 +5970,35 @@
         "name": "front door open?",
         "server": "8b52884a.b76658",
         "version": 4,
+        "outputs": 2,
+        "for": "",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -5988,36 +6017,7 @@
         "haltifstate": "off",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
         "output_only_on_state_change": false,
-        "for": "",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
         "x": 240,
         "y": 880,
         "wires": [
@@ -6036,6 +6036,35 @@
         "name": "basement door open?",
         "server": "8b52884a.b76658",
         "version": 4,
+        "outputs": 2,
+        "for": "",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -6054,36 +6083,7 @@
         "haltifstate": "off",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
         "output_only_on_state_change": false,
-        "for": "",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
         "x": 220,
         "y": 940,
         "wires": [
@@ -6102,26 +6102,7 @@
         "name": "garage door open?",
         "server": "8b52884a.b76658",
         "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "binary_sensor.garage_door",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
         "outputs": 2,
-        "output_only_on_state_change": false,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -6150,6 +6131,25 @@
                 "valueType": "triggerId"
             }
         ],
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.garage_door",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "output_only_on_state_change": false,
         "x": 230,
         "y": 1000,
         "wires": [
@@ -6300,26 +6300,7 @@
         "name": "Jeff's phone (wifi) not_home?",
         "server": "8b52884a.b76658",
         "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "device_tracker.jeffs_phone_2",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "home",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
         "outputs": 2,
-        "output_only_on_state_change": false,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -6348,6 +6329,25 @@
                 "valueType": "triggerId"
             }
         ],
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "device_tracker.jeffs_phone_2",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "home",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "output_only_on_state_change": false,
         "x": 200,
         "y": 40,
         "wires": [
@@ -6365,6 +6365,35 @@
         "name": "Jen's phone (wifi) not_home?",
         "server": "8b52884a.b76658",
         "version": 4,
+        "outputs": 2,
+        "for": "",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -6383,8 +6412,25 @@
         "haltifstate": "home",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
         "output_only_on_state_change": false,
+        "x": 200,
+        "y": 100,
+        "wires": [
+            [],
+            [
+                "16f12e62.2031d2",
+                "21e5467e.c04e6a"
+            ]
+        ]
+    },
+    {
+        "id": "84f77b1c.758d08",
+        "type": "server-state-changed",
+        "z": "9143c7f2.16df18",
+        "name": "Jeff's phone (gps) not_home?",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "outputs": 2,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -6413,23 +6459,6 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 200,
-        "y": 100,
-        "wires": [
-            [],
-            [
-                "16f12e62.2031d2",
-                "21e5467e.c04e6a"
-            ]
-        ]
-    },
-    {
-        "id": "84f77b1c.758d08",
-        "type": "server-state-changed",
-        "z": "9143c7f2.16df18",
-        "name": "Jeff's phone (gps) not_home?",
-        "server": "8b52884a.b76658",
-        "version": 4,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -6448,8 +6477,25 @@
         "haltifstate": "home",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
         "output_only_on_state_change": false,
+        "x": 200,
+        "y": 280,
+        "wires": [
+            [],
+            [
+                "16f12e62.2031d2",
+                "21e5467e.c04e6a"
+            ]
+        ]
+    },
+    {
+        "id": "4d79feec.8f286",
+        "type": "server-state-changed",
+        "z": "9143c7f2.16df18",
+        "name": "Jen's phone (gps) not_home?",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "outputs": 2,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -6478,23 +6524,6 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 200,
-        "y": 280,
-        "wires": [
-            [],
-            [
-                "16f12e62.2031d2",
-                "21e5467e.c04e6a"
-            ]
-        ]
-    },
-    {
-        "id": "4d79feec.8f286",
-        "type": "server-state-changed",
-        "z": "9143c7f2.16df18",
-        "name": "Jen's phone (gps) not_home?",
-        "server": "8b52884a.b76658",
-        "version": 4,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -6513,8 +6542,25 @@
         "haltifstate": "home",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
         "output_only_on_state_change": false,
+        "x": 200,
+        "y": 340,
+        "wires": [
+            [],
+            [
+                "16f12e62.2031d2",
+                "21e5467e.c04e6a"
+            ]
+        ]
+    },
+    {
+        "id": "bdd3ab2a.8fef78",
+        "type": "server-state-changed",
+        "z": "9143c7f2.16df18",
+        "name": "Jeff's phone (wifi) home?",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "outputs": 2,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -6543,23 +6589,6 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 200,
-        "y": 340,
-        "wires": [
-            [],
-            [
-                "16f12e62.2031d2",
-                "21e5467e.c04e6a"
-            ]
-        ]
-    },
-    {
-        "id": "bdd3ab2a.8fef78",
-        "type": "server-state-changed",
-        "z": "9143c7f2.16df18",
-        "name": "Jeff's phone (wifi) home?",
-        "server": "8b52884a.b76658",
-        "version": 4,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -6578,8 +6607,25 @@
         "haltifstate": "not_home",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
         "output_only_on_state_change": false,
+        "x": 210,
+        "y": 1120,
+        "wires": [
+            [],
+            [
+                "fe1f1f4a.3f5bc",
+                "e0d9002.3e0be"
+            ]
+        ]
+    },
+    {
+        "id": "8e0cf787.78b938",
+        "type": "server-state-changed",
+        "z": "9143c7f2.16df18",
+        "name": "Jen's phone (wifi) home?",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "outputs": 2,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -6608,23 +6654,6 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 210,
-        "y": 1120,
-        "wires": [
-            [],
-            [
-                "fe1f1f4a.3f5bc",
-                "e0d9002.3e0be"
-            ]
-        ]
-    },
-    {
-        "id": "8e0cf787.78b938",
-        "type": "server-state-changed",
-        "z": "9143c7f2.16df18",
-        "name": "Jen's phone (wifi) home?",
-        "server": "8b52884a.b76658",
-        "version": 4,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -6643,8 +6672,25 @@
         "haltifstate": "not_home",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
         "output_only_on_state_change": false,
+        "x": 210,
+        "y": 1180,
+        "wires": [
+            [],
+            [
+                "fe1f1f4a.3f5bc",
+                "e0d9002.3e0be"
+            ]
+        ]
+    },
+    {
+        "id": "90c40146.a5c44",
+        "type": "server-state-changed",
+        "z": "9143c7f2.16df18",
+        "name": "Jeff's phone (gps) home?",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "outputs": 2,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -6673,23 +6719,6 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 210,
-        "y": 1180,
-        "wires": [
-            [],
-            [
-                "fe1f1f4a.3f5bc",
-                "e0d9002.3e0be"
-            ]
-        ]
-    },
-    {
-        "id": "90c40146.a5c44",
-        "type": "server-state-changed",
-        "z": "9143c7f2.16df18",
-        "name": "Jeff's phone (gps) home?",
-        "server": "8b52884a.b76658",
-        "version": 4,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -6708,8 +6737,25 @@
         "haltifstate": "not_home",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
         "output_only_on_state_change": false,
+        "x": 210,
+        "y": 1360,
+        "wires": [
+            [],
+            [
+                "fe1f1f4a.3f5bc",
+                "e0d9002.3e0be"
+            ]
+        ]
+    },
+    {
+        "id": "7ac57ec8.a0491",
+        "type": "server-state-changed",
+        "z": "9143c7f2.16df18",
+        "name": "Jen's phone (gps) home?",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "outputs": 2,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -6738,23 +6784,6 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 210,
-        "y": 1360,
-        "wires": [
-            [],
-            [
-                "fe1f1f4a.3f5bc",
-                "e0d9002.3e0be"
-            ]
-        ]
-    },
-    {
-        "id": "7ac57ec8.a0491",
-        "type": "server-state-changed",
-        "z": "9143c7f2.16df18",
-        "name": "Jen's phone (gps) home?",
-        "server": "8b52884a.b76658",
-        "version": 4,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -6773,36 +6802,7 @@
         "haltifstate": "not_home",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
         "output_only_on_state_change": false,
-        "for": "",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
         "x": 210,
         "y": 1420,
         "wires": [
@@ -6870,26 +6870,7 @@
         "name": "Someone came home",
         "server": "8b52884a.b76658",
         "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "sensor.anyone_home",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "not_home",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
         "outputs": 2,
-        "output_only_on_state_change": false,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -6918,6 +6899,25 @@
                 "valueType": "triggerId"
             }
         ],
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "sensor.anyone_home",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "not_home",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "output_only_on_state_change": false,
         "x": 220,
         "y": 1660,
         "wires": [
@@ -7016,26 +7016,7 @@
         "name": "Jeff came home",
         "server": "8b52884a.b76658",
         "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "sensor.jeff_home_status",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "False",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
         "outputs": 2,
-        "output_only_on_state_change": false,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -7064,6 +7045,25 @@
                 "valueType": "triggerId"
             }
         ],
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "sensor.jeff_home_status",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "False",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "output_only_on_state_change": false,
         "x": 240,
         "y": 1720,
         "wires": [
@@ -7094,26 +7094,7 @@
         "name": "Jen came home",
         "server": "8b52884a.b76658",
         "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "sensor.jen_home_status",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "False",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
         "outputs": 2,
-        "output_only_on_state_change": false,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -7142,6 +7123,25 @@
                 "valueType": "triggerId"
             }
         ],
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "sensor.jen_home_status",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "False",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "output_only_on_state_change": false,
         "x": 240,
         "y": 1780,
         "wires": [
@@ -7214,9 +7214,8 @@
         "name": "Jeff home -> not_home (bluetooth)",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "input_boolean.jeff_occupancy",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "a93we87h1kg",
@@ -7239,12 +7238,13 @@
                 "comparatorValue": "on"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "input_boolean.jeff_occupancy",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": true,
         "state_type": "str",
-        "enableInput": true,
         "x": 180,
         "y": 1860,
         "wires": [
@@ -7265,9 +7265,8 @@
         "name": "Jeff not_home -> home (bluetooth)",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "input_boolean.jeff_occupancy",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "wg2s91i7aoc",
@@ -7290,12 +7289,13 @@
                 "comparatorValue": "off"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "input_boolean.jeff_occupancy",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": true,
         "state_type": "str",
-        "enableInput": true,
         "x": 180,
         "y": 1920,
         "wires": [
@@ -7382,9 +7382,8 @@
         "name": "tesla away (>50m)",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "proximity.home_tesla",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "vuzmqkcrm4",
@@ -7407,12 +7406,13 @@
                 "comparatorValue": "50"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "proximity.home_tesla",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "num",
-        "enableInput": true,
         "x": 230,
         "y": 2440,
         "wires": [
@@ -7429,9 +7429,8 @@
         "name": "tesla home (<=50m)",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "proximity.home_tesla",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "hot737wuyh",
@@ -7454,12 +7453,13 @@
                 "comparatorValue": "50"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "proximity.home_tesla",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "num",
-        "enableInput": true,
         "x": 230,
         "y": 2500,
         "wires": [
@@ -7476,26 +7476,7 @@
         "name": "Ansley's phone (wifi) not_home?",
         "server": "8b52884a.b76658",
         "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "device_tracker.eye_phone",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "home",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
         "outputs": 2,
-        "output_only_on_state_change": false,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -7524,6 +7505,25 @@
                 "valueType": "triggerId"
             }
         ],
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "device_tracker.eye_phone",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "home",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "output_only_on_state_change": false,
         "x": 190,
         "y": 160,
         "wires": [
@@ -7541,6 +7541,35 @@
         "name": "Ansley's phone (gps) not_home?",
         "server": "8b52884a.b76658",
         "version": 4,
+        "outputs": 2,
+        "for": "",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -7559,8 +7588,25 @@
         "haltifstate": "home",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
         "output_only_on_state_change": false,
+        "x": 190,
+        "y": 400,
+        "wires": [
+            [],
+            [
+                "16f12e62.2031d2",
+                "21e5467e.c04e6a"
+            ]
+        ]
+    },
+    {
+        "id": "99244591.4adac8",
+        "type": "server-state-changed",
+        "z": "9143c7f2.16df18",
+        "name": "Ansley's phone (wifi) home?",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "outputs": 2,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -7589,23 +7635,6 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 190,
-        "y": 400,
-        "wires": [
-            [],
-            [
-                "16f12e62.2031d2",
-                "21e5467e.c04e6a"
-            ]
-        ]
-    },
-    {
-        "id": "99244591.4adac8",
-        "type": "server-state-changed",
-        "z": "9143c7f2.16df18",
-        "name": "Ansley's phone (wifi) home?",
-        "server": "8b52884a.b76658",
-        "version": 4,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -7624,8 +7653,25 @@
         "haltifstate": "not_home",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
         "output_only_on_state_change": false,
+        "x": 200,
+        "y": 1240,
+        "wires": [
+            [],
+            [
+                "fe1f1f4a.3f5bc",
+                "e0d9002.3e0be"
+            ]
+        ]
+    },
+    {
+        "id": "9e47d0c1.372bf",
+        "type": "server-state-changed",
+        "z": "9143c7f2.16df18",
+        "name": "Ansley's phone (gps) home?",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "outputs": 2,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -7654,23 +7700,6 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 200,
-        "y": 1240,
-        "wires": [
-            [],
-            [
-                "fe1f1f4a.3f5bc",
-                "e0d9002.3e0be"
-            ]
-        ]
-    },
-    {
-        "id": "9e47d0c1.372bf",
-        "type": "server-state-changed",
-        "z": "9143c7f2.16df18",
-        "name": "Ansley's phone (gps) home?",
-        "server": "8b52884a.b76658",
-        "version": 4,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -7689,36 +7718,7 @@
         "haltifstate": "not_home",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
         "output_only_on_state_change": false,
-        "for": "",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
         "x": 200,
         "y": 1480,
         "wires": [
@@ -7786,20 +7786,8 @@
         "name": "Jen home -> not_home (bluetooth)",
         "server": "8b52884a.b76658",
         "version": 2,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityid": "input_boolean.jen_occupancy",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "targetType": "this_entity",
@@ -7820,12 +7808,24 @@
                 "propertyValue": "old_state.state"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityid": "input_boolean.jen_occupancy",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": true,
         "state_type": "str",
-        "enableInput": true,
         "x": 180,
         "y": 1980,
         "wires": [
@@ -7844,20 +7844,8 @@
         "name": "Jen not_home -> home (bluetooth)",
         "server": "8b52884a.b76658",
         "version": 2,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityid": "input_boolean.jen_occupancy",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "targetType": "this_entity",
@@ -7878,12 +7866,24 @@
                 "propertyValue": "old_state.state"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityid": "input_boolean.jen_occupancy",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": true,
         "state_type": "str",
-        "enableInput": true,
         "x": 180,
         "y": 2040,
         "wires": [
@@ -7998,20 +7998,8 @@
         "name": "Ansley home -> not_home (bluetooth)",
         "server": "8b52884a.b76658",
         "version": 2,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityid": "input_boolean.ansley_occupancy",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "targetType": "this_entity",
@@ -8032,12 +8020,24 @@
                 "propertyValue": "old_state.state"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityid": "input_boolean.ansley_occupancy",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": true,
         "state_type": "str",
-        "enableInput": true,
         "x": 170,
         "y": 2100,
         "wires": [
@@ -8088,26 +8088,7 @@
         "name": "Brinley's phone (wifi) not_home?",
         "server": "8b52884a.b76658",
         "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "device_tracker.brinleythebest",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "home",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
         "outputs": 2,
-        "output_only_on_state_change": false,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -8136,6 +8117,25 @@
                 "valueType": "triggerId"
             }
         ],
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "device_tracker.brinleythebest",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "home",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "output_only_on_state_change": false,
         "x": 190,
         "y": 220,
         "wires": [
@@ -8152,6 +8152,35 @@
         "name": "Brinley's phone (gps) not_home?",
         "server": "8b52884a.b76658",
         "version": 4,
+        "outputs": 2,
+        "for": "",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -8170,8 +8199,24 @@
         "haltifstate": "home",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
         "output_only_on_state_change": false,
+        "x": 190,
+        "y": 460,
+        "wires": [
+            [],
+            [
+                "16f12e62.2031d2"
+            ]
+        ]
+    },
+    {
+        "id": "404bca14c21c3959",
+        "type": "server-state-changed",
+        "z": "9143c7f2.16df18",
+        "name": "Brinley's phone (wifi) home?",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "outputs": 2,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -8200,22 +8245,6 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 190,
-        "y": 460,
-        "wires": [
-            [],
-            [
-                "16f12e62.2031d2"
-            ]
-        ]
-    },
-    {
-        "id": "404bca14c21c3959",
-        "type": "server-state-changed",
-        "z": "9143c7f2.16df18",
-        "name": "Brinley's phone (wifi) home?",
-        "server": "8b52884a.b76658",
-        "version": 4,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -8234,8 +8263,24 @@
         "haltifstate": "not_home",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
         "output_only_on_state_change": false,
+        "x": 200,
+        "y": 1300,
+        "wires": [
+            [],
+            [
+                "fe1f1f4a.3f5bc"
+            ]
+        ]
+    },
+    {
+        "id": "88307c69e8e754b5",
+        "type": "server-state-changed",
+        "z": "9143c7f2.16df18",
+        "name": "Brinley's phone (gps) home?",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "outputs": 2,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -8264,22 +8309,6 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 200,
-        "y": 1300,
-        "wires": [
-            [],
-            [
-                "fe1f1f4a.3f5bc"
-            ]
-        ]
-    },
-    {
-        "id": "88307c69e8e754b5",
-        "type": "server-state-changed",
-        "z": "9143c7f2.16df18",
-        "name": "Brinley's phone (gps) home?",
-        "server": "8b52884a.b76658",
-        "version": 4,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -8298,36 +8327,7 @@
         "haltifstate": "not_home",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
         "output_only_on_state_change": false,
-        "for": "",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
         "x": 200,
         "y": 1540,
         "wires": [
@@ -8398,20 +8398,8 @@
         "name": "not_home -> home",
         "server": "8b52884a.b76658",
         "version": 2,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityid": "sensor.anyone_home",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 2,
         "constraints": [
             {
                 "targetType": "this_entity",
@@ -8432,12 +8420,24 @@
                 "comparatorValue": "not_home"
             }
         ],
-        "inputs": 0,
-        "outputs": 2,
+        "enableInput": false,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityid": "sensor.anyone_home",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": false,
         "x": 230,
         "y": 2680,
         "wires": [
@@ -8454,9 +8454,8 @@
         "name": "home -> not_home",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "sensor.anyone_home",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "m9qiqujd83",
@@ -8479,12 +8478,13 @@
                 "comparatorValue": "home"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "sensor.anyone_home",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 230,
         "y": 2620,
         "wires": [
@@ -10134,9 +10134,8 @@
         "name": "tesla away (>50m)",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "proximity.home_tesla",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "vuzmqkcrm4",
@@ -10159,12 +10158,13 @@
                 "comparatorValue": "50"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "proximity.home_tesla",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "num",
-        "enableInput": true,
         "x": 130,
         "y": 1280,
         "wires": [
@@ -10181,20 +10181,8 @@
         "name": "tesla home (<=100m)",
         "server": "8b52884a.b76658",
         "version": 2,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityid": "proximity.home_tesla",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "targetType": "this_entity",
@@ -10215,12 +10203,24 @@
                 "comparatorValue": "100"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityid": "proximity.home_tesla",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "num",
-        "enableInput": true,
         "x": 130,
         "y": 1340,
         "wires": [
@@ -11659,20 +11659,8 @@
         "name": "tesla2 away (>50m)",
         "server": "8b52884a.b76658",
         "version": 2,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityid": "proximity.home_tesla2",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "targetType": "this_entity",
@@ -11693,12 +11681,24 @@
                 "propertyValue": "old_state.state"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityid": "proximity.home_tesla2",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "num",
-        "enableInput": true,
         "x": 130,
         "y": 1500,
         "wires": [
@@ -11715,20 +11715,8 @@
         "name": "tesla2 home (<=100m)",
         "server": "8b52884a.b76658",
         "version": 2,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityid": "proximity.home_tesla2",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "targetType": "this_entity",
@@ -11749,12 +11737,24 @@
                 "comparatorValue": "100"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityid": "proximity.home_tesla2",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "num",
-        "enableInput": true,
         "x": 120,
         "y": 1560,
         "wires": [
@@ -11854,9 +11854,8 @@
         "name": "home -> not_home",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "sensor.anyone_home",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "m9qiqujd83",
@@ -11879,12 +11878,13 @@
                 "comparatorValue": "home"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "sensor.anyone_home",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 130,
         "y": 2220,
         "wires": [
@@ -12100,20 +12100,8 @@
         "name": "not_home -> home",
         "server": "8b52884a.b76658",
         "version": 2,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityid": "sensor.anyone_home",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "targetType": "this_entity",
@@ -12134,12 +12122,24 @@
                 "propertyValue": "old_state.state"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityid": "sensor.anyone_home",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 110,
         "y": 180,
         "wires": [
@@ -12156,9 +12156,8 @@
         "name": "home -> not_home",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "sensor.anyone_home",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "m9qiqujd83",
@@ -12181,12 +12180,13 @@
                 "comparatorValue": "home"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "sensor.anyone_home",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 110,
         "y": 300,
         "wires": [
@@ -12271,26 +12271,7 @@
         "name": "garage door open?",
         "server": "8b52884a.b76658",
         "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "binary_sensor.garage_door",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
         "outputs": 2,
-        "output_only_on_state_change": false,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -12319,6 +12300,25 @@
                 "valueType": "triggerId"
             }
         ],
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.garage_door",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "output_only_on_state_change": false,
         "x": 110,
         "y": 380,
         "wires": [
@@ -12621,26 +12621,7 @@
         "name": "basement water",
         "server": "8b52884a.b76658",
         "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "binary_sensor.water_sensor_a_water_alarm_water_leak_detected",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is_not",
         "outputs": 2,
-        "output_only_on_state_change": false,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -12669,6 +12650,25 @@
                 "valueType": "triggerId"
             }
         ],
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.water_sensor_a_water_alarm_water_leak_detected",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is_not",
+        "output_only_on_state_change": false,
         "x": 120,
         "y": 840,
         "wires": [
@@ -12897,6 +12897,35 @@
         "name": "sump pump water",
         "server": "8b52884a.b76658",
         "version": 4,
+        "outputs": 2,
+        "for": "",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -12915,8 +12944,25 @@
         "haltifstate": "on",
         "halt_if_type": "str",
         "halt_if_compare": "is_not",
-        "outputs": 2,
         "output_only_on_state_change": false,
+        "x": 110,
+        "y": 900,
+        "wires": [
+            [],
+            [
+                "e1af3f7c.67365",
+                "a779d8f0.785008"
+            ]
+        ]
+    },
+    {
+        "id": "4fdbeade.1c57a4",
+        "type": "server-state-changed",
+        "z": "af228686.65c8a8",
+        "name": "sliding door open?",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "outputs": 2,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -12945,23 +12991,6 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 110,
-        "y": 900,
-        "wires": [
-            [],
-            [
-                "e1af3f7c.67365",
-                "a779d8f0.785008"
-            ]
-        ]
-    },
-    {
-        "id": "4fdbeade.1c57a4",
-        "type": "server-state-changed",
-        "z": "af228686.65c8a8",
-        "name": "sliding door open?",
-        "server": "8b52884a.b76658",
-        "version": 4,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -12980,36 +13009,7 @@
         "haltifstate": "off",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
         "output_only_on_state_change": false,
-        "for": "",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
         "x": 110,
         "y": 1000,
         "wires": [
@@ -13489,26 +13489,7 @@
         "name": "no desk motion for 10 min",
         "server": "8b52884a.b76658",
         "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "binary_sensor.wyze_3_motion_sensor",
-        "entityidfiltertype": "exact",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
         "outputs": 2,
-        "output_only_on_state_change": true,
         "for": "10",
         "forType": "num",
         "forUnits": "minutes",
@@ -13537,6 +13518,25 @@
                 "valueType": "triggerId"
             }
         ],
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.wyze_3_motion_sensor",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "output_only_on_state_change": true,
         "x": 150,
         "y": 1400,
         "wires": [
@@ -13635,26 +13635,7 @@
         "name": "upstairs motion",
         "server": "8b52884a.b76658",
         "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "binary_sensor.upstairs_motion",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
         "outputs": 2,
-        "output_only_on_state_change": false,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -13683,6 +13664,25 @@
                 "valueType": "triggerId"
             }
         ],
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.upstairs_motion",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "output_only_on_state_change": false,
         "x": 120,
         "y": 1240,
         "wires": [
@@ -13734,26 +13734,7 @@
         "name": "main motion",
         "server": "8b52884a.b76658",
         "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "binary_sensor.main_motion",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
         "outputs": 2,
-        "output_only_on_state_change": false,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -13782,6 +13763,25 @@
                 "valueType": "triggerId"
             }
         ],
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.main_motion",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "output_only_on_state_change": false,
         "x": 130,
         "y": 1180,
         "wires": [
@@ -13908,26 +13908,7 @@
         "name": "light <= 50000 lux",
         "server": "8b52884a.b76658",
         "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "sensor.smartweather_brightness_filtered",
-        "entityidfiltertype": "exact",
-        "outputinitially": true,
-        "state_type": "num",
-        "haltifstate": "50000",
-        "halt_if_type": "num",
-        "halt_if_compare": "lte",
         "outputs": 2,
-        "output_only_on_state_change": true,
         "for": "0",
         "forType": "num",
         "forUnits": "minutes",
@@ -13956,6 +13937,25 @@
                 "valueType": "triggerId"
             }
         ],
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "sensor.smartweather_brightness_filtered",
+        "entityidfiltertype": "exact",
+        "outputinitially": true,
+        "state_type": "num",
+        "haltifstate": "50000",
+        "halt_if_type": "num",
+        "halt_if_compare": "lte",
+        "output_only_on_state_change": true,
         "x": 170,
         "y": 1960,
         "wires": [
@@ -14017,26 +14017,7 @@
         "name": "light <= 7500 lux",
         "server": "8b52884a.b76658",
         "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "sensor.smartweather_brightness_filtered",
-        "entityidfiltertype": "exact",
-        "outputinitially": true,
-        "state_type": "num",
-        "haltifstate": "7500",
-        "halt_if_type": "num",
-        "halt_if_compare": "lte",
         "outputs": 2,
-        "output_only_on_state_change": true,
         "for": "0",
         "forType": "num",
         "forUnits": "minutes",
@@ -14065,6 +14046,25 @@
                 "valueType": "triggerId"
             }
         ],
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "sensor.smartweather_brightness_filtered",
+        "entityidfiltertype": "exact",
+        "outputinitially": true,
+        "state_type": "num",
+        "haltifstate": "7500",
+        "halt_if_type": "num",
+        "halt_if_compare": "lte",
+        "output_only_on_state_change": true,
         "x": 180,
         "y": 2080,
         "wires": [
@@ -14898,9 +14898,10 @@
         "name": "",
         "server": "8b52884a.b76658",
         "version": 2,
-        "updateinterval": "10",
         "updateIntervalType": "num",
         "updateIntervalUnits": "seconds",
+        "outputs": 1,
+        "updateinterval": "10",
         "outputinitially": true,
         "outputonchanged": true,
         "entity_id": "cover.jen_garage_door",
@@ -14908,7 +14909,6 @@
         "halt_if": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 1,
         "x": 210,
         "y": 100,
         "wires": [
@@ -14922,9 +14922,10 @@
         "name": "",
         "server": "8b52884a.b76658",
         "version": 2,
-        "updateinterval": "10",
         "updateIntervalType": "num",
         "updateIntervalUnits": "seconds",
+        "outputs": 1,
+        "updateinterval": "10",
         "outputinitially": true,
         "outputonchanged": true,
         "entity_id": "cover.jeff_garage_door",
@@ -14932,7 +14933,6 @@
         "halt_if": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 1,
         "x": 210,
         "y": 160,
         "wires": [
@@ -14946,9 +14946,8 @@
         "name": "jen's garage door open -> closed",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "cover.jen_garage_door",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "5vfaipig414",
@@ -14971,12 +14970,13 @@
                 "comparatorValue": "open"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "cover.jen_garage_door",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 220,
         "y": 280,
         "wires": [
@@ -15037,9 +15037,8 @@
         "name": "jen's garage door closed?",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "cover.jen_garage_door",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "5vfaipig414",
@@ -15062,12 +15061,13 @@
                 "comparatorValue": "closed"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "cover.jen_garage_door",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 190,
         "y": 340,
         "wires": [
@@ -15112,9 +15112,8 @@
         "name": "jen's garage door closed -> open",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "cover.jen_garage_door",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "7ssscforb0o",
@@ -15137,12 +15136,13 @@
                 "comparatorValue": "closed"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "cover.jen_garage_door",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 220,
         "y": 420,
         "wires": [
@@ -15203,9 +15203,8 @@
         "name": "jen's garage door open?",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "cover.jen_garage_door",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "03b4hq1eehkp",
@@ -15228,12 +15227,13 @@
                 "comparatorValue": "open"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "cover.jen_garage_door",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 190,
         "y": 480,
         "wires": [
@@ -15278,9 +15278,8 @@
         "name": "jeff's garage door open -> closed",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "cover.jeff_garage_door",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "5vfaipig414",
@@ -15303,12 +15302,13 @@
                 "comparatorValue": "open"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "cover.jeff_garage_door",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 220,
         "y": 580,
         "wires": [
@@ -15369,9 +15369,8 @@
         "name": "jeff's garage door closed?",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "cover.jeff_garage_door",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "5vfaipig414",
@@ -15394,12 +15393,13 @@
                 "comparatorValue": "closed"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "cover.jeff_garage_door",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 190,
         "y": 640,
         "wires": [
@@ -15444,9 +15444,8 @@
         "name": "jeff's garage door closed -> open",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "cover.jeff_garage_door",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "7ssscforb0o",
@@ -15469,12 +15468,13 @@
                 "comparatorValue": "closed"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "cover.jeff_garage_door",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 220,
         "y": 720,
         "wires": [
@@ -15535,9 +15535,8 @@
         "name": "jeff's garage door open?",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "cover.jeff_garage_door",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "03b4hq1eehkp",
@@ -15560,12 +15559,13 @@
                 "comparatorValue": "open"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "cover.jeff_garage_door",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 190,
         "y": 780,
         "wires": [
@@ -16043,13 +16043,6 @@
         "name": "Jen's Garage Door Opening",
         "server": "8b52884a.b76658",
         "version": 4,
-        "entityidfilter": "sensor.garage2_status",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "Opening",
-        "halt_if_type": "str",
-        "halt_if_compare": "is_not",
         "outputs": 2,
         "for": "0",
         "forType": "num",
@@ -16079,6 +16072,13 @@
                 "valueType": "triggerId"
             }
         ],
+        "entityidfilter": "sensor.garage2_status",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "Opening",
+        "halt_if_type": "str",
+        "halt_if_compare": "is_not",
         "x": 540,
         "y": 60,
         "wires": [
@@ -16093,13 +16093,6 @@
         "name": "Jeff's Garage Door Opening",
         "server": "8b52884a.b76658",
         "version": 4,
-        "entityidfilter": "sensor.garage_status",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "Opening",
-        "halt_if_type": "str",
-        "halt_if_compare": "is_not",
         "outputs": 2,
         "for": "0",
         "forType": "num",
@@ -16129,6 +16122,13 @@
                 "valueType": "triggerId"
             }
         ],
+        "entityidfilter": "sensor.garage_status",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "Opening",
+        "halt_if_type": "str",
+        "halt_if_compare": "is_not",
         "x": 540,
         "y": 120,
         "wires": [
@@ -16143,13 +16143,6 @@
         "name": "Jen's Garage Door Closing",
         "server": "8b52884a.b76658",
         "version": 4,
-        "entityidfilter": "sensor.garage2_status",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "Closing",
-        "halt_if_type": "str",
-        "halt_if_compare": "is_not",
         "outputs": 2,
         "for": "0",
         "forType": "num",
@@ -16179,6 +16172,13 @@
                 "valueType": "triggerId"
             }
         ],
+        "entityidfilter": "sensor.garage2_status",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "Closing",
+        "halt_if_type": "str",
+        "halt_if_compare": "is_not",
         "x": 530,
         "y": 180,
         "wires": [
@@ -16193,13 +16193,6 @@
         "name": "Jen's Garage Door Closing",
         "server": "8b52884a.b76658",
         "version": 4,
-        "entityidfilter": "sensor.garage2_status",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "Closing",
-        "halt_if_type": "str",
-        "halt_if_compare": "is_not",
         "outputs": 2,
         "for": "0",
         "forType": "num",
@@ -16229,6 +16222,13 @@
                 "valueType": "triggerId"
             }
         ],
+        "entityidfilter": "sensor.garage2_status",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "Closing",
+        "halt_if_type": "str",
+        "halt_if_compare": "is_not",
         "x": 530,
         "y": 240,
         "wires": [
@@ -16258,9 +16258,8 @@
         "name": "Alarm Disarmed 3",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "alarm_control_panel.alarm_panel",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "v3xl7gf8glf",
@@ -16283,12 +16282,13 @@
                 "comparatorValue": "^armed.*"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "alarm_control_panel.alarm_panel",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 190,
         "y": 1480,
         "wires": [
@@ -16320,9 +16320,8 @@
         "name": "Alarm Armed 3",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "alarm_control_panel.alarm_panel",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "x6ekl8kp0e",
@@ -16345,12 +16344,13 @@
                 "comparatorValue": "^armed.*"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "alarm_control_panel.alarm_panel",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 180,
         "y": 1540,
         "wires": [
@@ -16367,13 +16367,6 @@
         "name": "Alarm Disarmed 4",
         "server": "8b52884a.b76658",
         "version": 4,
-        "entityidfilter": "alarm_control_panel.alarm_panel",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "disarmed",
-        "halt_if_type": "str",
-        "halt_if_compare": "is_not",
         "outputs": 2,
         "for": "0",
         "forType": "num",
@@ -16403,6 +16396,13 @@
                 "valueType": "triggerId"
             }
         ],
+        "entityidfilter": "alarm_control_panel.alarm_panel",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "disarmed",
+        "halt_if_type": "str",
+        "halt_if_compare": "is_not",
         "x": 170,
         "y": 1620,
         "wires": [
@@ -16419,13 +16419,6 @@
         "name": "Alarm Armed 4",
         "server": "8b52884a.b76658",
         "version": 4,
-        "entityidfilter": "alarm_control_panel.alarm_panel",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "^armed.*",
-        "halt_if_type": "re",
-        "halt_if_compare": "is_not",
         "outputs": 2,
         "for": "0",
         "forType": "num",
@@ -16455,6 +16448,13 @@
                 "valueType": "triggerId"
             }
         ],
+        "entityidfilter": "alarm_control_panel.alarm_panel",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "^armed.*",
+        "halt_if_type": "re",
+        "halt_if_compare": "is_not",
         "x": 160,
         "y": 1680,
         "wires": [
@@ -16486,9 +16486,8 @@
         "name": "Alarm Armed",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "sensor.alarm_status",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "r22ucrgnllj",
@@ -16511,12 +16510,13 @@
                 "comparatorValue": "Disarmed"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "sensor.alarm_status",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 690,
         "y": 1500,
         "wires": [
@@ -16531,9 +16531,8 @@
         "name": "Alarm Disarmed",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "sensor.alarm_status",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "ugytonany1",
@@ -16556,12 +16555,13 @@
                 "comparatorValue": "Armed"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "sensor.alarm_status",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 680,
         "y": 1560,
         "wires": [
@@ -16840,9 +16840,8 @@
         "name": "jen's door open?",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "cover.jen_garage_door",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "03b4hq1eehkp",
@@ -16865,12 +16864,13 @@
                 "comparatorValue": "open"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "cover.jen_garage_door",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 170,
         "y": 1820,
         "wires": [
@@ -16903,9 +16903,8 @@
         "name": "jeff's door open?",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "cover.jeff_garage_door",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "03b4hq1eehkp",
@@ -16928,12 +16927,13 @@
                 "comparatorValue": "open"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "cover.jeff_garage_door",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 170,
         "y": 1940,
         "wires": [
@@ -16966,9 +16966,8 @@
         "name": "jen's door closed -> open",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "cover.jen_garage_door",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "7ssscforb0o",
@@ -16991,12 +16990,13 @@
                 "comparatorValue": "closed"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "cover.jen_garage_door",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 190,
         "y": 2020,
         "wires": [
@@ -17027,9 +17027,8 @@
         "name": "jeff's door closed -> open",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "cover.jeff_garage_door",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "7ssscforb0o",
@@ -17052,12 +17051,13 @@
                 "comparatorValue": "closed"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "cover.jeff_garage_door",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 190,
         "y": 2080,
         "wires": [
@@ -17109,9 +17109,8 @@
         "name": "jen's door open -> closed",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "cover.jen_garage_door",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "g9u7cbbteu8",
@@ -17134,12 +17133,13 @@
                 "comparatorValue": "open"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "cover.jen_garage_door",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 190,
         "y": 2140,
         "wires": [
@@ -17156,9 +17156,8 @@
         "name": "jeff's door open -> closed",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "cover.jeff_garage_door",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "19z302q4msn",
@@ -17181,12 +17180,13 @@
                 "comparatorValue": "open"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "cover.jeff_garage_door",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 190,
         "y": 2200,
         "wires": [
@@ -17245,9 +17245,8 @@
         "name": "jeff's garage door closed -> open",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "cover.jeff_garage_door",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "7ssscforb0o",
@@ -17270,12 +17269,13 @@
                 "comparatorValue": "closed"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "cover.jeff_garage_door",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 220,
         "y": 2280,
         "wires": [
@@ -17290,9 +17290,8 @@
         "name": "jen's garage door closed -> open",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "cover.jen_garage_door",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "7ssscforb0o",
@@ -17315,12 +17314,13 @@
                 "comparatorValue": "closed"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "cover.jen_garage_door",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 220,
         "y": 2340,
         "wires": [
@@ -17490,9 +17490,8 @@
         "name": "jeff's garage door closed -> open",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "cover.jeff_garage_door",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "7ssscforb0o",
@@ -17515,12 +17514,13 @@
                 "comparatorValue": "closed"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "cover.jeff_garage_door",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 220,
         "y": 2400,
         "wires": [
@@ -17535,9 +17535,8 @@
         "name": "jen's garage door closed -> open",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "cover.jen_garage_door",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "7ssscforb0o",
@@ -17560,12 +17559,13 @@
                 "comparatorValue": "closed"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "cover.jen_garage_door",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 220,
         "y": 2460,
         "wires": [
@@ -17580,9 +17580,8 @@
         "name": "jeff's garage open -> closed?",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "cover.jeff_garage_door",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "lfo3f7bo72",
@@ -17605,12 +17604,13 @@
                 "comparatorValue": "open"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "cover.jeff_garage_door",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 200,
         "y": 2520,
         "wires": [
@@ -17625,9 +17625,8 @@
         "name": "jen's garage open -> closed?",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "cover.jen_garage_door",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "lq80ra8i42",
@@ -17650,12 +17649,13 @@
                 "comparatorValue": "open"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "cover.jen_garage_door",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "str",
-        "enableInput": true,
         "x": 200,
         "y": 2580,
         "wires": [
@@ -18489,9 +18489,8 @@
         "name": "Tesla home -> not_home",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "device_tracker.tesla_location",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "z1zzizr1n1",
@@ -18514,12 +18513,13 @@
                 "comparatorValue": "not_home"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "device_tracker.tesla_location",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": true,
         "state_type": "str",
-        "enableInput": true,
         "x": 190,
         "y": 3620,
         "wires": [
@@ -18536,9 +18536,8 @@
         "name": "Tesla not_home -> home",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "device_tracker.tesla_location",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "n2mfbe9vw6a",
@@ -18561,12 +18560,13 @@
                 "comparatorValue": "not_home"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "device_tracker.tesla_location",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": true,
         "state_type": "str",
-        "enableInput": true,
         "x": 190,
         "y": 3680,
         "wires": [
@@ -18611,9 +18611,8 @@
         "name": "Jeff home -> not_home (phone)",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "device_tracker.jeffs_xs_2",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "z1zzizr1n1",
@@ -18636,12 +18635,13 @@
                 "comparatorValue": "not_home"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "device_tracker.jeffs_xs_2",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": true,
         "state_type": "str",
-        "enableInput": true,
         "x": 190,
         "y": 3880,
         "wires": [
@@ -18656,9 +18656,8 @@
         "name": "Jeff not_home -> home (phone)",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "device_tracker.jeffs_xs_2",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "n2mfbe9vw6a",
@@ -18681,12 +18680,13 @@
                 "comparatorValue": "not_home"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "device_tracker.jeffs_xs_2",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": true,
         "state_type": "str",
-        "enableInput": true,
         "x": 190,
         "y": 3940,
         "wires": [
@@ -18701,9 +18701,8 @@
         "name": "tesla away (>100m)",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "proximity.home_tesla",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "l1r7qlkeld9",
@@ -18726,12 +18725,13 @@
                 "comparatorValue": "100"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "proximity.home_tesla",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "num",
-        "enableInput": true,
         "x": 150,
         "y": 3760,
         "wires": [
@@ -18746,9 +18746,8 @@
         "name": "tesla home (<=100m)",
         "server": "8b52884a.b76658",
         "version": 2,
-        "entityid": "proximity.home_tesla",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
         "constraints": [
             {
                 "id": "b0cz35wk8in",
@@ -18771,12 +18770,13 @@
                 "comparatorValue": "100"
             }
         ],
-        "inputs": 1,
-        "outputs": 2,
+        "enableInput": true,
+        "entityid": "proximity.home_tesla",
+        "entityidfiltertype": "exact",
+        "debugenabled": false,
         "customoutputs": [],
         "outputinitially": false,
         "state_type": "num",
-        "enableInput": true,
         "x": 160,
         "y": 3820,
         "wires": [
@@ -19367,26 +19367,7 @@
         "name": "basement door open?",
         "server": "8b52884a.b76658",
         "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "binary_sensor.basement_door",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
         "outputs": 2,
-        "output_only_on_state_change": false,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -19415,6 +19396,25 @@
                 "valueType": "triggerId"
             }
         ],
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.basement_door",
+        "entityidfiltertype": "substring",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "output_only_on_state_change": false,
         "x": 160,
         "y": 4600,
         "wires": [
@@ -19795,26 +19795,7 @@
         "name": "US coronavirus deaths",
         "server": "8b52884a.b76658",
         "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "sensor.us_coronavirus_deaths",
-        "entityidfiltertype": "substring",
-        "outputinitially": true,
-        "state_type": "str",
-        "haltifstate": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
         "outputs": 1,
-        "output_only_on_state_change": false,
         "for": "",
         "forType": "num",
         "forUnits": "minutes",
@@ -19843,6 +19824,25 @@
                 "valueType": "triggerId"
             }
         ],
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "sensor.us_coronavirus_deaths",
+        "entityidfiltertype": "substring",
+        "outputinitially": true,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "output_only_on_state_change": false,
         "x": 160,
         "y": 4740,
         "wires": [
