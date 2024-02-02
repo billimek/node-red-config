@@ -1648,7 +1648,7 @@
         "z": "2299e9e0.40f656",
         "name": "",
         "topic": "frigate/events",
-        "qos": "0",
+        "qos": "2",
         "datatype": "auto",
         "broker": "649859a4.a17818",
         "nl": false,
