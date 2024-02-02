@@ -352,16 +352,6 @@
         "futureWeeks": "4"
     },
     {
-        "id": "67813a04.5b8c44",
-        "type": "server",
-        "name": "Home Assistant",
-        "addon": true,
-        "rejectUnauthorizedCerts": true,
-        "ha_boolean": "y|yes|true|on|home|open",
-        "connectionDelay": true,
-        "cacheJson": true
-    },
-    {
         "id": "4b2cdbdc.3114a4",
         "type": "rbe",
         "z": "b8b74cae.ffe4",
