@@ -1649,7 +1649,7 @@
         "name": "",
         "topic": "frigate/events",
         "qos": "0",
-        "datatype": "auto-detect",
+        "datatype": "auto",
         "broker": "649859a4.a17818",
         "nl": false,
         "rap": false,
