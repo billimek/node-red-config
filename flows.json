@@ -2945,7 +2945,8 @@
             [
                 "202f9fb7.5baeb",
                 "83349109c2e10d57",
-                "dcfcfca18cb08cb9"
+                "dcfcfca18cb08cb9",
+                "a02ac2d8216f80fc"
             ],
             [
                 "60c909a0.99eda8"
@@ -3306,6 +3307,24 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "a02ac2d8216f80fc",
+        "type": "mqtt out",
+        "z": "ea946133.0085b",
+        "name": "",
+        "topic": "nr-frigate/events",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "649859a4.a17818",
+        "x": 1180,
+        "y": 600,
+        "wires": []
     },
     {
         "id": "6cb23d50.77ced4",
