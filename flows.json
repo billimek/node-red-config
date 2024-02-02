@@ -3090,6 +3090,7 @@
         "id": "21d2ce1df5dc424c",
         "type": "api-call-service",
         "z": "ea946133.0085b",
+        "d": true,
         "name": "Notify Jeff (ios)",
         "server": "8b52884a.b76658",
         "version": 5,
@@ -3115,9 +3116,7 @@
         "x": 1840,
         "y": 780,
         "wires": [
-            [
-                "946e5479461b398c"
-            ]
+            []
         ]
     },
     {
@@ -3277,22 +3276,6 @@
         "statusType": "auto",
         "x": 1400,
         "y": 900,
-        "wires": []
-    },
-    {
-        "id": "946e5479461b398c",
-        "type": "debug",
-        "z": "ea946133.0085b",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2060,
-        "y": 860,
         "wires": []
     },
     {
