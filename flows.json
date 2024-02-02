@@ -3126,8 +3126,7 @@
         "y": 220,
         "wires": [
             [
-                "21d2ce1df5dc424c",
-                "20b5e3df6f62259c"
+                "21d2ce1df5dc424c"
             ]
         ]
     },
@@ -3218,8 +3217,7 @@
         "y": 560,
         "wires": [
             [
-                "21d2ce1df5dc424c",
-                "64482f2a0d6d89bf"
+                "21d2ce1df5dc424c"
             ]
         ]
     },
@@ -3240,58 +3238,9 @@
         "y": 600,
         "wires": [
             [
-                "21d2ce1df5dc424c",
-                "b09c899898f8268c"
+                "21d2ce1df5dc424c"
             ]
         ]
-    },
-    {
-        "id": "20b5e3df6f62259c",
-        "type": "debug",
-        "z": "ea946133.0085b",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2020,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "64482f2a0d6d89bf",
-        "type": "debug",
-        "z": "ea946133.0085b",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2000,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "b09c899898f8268c",
-        "type": "debug",
-        "z": "ea946133.0085b",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2000,
-        "y": 580,
-        "wires": []
     },
     {
         "id": "95763d89022d00dc",
@@ -3370,7 +3319,7 @@
         "type": "debug",
         "z": "ea946133.0085b",
         "name": "debug 10",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
