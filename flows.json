@@ -2936,7 +2936,8 @@
                 "74a6c66e.9b3788"
             ],
             [
-                "202f9fb7.5baeb"
+                "202f9fb7.5baeb",
+                "7ffc109faf8c8390"
             ],
             [
                 "60c909a0.99eda8"
@@ -3289,6 +3290,22 @@
         "statusType": "auto",
         "x": 2060,
         "y": 860,
+        "wires": []
+    },
+    {
+        "id": "7ffc109faf8c8390",
+        "type": "debug",
+        "z": "ea946133.0085b",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 720,
         "wires": []
     },
     {
