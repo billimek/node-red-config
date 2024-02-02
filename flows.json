@@ -8060,7 +8060,7 @@
         "entityId": [
             "climate.upstairs"
         ],
-        "data": "{\"preset_mode\":\"away\"}",
+        "data": "{\"preset_mode\":\"Away\"}",
         "dataType": "json",
         "mergeContext": "",
         "mustacheAltTags": false,
