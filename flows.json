@@ -3266,7 +3266,7 @@
         "z": "ea946133.0085b",
         "name": "",
         "topic": "nr-frigate/events",
-        "qos": "",
+        "qos": "2",
         "retain": "",
         "respTopic": "",
         "contentType": "",
