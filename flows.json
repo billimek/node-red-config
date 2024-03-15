@@ -14678,6 +14678,114 @@
         "wires": []
     },
     {
+        "id": "35b6ca06a561d9cc",
+        "type": "api-current-state",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "switch.outlet_a",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 510,
+        "y": 2340,
+        "wires": [
+            [
+                "111cdd105975d110"
+            ],
+            [
+                "045fefbfa7aaffef"
+            ]
+        ]
+    },
+    {
+        "id": "281697ef85c0fb81",
+        "type": "inject",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 2300,
+        "wires": [
+            [
+                "35b6ca06a561d9cc"
+            ]
+        ]
+    },
+    {
+        "id": "111cdd105975d110",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 2420,
+        "wires": []
+    },
+    {
+        "id": "045fefbfa7aaffef",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 2480,
+        "wires": []
+    },
+    {
         "id": "f9971550.66b808",
         "type": "poll-state",
         "z": "2fad043e.317c8c",
