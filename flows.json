@@ -14607,6 +14607,77 @@
         "wires": []
     },
     {
+        "id": "b4cc174ef6e72cac",
+        "type": "trigger-state",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "inputs": 0,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "binary_sensor.porch_person_occupancy",
+        "entityIdType": "exact",
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": ""
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": false,
+        "stateType": "str",
+        "enableInput": false,
+        "x": 320,
+        "y": 2220,
+        "wires": [
+            [
+                "de1c5e81fca5b14f"
+            ],
+            [
+                "e43a8e692198fce2"
+            ]
+        ]
+    },
+    {
+        "id": "de1c5e81fca5b14f",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 2220,
+        "wires": []
+    },
+    {
+        "id": "e43a8e692198fce2",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 2280,
+        "wires": []
+    },
+    {
         "id": "f9971550.66b808",
         "type": "poll-state",
         "z": "2fad043e.317c8c",
