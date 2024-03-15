@@ -14610,7 +14610,7 @@
         "id": "b4cc174ef6e72cac",
         "type": "trigger-state",
         "z": "af228686.65c8a8",
-        "name": "",
+        "name": "person detected on porch",
         "server": "8b52884a.b76658",
         "version": 4,
         "inputs": 0,
@@ -14634,11 +14634,11 @@
         "outputInitially": false,
         "stateType": "str",
         "enableInput": false,
-        "x": 320,
+        "x": 230,
         "y": 2220,
         "wires": [
             [
-                "de1c5e81fca5b14f"
+                "35b6ca06a561d9cc"
             ],
             [
                 "e43a8e692198fce2"
@@ -14657,7 +14657,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
+        "x": 860,
         "y": 2220,
         "wires": []
     },
@@ -14713,79 +14713,14 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 460,
-        "y": 2340,
+        "x": 620,
+        "y": 2220,
         "wires": [
             [
-                "111cdd105975d110"
+                "de1c5e81fca5b14f"
             ],
-            [
-                "045fefbfa7aaffef"
-            ]
+            []
         ]
-    },
-    {
-        "id": "281697ef85c0fb81",
-        "type": "inject",
-        "z": "af228686.65c8a8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 260,
-        "y": 2340,
-        "wires": [
-            [
-                "35b6ca06a561d9cc"
-            ]
-        ]
-    },
-    {
-        "id": "111cdd105975d110",
-        "type": "debug",
-        "z": "af228686.65c8a8",
-        "name": "deck lights on",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 760,
-        "y": 2340,
-        "wires": []
-    },
-    {
-        "id": "045fefbfa7aaffef",
-        "type": "debug",
-        "z": "af228686.65c8a8",
-        "name": "deck lights off",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 760,
-        "y": 2380,
-        "wires": []
     },
     {
         "id": "f9971550.66b808",
