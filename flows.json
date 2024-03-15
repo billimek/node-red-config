@@ -14681,7 +14681,7 @@
         "id": "35b6ca06a561d9cc",
         "type": "api-current-state",
         "z": "af228686.65c8a8",
-        "name": "",
+        "name": "deck lights on?",
         "server": "8b52884a.b76658",
         "version": 3,
         "outputs": 2,
@@ -14713,7 +14713,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 510,
+        "x": 460,
         "y": 2340,
         "wires": [
             [
@@ -14765,8 +14765,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 780,
-        "y": 2420,
+        "x": 820,
+        "y": 2340,
         "wires": []
     },
     {
