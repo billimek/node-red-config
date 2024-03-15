@@ -14634,7 +14634,7 @@
         "outputInitially": false,
         "stateType": "str",
         "enableInput": false,
-        "x": 230,
+        "x": 150,
         "y": 2220,
         "wires": [
             [
@@ -14657,7 +14657,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
+        "x": 760,
         "y": 2220,
         "wires": []
     },
@@ -14713,7 +14713,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 620,
+        "x": 500,
         "y": 2220,
         "wires": [
             [
