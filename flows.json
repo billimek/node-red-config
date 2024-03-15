@@ -14627,7 +14627,7 @@
                 "propertyValue": "new_state.state",
                 "comparatorType": "is",
                 "comparatorValueDatatype": "str",
-                "comparatorValue": ""
+                "comparatorValue": "on"
             }
         ],
         "customOutputs": [],
