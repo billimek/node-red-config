@@ -14745,8 +14745,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 220,
-        "y": 2300,
+        "x": 260,
+        "y": 2340,
         "wires": [
             [
                 "35b6ca06a561d9cc"
@@ -14766,7 +14766,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 840,
+        "x": 760,
         "y": 2340,
         "wires": []
     },
@@ -14783,8 +14783,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 2480,
+        "x": 760,
+        "y": 2380,
         "wires": []
     },
     {
