@@ -14519,6 +14519,94 @@
         ]
     },
     {
+        "id": "f80b356f7f4fd854",
+        "type": "server-state-changed",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "server": "8b52884a.b76658",
+        "version": 5,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "binary_sensor.porch_person_occupancy",
+        "entityIdType": "exact",
+        "outputInitially": false,
+        "stateType": "str",
+        "ifState": "Detected",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputOnlyOnStateChange": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 250,
+        "y": 2160,
+        "wires": [
+            [
+                "6c54fa908e648a2c"
+            ],
+            [
+                "863c65661c9b9b90"
+            ]
+        ]
+    },
+    {
+        "id": "6c54fa908e648a2c",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 2100,
+        "wires": []
+    },
+    {
+        "id": "863c65661c9b9b90",
+        "type": "debug",
+        "z": "af228686.65c8a8",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 2160,
+        "wires": []
+    },
+    {
         "id": "f9971550.66b808",
         "type": "poll-state",
         "z": "2fad043e.317c8c",
