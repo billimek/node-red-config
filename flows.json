@@ -5807,7 +5807,7 @@
             }
         ],
         "customOutputs": [],
-        "outputInitially": false,
+        "outputInitially": true,
         "stateType": "num",
         "enableInput": true,
         "x": 310,
