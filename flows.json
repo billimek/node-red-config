@@ -5822,35 +5822,6 @@
         ]
     },
     {
-        "id": "f8549ff1c795cd55",
-        "type": "inject",
-        "z": "4aedf9e8.044e08",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
-        "y": 2000,
-        "wires": [
-            [
-                "33831ac6450382c2"
-            ]
-        ]
-    },
-    {
         "id": "46cdb220.d99dbc",
         "type": "mqtt out",
         "z": "9143c7f2.16df18",
