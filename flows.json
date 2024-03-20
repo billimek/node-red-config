@@ -10563,7 +10563,7 @@
         "id": "834f3964.92aed8",
         "type": "trigger-state",
         "z": "75b62c93.dd5d84",
-        "name": "tesla away (>50m)",
+        "name": "tesla away (>200ft)",
         "server": "8b52884a.b76658",
         "version": 4,
         "inputs": 1,
@@ -10580,7 +10580,7 @@
                 "propertyValue": "new_state.state",
                 "comparatorType": ">",
                 "comparatorValueDatatype": "num",
-                "comparatorValue": "50"
+                "comparatorValue": "200"
             },
             {
                 "targetType": "this_entity",
@@ -10589,7 +10589,7 @@
                 "propertyValue": "old_state.state",
                 "comparatorType": "<=",
                 "comparatorValueDatatype": "num",
-                "comparatorValue": "50"
+                "comparatorValue": "200"
             }
         ],
         "customOutputs": [],
@@ -10609,7 +10609,7 @@
         "id": "32d7f.835aa2818",
         "type": "trigger-state",
         "z": "75b62c93.dd5d84",
-        "name": "tesla home (<=100m)",
+        "name": "tesla home (<=350ft)",
         "server": "8b52884a.b76658",
         "version": 4,
         "inputs": 1,
@@ -10626,7 +10626,7 @@
                 "propertyValue": "new_state.state",
                 "comparatorType": "<=",
                 "comparatorValueDatatype": "num",
-                "comparatorValue": "100"
+                "comparatorValue": "350"
             },
             {
                 "targetType": "this_entity",
@@ -10635,7 +10635,7 @@
                 "propertyValue": "old_state.state",
                 "comparatorType": ">",
                 "comparatorValueDatatype": "num",
-                "comparatorValue": "100"
+                "comparatorValue": "350"
             }
         ],
         "customOutputs": [],
@@ -10653,7 +10653,7 @@
                 "value": ""
             }
         ],
-        "x": 130,
+        "x": 120,
         "y": 1340,
         "wires": [
             [
@@ -12088,7 +12088,7 @@
         "id": "66536cb612d3be87",
         "type": "trigger-state",
         "z": "75b62c93.dd5d84",
-        "name": "tesla2 away (>50m)",
+        "name": "tesla2 away (>200ft)",
         "server": "8b52884a.b76658",
         "version": 4,
         "inputs": 1,
@@ -12105,7 +12105,7 @@
                 "propertyValue": "new_state.state",
                 "comparatorType": ">",
                 "comparatorValueDatatype": "num",
-                "comparatorValue": "50"
+                "comparatorValue": "200"
             },
             {
                 "targetType": "this_entity",
@@ -12114,7 +12114,7 @@
                 "propertyValue": "old_state.state",
                 "comparatorType": "<=",
                 "comparatorValueDatatype": "num",
-                "comparatorValue": "50"
+                "comparatorValue": "200"
             }
         ],
         "customOutputs": [],
@@ -12145,7 +12145,7 @@
         "id": "bcb174cd97f93313",
         "type": "trigger-state",
         "z": "75b62c93.dd5d84",
-        "name": "tesla2 home (<=100m)",
+        "name": "tesla2 home (<=350m)",
         "server": "8b52884a.b76658",
         "version": 4,
         "inputs": 1,
@@ -12162,7 +12162,7 @@
                 "propertyValue": "new_state.state",
                 "comparatorType": "<=",
                 "comparatorValueDatatype": "num",
-                "comparatorValue": "100"
+                "comparatorValue": "350"
             },
             {
                 "targetType": "this_entity",
@@ -12171,7 +12171,7 @@
                 "propertyValue": "old_state.state",
                 "comparatorType": ">",
                 "comparatorValueDatatype": "num",
-                "comparatorValue": "100"
+                "comparatorValue": "350"
             }
         ],
         "customOutputs": [],
