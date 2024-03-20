@@ -8836,7 +8836,7 @@
                 "targetValue": "",
                 "propertyType": "current_state",
                 "propertyValue": "new_state.state",
-                "comparatorType": "is",
+                "comparatorType": "is_not",
                 "comparatorValueDatatype": "str",
                 "comparatorValue": "Home"
             }
