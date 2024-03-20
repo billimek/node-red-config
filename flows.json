@@ -5742,86 +5742,6 @@
         "wires": []
     },
     {
-        "id": "1f5bb02ce96321d1",
-        "type": "debug",
-        "z": "4aedf9e8.044e08",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 500,
-        "y": 2140,
-        "wires": []
-    },
-    {
-        "id": "620ce3b44de8cd66",
-        "type": "debug",
-        "z": "4aedf9e8.044e08",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 500,
-        "y": 2040,
-        "wires": []
-    },
-    {
-        "id": "33831ac6450382c2",
-        "type": "trigger-state",
-        "z": "4aedf9e8.044e08",
-        "name": "home -> not_home",
-        "server": "8b52884a.b76658",
-        "version": 4,
-        "inputs": 1,
-        "outputs": 2,
-        "exposeAsEntityConfig": "",
-        "entityId": "zone.home",
-        "entityIdType": "exact",
-        "debugEnabled": false,
-        "constraints": [
-            {
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "current_state",
-                "propertyValue": "new_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "num",
-                "comparatorValue": "0"
-            },
-            {
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "previous_state",
-                "propertyValue": "old_state.state",
-                "comparatorType": ">",
-                "comparatorValueDatatype": "num",
-                "comparatorValue": "0"
-            }
-        ],
-        "customOutputs": [],
-        "outputInitially": true,
-        "stateType": "num",
-        "enableInput": true,
-        "x": 310,
-        "y": 2060,
-        "wires": [
-            [
-                "620ce3b44de8cd66"
-            ],
-            [
-                "1f5bb02ce96321d1"
-            ]
-        ]
-    },
-    {
         "id": "46cdb220.d99dbc",
         "type": "mqtt out",
         "z": "9143c7f2.16df18",
@@ -8282,6 +8202,128 @@
                 "20a6330cc73c1a7c"
             ],
             []
+        ]
+    },
+    {
+        "id": "1f5bb02ce96321d1",
+        "type": "debug",
+        "z": "9143c7f2.16df18",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 3120,
+        "wires": []
+    },
+    {
+        "id": "620ce3b44de8cd66",
+        "type": "debug",
+        "z": "9143c7f2.16df18",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 3080,
+        "wires": []
+    },
+    {
+        "id": "33831ac6450382c2",
+        "type": "trigger-state",
+        "z": "9143c7f2.16df18",
+        "name": "home -> not_home",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "inputs": 1,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "zone.home",
+        "entityIdType": "exact",
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "0"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
+                "comparatorType": ">",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "0"
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": true,
+        "stateType": "num",
+        "enableInput": true,
+        "x": 230,
+        "y": 2820,
+        "wires": [
+            [
+                "620ce3b44de8cd66",
+                "7e70ea5c6ea86c16"
+            ],
+            [
+                "1f5bb02ce96321d1",
+                "b47589dc19379f69"
+            ]
+        ]
+    },
+    {
+        "id": "7e70ea5c6ea86c16",
+        "type": "function",
+        "z": "9143c7f2.16df18",
+        "name": "Format iOS message",
+        "func": "var title = \"(test) Presence\"\nvar message = \"everyone left home\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n    }\n}\nreturn [ msg ];",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 2800,
+        "wires": [
+            [
+                "31b8c785.cc1828"
+            ]
+        ]
+    },
+    {
+        "id": "b47589dc19379f69",
+        "type": "function",
+        "z": "9143c7f2.16df18",
+        "name": "Format iOS message",
+        "func": "var title = \"(test) Presence\"\nvar message = \"someone came home\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n    }\n}\nreturn [ msg ];",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 2840,
+        "wires": [
+            [
+                "31b8c785.cc1828"
+            ]
         ]
     },
     {
