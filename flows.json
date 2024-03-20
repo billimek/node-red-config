@@ -8216,8 +8216,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 500,
-        "y": 3120,
+        "x": 440,
+        "y": 3320,
         "wires": []
     },
     {
@@ -8232,8 +8232,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 520,
-        "y": 3080,
+        "x": 440,
+        "y": 3260,
         "wires": []
     },
     {
@@ -8330,7 +8330,7 @@
         "id": "30603c661cdc3cab",
         "type": "trigger-state",
         "z": "9143c7f2.16df18",
-        "name": "",
+        "name": "doorbell ring",
         "server": "8b52884a.b76658",
         "version": 4,
         "inputs": 0,
@@ -8354,14 +8354,16 @@
         "outputInitially": true,
         "stateType": "str",
         "enableInput": false,
-        "x": 340,
+        "x": 210,
         "y": 2900,
         "wires": [
             [
-                "2402b5f9e46543a4"
+                "2402b5f9e46543a4",
+                "e59f3611cbf1944e"
             ],
             [
-                "2a1b42e182e54b7d"
+                "2a1b42e182e54b7d",
+                "64bbf0faeab57433"
             ]
         ]
     },
@@ -8377,8 +8379,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 840,
-        "y": 2920,
+        "x": 440,
+        "y": 3440,
         "wires": []
     },
     {
@@ -8393,9 +8395,162 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 840,
-        "y": 2980,
+        "x": 440,
+        "y": 3380,
         "wires": []
+    },
+    {
+        "id": "ed044d80887bed6f",
+        "type": "trigger-state",
+        "z": "9143c7f2.16df18",
+        "name": "doorbel - person detected",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "inputs": 0,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "binary_sensor.front_door_smart_motion_human",
+        "entityIdType": "exact",
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "on"
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": true,
+        "stateType": "str",
+        "enableInput": false,
+        "x": 250,
+        "y": 2980,
+        "wires": [
+            [
+                "b798dd75e539667a",
+                "c14dac006e1e801d"
+            ],
+            [
+                "a39249209f6003ea",
+                "de22b79ddeed17d4"
+            ]
+        ]
+    },
+    {
+        "id": "a39249209f6003ea",
+        "type": "debug",
+        "z": "9143c7f2.16df18",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 3560,
+        "wires": []
+    },
+    {
+        "id": "b798dd75e539667a",
+        "type": "debug",
+        "z": "9143c7f2.16df18",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 3500,
+        "wires": []
+    },
+    {
+        "id": "e59f3611cbf1944e",
+        "type": "function",
+        "z": "9143c7f2.16df18",
+        "name": "Format iOS message",
+        "func": "var title = \"(test) doorbell\"\nvar message = \"doorbell rang\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n    }\n}\nreturn [ msg ];",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 2900,
+        "wires": [
+            [
+                "31b8c785.cc1828"
+            ]
+        ]
+    },
+    {
+        "id": "64bbf0faeab57433",
+        "type": "function",
+        "z": "9143c7f2.16df18",
+        "name": "Format iOS message",
+        "func": "var title = \"(test) doorbell\"\nvar message = \"doorbell not rang?\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n    }\n}\nreturn [ msg ];",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 2940,
+        "wires": [
+            [
+                "31b8c785.cc1828"
+            ]
+        ]
+    },
+    {
+        "id": "c14dac006e1e801d",
+        "type": "function",
+        "z": "9143c7f2.16df18",
+        "name": "Format iOS message",
+        "func": "var title = \"(test) doorbell\"\nvar message = \"doorbell person detected\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n    }\n}\nreturn [ msg ];",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 3000,
+        "wires": [
+            [
+                "31b8c785.cc1828"
+            ]
+        ]
+    },
+    {
+        "id": "de22b79ddeed17d4",
+        "type": "function",
+        "z": "9143c7f2.16df18",
+        "name": "Format iOS message",
+        "func": "var title = \"(test) doorbell\"\nvar message = \"doorbell person not detected?\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n    }\n}\nreturn [ msg ];",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 3040,
+        "wires": [
+            [
+                "31b8c785.cc1828"
+            ]
+        ]
     },
     {
         "id": "e2f343b.68adbc",
