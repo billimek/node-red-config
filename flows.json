@@ -8719,7 +8719,7 @@
         "outputs": 2,
         "halt_if": "Home",
         "halt_if_type": "str",
-        "halt_if_compare": "is",
+        "halt_if_compare": "is_not",
         "entity_id": "person.jeff_billimek",
         "state_type": "str",
         "blockInputOverrides": false,
