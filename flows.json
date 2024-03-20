@@ -8836,9 +8836,18 @@
                 "targetValue": "",
                 "propertyType": "current_state",
                 "propertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "home"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
                 "comparatorType": "is_not",
                 "comparatorValueDatatype": "str",
-                "comparatorValue": "Home"
+                "comparatorValue": "home"
             }
         ],
         "customOutputs": [],
