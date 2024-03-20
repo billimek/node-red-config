@@ -8829,7 +8829,7 @@
         "exposeAsEntityConfig": "",
         "entityId": "person.jeff_billimek",
         "entityIdType": "exact",
-        "debugEnabled": false,
+        "debugEnabled": true,
         "constraints": [
             {
                 "targetType": "this_entity",
