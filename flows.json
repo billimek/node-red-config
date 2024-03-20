@@ -8838,7 +8838,7 @@
                 "propertyValue": "new_state.state",
                 "comparatorType": "is",
                 "comparatorValueDatatype": "str",
-                "comparatorValue": "home"
+                "comparatorValue": "Home"
             }
         ],
         "customOutputs": [],
