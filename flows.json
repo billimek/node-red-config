@@ -4178,6 +4178,7 @@
         "id": "71941591.c8558c",
         "type": "trigger-state",
         "z": "4aedf9e8.044e08",
+        "d": true,
         "name": "home -> not_home",
         "server": "8b52884a.b76658",
         "version": 4,
@@ -4189,7 +4190,6 @@
         "debugEnabled": false,
         "constraints": [
             {
-                "id": "m9qiqujd83",
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "current_state",
@@ -4199,7 +4199,6 @@
                 "comparatorValue": "not_home"
             },
             {
-                "id": "wl8tjeww34",
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "previous_state",
@@ -4325,6 +4324,7 @@
         "id": "d530f3f1.e8195",
         "type": "trigger-state",
         "z": "4aedf9e8.044e08",
+        "d": true,
         "name": "not_home -> home",
         "server": "8b52884a.b76658",
         "version": 4,
@@ -4336,7 +4336,6 @@
         "debugEnabled": false,
         "constraints": [
             {
-                "id": "n16bzdqj6p",
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "current_state",
@@ -4346,7 +4345,6 @@
                 "comparatorValue": "home"
             },
             {
-                "id": "1cv3kmbt40v",
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "previous_state",
@@ -5742,6 +5740,98 @@
         "wires": []
     },
     {
+        "id": "d7a84dba2d2c3d57",
+        "type": "trigger-state",
+        "z": "4aedf9e8.044e08",
+        "name": "home -> not_home",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "inputs": 1,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "zone.home",
+        "entityIdType": "exact",
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "0"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
+                "comparatorType": ">",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "0"
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": true,
+        "stateType": "num",
+        "enableInput": true,
+        "x": 130,
+        "y": 300,
+        "wires": [
+            [
+                "ccda8ca7.269df"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "61c61524d87c8db9",
+        "type": "trigger-state",
+        "z": "4aedf9e8.044e08",
+        "name": "not_home -> home",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "inputs": 1,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "zone.home",
+        "entityIdType": "exact",
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": ">",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "0"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "0"
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": true,
+        "stateType": "num",
+        "enableInput": true,
+        "x": 130,
+        "y": 700,
+        "wires": [
+            [
+                "7f300b61.5a4044"
+            ],
+            []
+        ]
+    },
+    {
         "id": "46cdb220.d99dbc",
         "type": "mqtt out",
         "z": "9143c7f2.16df18",
@@ -6769,7 +6859,11 @@
         "name": "Format iOS message",
         "func": "var title = \"Presence\"\nvar status = msg.payload;\nvar message = \"\"\n\nif (status == \"home\") {\n    message = \"Someone came home\"\n    msg.payload = {\n        \"data\": {\n            message,\n            title,\n        }\n    }\n} else {\n    message = \"Everyone has left home\"\n    msg.payload = {\n        \"data\": {\n            message,\n            title,\n            data: {\n                push: {\n                    sound: \"US-EN-Morgan-Freeman-Welcome-Home.wav\"\n                }\n            }\n        }\n    }    \n}\nreturn [ msg ];",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 580,
         "y": 1660,
         "wires": [
@@ -8103,6 +8197,7 @@
         "id": "3458d66bc0af61cd",
         "type": "trigger-state",
         "z": "9143c7f2.16df18",
+        "d": true,
         "name": "not_home -> home",
         "server": "8b52884a.b76658",
         "version": 4,
@@ -8160,6 +8255,7 @@
         "id": "bae82c5f4b24527a",
         "type": "trigger-state",
         "z": "9143c7f2.16df18",
+        "d": true,
         "name": "home -> not_home",
         "server": "8b52884a.b76658",
         "version": 4,
@@ -8171,7 +8267,6 @@
         "debugEnabled": false,
         "constraints": [
             {
-                "id": "m9qiqujd83",
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "current_state",
@@ -8181,7 +8276,6 @@
                 "comparatorValue": "not_home"
             },
             {
-                "id": "wl8tjeww34",
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "previous_state",
@@ -8741,6 +8835,98 @@
         "x": 640,
         "y": 3300,
         "wires": []
+    },
+    {
+        "id": "1daa02da8a4ef03e",
+        "type": "trigger-state",
+        "z": "9143c7f2.16df18",
+        "name": "home -> not_home",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "inputs": 1,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "zone.home",
+        "entityIdType": "exact",
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "0"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
+                "comparatorType": ">",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "0"
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": true,
+        "stateType": "num",
+        "enableInput": true,
+        "x": 230,
+        "y": 2560,
+        "wires": [
+            [
+                "20a6330cc73c1a7c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "f8c0aa3d60164b8f",
+        "type": "trigger-state",
+        "z": "9143c7f2.16df18",
+        "name": "not_home -> home",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "inputs": 1,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "zone.home",
+        "entityIdType": "exact",
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": ">",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "0"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "0"
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": true,
+        "stateType": "num",
+        "enableInput": true,
+        "x": 230,
+        "y": 2740,
+        "wires": [
+            [
+                "521868ea42064502"
+            ],
+            []
+        ]
     },
     {
         "id": "e2f343b.68adbc",
@@ -12103,6 +12289,7 @@
         "id": "6f0bb06a6dda792f",
         "type": "trigger-state",
         "z": "75b62c93.dd5d84",
+        "d": true,
         "name": "home -> not_home",
         "server": "8b52884a.b76658",
         "version": 4,
@@ -12114,7 +12301,6 @@
         "debugEnabled": false,
         "constraints": [
             {
-                "id": "m9qiqujd83",
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "current_state",
@@ -12124,7 +12310,6 @@
                 "comparatorValue": "not_home"
             },
             {
-                "id": "wl8tjeww34",
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "previous_state",
@@ -12138,8 +12323,8 @@
         "outputInitially": false,
         "stateType": "str",
         "enableInput": true,
-        "x": 130,
-        "y": 2220,
+        "x": 110,
+        "y": 1960,
         "wires": [
             [
                 "1c5cda98c18e2928",
@@ -12347,9 +12532,58 @@
         ]
     },
     {
+        "id": "2ec54d77171f37d6",
+        "type": "trigger-state",
+        "z": "75b62c93.dd5d84",
+        "name": "home -> not_home",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "inputs": 1,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "zone.home",
+        "entityIdType": "exact",
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "0"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
+                "comparatorType": ">",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "0"
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": true,
+        "stateType": "num",
+        "enableInput": true,
+        "x": 110,
+        "y": 2040,
+        "wires": [
+            [
+                "bb6adeb259874fe3"
+            ],
+            [
+                "1c5cda98c18e2928"
+            ]
+        ]
+    },
+    {
         "id": "dd155455.bc9c28",
         "type": "trigger-state",
         "z": "af228686.65c8a8",
+        "d": true,
         "name": "not_home -> home",
         "server": "8b52884a.b76658",
         "version": 4,
@@ -12364,19 +12598,19 @@
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "current_state",
+                "propertyValue": "new_state.state",
                 "comparatorType": "is",
                 "comparatorValueDatatype": "str",
-                "comparatorValue": "home",
-                "propertyValue": "new_state.state"
+                "comparatorValue": "home"
             },
             {
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
                 "comparatorType": "is",
                 "comparatorValueDatatype": "str",
-                "comparatorValue": "not_home",
-                "propertyValue": "old_state.state"
+                "comparatorValue": "not_home"
             }
         ],
         "customOutputs": [],
@@ -12445,9 +12679,7 @@
         "x": 110,
         "y": 300,
         "wires": [
-            [
-                "7dd47d21.519634"
-            ],
+            [],
             []
         ]
     },
@@ -15135,6 +15367,98 @@
             [
                 "444fce21.363b4",
                 "6136719f.1718d"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "02441480b1296e17",
+        "type": "trigger-state",
+        "z": "af228686.65c8a8",
+        "name": "home -> not_home",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "inputs": 1,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "zone.home",
+        "entityIdType": "exact",
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "0"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
+                "comparatorType": ">",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "0"
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": true,
+        "stateType": "num",
+        "enableInput": true,
+        "x": 330,
+        "y": 300,
+        "wires": [
+            [
+                "7dd47d21.519634"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "7becbc494ab386f2",
+        "type": "trigger-state",
+        "z": "af228686.65c8a8",
+        "name": "not_home -> home",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "inputs": 1,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "zone.home",
+        "entityIdType": "exact",
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": ">",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "0"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "0"
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": true,
+        "stateType": "num",
+        "enableInput": true,
+        "x": 110,
+        "y": 140,
+        "wires": [
+            [
+                "b98bed87.b9424"
             ],
             []
         ]
