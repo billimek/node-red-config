@@ -10569,12 +10569,11 @@
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "proximity.home_tesla",
+        "entityId": "sensor.home_tesla_location_distance",
         "entityIdType": "exact",
         "debugEnabled": false,
         "constraints": [
             {
-                "id": "vuzmqkcrm4",
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "current_state",
@@ -10584,7 +10583,6 @@
                 "comparatorValue": "50"
             },
             {
-                "id": "vgcke8epixl",
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "previous_state",
@@ -10617,7 +10615,7 @@
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "proximity.home_tesla",
+        "entityId": "sensor.home_tesla_location_distance",
         "entityIdType": "exact",
         "debugEnabled": false,
         "constraints": [
