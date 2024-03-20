@@ -8327,6 +8327,77 @@
         ]
     },
     {
+        "id": "30603c661cdc3cab",
+        "type": "trigger-state",
+        "z": "9143c7f2.16df18",
+        "name": "",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "inputs": 0,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "binary_sensor.front_door_button_pressed",
+        "entityIdType": "exact",
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "on"
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": true,
+        "stateType": "str",
+        "enableInput": false,
+        "x": 340,
+        "y": 2900,
+        "wires": [
+            [
+                "2402b5f9e46543a4"
+            ],
+            [
+                "2a1b42e182e54b7d"
+            ]
+        ]
+    },
+    {
+        "id": "2402b5f9e46543a4",
+        "type": "debug",
+        "z": "9143c7f2.16df18",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 2920,
+        "wires": []
+    },
+    {
+        "id": "2a1b42e182e54b7d",
+        "type": "debug",
+        "z": "9143c7f2.16df18",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 2980,
+        "wires": []
+    },
+    {
         "id": "e2f343b.68adbc",
         "type": "api-call-service",
         "z": "75b62c93.dd5d84",
