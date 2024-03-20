@@ -8818,6 +8818,45 @@
         "wires": []
     },
     {
+        "id": "cf6f9f1481fa12b3",
+        "type": "trigger-state",
+        "z": "9143c7f2.16df18",
+        "name": "",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "inputs": 0,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "person.jeff_billimek",
+        "entityIdType": "exact",
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "home"
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": true,
+        "stateType": "str",
+        "enableInput": false,
+        "x": 1390,
+        "y": 2260,
+        "wires": [
+            [
+                "f6119b98a39778ed"
+            ],
+            [
+                "c5dd70375bf65768"
+            ]
+        ]
+    },
+    {
         "id": "e2f343b.68adbc",
         "type": "api-call-service",
         "z": "75b62c93.dd5d84",
