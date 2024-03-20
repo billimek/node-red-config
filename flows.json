@@ -8553,6 +8553,119 @@
         ]
     },
     {
+        "id": "f44258a08386b4ac",
+        "type": "trigger-state",
+        "z": "9143c7f2.16df18",
+        "name": "doorbel - region detected",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "inputs": 0,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "binary_sensor.front_door_cross_region_detection",
+        "entityIdType": "exact",
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "on"
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": true,
+        "stateType": "str",
+        "enableInput": false,
+        "x": 250,
+        "y": 3100,
+        "wires": [
+            [
+                "9da5f0d41ee98b04",
+                "cad4e0b681f61ad9"
+            ],
+            [
+                "e18f8dcdf97650c2",
+                "e0b6867cdcf7b9de"
+            ]
+        ]
+    },
+    {
+        "id": "e18f8dcdf97650c2",
+        "type": "debug",
+        "z": "9143c7f2.16df18",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 3680,
+        "wires": []
+    },
+    {
+        "id": "9da5f0d41ee98b04",
+        "type": "debug",
+        "z": "9143c7f2.16df18",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 3620,
+        "wires": []
+    },
+    {
+        "id": "cad4e0b681f61ad9",
+        "type": "function",
+        "z": "9143c7f2.16df18",
+        "name": "Format iOS message",
+        "func": "var title = \"(test) doorbell\"\nvar message = \"doorbell region detected\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n    }\n}\nreturn [ msg ];",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 3100,
+        "wires": [
+            [
+                "31b8c785.cc1828"
+            ]
+        ]
+    },
+    {
+        "id": "e0b6867cdcf7b9de",
+        "type": "function",
+        "z": "9143c7f2.16df18",
+        "name": "Format iOS message",
+        "func": "var title = \"(test) doorbell\"\nvar message = \"doorbell region not detected?\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n    }\n}\nreturn [ msg ];",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 3140,
+        "wires": [
+            [
+                "31b8c785.cc1828"
+            ]
+        ]
+    },
+    {
         "id": "e2f343b.68adbc",
         "type": "api-call-service",
         "z": "75b62c93.dd5d84",
