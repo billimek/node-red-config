@@ -8845,8 +8845,8 @@
         "outputInitially": true,
         "stateType": "str",
         "enableInput": false,
-        "x": 1390,
-        "y": 2260,
+        "x": 1410,
+        "y": 1920,
         "wires": [
             [
                 "f6119b98a39778ed"
