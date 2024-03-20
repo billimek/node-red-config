@@ -8299,38 +8299,6 @@
         ]
     },
     {
-        "id": "1f5bb02ce96321d1",
-        "type": "debug",
-        "z": "9143c7f2.16df18",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 440,
-        "y": 3320,
-        "wires": []
-    },
-    {
-        "id": "620ce3b44de8cd66",
-        "type": "debug",
-        "z": "9143c7f2.16df18",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 440,
-        "y": 3280,
-        "wires": []
-    },
-    {
         "id": "33831ac6450382c2",
         "type": "trigger-state",
         "z": "9143c7f2.16df18",
@@ -8370,12 +8338,8 @@
         "x": 230,
         "y": 2800,
         "wires": [
-            [
-                "620ce3b44de8cd66"
-            ],
-            [
-                "1f5bb02ce96321d1"
-            ]
+            [],
+            []
         ]
     },
     {
@@ -8446,49 +8410,14 @@
         "outputInitially": true,
         "stateType": "str",
         "enableInput": false,
-        "x": 210,
-        "y": 2920,
+        "x": 250,
+        "y": 1600,
         "wires": [
             [
-                "e59f3611cbf1944e",
-                "2a1b42e182e54b7d"
+                "e59f3611cbf1944e"
             ],
-            [
-                "2402b5f9e46543a4"
-            ]
+            []
         ]
-    },
-    {
-        "id": "2402b5f9e46543a4",
-        "type": "debug",
-        "z": "9143c7f2.16df18",
-        "name": "debug 9",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 440,
-        "y": 3440,
-        "wires": []
-    },
-    {
-        "id": "2a1b42e182e54b7d",
-        "type": "debug",
-        "z": "9143c7f2.16df18",
-        "name": "debug 10",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 440,
-        "y": 3400,
-        "wires": []
     },
     {
         "id": "ed044d80887bed6f",
@@ -8522,52 +8451,17 @@
         "y": 2980,
         "wires": [
             [
-                "b798dd75e539667a",
                 "c14dac006e1e801d"
             ],
-            [
-                "a39249209f6003ea"
-            ]
+            []
         ]
-    },
-    {
-        "id": "a39249209f6003ea",
-        "type": "debug",
-        "z": "9143c7f2.16df18",
-        "name": "debug 11",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 440,
-        "y": 3560,
-        "wires": []
-    },
-    {
-        "id": "b798dd75e539667a",
-        "type": "debug",
-        "z": "9143c7f2.16df18",
-        "name": "debug 12",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 440,
-        "y": 3520,
-        "wires": []
     },
     {
         "id": "e59f3611cbf1944e",
         "type": "function",
         "z": "9143c7f2.16df18",
         "name": "Format iOS message",
-        "func": "var title = \"(test) doorbell\"\nvar message = \"doorbell rang\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n    }\n}\nreturn [ msg ];",
+        "func": "var title = \"Doorbell\"\nvar message = \"Someone rang the doorbell!\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n    }\n}\nreturn [ msg ];",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -8575,7 +8469,7 @@
         "finalize": "",
         "libs": [],
         "x": 580,
-        "y": 2900,
+        "y": 1600,
         "wires": [
             [
                 "31b8c785.cc1828"
@@ -8623,26 +8517,6 @@
         ]
     },
     {
-        "id": "de22b79ddeed17d4",
-        "type": "function",
-        "z": "9143c7f2.16df18",
-        "name": "Format iOS message",
-        "func": "var title = \"(test) doorbell\"\nvar message = \"doorbell person not detected?\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n    }\n}\nreturn [ msg ];",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 580,
-        "y": 3040,
-        "wires": [
-            [
-                "31b8c785.cc1828"
-            ]
-        ]
-    },
-    {
         "id": "f44258a08386b4ac",
         "type": "trigger-state",
         "z": "9143c7f2.16df18",
@@ -8674,45 +8548,10 @@
         "y": 3100,
         "wires": [
             [
-                "9da5f0d41ee98b04",
                 "cad4e0b681f61ad9"
             ],
-            [
-                "e18f8dcdf97650c2"
-            ]
+            []
         ]
-    },
-    {
-        "id": "e18f8dcdf97650c2",
-        "type": "debug",
-        "z": "9143c7f2.16df18",
-        "name": "debug 13",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 440,
-        "y": 3680,
-        "wires": []
-    },
-    {
-        "id": "9da5f0d41ee98b04",
-        "type": "debug",
-        "z": "9143c7f2.16df18",
-        "name": "debug 14",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 440,
-        "y": 3640,
-        "wires": []
     },
     {
         "id": "cad4e0b681f61ad9",
@@ -8728,26 +8567,6 @@
         "libs": [],
         "x": 580,
         "y": 3100,
-        "wires": [
-            [
-                "31b8c785.cc1828"
-            ]
-        ]
-    },
-    {
-        "id": "e0b6867cdcf7b9de",
-        "type": "function",
-        "z": "9143c7f2.16df18",
-        "name": "Format iOS message",
-        "func": "var title = \"(test) doorbell\"\nvar message = \"doorbell region not detected?\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n    }\n}\nreturn [ msg ];",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 580,
-        "y": 3140,
         "wires": [
             [
                 "31b8c785.cc1828"
@@ -8794,45 +8613,9 @@
         "x": 230,
         "y": 2860,
         "wires": [
-            [
-                "17700984ce680f93"
-            ],
-            [
-                "429e60dab648deb7"
-            ]
+            [],
+            []
         ]
-    },
-    {
-        "id": "17700984ce680f93",
-        "type": "debug",
-        "z": "9143c7f2.16df18",
-        "name": "debug 15",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 640,
-        "y": 3260,
-        "wires": []
-    },
-    {
-        "id": "429e60dab648deb7",
-        "type": "debug",
-        "z": "9143c7f2.16df18",
-        "name": "debug 16",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 640,
-        "y": 3300,
-        "wires": []
     },
     {
         "id": "1daa02da8a4ef03e",
@@ -8925,6 +8708,114 @@
             ],
             []
         ]
+    },
+    {
+        "id": "493d2d364b0b0f87",
+        "type": "api-current-state",
+        "z": "9143c7f2.16df18",
+        "name": "",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "Home",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "person.jeff_billimek",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 1360,
+        "y": 2180,
+        "wires": [
+            [
+                "f6119b98a39778ed"
+            ],
+            [
+                "c5dd70375bf65768"
+            ]
+        ]
+    },
+    {
+        "id": "5cb18a3440cd907b",
+        "type": "inject",
+        "z": "9143c7f2.16df18",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 980,
+        "y": 2200,
+        "wires": [
+            [
+                "493d2d364b0b0f87"
+            ]
+        ]
+    },
+    {
+        "id": "f6119b98a39778ed",
+        "type": "debug",
+        "z": "9143c7f2.16df18",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1740,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "c5dd70375bf65768",
+        "type": "debug",
+        "z": "9143c7f2.16df18",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1700,
+        "y": 2180,
+        "wires": []
     },
     {
         "id": "e2f343b.68adbc",
