@@ -8274,15 +8274,14 @@
         "stateType": "num",
         "enableInput": true,
         "x": 230,
-        "y": 2820,
+        "y": 2800,
         "wires": [
             [
                 "620ce3b44de8cd66",
                 "7e70ea5c6ea86c16"
             ],
             [
-                "1f5bb02ce96321d1",
-                "b47589dc19379f69"
+                "1f5bb02ce96321d1"
             ]
         ]
     },
@@ -8355,7 +8354,7 @@
         "stateType": "str",
         "enableInput": false,
         "x": 210,
-        "y": 2900,
+        "y": 2920,
         "wires": [
             [
                 "2402b5f9e46543a4",
@@ -8661,6 +8660,87 @@
                 "31b8c785.cc1828"
             ]
         ]
+    },
+    {
+        "id": "34b6638dfb7b02c2",
+        "type": "trigger-state",
+        "z": "9143c7f2.16df18",
+        "name": "not_home -> home",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "inputs": 1,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "zone.home",
+        "entityIdType": "exact",
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": ">",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "0"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "0"
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": true,
+        "stateType": "num",
+        "enableInput": true,
+        "x": 230,
+        "y": 2860,
+        "wires": [
+            [
+                "b47589dc19379f69",
+                "17700984ce680f93"
+            ],
+            [
+                "429e60dab648deb7"
+            ]
+        ]
+    },
+    {
+        "id": "17700984ce680f93",
+        "type": "debug",
+        "z": "9143c7f2.16df18",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 3260,
+        "wires": []
+    },
+    {
+        "id": "429e60dab648deb7",
+        "type": "debug",
+        "z": "9143c7f2.16df18",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 3300,
+        "wires": []
     },
     {
         "id": "e2f343b.68adbc",
