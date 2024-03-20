@@ -12094,7 +12094,7 @@
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "proximity.home_tesla2",
+        "entityId": "sensor.home_tesla2_location_distance",
         "entityIdType": "exact",
         "debugEnabled": false,
         "constraints": [
@@ -12102,19 +12102,19 @@
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "current_state",
+                "propertyValue": "new_state.state",
                 "comparatorType": ">",
                 "comparatorValueDatatype": "num",
-                "comparatorValue": "50",
-                "propertyValue": "new_state.state"
+                "comparatorValue": "50"
             },
             {
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
                 "comparatorType": "<=",
                 "comparatorValueDatatype": "num",
-                "comparatorValue": "50",
-                "propertyValue": "old_state.state"
+                "comparatorValue": "50"
             }
         ],
         "customOutputs": [],
@@ -12151,7 +12151,7 @@
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "proximity.home_tesla2",
+        "entityId": "sensor.home_tesla2_location_distance",
         "entityIdType": "exact",
         "debugEnabled": false,
         "constraints": [
