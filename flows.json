@@ -6858,7 +6858,7 @@
         "type": "function",
         "z": "9143c7f2.16df18",
         "name": "Format iOS message",
-        "func": "var title = \"Presence\"\nvar status = msg.payload;\nvar message = \"\"\n\nif (status == \"home\") {\n    message = \"Someone came home\"\n    msg.payload = {\n        \"data\": {\n            message,\n            title,\n        }\n    }\n} else {\n    message = \"Everyone has left home\"\n    msg.payload = {\n        \"data\": {\n            message,\n            title,\n            data: {\n                push: {\n                    sound: \"US-EN-Morgan-Freeman-Welcome-Home.wav\"\n                }\n            }\n        }\n    }    \n}\nreturn [ msg ];",
+        "func": "var title = \"Presence\"\nvar status = msg.payload;\nvar message = \"\"\n\nif (status > 0) {\n    message = \"Someone came home\"\n    msg.payload = {\n        \"data\": {\n            message,\n            title,\n        }\n    }\n} else {\n    message = \"Everyone has left home\"\n    msg.payload = {\n        \"data\": {\n            message,\n            title,\n            data: {\n                push: {\n                    sound: \"US-EN-Morgan-Freeman-Welcome-Home.wav\"\n                }\n            }\n        }\n    }    \n}\nreturn [ msg ];",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -8768,7 +8768,7 @@
         "exposeAsEntityConfig": "",
         "entityId": "zone.home",
         "entityIdType": "exact",
-        "debugEnabled": true,
+        "debugEnabled": false,
         "constraints": [
             {
                 "targetType": "this_entity",
