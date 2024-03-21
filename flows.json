@@ -8837,6 +8837,35 @@
         "wires": []
     },
     {
+        "id": "b576ee70391c64df",
+        "type": "inject",
+        "z": "9143c7f2.16df18",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1000,
+        "y": 1860,
+        "wires": [
+            [
+                "b9888bea1aa7e90c"
+            ]
+        ]
+    },
+    {
         "id": "e2f343b.68adbc",
         "type": "api-call-service",
         "z": "75b62c93.dd5d84",
