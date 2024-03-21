@@ -6909,6 +6909,7 @@
         "id": "9ee1346f.7bc3b8",
         "type": "server-state-changed",
         "z": "9143c7f2.16df18",
+        "d": true,
         "name": "Jeff came home",
         "server": "8b52884a.b76658",
         "version": 5,
@@ -6950,8 +6951,8 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 240,
-        "y": 1720,
+        "x": 960,
+        "y": 1540,
         "wires": [
             [],
             [
@@ -6977,6 +6978,7 @@
         "id": "93e5af26.4c3cd",
         "type": "server-state-changed",
         "z": "9143c7f2.16df18",
+        "d": true,
         "name": "Jen came home",
         "server": "8b52884a.b76658",
         "version": 5,
@@ -7018,8 +7020,8 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 240,
-        "y": 1780,
+        "x": 1140,
+        "y": 1620,
         "wires": [
             [],
             [
@@ -8869,7 +8871,7 @@
         "id": "5cd4e78b2da4ea82",
         "type": "trigger-state",
         "z": "9143c7f2.16df18",
-        "name": "",
+        "name": "Jeff came home",
         "server": "8b52884a.b76658",
         "version": 4,
         "inputs": 0,
@@ -8887,13 +8889,22 @@
                 "comparatorType": "is",
                 "comparatorValueDatatype": "str",
                 "comparatorValue": "home"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
+                "comparatorType": "is_not",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "home"
             }
         ],
         "customOutputs": [],
         "outputInitially": true,
         "stateType": "str",
         "enableInput": false,
-        "x": 1210,
+        "x": 1160,
         "y": 2160,
         "wires": [
             [
@@ -8935,6 +8946,98 @@
         "x": 1520,
         "y": 2200,
         "wires": []
+    },
+    {
+        "id": "3192e816e3cab53b",
+        "type": "trigger-state",
+        "z": "9143c7f2.16df18",
+        "name": "Jeff came home",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "inputs": 0,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "person.jeff_billimek",
+        "entityIdType": "exact",
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "home"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
+                "comparatorType": "is_not",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "home"
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": false,
+        "stateType": "str",
+        "enableInput": false,
+        "x": 240,
+        "y": 1720,
+        "wires": [
+            [
+                "398e9c65.547984"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "d5e555de864ad22a",
+        "type": "trigger-state",
+        "z": "9143c7f2.16df18",
+        "name": "Jen came home",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "inputs": 0,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "person.jennifer_billimek",
+        "entityIdType": "exact",
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "home"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
+                "comparatorType": "is_not",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "home"
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": false,
+        "stateType": "str",
+        "enableInput": false,
+        "x": 240,
+        "y": 1780,
+        "wires": [
+            [
+                "787546ca.e16058"
+            ],
+            []
+        ]
     },
     {
         "id": "e2f343b.68adbc",
