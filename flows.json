@@ -8799,7 +8799,9 @@
             [
                 "240a55aaa87daf86"
             ],
-            []
+            [
+                "cbc8d682457088e0"
+            ]
         ]
     },
     {
@@ -8816,6 +8818,22 @@
         "statusType": "auto",
         "x": 1620,
         "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "cbc8d682457088e0",
+        "type": "debug",
+        "z": "9143c7f2.16df18",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1620,
+        "y": 2020,
         "wires": []
     },
     {
