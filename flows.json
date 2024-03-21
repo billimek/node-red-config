@@ -6768,6 +6768,7 @@
         "id": "98c38f0a.2ef8b",
         "type": "server-state-changed",
         "z": "9143c7f2.16df18",
+        "d": true,
         "name": "Someone came home",
         "server": "8b52884a.b76658",
         "version": 5,
@@ -6809,8 +6810,8 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 220,
-        "y": 1660,
+        "x": 800,
+        "y": 1420,
         "wires": [
             [
                 "4c5a09c0.3a0ee8"
@@ -8708,6 +8709,114 @@
             ],
             []
         ]
+    },
+    {
+        "id": "885768c227c8ea04",
+        "type": "trigger-state",
+        "z": "9143c7f2.16df18",
+        "name": "not_home -> home",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "inputs": 1,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "zone.home",
+        "entityIdType": "exact",
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": ">",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "0"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "0"
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": false,
+        "stateType": "num",
+        "enableInput": true,
+        "x": 230,
+        "y": 1660,
+        "wires": [
+            [
+                "4c5a09c0.3a0ee8"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "b9888bea1aa7e90c",
+        "type": "trigger-state",
+        "z": "9143c7f2.16df18",
+        "name": "not_home -> home",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "inputs": 1,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "zone.home",
+        "entityIdType": "exact",
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": ">",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "0"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "0"
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": true,
+        "stateType": "num",
+        "enableInput": true,
+        "x": 1350,
+        "y": 1960,
+        "wires": [
+            [
+                "240a55aaa87daf86"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "240a55aaa87daf86",
+        "type": "debug",
+        "z": "9143c7f2.16df18",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1620,
+        "y": 1920,
+        "wires": []
     },
     {
         "id": "e2f343b.68adbc",
