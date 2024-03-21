@@ -8710,50 +8710,6 @@
         ]
     },
     {
-        "id": "493d2d364b0b0f87",
-        "type": "api-current-state",
-        "z": "9143c7f2.16df18",
-        "name": "",
-        "server": "8b52884a.b76658",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "person.jeff_billimek",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 1360,
-        "y": 2180,
-        "wires": [
-            [
-                "f6119b98a39778ed"
-            ]
-        ]
-    },
-    {
         "id": "5cb18a3440cd907b",
         "type": "inject",
         "z": "9143c7f2.16df18",
@@ -8778,7 +8734,7 @@
         "y": 2200,
         "wires": [
             [
-                "493d2d364b0b0f87"
+                "699dd7498a03f955"
             ]
         ]
     },
@@ -8859,6 +8815,50 @@
             ],
             [
                 "c5dd70375bf65768"
+            ]
+        ]
+    },
+    {
+        "id": "699dd7498a03f955",
+        "type": "api-current-state",
+        "z": "9143c7f2.16df18",
+        "name": "",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "person.jeff_billimek",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 1400,
+        "y": 2120,
+        "wires": [
+            [
+                "f6119b98a39778ed"
             ]
         ]
     },
