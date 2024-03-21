@@ -8768,7 +8768,7 @@
         "exposeAsEntityConfig": "",
         "entityId": "zone.home",
         "entityIdType": "exact",
-        "debugEnabled": false,
+        "debugEnabled": true,
         "constraints": [
             {
                 "targetType": "this_entity",
