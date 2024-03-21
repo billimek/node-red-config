@@ -8794,8 +8794,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1740,
-        "y": 2040,
+        "x": 1700,
+        "y": 2160,
         "wires": []
     },
     {
@@ -8811,7 +8811,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1700,
-        "y": 2180,
+        "y": 2260,
         "wires": []
     },
     {
@@ -8851,8 +8851,8 @@
         "outputInitially": true,
         "stateType": "str",
         "enableInput": false,
-        "x": 1410,
-        "y": 1920,
+        "x": 1390,
+        "y": 2240,
         "wires": [
             [
                 "f6119b98a39778ed"
