@@ -8734,8 +8734,7 @@
         "y": 2200,
         "wires": [
             [
-                "699dd7498a03f955",
-                "cf6f9f1481fa12b3"
+                "699dd7498a03f955"
             ]
         ]
     },
@@ -8778,12 +8777,12 @@
         "name": "",
         "server": "8b52884a.b76658",
         "version": 4,
-        "inputs": 1,
+        "inputs": 0,
         "outputs": 2,
         "exposeAsEntityConfig": "",
         "entityId": "person.jeff_billimek",
         "entityIdType": "exact",
-        "debugEnabled": true,
+        "debugEnabled": false,
         "constraints": [
             {
                 "targetType": "this_entity",
@@ -8807,7 +8806,7 @@
         "customOutputs": [],
         "outputInitially": true,
         "stateType": "str",
-        "enableInput": true,
+        "enableInput": false,
         "x": 1390,
         "y": 2240,
         "wires": [
