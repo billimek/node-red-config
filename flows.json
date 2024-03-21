@@ -8866,6 +8866,77 @@
         ]
     },
     {
+        "id": "5cd4e78b2da4ea82",
+        "type": "trigger-state",
+        "z": "9143c7f2.16df18",
+        "name": "",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "inputs": 0,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "person.jeff_billimek",
+        "entityIdType": "exact",
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "str",
+                "comparatorValue": "home"
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": false,
+        "stateType": "str",
+        "enableInput": false,
+        "x": 1210,
+        "y": 2160,
+        "wires": [
+            [
+                "af6ce517a2a5e86f"
+            ],
+            [
+                "bbc7365f90b50b22"
+            ]
+        ]
+    },
+    {
+        "id": "af6ce517a2a5e86f",
+        "type": "debug",
+        "z": "9143c7f2.16df18",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1520,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "bbc7365f90b50b22",
+        "type": "debug",
+        "z": "9143c7f2.16df18",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1520,
+        "y": 2200,
+        "wires": []
+    },
+    {
         "id": "e2f343b.68adbc",
         "type": "api-call-service",
         "z": "75b62c93.dd5d84",
