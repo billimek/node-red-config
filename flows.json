@@ -3216,7 +3216,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 780,
+        "x": 880,
         "y": 860,
         "wires": [
             [
@@ -3236,8 +3236,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1400,
-        "y": 900,
+        "x": 1340,
+        "y": 860,
         "wires": []
     },
     {
