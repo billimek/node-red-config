@@ -5466,8 +5466,7 @@
         "wires": [
             [
                 "aa4e1a98addc09a2",
-                "69d0aded096cfda8",
-                "c4edf9a55965213b"
+                "69d0aded096cfda8"
             ]
         ]
     },
@@ -5512,7 +5511,8 @@
         "y": 1460,
         "wires": [
             [
-                "db91788ba2ebaea8"
+                "db91788ba2ebaea8",
+                "9044fe1f91b3d866"
             ]
         ]
     },
@@ -5848,6 +5848,58 @@
         "x": 580,
         "y": 1540,
         "wires": []
+    },
+    {
+        "id": "9044fe1f91b3d866",
+        "type": "ical-upcoming",
+        "z": "4aedf9e8.044e08",
+        "confignode": "d369385a16ca904f",
+        "timeout": "",
+        "timeoutUnits": "seconds",
+        "cron": "",
+        "name": "Cleaning scheduled",
+        "offsettype": "",
+        "offset": "",
+        "offsetUnitstype": "",
+        "offsetUnits": "",
+        "eventtypes": "events",
+        "eventtypestype": "eventtypes",
+        "calendar": "",
+        "calendartype": "str",
+        "triggertype": "trigger",
+        "trigger": "always",
+        "timezone": "UTC",
+        "timezonetype": "str",
+        "dateformat": "{ \"timeStyle\": \"short\", \"dateStyle\": \"short\" }",
+        "dateformattype": "json",
+        "language": "en",
+        "languagetype": "language",
+        "filterProperty": "summary",
+        "filterPropertytype": "filterProperty",
+        "filterOperator": "between",
+        "filterOperatortype": "filterOperator",
+        "filtertype": "str",
+        "filter2type": "str",
+        "filter2": "",
+        "filter": "house cleaning",
+        "checkall": false,
+        "endpreview": "",
+        "endpreviewUnits": "",
+        "previewtype": "num",
+        "preview": "1",
+        "previewUnitstype": "previewUnits",
+        "previewUnits": "days",
+        "pastviewtype": "num",
+        "pastview": "12",
+        "pastviewUnits": "hours",
+        "pastviewUnitstype": "pastviewUnits",
+        "x": 300,
+        "y": 1620,
+        "wires": [
+            [
+                "c4edf9a55965213b"
+            ]
+        ]
     },
     {
         "id": "46cdb220.d99dbc",
