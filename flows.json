@@ -5897,6 +5897,31 @@
         "y": 1620,
         "wires": [
             [
+                "f816d6cfd326b74b"
+            ]
+        ]
+    },
+    {
+        "id": "f816d6cfd326b74b",
+        "type": "switch",
+        "z": "4aedf9e8.044e08",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 1640,
+        "wires": [
+            [
                 "c4edf9a55965213b"
             ]
         ]
