@@ -347,6 +347,7 @@
         "usecache": true,
         "username": "",
         "password": "",
+        "experimental": false,
         "calendar": "",
         "pastWeeks": "0",
         "futureWeeks": "4"
@@ -5465,7 +5466,8 @@
         "wires": [
             [
                 "aa4e1a98addc09a2",
-                "69d0aded096cfda8"
+                "69d0aded096cfda8",
+                "c4edf9a55965213b"
             ]
         ]
     },
@@ -5830,6 +5832,22 @@
             ],
             []
         ]
+    },
+    {
+        "id": "c4edf9a55965213b",
+        "type": "debug",
+        "z": "4aedf9e8.044e08",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 1540,
+        "wires": []
     },
     {
         "id": "46cdb220.d99dbc",
