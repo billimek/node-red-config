@@ -12606,7 +12606,7 @@
         "halt_if_compare": "gte",
         "entity_id": "zone.home",
         "state_type": "num",
-        "blockInputOverrides": false,
+        "blockInputOverrides": true,
         "outputProperties": [
             {
                 "property": "payload",
