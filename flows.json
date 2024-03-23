@@ -12606,7 +12606,7 @@
         "halt_if_compare": "gte",
         "entity_id": "zone.home",
         "state_type": "num",
-        "blockInputOverrides": true,
+        "blockInputOverrides": false,
         "outputProperties": [
             {
                 "property": "payload",
@@ -12658,10 +12658,10 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "",
+        "topic": "state",
         "payload": "",
         "payloadType": "date",
-        "x": 180,
+        "x": 200,
         "y": 2420,
         "wires": [
             [
