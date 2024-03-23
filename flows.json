@@ -12600,9 +12600,9 @@
         "name": "",
         "server": "8b52884a.b76658",
         "version": 3,
-        "outputs": 2,
-        "halt_if": "0",
-        "halt_if_type": "num",
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
         "halt_if_compare": "is",
         "entity_id": "zone.home",
         "state_type": "num",
@@ -12634,9 +12634,6 @@
         "wires": [
             [
                 "9e28f216fb332c54"
-            ],
-            [
-                "18d2e8fa7c7f3979"
             ]
         ]
     },
