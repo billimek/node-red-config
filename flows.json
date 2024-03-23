@@ -14742,6 +14742,7 @@
         "id": "b9d8ec1d.5e933",
         "type": "api-current-state",
         "z": "af228686.65c8a8",
+        "d": true,
         "name": "home?",
         "server": "8b52884a.b76658",
         "version": 3,
@@ -14883,7 +14884,8 @@
         "y": 220,
         "wires": [
             [
-                "b9d8ec1d.5e933"
+                "b9d8ec1d.5e933",
+                "59992074929e01e1"
             ]
         ]
     },
@@ -14924,7 +14926,8 @@
         "y": 100,
         "wires": [
             [
-                "b9d8ec1d.5e933"
+                "b9d8ec1d.5e933",
+                "59992074929e01e1"
             ]
         ]
     },
@@ -15664,6 +15667,53 @@
         "wires": [
             [
                 "b98bed87.b9424"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "59992074929e01e1",
+        "type": "api-current-state",
+        "z": "af228686.65c8a8",
+        "name": "home?",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "0",
+        "halt_if_type": "num",
+        "halt_if_compare": "gt",
+        "entity_id": "zone.home",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 730,
+        "y": 180,
+        "wires": [
+            [
+                "b5ce153f.7eca98",
+                "78d24791.853db8",
+                "47b848e8ac632ede"
             ],
             []
         ]
