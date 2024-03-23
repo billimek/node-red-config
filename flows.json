@@ -12587,12 +12587,100 @@
         "y": 2040,
         "wires": [
             [
-                "bb6adeb259874fe3"
-            ],
-            [
+                "bb6adeb259874fe3",
                 "1c5cda98c18e2928"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "01af65c318819d76",
+        "type": "api-current-state",
+        "z": "75b62c93.dd5d84",
+        "name": "",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "num",
+        "halt_if_compare": "is",
+        "entity_id": "zone.home",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 490,
+        "y": 2480,
+        "wires": [
+            [
+                "9e28f216fb332c54"
             ]
         ]
+    },
+    {
+        "id": "90f674ab6a149df8",
+        "type": "inject",
+        "z": "75b62c93.dd5d84",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 2420,
+        "wires": [
+            [
+                "01af65c318819d76"
+            ]
+        ]
+    },
+    {
+        "id": "9e28f216fb332c54",
+        "type": "debug",
+        "z": "75b62c93.dd5d84",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 2440,
+        "wires": []
     },
     {
         "id": "dd155455.bc9c28",
