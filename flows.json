@@ -12600,12 +12600,12 @@
         "name": "",
         "server": "8b52884a.b76658",
         "version": 3,
-        "outputs": 1,
-        "halt_if": "",
+        "outputs": 2,
+        "halt_if": "0",
         "halt_if_type": "num",
-        "halt_if_compare": "is",
+        "halt_if_compare": "gt",
         "entity_id": "zone.home",
-        "state_type": "str",
+        "state_type": "num",
         "blockInputOverrides": false,
         "outputProperties": [
             {
@@ -12634,7 +12634,8 @@
         "wires": [
             [
                 "9e28f216fb332c54"
-            ]
+            ],
+            []
         ]
     },
     {
