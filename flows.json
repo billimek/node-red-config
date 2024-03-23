@@ -9630,6 +9630,7 @@
         "id": "aa116aed.726218",
         "type": "api-current-state",
         "z": "75b62c93.dd5d84",
+        "d": true,
         "name": "home?",
         "server": "8b52884a.b76658",
         "version": 3,
@@ -9780,6 +9781,7 @@
         "id": "d8d2558c.c647a8",
         "type": "api-current-state",
         "z": "75b62c93.dd5d84",
+        "d": true,
         "name": "home?",
         "server": "8b52884a.b76658",
         "version": 3,
@@ -9884,7 +9886,8 @@
             [],
             [
                 "d8d2558c.c647a8",
-                "2f3e0f3c.f3db3"
+                "2f3e0f3c.f3db3",
+                "798689d1552e0a77"
             ]
         ]
     },
@@ -12725,9 +12728,58 @@
         "x": 770,
         "y": 720,
         "wires": [
-            [],
             [
-                "519672b2.9eeb1c"
+                "c42a5b00.4342c8"
+            ],
+            [
+                "3ab2d709.6538b8"
+            ]
+        ]
+    },
+    {
+        "id": "798689d1552e0a77",
+        "type": "api-current-state",
+        "z": "75b62c93.dd5d84",
+        "name": "home?",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "0",
+        "halt_if_type": "num",
+        "halt_if_compare": "gt",
+        "entity_id": "zone.home",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 630,
+        "y": 1000,
+        "wires": [
+            [
+                "55f9ad38.78bbf4"
+            ],
+            [
+                "dba0b367.9cfa"
             ]
         ]
     },
