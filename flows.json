@@ -11670,7 +11670,7 @@
             }
         ],
         "queue": "none",
-        "x": 1150,
+        "x": 1160,
         "y": 1840,
         "wires": [
             []
@@ -11736,7 +11736,7 @@
             }
         ],
         "queue": "none",
-        "x": 1150,
+        "x": 1160,
         "y": 1900,
         "wires": [
             []
@@ -12452,7 +12452,7 @@
         "stateType": "str",
         "enableInput": true,
         "x": 110,
-        "y": 1960,
+        "y": 2120,
         "wires": [
             [
                 "1c5cda98c18e2928",
@@ -12533,7 +12533,7 @@
             }
         ],
         "queue": "none",
-        "x": 1150,
+        "x": 1160,
         "y": 2240,
         "wires": [
             []
@@ -12565,7 +12565,7 @@
             }
         ],
         "queue": "none",
-        "x": 1150,
+        "x": 1160,
         "y": 2180,
         "wires": [
             []
@@ -12697,121 +12697,13 @@
         "stateType": "num",
         "enableInput": true,
         "x": 110,
-        "y": 2040,
+        "y": 2180,
         "wires": [
             [
                 "bb6adeb259874fe3",
                 "1c5cda98c18e2928"
             ],
             []
-        ]
-    },
-    {
-        "id": "9e28f216fb332c54",
-        "type": "debug",
-        "z": "75b62c93.dd5d84",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 740,
-        "y": 2440,
-        "wires": []
-    },
-    {
-        "id": "18d2e8fa7c7f3979",
-        "type": "debug",
-        "z": "75b62c93.dd5d84",
-        "name": "debug 9",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 740,
-        "y": 2540,
-        "wires": []
-    },
-    {
-        "id": "216a6875bee6b17f",
-        "type": "inject",
-        "z": "75b62c93.dd5d84",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 180,
-        "y": 2400,
-        "wires": [
-            [
-                "2e794ade401f8405"
-            ]
-        ]
-    },
-    {
-        "id": "2e794ade401f8405",
-        "type": "api-current-state",
-        "z": "75b62c93.dd5d84",
-        "name": "home?",
-        "server": "8b52884a.b76658",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "0",
-        "halt_if_type": "num",
-        "halt_if_compare": "gt",
-        "entity_id": "zone.home",
-        "state_type": "num",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 450,
-        "y": 2460,
-        "wires": [
-            [
-                "9e28f216fb332c54"
-            ],
-            [
-                "18d2e8fa7c7f3979"
-            ]
         ]
     },
     {
