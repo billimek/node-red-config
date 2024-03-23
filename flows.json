@@ -12603,9 +12603,9 @@
         "outputs": 2,
         "halt_if": "0",
         "halt_if_type": "num",
-        "halt_if_compare": "gte",
+        "halt_if_compare": "is_not",
         "entity_id": "zone.home",
-        "state_type": "str",
+        "state_type": "num",
         "blockInputOverrides": false,
         "outputProperties": [
             {
