@@ -9734,7 +9734,8 @@
             [],
             [
                 "aa116aed.726218",
-                "f9984dec.1157b"
+                "f9984dec.1157b",
+                "64ad0a850a3891ef"
             ]
         ]
     },
@@ -10533,8 +10534,7 @@
         "wires": [
             [
                 "65fb8035.02a31",
-                "d478b33.601d25",
-                "60724780.ab97c8"
+                "d478b33.601d25"
             ]
         ]
     },
@@ -10918,6 +10918,7 @@
         "id": "d478b33.601d25",
         "type": "api-current-state",
         "z": "75b62c93.dd5d84",
+        "d": true,
         "name": "home?",
         "server": "8b52884a.b76658",
         "version": 3,
@@ -11721,22 +11722,6 @@
             ],
             [
                 "4cb25abb.6dc924"
-            ]
-        ]
-    },
-    {
-        "id": "60724780.ab97c8",
-        "type": "subflow:29f6dc7c.662814",
-        "z": "75b62c93.dd5d84",
-        "d": true,
-        "name": "",
-        "env": [],
-        "x": 770,
-        "y": 720,
-        "wires": [
-            [],
-            [
-                "519672b2.9eeb1c"
             ]
         ]
     },
@@ -12698,6 +12683,51 @@
             ],
             [
                 "18d2e8fa7c7f3979"
+            ]
+        ]
+    },
+    {
+        "id": "64ad0a850a3891ef",
+        "type": "api-current-state",
+        "z": "75b62c93.dd5d84",
+        "name": "home?",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "0",
+        "halt_if_type": "num",
+        "halt_if_compare": "gt",
+        "entity_id": "zone.home",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 770,
+        "y": 720,
+        "wires": [
+            [],
+            [
+                "519672b2.9eeb1c"
             ]
         ]
     },
