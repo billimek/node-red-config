@@ -2419,6 +2419,7 @@
         "id": "c73198e9.b2deb8",
         "type": "api-current-state",
         "z": "ea946133.0085b",
+        "d": true,
         "name": "home?",
         "server": "8b52884a.b76658",
         "version": 3,
@@ -2468,7 +2469,8 @@
             [],
             [
                 "c73198e9.b2deb8",
-                "90c6bacc2b111acc"
+                "90c6bacc2b111acc",
+                "ed2acb6daf7b8a20"
             ]
         ]
     },
@@ -2516,6 +2518,7 @@
         "id": "ee4b488e.276818",
         "type": "api-current-state",
         "z": "ea946133.0085b",
+        "d": true,
         "name": "home?",
         "server": "8b52884a.b76658",
         "version": 3,
@@ -2562,7 +2565,8 @@
         "wires": [
             [],
             [
-                "6a9b4076.f0afc"
+                "6a9b4076.f0afc",
+                "6c8c5e5f029ea5cc"
             ]
         ]
     },
@@ -2570,6 +2574,7 @@
         "id": "6a9b4076.f0afc",
         "type": "api-current-state",
         "z": "ea946133.0085b",
+        "d": true,
         "name": "home?",
         "server": "8b52884a.b76658",
         "version": 3,
@@ -2744,6 +2749,7 @@
         "id": "50264aaa.0cb994",
         "type": "api-current-state",
         "z": "ea946133.0085b",
+        "d": true,
         "name": "home?",
         "server": "8b52884a.b76658",
         "version": 3,
@@ -2792,7 +2798,8 @@
         "wires": [
             [],
             [
-                "50264aaa.0cb994"
+                "50264aaa.0cb994",
+                "37f4915d3dcfab07"
             ]
         ]
     },
@@ -2975,7 +2982,8 @@
         "y": 360,
         "wires": [
             [
-                "ee4b488e.276818"
+                "ee4b488e.276818",
+                "605aaf60a9843149"
             ]
         ]
     },
@@ -3270,6 +3278,192 @@
         "x": 1340,
         "y": 860,
         "wires": []
+    },
+    {
+        "id": "ed2acb6daf7b8a20",
+        "type": "api-current-state",
+        "z": "ea946133.0085b",
+        "name": "home?",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "0",
+        "halt_if_type": "num",
+        "halt_if_compare": "gt",
+        "entity_id": "zone.home",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 630,
+        "y": 120,
+        "wires": [
+            [
+                "3c2395cd.f242ca"
+            ],
+            [
+                "3c2395cd.f242ca"
+            ]
+        ]
+    },
+    {
+        "id": "37f4915d3dcfab07",
+        "type": "api-current-state",
+        "z": "ea946133.0085b",
+        "name": "home?",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "0",
+        "halt_if_type": "num",
+        "halt_if_compare": "gt",
+        "entity_id": "zone.home",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 630,
+        "y": 220,
+        "wires": [
+            [
+                "ff124fe7.97093"
+            ],
+            [
+                "f7432cb0.84a5e"
+            ]
+        ]
+    },
+    {
+        "id": "605aaf60a9843149",
+        "type": "api-current-state",
+        "z": "ea946133.0085b",
+        "name": "home?",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "0",
+        "halt_if_type": "num",
+        "halt_if_compare": "gt",
+        "entity_id": "zone.home",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 630,
+        "y": 320,
+        "wires": [
+            [],
+            [
+                "f7432cb0.84a5e"
+            ]
+        ]
+    },
+    {
+        "id": "6c8c5e5f029ea5cc",
+        "type": "api-current-state",
+        "z": "ea946133.0085b",
+        "name": "home?",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "0",
+        "halt_if_type": "num",
+        "halt_if_compare": "gt",
+        "entity_id": "zone.home",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 630,
+        "y": 440,
+        "wires": [
+            [
+                "7a5f22bf.7e5bfc"
+            ],
+            [
+                "eaf45bf4.756e28"
+            ]
+        ]
     },
     {
         "id": "6cb23d50.77ced4",
