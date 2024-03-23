@@ -1921,7 +1921,7 @@
                 "c7daa875.529798",
                 "1e7a0313.46060d",
                 "bf057d34.456c4",
-                "ad95fe70.c19c6"
+                "a3a0e70635731164"
             ]
         ]
     },
@@ -1929,6 +1929,7 @@
         "id": "abaa348a.014658",
         "type": "api-current-state",
         "z": "afb0f186.cfb0d",
+        "d": true,
         "name": "home?",
         "server": "8b52884a.b76658",
         "version": 3,
@@ -2241,12 +2242,41 @@
         "wires": []
     },
     {
-        "id": "ad95fe70.c19c6",
-        "type": "subflow:29f6dc7c.662814",
+        "id": "a3a0e70635731164",
+        "type": "api-current-state",
         "z": "afb0f186.cfb0d",
-        "d": true,
-        "name": "",
-        "env": [],
+        "name": "home?",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "0",
+        "halt_if_type": "num",
+        "halt_if_compare": "gt",
+        "entity_id": "zone.home",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
         "x": 510,
         "y": 140,
         "wires": [
