@@ -3350,6 +3350,7 @@
         "id": "c77d382a.cb6bf8",
         "type": "api-current-state",
         "z": "4aedf9e8.044e08",
+        "d": true,
         "name": "home?",
         "server": "8b52884a.b76658",
         "version": 3,
@@ -3522,6 +3523,7 @@
         "id": "73c30e71.e8d46",
         "type": "api-current-state",
         "z": "4aedf9e8.044e08",
+        "d": true,
         "name": "home?",
         "server": "8b52884a.b76658",
         "version": 3,
@@ -3721,7 +3723,8 @@
             [],
             [
                 "c77d382a.cb6bf8",
-                "3ff0a0c.e3cf96"
+                "3ff0a0c.e3cf96",
+                "5aa4f6d1392f3ae3"
             ]
         ]
     },
@@ -3768,7 +3771,7 @@
             [],
             [
                 "73c30e71.e8d46",
-                "de5bd3a9.a8a66"
+                "67195799292fc4fd"
             ]
         ]
     },
@@ -4133,6 +4136,7 @@
         "id": "7cf2a0d2.f39ae",
         "type": "api-current-state",
         "z": "4aedf9e8.044e08",
+        "d": true,
         "name": "not home?",
         "server": "8b52884a.b76658",
         "version": 3,
@@ -4511,7 +4515,7 @@
             [
                 "7cf2a0d2.f39ae",
                 "9e7b18fc.02bc08",
-                "3b0b9b77.a62ff4"
+                "516d1a94c360601c"
             ]
         ]
     },
@@ -4560,7 +4564,7 @@
                 "7cf2a0d2.f39ae",
                 "9e7b18fc.02bc08",
                 "3d9da1d0.c9fb5e",
-                "3b0b9b77.a62ff4"
+                "516d1a94c360601c"
             ]
         ]
     },
@@ -5233,38 +5237,6 @@
         ]
     },
     {
-        "id": "de5bd3a9.a8a66",
-        "type": "subflow:29f6dc7c.662814",
-        "z": "4aedf9e8.044e08",
-        "d": true,
-        "name": "",
-        "env": [],
-        "x": 530,
-        "y": 480,
-        "wires": [
-            [],
-            [
-                "f36487b8.7e8c48"
-            ]
-        ]
-    },
-    {
-        "id": "3b0b9b77.a62ff4",
-        "type": "subflow:29f6dc7c.662814",
-        "z": "4aedf9e8.044e08",
-        "d": true,
-        "name": "",
-        "env": [],
-        "x": 530,
-        "y": 720,
-        "wires": [
-            [],
-            [
-                "fe046407.ab0868"
-            ]
-        ]
-    },
-    {
         "id": "b10170a8c7d48e42",
         "type": "ical-upcoming",
         "z": "4aedf9e8.044e08",
@@ -5923,6 +5895,145 @@
         "wires": [
             [
                 "c4edf9a55965213b"
+            ]
+        ]
+    },
+    {
+        "id": "5aa4f6d1392f3ae3",
+        "type": "api-current-state",
+        "z": "4aedf9e8.044e08",
+        "name": "home?",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "0",
+        "halt_if_type": "num",
+        "halt_if_compare": "gt",
+        "entity_id": "zone.home",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 530,
+        "y": 200,
+        "wires": [
+            [
+                "8d782ee4.3daf1"
+            ],
+            [
+                "8d782ee4.3daf1"
+            ]
+        ]
+    },
+    {
+        "id": "67195799292fc4fd",
+        "type": "api-current-state",
+        "z": "4aedf9e8.044e08",
+        "name": "home?",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "0",
+        "halt_if_type": "num",
+        "halt_if_compare": "gt",
+        "entity_id": "zone.home",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 530,
+        "y": 480,
+        "wires": [
+            [
+                "f36487b8.7e8c48"
+            ],
+            [
+                "f36487b8.7e8c48"
+            ]
+        ]
+    },
+    {
+        "id": "516d1a94c360601c",
+        "type": "api-current-state",
+        "z": "4aedf9e8.044e08",
+        "name": "home?",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "0",
+        "halt_if_type": "num",
+        "halt_if_compare": "gt",
+        "entity_id": "zone.home",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 530,
+        "y": 720,
+        "wires": [
+            [],
+            [
+                "fe046407.ab0868"
             ]
         ]
     },
