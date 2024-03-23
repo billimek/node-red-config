@@ -12603,7 +12603,7 @@
         "outputs": 2,
         "halt_if": "0",
         "halt_if_type": "num",
-        "halt_if_compare": "gt",
+        "halt_if_compare": "is",
         "entity_id": "zone.home",
         "state_type": "num",
         "blockInputOverrides": false,
