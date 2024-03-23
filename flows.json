@@ -3560,7 +3560,7 @@
         "odd": false,
         "even": false,
         "x": 130,
-        "y": 140,
+        "y": 380,
         "wires": [
             [
                 "cd1caa8c.300358",
@@ -3609,7 +3609,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 530,
-        "y": 140,
+        "y": 380,
         "wires": [
             [
                 "8d782ee4.3daf1"
@@ -3632,7 +3632,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 160,
-        "y": 200,
+        "y": 440,
         "wires": [
             [
                 "cd1caa8c.300358"
@@ -3734,7 +3734,7 @@
         "odd": false,
         "even": false,
         "x": 140,
-        "y": 420,
+        "y": 560,
         "wires": [
             [
                 "b15d162c.105c28"
@@ -3782,7 +3782,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 530,
-        "y": 420,
+        "y": 620,
         "wires": [
             [
                 "f36487b8.7e8c48"
@@ -3805,7 +3805,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 160,
-        "y": 480,
+        "y": 620,
         "wires": [
             [
                 "b15d162c.105c28"
@@ -3850,7 +3850,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 750,
-        "y": 140,
+        "y": 440,
         "wires": [
             [],
             [
@@ -3896,7 +3896,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 800,
-        "y": 420,
+        "y": 560,
         "wires": [
             [],
             [
@@ -3942,12 +3942,11 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 350,
-        "y": 140,
+        "y": 440,
         "wires": [
             [],
             [
                 "c77d382a.cb6bf8",
-                "3ff0a0c.e3cf96",
                 "5aa4f6d1392f3ae3"
             ]
         ]
@@ -3990,7 +3989,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 350,
-        "y": 420,
+        "y": 560,
         "wires": [
             [],
             [
@@ -4008,7 +4007,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 920,
-        "y": 760,
+        "y": 880,
         "wires": [
             [
                 "aeafe637.1aeaf8",
@@ -4043,7 +4042,7 @@
         ],
         "queue": "none",
         "x": 1260,
-        "y": 760,
+        "y": 880,
         "wires": [
             []
         ]
@@ -4075,7 +4074,7 @@
         ],
         "queue": "none",
         "x": 1250,
-        "y": 880,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -4089,7 +4088,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 920,
-        "y": 820,
+        "y": 940,
         "wires": [
             []
         ]
@@ -4121,7 +4120,7 @@
         ],
         "queue": "none",
         "x": 1260,
-        "y": 820,
+        "y": 940,
         "wires": [
             []
         ]
@@ -4172,7 +4171,7 @@
             }
         ],
         "x": 140,
-        "y": 1000,
+        "y": 1180,
         "wires": [
             [],
             [
@@ -4189,7 +4188,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 950,
-        "y": 960,
+        "y": 1140,
         "wires": [
             []
         ]
@@ -4203,7 +4202,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 960,
-        "y": 1040,
+        "y": 1220,
         "wires": [
             [
                 "199cf4c0.bebdbb"
@@ -4248,113 +4247,15 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 680,
-        "y": 1000,
+        "y": 1180,
         "wires": [
             [
-                "dbaa0a2e.d4c668",
-                "3c2430e1.ba8e3",
-                "8cbf255e.433118",
-                "c0e06a86.1980c8",
-                "e2b8a6e2.e4fdc8",
                 "32667083.17f79",
                 "c7ea6dcc.c22e4",
                 "8af4ba1c.44a458",
                 "88ed4484.87c648"
             ]
         ]
-    },
-    {
-        "id": "dbaa0a2e.d4c668",
-        "type": "function",
-        "z": "4aedf9e8.044e08",
-        "name": "trigger basement camera (BI)",
-        "func": "msg.payload = \"camera=basement&trigger\";\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 960,
-        "y": 1280,
-        "wires": [
-            [
-                "99152e82.75a54"
-            ]
-        ]
-    },
-    {
-        "id": "e2b8a6e2.e4fdc8",
-        "type": "function",
-        "z": "4aedf9e8.044e08",
-        "name": "trigger pool camera (BI)",
-        "func": "msg.payload = \"camera=pool&trigger\";\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 950,
-        "y": 1240,
-        "wires": [
-            [
-                "99152e82.75a54"
-            ]
-        ]
-    },
-    {
-        "id": "c0e06a86.1980c8",
-        "type": "function",
-        "z": "4aedf9e8.044e08",
-        "name": "trigger driveway camera (BI)",
-        "func": "msg.payload = \"camera=driveway&trigger\";\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 960,
-        "y": 1200,
-        "wires": [
-            [
-                "99152e82.75a54"
-            ]
-        ]
-    },
-    {
-        "id": "8cbf255e.433118",
-        "type": "function",
-        "z": "4aedf9e8.044e08",
-        "name": "trigger porch camera (BI)",
-        "func": "msg.payload = \"camera=porch&trigger\";\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 950,
-        "y": 1160,
-        "wires": [
-            [
-                "99152e82.75a54"
-            ]
-        ]
-    },
-    {
-        "id": "3c2430e1.ba8e3",
-        "type": "function",
-        "z": "4aedf9e8.044e08",
-        "name": "trigger front camera (BI)",
-        "func": "msg.payload = \"camera=front&trigger\";\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 950,
-        "y": 1120,
-        "wires": [
-            [
-                "99152e82.75a54"
-            ]
-        ]
-    },
-    {
-        "id": "99152e82.75a54",
-        "type": "mqtt out",
-        "z": "4aedf9e8.044e08",
-        "name": "trigger blue iris",
-        "topic": "BlueIris/admin",
-        "qos": "",
-        "retain": "",
-        "broker": "649859a4.a17818",
-        "x": 1240,
-        "y": 1200,
-        "wires": []
     },
     {
         "id": "7cf2a0d2.f39ae",
@@ -4395,7 +4296,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 550,
-        "y": 760,
+        "y": 840,
         "wires": [
             [],
             [
@@ -4442,7 +4343,7 @@
         "stateType": "str",
         "enableInput": true,
         "x": 130,
-        "y": 340,
+        "y": 220,
         "wires": [
             [
                 "ccda8ca7.269df"
@@ -4488,7 +4389,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 350,
-        "y": 340,
+        "y": 260,
         "wires": [
             [],
             [
@@ -4507,8 +4408,8 @@
                 "type": "msg"
             }
         ],
-        "x": 1050,
-        "y": 340,
+        "x": 1250,
+        "y": 440,
         "wires": [
             [
                 "c901e347.7a1dc"
@@ -4543,8 +4444,8 @@
             }
         ],
         "queue": "none",
-        "x": 1240,
-        "y": 340,
+        "x": 1420,
+        "y": 440,
         "wires": [
             []
         ]
@@ -4588,7 +4489,7 @@
         "stateType": "str",
         "enableInput": true,
         "x": 130,
-        "y": 640,
+        "y": 820,
         "wires": [
             [
                 "7f300b61.5a4044"
@@ -4634,7 +4535,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 350,
-        "y": 640,
+        "y": 760,
         "wires": [
             [],
             [
@@ -4653,8 +4554,8 @@
                 "type": "msg"
             }
         ],
-        "x": 990,
-        "y": 640,
+        "x": 1250,
+        "y": 760,
         "wires": [
             [
                 "d837e04d.b2546"
@@ -4689,8 +4590,8 @@
             }
         ],
         "queue": "none",
-        "x": 1250,
-        "y": 640,
+        "x": 1430,
+        "y": 760,
         "wires": [
             []
         ]
@@ -4733,7 +4634,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 350,
-        "y": 760,
+        "y": 880,
         "wires": [
             [],
             [
@@ -4781,7 +4682,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 350,
-        "y": 820,
+        "y": 940,
         "wires": [
             [],
             [
@@ -4830,7 +4731,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 350,
-        "y": 1000,
+        "y": 1180,
         "wires": [
             [],
             [
@@ -4843,7 +4744,7 @@
         "id": "513f0dbe.940124",
         "type": "api-current-state",
         "z": "4aedf9e8.044e08",
-        "name": "alarm automatic mode?",
+        "name": "automatic alarm?",
         "server": "8b52884a.b76658",
         "version": 3,
         "outputs": 2,
@@ -4876,8 +4777,8 @@
         "for": 0,
         "forType": "num",
         "forUnits": "minutes",
-        "x": 590,
-        "y": 340,
+        "x": 570,
+        "y": 260,
         "wires": [
             [],
             [
@@ -4889,7 +4790,7 @@
         "id": "f57054d6.5fd878",
         "type": "api-current-state",
         "z": "4aedf9e8.044e08",
-        "name": "alarm automatic mode?",
+        "name": "automatic alarm?",
         "server": "8b52884a.b76658",
         "version": 3,
         "outputs": 2,
@@ -4922,8 +4823,8 @@
         "for": 0,
         "forType": "num",
         "forUnits": "minutes",
-        "x": 590,
-        "y": 640,
+        "x": 570,
+        "y": 760,
         "wires": [
             [],
             [
@@ -4969,7 +4870,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 730,
-        "y": 760,
+        "y": 880,
         "wires": [
             [
                 "1104f7d2.7a2938"
@@ -5014,7 +4915,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 730,
-        "y": 820,
+        "y": 940,
         "wires": [
             [
                 "42e3cc92.5ddb44"
@@ -5061,7 +4962,7 @@
         "stateType": "str",
         "enableInput": true,
         "x": 140,
-        "y": 820,
+        "y": 940,
         "wires": [
             [
                 "7c85f3a.d00500c"
@@ -5109,7 +5010,7 @@
         "stateType": "str",
         "enableInput": true,
         "x": 150,
-        "y": 760,
+        "y": 880,
         "wires": [
             [
                 "3d0081db.06ffce"
@@ -5126,7 +5027,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 980,
-        "y": 1000,
+        "y": 1180,
         "wires": [
             [
                 "aeafe637.1aeaf8",
@@ -5199,7 +5100,7 @@
         "name": "",
         "env": [],
         "x": 370,
-        "y": 80,
+        "y": 380,
         "wires": []
     },
     {
@@ -5315,7 +5216,7 @@
         "odd": false,
         "even": false,
         "x": 130,
-        "y": 540,
+        "y": 680,
         "wires": [
             [
                 "b10170a8c7d48e42"
@@ -5335,8 +5236,8 @@
         "endTime": "14:00",
         "startOffset": 0,
         "endOffset": 0,
-        "x": 830,
-        "y": 280,
+        "x": 790,
+        "y": 260,
         "wires": [
             [
                 "e8cea7e30d09b0d4"
@@ -5358,7 +5259,7 @@
         "startOffset": 0,
         "endOffset": 0,
         "x": 550,
-        "y": 880,
+        "y": 1000,
         "wires": [
             [
                 "537b61b2.0a12d"
@@ -5377,7 +5278,7 @@
         "initialize": "",
         "finalize": "",
         "x": 920,
-        "y": 880,
+        "y": 1000,
         "wires": [
             [
                 "aeafe637.1aeaf8"
@@ -5391,7 +5292,7 @@
         "name": "Alert if someone is sneaking out",
         "info": "",
         "x": 610,
-        "y": 940,
+        "y": 1060,
         "wires": []
     },
     {
@@ -5405,7 +5306,7 @@
         "initialize": "",
         "finalize": "",
         "x": 960,
-        "y": 1080,
+        "y": 1260,
         "wires": [
             [
                 "253e7337.0501fc"
@@ -5439,25 +5340,9 @@
         ],
         "queue": "none",
         "x": 1260,
-        "y": 920,
+        "y": 1040,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "3ff0a0c.e3cf96",
-        "type": "subflow:29f6dc7c.662814",
-        "z": "4aedf9e8.044e08",
-        "d": true,
-        "name": "",
-        "env": [],
-        "x": 530,
-        "y": 100,
-        "wires": [
-            [],
-            [
-                "8d782ee4.3daf1"
-            ]
         ]
     },
     {
@@ -5505,7 +5390,7 @@
         "pastviewUnits": "hours",
         "pastviewUnitstype": "pastviewUnits",
         "x": 580,
-        "y": 540,
+        "y": 680,
         "wires": [
             [
                 "f36487b8.7e8c48"
@@ -5556,40 +5441,11 @@
         "pastview": "12",
         "pastviewUnits": "hours",
         "pastviewUnitstype": "pastviewUnits",
-        "x": 1080,
-        "y": 280,
+        "x": 1060,
+        "y": 260,
         "wires": [
             [
                 "e3eced460211d893"
-            ]
-        ]
-    },
-    {
-        "id": "a3d33510fd04f33e",
-        "type": "inject",
-        "z": "4aedf9e8.044e08",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 360,
-        "y": 240,
-        "wires": [
-            [
-                "513f0dbe.940124"
             ]
         ]
     },
@@ -5770,8 +5626,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1290,
-        "y": 280,
+        "x": 1250,
+        "y": 260,
         "wires": [
             [
                 "892a8bfd.69c738"
@@ -5975,7 +5831,7 @@
         "stateType": "num",
         "enableInput": true,
         "x": 130,
-        "y": 300,
+        "y": 260,
         "wires": [
             [
                 "ccda8ca7.269df"
@@ -6021,7 +5877,7 @@
         "stateType": "num",
         "enableInput": true,
         "x": 130,
-        "y": 700,
+        "y": 760,
         "wires": [
             [
                 "7f300b61.5a4044"
@@ -6159,7 +6015,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 530,
-        "y": 200,
+        "y": 440,
         "wires": [
             [
                 "8d782ee4.3daf1"
@@ -6206,7 +6062,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 530,
-        "y": 480,
+        "y": 560,
         "wires": [
             [
                 "f36487b8.7e8c48"
@@ -6253,7 +6109,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 530,
-        "y": 720,
+        "y": 880,
         "wires": [
             [],
             [
@@ -21107,6 +20963,99 @@
         "wires": [
             [],
             []
+        ]
+    },
+    {
+        "id": "99152e82.75a54",
+        "type": "mqtt out",
+        "z": "2fad043e.317c8c",
+        "name": "trigger blue iris",
+        "topic": "BlueIris/admin",
+        "qos": "",
+        "retain": "",
+        "broker": "649859a4.a17818",
+        "x": 500,
+        "y": 7720,
+        "wires": []
+    },
+    {
+        "id": "dbaa0a2e.d4c668",
+        "type": "function",
+        "z": "2fad043e.317c8c",
+        "name": "trigger basement camera (BI)",
+        "func": "msg.payload = \"camera=basement&trigger\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 200,
+        "y": 7800,
+        "wires": [
+            [
+                "99152e82.75a54"
+            ]
+        ]
+    },
+    {
+        "id": "e2b8a6e2.e4fdc8",
+        "type": "function",
+        "z": "2fad043e.317c8c",
+        "name": "trigger pool camera (BI)",
+        "func": "msg.payload = \"camera=pool&trigger\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 190,
+        "y": 7760,
+        "wires": [
+            [
+                "99152e82.75a54"
+            ]
+        ]
+    },
+    {
+        "id": "c0e06a86.1980c8",
+        "type": "function",
+        "z": "2fad043e.317c8c",
+        "name": "trigger driveway camera (BI)",
+        "func": "msg.payload = \"camera=driveway&trigger\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 200,
+        "y": 7720,
+        "wires": [
+            [
+                "99152e82.75a54"
+            ]
+        ]
+    },
+    {
+        "id": "8cbf255e.433118",
+        "type": "function",
+        "z": "2fad043e.317c8c",
+        "name": "trigger porch camera (BI)",
+        "func": "msg.payload = \"camera=porch&trigger\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 190,
+        "y": 7680,
+        "wires": [
+            [
+                "99152e82.75a54"
+            ]
+        ]
+    },
+    {
+        "id": "3c2430e1.ba8e3",
+        "type": "function",
+        "z": "2fad043e.317c8c",
+        "name": "trigger front camera (BI)",
+        "func": "msg.payload = \"camera=front&trigger\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 190,
+        "y": 7640,
+        "wires": [
+            [
+                "99152e82.75a54"
+            ]
         ]
     }
 ]
