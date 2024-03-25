@@ -291,7 +291,7 @@
         "connectionDelay": true,
         "cacheJson": true,
         "heartbeat": false,
-        "heartbeatInterval": 30,
+        "heartbeatInterval": "30",
         "areaSelector": "friendlyName",
         "deviceSelector": "friendlyName",
         "entitySelector": "friendlyName",
