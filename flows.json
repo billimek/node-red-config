@@ -8893,7 +8893,7 @@
         "id": "32d7f.835aa2818",
         "type": "trigger-state",
         "z": "75b62c93.dd5d84",
-        "name": "tesla home (<=350ft)",
+        "name": "tesla home (<=250ft)",
         "server": "8b52884a.b76658",
         "version": 4,
         "inputs": 1,
@@ -8910,7 +8910,7 @@
                 "propertyValue": "new_state.state",
                 "comparatorType": "<=",
                 "comparatorValueDatatype": "num",
-                "comparatorValue": "350"
+                "comparatorValue": "250"
             },
             {
                 "targetType": "this_entity",
@@ -8919,7 +8919,7 @@
                 "propertyValue": "old_state.state",
                 "comparatorType": ">",
                 "comparatorValueDatatype": "num",
-                "comparatorValue": "350"
+                "comparatorValue": "250"
             }
         ],
         "customOutputs": [],
@@ -10205,7 +10205,7 @@
         "id": "bcb174cd97f93313",
         "type": "trigger-state",
         "z": "75b62c93.dd5d84",
-        "name": "tesla2 home (<=350m)",
+        "name": "tesla2 home (<=250m)",
         "server": "8b52884a.b76658",
         "version": 4,
         "inputs": 1,
@@ -10222,7 +10222,7 @@
                 "propertyValue": "new_state.state",
                 "comparatorType": "<=",
                 "comparatorValueDatatype": "num",
-                "comparatorValue": "350"
+                "comparatorValue": "250"
             },
             {
                 "targetType": "this_entity",
@@ -10231,7 +10231,7 @@
                 "propertyValue": "old_state.state",
                 "comparatorType": ">",
                 "comparatorValueDatatype": "num",
-                "comparatorValue": "350"
+                "comparatorValue": "250"
             }
         ],
         "customOutputs": [],
