@@ -4029,53 +4029,6 @@
         ]
     },
     {
-        "id": "7cf2a0d2.f39ae",
-        "type": "api-current-state",
-        "z": "4aedf9e8.044e08",
-        "d": true,
-        "name": "not home?",
-        "server": "8b52884a.b76658",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "home",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "sensor.anyone_home",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "x": 550,
-        "y": 620,
-        "wires": [
-            [],
-            [
-                "fe046407.ab0868"
-            ]
-        ]
-    },
-    {
         "id": "ccda8ca7.269df",
         "type": "api-current-state",
         "z": "4aedf9e8.044e08",
@@ -4315,7 +4268,6 @@
         "wires": [
             [],
             [
-                "7cf2a0d2.f39ae",
                 "9e7b18fc.02bc08",
                 "516d1a94c360601c"
             ]
@@ -4363,7 +4315,6 @@
         "wires": [
             [],
             [
-                "7cf2a0d2.f39ae",
                 "9e7b18fc.02bc08",
                 "3d9da1d0.c9fb5e",
                 "516d1a94c360601c"
