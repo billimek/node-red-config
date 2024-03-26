@@ -1917,58 +1917,10 @@
         "y": 180,
         "wires": [
             [
-                "abaa348a.014658",
                 "c7daa875.529798",
                 "1e7a0313.46060d",
                 "bf057d34.456c4",
                 "a3a0e70635731164"
-            ]
-        ]
-    },
-    {
-        "id": "abaa348a.014658",
-        "type": "api-current-state",
-        "z": "afb0f186.cfb0d",
-        "d": true,
-        "name": "home?",
-        "server": "8b52884a.b76658",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "home",
-        "halt_if_type": "str",
-        "halt_if_compare": "is_not",
-        "entity_id": "sensor.anyone_home",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "x": 510,
-        "y": 180,
-        "wires": [
-            [],
-            [
-                "df49345d.517b08"
             ]
         ]
     },
@@ -2278,12 +2230,12 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 510,
-        "y": 140,
+        "y": 180,
         "wires": [
-            [],
             [
                 "df49345d.517b08"
-            ]
+            ],
+            []
         ]
     },
     {
@@ -2416,36 +2368,6 @@
         ]
     },
     {
-        "id": "c73198e9.b2deb8",
-        "type": "api-current-state",
-        "z": "ea946133.0085b",
-        "d": true,
-        "name": "home?",
-        "server": "8b52884a.b76658",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "home",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "sensor.anyone_home",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [],
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "x": 630,
-        "y": 160,
-        "wires": [
-            [
-                "3c2395cd.f242ca"
-            ],
-            [
-                "8faf5cc1.5c41a"
-            ]
-        ]
-    },
-    {
         "id": "202f9fb7.5baeb",
         "type": "api-current-state",
         "z": "ea946133.0085b",
@@ -2468,7 +2390,6 @@
         "wires": [
             [],
             [
-                "c73198e9.b2deb8",
                 "90c6bacc2b111acc",
                 "ed2acb6daf7b8a20"
             ]
@@ -2515,34 +2436,6 @@
         ]
     },
     {
-        "id": "ee4b488e.276818",
-        "type": "api-current-state",
-        "z": "ea946133.0085b",
-        "d": true,
-        "name": "home?",
-        "server": "8b52884a.b76658",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "home",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "sensor.anyone_home",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [],
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "x": 630,
-        "y": 360,
-        "wires": [
-            [],
-            [
-                "f7432cb0.84a5e"
-            ]
-        ]
-    },
-    {
         "id": "4fb82dd3.faff04",
         "type": "api-current-state",
         "z": "ea946133.0085b",
@@ -2565,38 +2458,7 @@
         "wires": [
             [],
             [
-                "6a9b4076.f0afc",
                 "6c8c5e5f029ea5cc"
-            ]
-        ]
-    },
-    {
-        "id": "6a9b4076.f0afc",
-        "type": "api-current-state",
-        "z": "ea946133.0085b",
-        "d": true,
-        "name": "home?",
-        "server": "8b52884a.b76658",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "home",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "sensor.anyone_home",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [],
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "x": 630,
-        "y": 480,
-        "wires": [
-            [
-                "7a5f22bf.7e5bfc"
-            ],
-            [
-                "eaf45bf4.756e28"
             ]
         ]
     },
@@ -2746,36 +2608,6 @@
         ]
     },
     {
-        "id": "50264aaa.0cb994",
-        "type": "api-current-state",
-        "z": "ea946133.0085b",
-        "d": true,
-        "name": "home?",
-        "server": "8b52884a.b76658",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "home",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "sensor.anyone_home",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [],
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "x": 630,
-        "y": 260,
-        "wires": [
-            [
-                "ff124fe7.97093"
-            ],
-            [
-                "f7432cb0.84a5e"
-            ]
-        ]
-    },
-    {
         "id": "60c909a0.99eda8",
         "type": "api-current-state",
         "z": "ea946133.0085b",
@@ -2798,7 +2630,6 @@
         "wires": [
             [],
             [
-                "50264aaa.0cb994",
                 "37f4915d3dcfab07"
             ]
         ]
@@ -2982,7 +2813,6 @@
         "y": 360,
         "wires": [
             [
-                "ee4b488e.276818",
                 "605aaf60a9843149"
             ]
         ]
@@ -3316,7 +3146,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 630,
-        "y": 120,
+        "y": 160,
         "wires": [
             [
                 "3c2395cd.f242ca"
@@ -3363,7 +3193,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 630,
-        "y": 220,
+        "y": 260,
         "wires": [
             [
                 "ff124fe7.97093"
@@ -3410,7 +3240,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 630,
-        "y": 320,
+        "y": 360,
         "wires": [
             [],
             [
@@ -3455,7 +3285,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 630,
-        "y": 440,
+        "y": 480,
         "wires": [
             [
                 "7a5f22bf.7e5bfc"
@@ -4302,53 +4132,6 @@
             [
                 "fe046407.ab0868"
             ]
-        ]
-    },
-    {
-        "id": "71941591.c8558c",
-        "type": "trigger-state",
-        "z": "4aedf9e8.044e08",
-        "d": true,
-        "name": "home -> not_home",
-        "server": "8b52884a.b76658",
-        "version": 4,
-        "inputs": 1,
-        "outputs": 2,
-        "exposeAsEntityConfig": "",
-        "entityId": "sensor.anyone_home",
-        "entityIdType": "exact",
-        "debugEnabled": false,
-        "constraints": [
-            {
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "current_state",
-                "propertyValue": "new_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "not_home"
-            },
-            {
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "previous_state",
-                "propertyValue": "old_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "home"
-            }
-        ],
-        "customOutputs": [],
-        "outputInitially": false,
-        "stateType": "str",
-        "enableInput": true,
-        "x": 130,
-        "y": 220,
-        "wires": [
-            [
-                "ccda8ca7.269df"
-            ],
-            []
         ]
     },
     {
@@ -6118,63 +5901,6 @@
         ]
     },
     {
-        "id": "98c38f0a.2ef8b",
-        "type": "server-state-changed",
-        "z": "9143c7f2.16df18",
-        "d": true,
-        "name": "Someone came home",
-        "server": "8b52884a.b76658",
-        "version": 5,
-        "outputs": 2,
-        "exposeAsEntityConfig": "",
-        "entityId": "sensor.anyone_home",
-        "entityIdType": "substring",
-        "outputInitially": false,
-        "stateType": "str",
-        "ifState": "not_home",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputOnlyOnStateChange": false,
-        "for": "",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "x": 1100,
-        "y": 100,
-        "wires": [
-            [
-                "4c5a09c0.3a0ee8"
-            ],
-            [
-                "4c5a09c0.3a0ee8"
-            ]
-        ]
-    },
-    {
         "id": "31b8c785.cc1828",
         "type": "api-call-service",
         "z": "9143c7f2.16df18",
@@ -6259,61 +5985,6 @@
         ]
     },
     {
-        "id": "9ee1346f.7bc3b8",
-        "type": "server-state-changed",
-        "z": "9143c7f2.16df18",
-        "d": true,
-        "name": "Jeff came home",
-        "server": "8b52884a.b76658",
-        "version": 5,
-        "outputs": 2,
-        "exposeAsEntityConfig": "",
-        "entityId": "sensor.jeff_home_status",
-        "entityIdType": "substring",
-        "outputInitially": false,
-        "stateType": "str",
-        "ifState": "False",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputOnlyOnStateChange": false,
-        "for": "",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "x": 1080,
-        "y": 320,
-        "wires": [
-            [],
-            [
-                "398e9c65.547984"
-            ]
-        ]
-    },
-    {
         "id": "398e9c65.547984",
         "type": "function",
         "z": "9143c7f2.16df18",
@@ -6325,61 +5996,6 @@
         "y": 220,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "93e5af26.4c3cd",
-        "type": "server-state-changed",
-        "z": "9143c7f2.16df18",
-        "d": true,
-        "name": "Jen came home",
-        "server": "8b52884a.b76658",
-        "version": 5,
-        "outputs": 2,
-        "exposeAsEntityConfig": "",
-        "entityId": "sensor.jen_home_status",
-        "entityIdType": "substring",
-        "outputInitially": false,
-        "stateType": "str",
-        "ifState": "False",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputOnlyOnStateChange": false,
-        "for": "",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "x": 1080,
-        "y": 380,
-        "wires": [
-            [],
-            [
-                "787546ca.e16058"
-            ]
         ]
     },
     {
@@ -6481,111 +6097,6 @@
         "x": 590,
         "y": 780,
         "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3458d66bc0af61cd",
-        "type": "trigger-state",
-        "z": "9143c7f2.16df18",
-        "d": true,
-        "name": "not_home -> home",
-        "server": "8b52884a.b76658",
-        "version": 4,
-        "inputs": 0,
-        "outputs": 2,
-        "exposeAsEntityConfig": "",
-        "entityId": "sensor.anyone_home",
-        "entityIdType": "exact",
-        "debugEnabled": false,
-        "constraints": [
-            {
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "current_state",
-                "propertyValue": "new_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "home"
-            },
-            {
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "previous_state",
-                "propertyValue": "old_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "not_home"
-            }
-        ],
-        "customOutputs": [],
-        "outputInitially": false,
-        "stateType": "str",
-        "enableInput": false,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "x": 990,
-        "y": 780,
-        "wires": [
-            [
-                "521868ea42064502"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "bae82c5f4b24527a",
-        "type": "trigger-state",
-        "z": "9143c7f2.16df18",
-        "d": true,
-        "name": "home -> not_home",
-        "server": "8b52884a.b76658",
-        "version": 4,
-        "inputs": 1,
-        "outputs": 2,
-        "exposeAsEntityConfig": "",
-        "entityId": "sensor.anyone_home",
-        "entityIdType": "exact",
-        "debugEnabled": false,
-        "constraints": [
-            {
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "current_state",
-                "propertyValue": "new_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "not_home"
-            },
-            {
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "previous_state",
-                "propertyValue": "old_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "home"
-            }
-        ],
-        "customOutputs": [],
-        "outputInitially": false,
-        "stateType": "str",
-        "enableInput": true,
-        "x": 990,
-        "y": 720,
-        "wires": [
-            [
-                "20a6330cc73c1a7c"
-            ],
             []
         ]
     },
@@ -7890,55 +7401,6 @@
         ]
     },
     {
-        "id": "aa116aed.726218",
-        "type": "api-current-state",
-        "z": "75b62c93.dd5d84",
-        "d": true,
-        "name": "home?",
-        "server": "8b52884a.b76658",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "home",
-        "halt_if_type": "str",
-        "halt_if_compare": "is_not",
-        "entity_id": "sensor.anyone_home",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "x": 770,
-        "y": 720,
-        "wires": [
-            [
-                "3ab2d709.6538b8"
-            ],
-            [
-                "c42a5b00.4342c8"
-            ]
-        ]
-    },
-    {
         "id": "3ab2d709.6538b8",
         "type": "function",
         "z": "75b62c93.dd5d84",
@@ -7997,7 +7459,6 @@
         "wires": [
             [],
             [
-                "aa116aed.726218",
                 "64ad0a850a3891ef"
             ]
         ]
@@ -8036,55 +7497,6 @@
         "wires": [
             [
                 "13e805e6.ba940a"
-            ]
-        ]
-    },
-    {
-        "id": "d8d2558c.c647a8",
-        "type": "api-current-state",
-        "z": "75b62c93.dd5d84",
-        "d": true,
-        "name": "home?",
-        "server": "8b52884a.b76658",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "home",
-        "halt_if_type": "str",
-        "halt_if_compare": "is_not",
-        "entity_id": "sensor.anyone_home",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "x": 770,
-        "y": 960,
-        "wires": [
-            [
-                "55f9ad38.78bbf4"
-            ],
-            [
-                "dba0b367.9cfa"
             ]
         ]
     },
@@ -8147,7 +7559,6 @@
         "wires": [
             [],
             [
-                "d8d2558c.c647a8",
                 "798689d1552e0a77"
             ]
         ]
@@ -8182,55 +7593,6 @@
         "y": 1000,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "5ba2f2e1.f603fc",
-        "type": "api-current-state",
-        "z": "75b62c93.dd5d84",
-        "d": true,
-        "name": "home?",
-        "server": "8b52884a.b76658",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "home",
-        "halt_if_type": "str",
-        "halt_if_compare": "is_not",
-        "entity_id": "sensor.anyone_home",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "x": 770,
-        "y": 760,
-        "wires": [
-            [
-                "a7875b7c.d961c8"
-            ],
-            [
-                "4cb25abb.6dc924"
-            ]
         ]
     },
     {
@@ -8275,7 +7637,6 @@
         "wires": [
             [],
             [
-                "5ba2f2e1.f603fc",
                 "f428963d8b09c8c0"
             ]
         ]
@@ -8284,7 +7645,6 @@
         "id": "4cb25abb.6dc924",
         "type": "function",
         "z": "75b62c93.dd5d84",
-        "d": true,
         "name": "Jeff's garage closed msg",
         "func": "var category = \"garage\"\nvar title = \"Jeff's Garage Door\";\nvar message = title + \" is closed\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n        data: {\n            push: {\n                category: category,\n                sound: \"US-EN-Morgan-Freeman-Garage-Door-Closed.wav\"\n            }\n        }\n    }\n}\nreturn [ msg ];\n",
         "outputs": 1,
@@ -8305,7 +7665,6 @@
         "id": "a7875b7c.d961c8",
         "type": "function",
         "z": "75b62c93.dd5d84",
-        "d": true,
         "name": "Jeff's garage closed msg",
         "func": "var category = \"garage\"\nvar title = \"Jeff's Garage Door\";\nvar message = title + \" is closed and no one is home!\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n        data: {\n            push: {\n                category: category,\n                sound: \"US-EN-Morgan-Freeman-Garage-Door-Closed.wav\"\n            }\n        }\n    }\n}\nreturn [ msg ];\n",
         "outputs": 1,
@@ -8320,55 +7679,6 @@
             [
                 "13e805e6.ba940a",
                 "fa6e731.f06f79"
-            ]
-        ]
-    },
-    {
-        "id": "dfd317cd.c2e2e8",
-        "type": "api-current-state",
-        "z": "75b62c93.dd5d84",
-        "d": true,
-        "name": "home?",
-        "server": "8b52884a.b76658",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "home",
-        "halt_if_type": "str",
-        "halt_if_compare": "is_not",
-        "entity_id": "sensor.anyone_home",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "x": 770,
-        "y": 1000,
-        "wires": [
-            [
-                "1423693d.38f4a7"
-            ],
-            [
-                "5a4230ac.531df"
             ]
         ]
     },
@@ -8414,7 +7724,6 @@
         "wires": [
             [],
             [
-                "dfd317cd.c2e2e8",
                 "90633a41d572ddf5"
             ]
         ]
@@ -8423,7 +7732,6 @@
         "id": "5a4230ac.531df",
         "type": "function",
         "z": "75b62c93.dd5d84",
-        "d": true,
         "name": "Jen's garage closed msg",
         "func": "var category = \"garage2\"\nvar title = \"Jen's Garage Door\";\nvar message = title + \" is closed\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n        data: {\n            push: {\n                category: category,\n                sound: \"US-EN-Morgan-Freeman-Garage-Door-Closed.wav\"\n            }\n        }\n    }\n}\nreturn [ msg ];\n",
         "outputs": 1,
@@ -8444,7 +7752,6 @@
         "id": "1423693d.38f4a7",
         "type": "function",
         "z": "75b62c93.dd5d84",
-        "d": true,
         "name": "Jen's garage closed msg",
         "func": "var category = \"garage2\"\nvar title = \"Jen's Garage Door\";\nvar message = title + \" is closed and no one is home!\"\n\nmsg.payload = {\n    \"data\": {\n        message,\n        title,\n        data: {\n            push: {\n                category: category,\n                sound: \"US-EN-Morgan-Freeman-Garage-Door-Closed.wav\"\n            }\n        }\n    }\n}\nreturn [ msg ];\n",
         "outputs": 1,
@@ -8807,6 +8114,7 @@
         "id": "7b9c3894.6a8248",
         "type": "subflow:a9b8c57d.9659a8",
         "z": "75b62c93.dd5d84",
+        "d": true,
         "name": "",
         "x": 360,
         "y": 880,
@@ -8834,6 +8142,7 @@
         "id": "1f4e8e01.7ed502",
         "type": "subflow:a9b8c57d.9659a8",
         "z": "75b62c93.dd5d84",
+        "d": true,
         "name": "",
         "x": 360,
         "y": 1120,
@@ -10342,54 +9651,6 @@
         ]
     },
     {
-        "id": "6f0bb06a6dda792f",
-        "type": "trigger-state",
-        "z": "75b62c93.dd5d84",
-        "d": true,
-        "name": "home -> not_home",
-        "server": "8b52884a.b76658",
-        "version": 4,
-        "inputs": 1,
-        "outputs": 2,
-        "exposeAsEntityConfig": "",
-        "entityId": "sensor.anyone_home",
-        "entityIdType": "exact",
-        "debugEnabled": false,
-        "constraints": [
-            {
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "current_state",
-                "propertyValue": "new_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "not_home"
-            },
-            {
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "previous_state",
-                "propertyValue": "old_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "home"
-            }
-        ],
-        "customOutputs": [],
-        "outputInitially": false,
-        "stateType": "str",
-        "enableInput": true,
-        "x": 110,
-        "y": 2120,
-        "wires": [
-            [
-                "1c5cda98c18e2928",
-                "bb6adeb259874fe3"
-            ],
-            []
-        ]
-    },
-    {
         "id": "1c5cda98c18e2928",
         "type": "api-current-state",
         "z": "75b62c93.dd5d84",
@@ -10768,10 +10029,10 @@
         "y": 880,
         "wires": [
             [
-                "a7875b7c.d961c8"
+                "4cb25abb.6dc924"
             ],
             [
-                "4cb25abb.6dc924"
+                "a7875b7c.d961c8"
             ]
         ]
     },
@@ -10815,166 +10076,12 @@
         "y": 1120,
         "wires": [
             [
-                "1423693d.38f4a7"
-            ],
-            [
                 "5a4230ac.531df"
-            ]
-        ]
-    },
-    {
-        "id": "5a86d013b105431d",
-        "type": "api-current-state",
-        "z": "75b62c93.dd5d84",
-        "name": "run?",
-        "server": "8b52884a.b76658",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.notify_garage_doors_home",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "x": 630,
-        "y": 2540,
-        "wires": [
-            [],
-            [
-                "a41f21bd2c3c85a2"
-            ]
-        ]
-    },
-    {
-        "id": "a41f21bd2c3c85a2",
-        "type": "api-current-state",
-        "z": "75b62c93.dd5d84",
-        "name": "home?",
-        "server": "8b52884a.b76658",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "0",
-        "halt_if_type": "num",
-        "halt_if_compare": "gt",
-        "entity_id": "zone.home",
-        "state_type": "num",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 890,
-        "y": 2540,
-        "wires": [
-            [
-                "c43dd17e19ef7d56"
             ],
             [
-                "c2079120d30e45c1"
+                "1423693d.38f4a7"
             ]
         ]
-    },
-    {
-        "id": "51021d9905a99bfb",
-        "type": "inject",
-        "z": "75b62c93.dd5d84",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 260,
-        "y": 2420,
-        "wires": [
-            [
-                "5a86d013b105431d"
-            ]
-        ]
-    },
-    {
-        "id": "c43dd17e19ef7d56",
-        "type": "debug",
-        "z": "75b62c93.dd5d84",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1040,
-        "y": 2420,
-        "wires": []
-    },
-    {
-        "id": "c2079120d30e45c1",
-        "type": "debug",
-        "z": "75b62c93.dd5d84",
-        "name": "debug 9",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1220,
-        "y": 2560,
-        "wires": []
     },
     {
         "id": "dd155455.bc9c28",
@@ -12534,36 +11641,6 @@
         ]
     },
     {
-        "id": "b9d8ec1d.5e933",
-        "type": "api-current-state",
-        "z": "af228686.65c8a8",
-        "d": true,
-        "name": "home?",
-        "server": "8b52884a.b76658",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "home",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "sensor.anyone_home",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [],
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "x": 730,
-        "y": 220,
-        "wires": [
-            [
-                "b5ce153f.7eca98",
-                "78d24791.853db8",
-                "47b848e8ac632ede"
-            ],
-            []
-        ]
-    },
-    {
         "id": "c418f727.e241d8",
         "type": "bigtimer",
         "z": "af228686.65c8a8",
@@ -12679,7 +11756,6 @@
         "y": 220,
         "wires": [
             [
-                "b9d8ec1d.5e933",
                 "59992074929e01e1"
             ]
         ]
@@ -12721,7 +11797,6 @@
         "y": 100,
         "wires": [
             [
-                "b9d8ec1d.5e933",
                 "59992074929e01e1"
             ]
         ]
@@ -13444,7 +12519,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 730,
-        "y": 100,
+        "y": 220,
         "wires": [
             [
                 "b5ce153f.7eca98",
