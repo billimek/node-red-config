@@ -3641,7 +3641,7 @@
         "outputs": 2,
         "halt_if": "disarmed",
         "halt_if_type": "str",
-        "halt_if_compare": "is",
+        "halt_if_compare": "is_not",
         "entity_id": "alarm_control_panel.alarm_panel",
         "state_type": "str",
         "blockInputOverrides": false,
@@ -3671,10 +3671,10 @@
         "x": 940,
         "y": 340,
         "wires": [
-            [],
             [
                 "81c2d258.033ce"
-            ]
+            ],
+            []
         ]
     },
     {
