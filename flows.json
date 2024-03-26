@@ -9660,7 +9660,7 @@
         "outputs": 2,
         "halt_if": "open",
         "halt_if_type": "str",
-        "halt_if_compare": "is_not",
+        "halt_if_compare": "is",
         "entity_id": "cover.jens_garage_mqtt",
         "state_type": "str",
         "blockInputOverrides": false,
@@ -9812,7 +9812,7 @@
         "outputs": 2,
         "halt_if": "open",
         "halt_if_type": "str",
-        "halt_if_compare": "is_not",
+        "halt_if_compare": "is",
         "entity_id": "cover.jeffs_garage_mqtt",
         "state_type": "str",
         "blockInputOverrides": false,
@@ -9842,10 +9842,10 @@
         "x": 390,
         "y": 2180,
         "wires": [
-            [],
             [
                 "fb22ec4b258c5f21"
-            ]
+            ],
+            []
         ]
     },
     {
