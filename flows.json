@@ -11575,7 +11575,7 @@
         "scheduleRndMax": 0,
         "sunElevationThreshold": "10",
         "sunShowElevationInStatus": true,
-        "outputfreq": "output.statechange.startup",
+        "outputfreq": "output.statechange",
         "x": 330,
         "y": 100,
         "wires": [
