@@ -13278,22 +13278,9 @@
         "halt_if_type": "num",
         "halt_if_compare": "gt",
         "entity_id": "zone.home",
-        "state_type": "num",
+        "state_type": "str",
         "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
+        "outputProperties": [],
         "for": "0",
         "forType": "num",
         "forUnits": "minutes",
