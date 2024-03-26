@@ -3327,6 +3327,16 @@
         ]
     },
     {
+        "id": "868a027429260b5e",
+        "type": "comment",
+        "z": "ea946133.0085b",
+        "name": "This flow needs some work",
+        "info": "We need to trigger frigate manually somehow or trigger a notification from camera(s)",
+        "x": 180,
+        "y": 100,
+        "wires": []
+    },
+    {
         "id": "6cb23d50.77ced4",
         "type": "bigtimer",
         "z": "4aedf9e8.044e08",
