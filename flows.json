@@ -9929,64 +9929,6 @@
         ]
     },
     {
-        "id": "dd155455.bc9c28",
-        "type": "trigger-state",
-        "z": "af228686.65c8a8",
-        "d": true,
-        "name": "not_home -> home",
-        "server": "8b52884a.b76658",
-        "version": 4,
-        "inputs": 1,
-        "outputs": 2,
-        "exposeAsEntityConfig": "",
-        "entityId": "sensor.anyone_home",
-        "entityIdType": "exact",
-        "debugEnabled": false,
-        "constraints": [
-            {
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "current_state",
-                "propertyValue": "new_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "home"
-            },
-            {
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "previous_state",
-                "propertyValue": "old_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "not_home"
-            }
-        ],
-        "customOutputs": [],
-        "outputInitially": false,
-        "stateType": "str",
-        "enableInput": true,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "x": 110,
-        "y": 120,
-        "wires": [
-            [
-                "b98bed87.b9424"
-            ],
-            []
-        ]
-    },
-    {
         "id": "b5ce153f.7eca98",
         "type": "api-call-service",
         "z": "af228686.65c8a8",
