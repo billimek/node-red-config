@@ -10147,6 +10147,18 @@
         "type": "inject",
         "z": "af228686.65c8a8",
         "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "auto",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
@@ -12387,13 +12399,13 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 100,
+        "payload": "turn_off",
+        "payloadType": "str",
+        "x": 130,
+        "y": 140,
         "wires": [
             [
-                "aeb0b243.17cee"
+                "710faff9.f3bb5"
             ]
         ]
     },
