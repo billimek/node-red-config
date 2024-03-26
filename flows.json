@@ -4175,53 +4175,6 @@
         ]
     },
     {
-        "id": "d530f3f1.e8195",
-        "type": "trigger-state",
-        "z": "4aedf9e8.044e08",
-        "d": true,
-        "name": "not_home -> home",
-        "server": "8b52884a.b76658",
-        "version": 4,
-        "inputs": 1,
-        "outputs": 2,
-        "exposeAsEntityConfig": "",
-        "entityId": "sensor.anyone_home",
-        "entityIdType": "exact",
-        "debugEnabled": false,
-        "constraints": [
-            {
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "current_state",
-                "propertyValue": "new_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "home"
-            },
-            {
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "previous_state",
-                "propertyValue": "old_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "not_home"
-            }
-        ],
-        "customOutputs": [],
-        "outputInitially": false,
-        "stateType": "str",
-        "enableInput": true,
-        "x": 130,
-        "y": 600,
-        "wires": [
-            [
-                "7f300b61.5a4044"
-            ],
-            []
-        ]
-    },
-    {
         "id": "7f300b61.5a4044",
         "type": "api-current-state",
         "z": "4aedf9e8.044e08",
