@@ -3431,7 +3431,7 @@
         "odd": false,
         "even": false,
         "x": 130,
-        "y": 380,
+        "y": 160,
         "wires": [
             [
                 "cd1caa8c.300358",
@@ -3439,55 +3439,6 @@
             ],
             [],
             []
-        ]
-    },
-    {
-        "id": "c77d382a.cb6bf8",
-        "type": "api-current-state",
-        "z": "4aedf9e8.044e08",
-        "d": true,
-        "name": "home?",
-        "server": "8b52884a.b76658",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "home",
-        "halt_if_type": "str",
-        "halt_if_compare": "is_not",
-        "entity_id": "sensor.anyone_home",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "x": 530,
-        "y": 380,
-        "wires": [
-            [
-                "8d782ee4.3daf1"
-            ],
-            [
-                "8d782ee4.3daf1"
-            ]
         ]
     },
     {
@@ -3503,7 +3454,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 160,
-        "y": 440,
+        "y": 220,
         "wires": [
             [
                 "cd1caa8c.300358"
@@ -3605,62 +3556,13 @@
         "odd": false,
         "even": false,
         "x": 140,
-        "y": 560,
+        "y": 340,
         "wires": [
             [
                 "b15d162c.105c28"
             ],
             [],
             []
-        ]
-    },
-    {
-        "id": "73c30e71.e8d46",
-        "type": "api-current-state",
-        "z": "4aedf9e8.044e08",
-        "d": true,
-        "name": "home?",
-        "server": "8b52884a.b76658",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "home",
-        "halt_if_type": "str",
-        "halt_if_compare": "is_not",
-        "entity_id": "sensor.anyone_home",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "x": 530,
-        "y": 620,
-        "wires": [
-            [
-                "f36487b8.7e8c48"
-            ],
-            [
-                "f36487b8.7e8c48"
-            ]
         ]
     },
     {
@@ -3676,7 +3578,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 160,
-        "y": 620,
+        "y": 400,
         "wires": [
             [
                 "b15d162c.105c28"
@@ -3693,7 +3595,7 @@
         "outputs": 2,
         "halt_if": "disarmed",
         "halt_if_type": "str",
-        "halt_if_compare": "is_not",
+        "halt_if_compare": "is",
         "entity_id": "alarm_control_panel.alarm_panel",
         "state_type": "str",
         "blockInputOverrides": false,
@@ -3720,13 +3622,13 @@
         "for": 0,
         "forType": "num",
         "forUnits": "minutes",
-        "x": 750,
-        "y": 440,
+        "x": 930,
+        "y": 220,
         "wires": [
-            [],
             [
                 "892a8bfd.69c738"
-            ]
+            ],
+            []
         ]
     },
     {
@@ -3766,8 +3668,8 @@
         "for": 0,
         "forType": "num",
         "forUnits": "minutes",
-        "x": 800,
-        "y": 560,
+        "x": 940,
+        "y": 340,
         "wires": [
             [],
             [
@@ -3785,7 +3687,7 @@
         "outputs": 2,
         "halt_if": "on",
         "halt_if_type": "str",
-        "halt_if_compare": "is_not",
+        "halt_if_compare": "is",
         "entity_id": "input_boolean.auto_arm_disarm_alarm_night",
         "state_type": "str",
         "blockInputOverrides": false,
@@ -3813,13 +3715,12 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 350,
-        "y": 440,
+        "y": 220,
         "wires": [
-            [],
             [
-                "c77d382a.cb6bf8",
                 "5aa4f6d1392f3ae3"
-            ]
+            ],
+            []
         ]
     },
     {
@@ -3832,7 +3733,7 @@
         "outputs": 2,
         "halt_if": "on",
         "halt_if_type": "str",
-        "halt_if_compare": "is_not",
+        "halt_if_compare": "is",
         "entity_id": "input_boolean.auto_arm_disarm_alarm_night",
         "state_type": "str",
         "blockInputOverrides": false,
@@ -3860,13 +3761,12 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 350,
-        "y": 560,
+        "y": 340,
         "wires": [
-            [],
             [
-                "73c30e71.e8d46",
                 "67195799292fc4fd"
-            ]
+            ],
+            []
         ]
     },
     {
@@ -3878,7 +3778,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 920,
-        "y": 880,
+        "y": 660,
         "wires": [
             [
                 "aeafe637.1aeaf8",
@@ -3913,7 +3813,7 @@
         ],
         "queue": "none",
         "x": 1260,
-        "y": 880,
+        "y": 660,
         "wires": [
             []
         ]
@@ -3945,7 +3845,7 @@
         ],
         "queue": "none",
         "x": 1250,
-        "y": 1000,
+        "y": 780,
         "wires": [
             []
         ]
@@ -3959,7 +3859,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 920,
-        "y": 940,
+        "y": 720,
         "wires": [
             []
         ]
@@ -3991,7 +3891,7 @@
         ],
         "queue": "none",
         "x": 1260,
-        "y": 940,
+        "y": 720,
         "wires": [
             []
         ]
@@ -4042,7 +3942,7 @@
             }
         ],
         "x": 140,
-        "y": 1180,
+        "y": 960,
         "wires": [
             [],
             [
@@ -4059,7 +3959,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 950,
-        "y": 1140,
+        "y": 920,
         "wires": [
             []
         ]
@@ -4073,7 +3973,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 960,
-        "y": 1220,
+        "y": 1000,
         "wires": [
             [
                 "199cf4c0.bebdbb"
@@ -4118,7 +4018,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 680,
-        "y": 1180,
+        "y": 960,
         "wires": [
             [
                 "32667083.17f79",
@@ -4167,7 +4067,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 550,
-        "y": 840,
+        "y": 620,
         "wires": [
             [],
             [
@@ -4185,7 +4085,7 @@
         "outputs": 2,
         "halt_if": "on",
         "halt_if_type": "str",
-        "halt_if_compare": "is_not",
+        "halt_if_compare": "is",
         "entity_id": "input_boolean.auto_arm_alarm_when_gone",
         "state_type": "str",
         "blockInputOverrides": false,
@@ -4213,12 +4113,12 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 350,
-        "y": 260,
+        "y": 40,
         "wires": [
-            [],
             [
                 "513f0dbe.940124"
-            ]
+            ],
+            []
         ]
     },
     {
@@ -4233,7 +4133,7 @@
             }
         ],
         "x": 1250,
-        "y": 440,
+        "y": 220,
         "wires": [
             [
                 "c901e347.7a1dc"
@@ -4269,7 +4169,7 @@
         ],
         "queue": "none",
         "x": 1420,
-        "y": 440,
+        "y": 220,
         "wires": [
             []
         ]
@@ -4313,7 +4213,7 @@
         "stateType": "str",
         "enableInput": true,
         "x": 130,
-        "y": 820,
+        "y": 600,
         "wires": [
             [
                 "7f300b61.5a4044"
@@ -4359,7 +4259,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 350,
-        "y": 760,
+        "y": 540,
         "wires": [
             [],
             [
@@ -4379,7 +4279,7 @@
             }
         ],
         "x": 1250,
-        "y": 760,
+        "y": 540,
         "wires": [
             [
                 "d837e04d.b2546"
@@ -4415,7 +4315,7 @@
         ],
         "queue": "none",
         "x": 1430,
-        "y": 760,
+        "y": 540,
         "wires": [
             []
         ]
@@ -4458,7 +4358,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 350,
-        "y": 880,
+        "y": 660,
         "wires": [
             [],
             [
@@ -4506,7 +4406,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 350,
-        "y": 940,
+        "y": 720,
         "wires": [
             [],
             [
@@ -4555,7 +4455,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 350,
-        "y": 1180,
+        "y": 960,
         "wires": [
             [],
             [
@@ -4574,7 +4474,7 @@
         "outputs": 2,
         "halt_if": "automatic",
         "halt_if_type": "str",
-        "halt_if_compare": "is_not",
+        "halt_if_compare": "is",
         "entity_id": "input_select.alarm_mode",
         "state_type": "str",
         "blockInputOverrides": false,
@@ -4602,12 +4502,12 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 570,
-        "y": 260,
+        "y": 40,
         "wires": [
-            [],
             [
                 "dba11aed.2b5e28"
-            ]
+            ],
+            []
         ]
     },
     {
@@ -4648,7 +4548,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 570,
-        "y": 760,
+        "y": 540,
         "wires": [
             [],
             [
@@ -4694,7 +4594,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 730,
-        "y": 880,
+        "y": 660,
         "wires": [
             [
                 "1104f7d2.7a2938"
@@ -4739,7 +4639,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 730,
-        "y": 940,
+        "y": 720,
         "wires": [
             [
                 "42e3cc92.5ddb44"
@@ -4786,7 +4686,7 @@
         "stateType": "str",
         "enableInput": true,
         "x": 140,
-        "y": 940,
+        "y": 720,
         "wires": [
             [
                 "7c85f3a.d00500c"
@@ -4834,7 +4734,7 @@
         "stateType": "str",
         "enableInput": true,
         "x": 150,
-        "y": 880,
+        "y": 660,
         "wires": [
             [
                 "3d0081db.06ffce"
@@ -4851,7 +4751,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 980,
-        "y": 1180,
+        "y": 960,
         "wires": [
             [
                 "aeafe637.1aeaf8",
@@ -4888,7 +4788,7 @@
         ],
         "queue": "none",
         "x": 940,
-        "y": 1340,
+        "y": 1120,
         "wires": [
             []
         ]
@@ -4910,7 +4810,7 @@
         "drop": true,
         "outputs": 1,
         "x": 660,
-        "y": 1340,
+        "y": 1120,
         "wires": [
             [
                 "ee5938d2.5f5108"
@@ -4924,7 +4824,7 @@
         "name": "",
         "env": [],
         "x": 370,
-        "y": 380,
+        "y": 160,
         "wires": []
     },
     {
@@ -5040,7 +4940,7 @@
         "odd": false,
         "even": false,
         "x": 130,
-        "y": 680,
+        "y": 460,
         "wires": [
             [
                 "b10170a8c7d48e42"
@@ -5061,7 +4961,7 @@
         "startOffset": 0,
         "endOffset": 0,
         "x": 790,
-        "y": 260,
+        "y": 40,
         "wires": [
             [
                 "e8cea7e30d09b0d4"
@@ -5083,7 +4983,7 @@
         "startOffset": 0,
         "endOffset": 0,
         "x": 550,
-        "y": 1000,
+        "y": 780,
         "wires": [
             [
                 "537b61b2.0a12d"
@@ -5102,7 +5002,7 @@
         "initialize": "",
         "finalize": "",
         "x": 920,
-        "y": 1000,
+        "y": 780,
         "wires": [
             [
                 "aeafe637.1aeaf8"
@@ -5116,7 +5016,7 @@
         "name": "Alert if someone is sneaking out",
         "info": "",
         "x": 610,
-        "y": 1060,
+        "y": 840,
         "wires": []
     },
     {
@@ -5129,8 +5029,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 960,
-        "y": 1260,
+        "x": 970,
+        "y": 1040,
         "wires": [
             [
                 "253e7337.0501fc"
@@ -5164,7 +5064,7 @@
         ],
         "queue": "none",
         "x": 1260,
-        "y": 1040,
+        "y": 820,
         "wires": [
             []
         ]
@@ -5214,7 +5114,7 @@
         "pastviewUnits": "hours",
         "pastviewUnitstype": "pastviewUnits",
         "x": 580,
-        "y": 680,
+        "y": 460,
         "wires": [
             [
                 "f36487b8.7e8c48"
@@ -5266,7 +5166,7 @@
         "pastviewUnits": "hours",
         "pastviewUnitstype": "pastviewUnits",
         "x": 1060,
-        "y": 260,
+        "y": 40,
         "wires": [
             [
                 "e3eced460211d893"
@@ -5451,7 +5351,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1250,
-        "y": 260,
+        "y": 40,
         "wires": [
             [
                 "892a8bfd.69c738"
@@ -5655,7 +5555,7 @@
         "stateType": "num",
         "enableInput": true,
         "x": 130,
-        "y": 260,
+        "y": 40,
         "wires": [
             [
                 "ccda8ca7.269df"
@@ -5701,7 +5601,7 @@
         "stateType": "num",
         "enableInput": true,
         "x": 130,
-        "y": 760,
+        "y": 540,
         "wires": [
             [
                 "7f300b61.5a4044"
@@ -5839,7 +5739,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 530,
-        "y": 440,
+        "y": 220,
         "wires": [
             [
                 "8d782ee4.3daf1"
@@ -5886,7 +5786,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 530,
-        "y": 560,
+        "y": 340,
         "wires": [
             [
                 "f36487b8.7e8c48"
@@ -5933,7 +5833,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 530,
-        "y": 880,
+        "y": 660,
         "wires": [
             [],
             [
