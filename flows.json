@@ -871,7 +871,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "switch.outlet_e_2"
+            "switch.outlet_e"
         ],
         "data": "",
         "dataType": "json",
@@ -905,7 +905,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "switch.outlet_e"
+            "switch.outlet_e_2"
         ],
         "data": "",
         "dataType": "json",
