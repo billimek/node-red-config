@@ -6060,6 +6060,7 @@
         "id": "f44258a08386b4ac",
         "type": "trigger-state",
         "z": "9143c7f2.16df18",
+        "d": true,
         "name": "doorbel - region detected",
         "server": "8b52884a.b76658",
         "version": 4,
