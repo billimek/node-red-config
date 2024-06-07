@@ -2742,7 +2742,7 @@
         "version": 5,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.basement_door",
+        "entityId": "binary_sensor.ser2sock_10000_basement_door",
         "entityIdType": "substring",
         "outputInitially": false,
         "stateType": "str",
