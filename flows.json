@@ -3596,7 +3596,7 @@
         "halt_if": "disarmed",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "entity_id": "alarm_control_panel.alarm_panel",
+        "entity_id": "alarm_control_panel.ser2sock_10000_alarm_panel",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
@@ -3642,7 +3642,7 @@
         "halt_if": "disarmed",
         "halt_if_type": "str",
         "halt_if_compare": "is_not",
-        "entity_id": "alarm_control_panel.alarm_panel",
+        "entity_id": "alarm_control_panel.ser2sock_10000_alarm_panel",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
@@ -3905,7 +3905,7 @@
         "version": 5,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "alarm_control_panel.alarm_panel",
+        "entityId": "alarm_control_panel.ser2sock_10000_alarm_panel",
         "entityIdType": "substring",
         "outputInitially": false,
         "stateType": "str",
@@ -3991,7 +3991,7 @@
         "halt_if": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "entity_id": "sensor.alarm_panel_display",
+        "entity_id": "sensor.ser2sock_10000_alarm_panel_display",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
@@ -4106,7 +4106,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "alarm_control_panel.alarm_panel"
+            "alarm_control_panel.ser2sock_10000_alarm_panel"
         ],
         "data": "{\"code\":\"{{ alarm_code }}\"}",
         "dataType": "json",
@@ -4205,7 +4205,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "alarm_control_panel.alarm_panel"
+            "alarm_control_panel.ser2sock_10000_alarm_panel"
         ],
         "data": "{\"code\":\"{{ alarm_code }}\"}",
         "dataType": "json",
@@ -4471,7 +4471,7 @@
         "halt_if": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "entity_id": "alarm_control_panel.alarm_panel",
+        "entity_id": "alarm_control_panel.ser2sock_10000_alarm_panel",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
@@ -4516,7 +4516,7 @@
         "halt_if": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "entity_id": "alarm_control_panel.alarm_panel",
+        "entity_id": "alarm_control_panel.ser2sock_10000_alarm_panel",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
@@ -4560,12 +4560,11 @@
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "alarm_control_panel.alarm_panel",
+        "entityId": "alarm_control_panel.ser2sock_10000_alarm_panel",
         "entityIdType": "exact",
         "debugEnabled": false,
         "constraints": [
             {
-                "id": "u92ykgxcnd",
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "current_state",
@@ -4575,7 +4574,6 @@
                 "comparatorValue": "disarmed"
             },
             {
-                "id": "2vhxcfx6q13",
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "previous_state",
@@ -4608,12 +4606,11 @@
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "alarm_control_panel.alarm_panel",
+        "entityId": "alarm_control_panel.ser2sock_10000_alarm_panel",
         "entityIdType": "exact",
         "debugEnabled": false,
         "constraints": [
             {
-                "id": "ty01v74n8h",
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "current_state",
@@ -4623,7 +4620,6 @@
                 "comparatorValue": "^armed.*"
             },
             {
-                "id": "i15iybgnzt",
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "previous_state",
