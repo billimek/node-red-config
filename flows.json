@@ -1966,7 +1966,7 @@
         "halt_if": "disarmed",
         "halt_if_type": "str",
         "halt_if_compare": "is_not",
-        "entity_id": "alarm_control_panel.alarm_panel",
+        "entity_id": "alarm_control_panel.ser2sock_10000_alarm_panel",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
@@ -2033,7 +2033,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "alarm_control_panel.alarm_panel"
+            "alarm_control_panel.ser2sock_10000_alarm_panel"
         ],
         "data": "{\"code\":\"{{ alarm_code }}\"}",
         "dataType": "json",
