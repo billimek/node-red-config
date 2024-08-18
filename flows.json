@@ -9950,7 +9950,7 @@
         ],
         "queue": "none",
         "x": 940,
-        "y": 160,
+        "y": 280,
         "wires": [
             []
         ]
@@ -11743,7 +11743,7 @@
         ],
         "queue": "none",
         "x": 950,
-        "y": 280,
+        "y": 160,
         "wires": [
             []
         ]
@@ -12314,7 +12314,6 @@
         "y": 220,
         "wires": [
             [
-                "b5ce153f.7eca98",
                 "78d24791.853db8",
                 "47b848e8ac632ede"
             ],
@@ -12449,9 +12448,57 @@
         "y": 320,
         "wires": [
             [
-                "7febdb3c.58d2a4"
+                "909e2f496b1c3156"
             ],
             [],
+            []
+        ]
+    },
+    {
+        "id": "909e2f496b1c3156",
+        "type": "function",
+        "z": "af228686.65c8a8",
+        "name": "turn_on",
+        "func": "var service = \"turn_on\"\n\nmsg.payload = {\n    \"service\": service,\n}\nreturn [ msg ];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 540,
+        "y": 280,
+        "wires": [
+            [
+                "7693d691792f3a7e"
+            ]
+        ]
+    },
+    {
+        "id": "7693d691792f3a7e",
+        "type": "api-current-state",
+        "z": "af228686.65c8a8",
+        "name": "home?",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "0",
+        "halt_if_type": "num",
+        "halt_if_compare": "gt",
+        "entity_id": "zone.home",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 730,
+        "y": 280,
+        "wires": [
+            [
+                "b5ce153f.7eca98"
+            ],
             []
         ]
     },
