@@ -7618,7 +7618,7 @@
         "halt_if": "open",
         "halt_if_type": "str",
         "halt_if_compare": "is_not",
-        "entity_id": "cover.jens_garage_mqtt",
+        "entity_id": "cover.jen_garage_door",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
@@ -8929,7 +8929,7 @@
         "halt_if": "closed",
         "halt_if_type": "str",
         "halt_if_compare": "is_not",
-        "entity_id": "cover.jens_garage_mqtt",
+        "entity_id": "cover.jen_garage_door",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
@@ -8975,7 +8975,7 @@
         "halt_if": "open",
         "halt_if_type": "str",
         "halt_if_compare": "is_not",
-        "entity_id": "cover.jeffs_garage_mqtt",
+        "entity_id": "cover.jeff_garage_door",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
@@ -9416,7 +9416,7 @@
         "halt_if": "closed",
         "halt_if_type": "str",
         "halt_if_compare": "is_not",
-        "entity_id": "cover.jeffs_garage_mqtt",
+        "entity_id": "cover.jeff_garage_door",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
