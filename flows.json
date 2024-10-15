@@ -2308,7 +2308,7 @@
         "type": "debug",
         "z": "afb0f186.cfb0d",
         "name": "debug 8",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2341,7 +2341,7 @@
         "wires": [
             [
                 "a1c62b7c92a6bc2d",
-                "28e167bb7e364e56"
+                "47d2882cca090260"
             ]
         ]
     },
@@ -2387,7 +2387,7 @@
             }
         ],
         "queue": "none",
-        "x": 760,
+        "x": 960,
         "y": 460,
         "wires": [
             [
@@ -2407,8 +2407,50 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 920,
+        "x": 1100,
         "y": 540,
+        "wires": []
+    },
+    {
+        "id": "47d2882cca090260",
+        "type": "switch",
+        "z": "afb0f186.cfb0d",
+        "name": "",
+        "property": "payload.event.entity_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "device_tracker.unifi",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 710,
+        "y": 460,
+        "wires": [
+            [
+                "28e167bb7e364e56",
+                "c595033178a88d91"
+            ]
+        ]
+    },
+    {
+        "id": "c595033178a88d91",
+        "type": "debug",
+        "z": "afb0f186.cfb0d",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 560,
         "wires": []
     },
     {
