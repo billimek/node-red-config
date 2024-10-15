@@ -2383,7 +2383,7 @@
         "type": "debug",
         "z": "afb0f186.cfb0d",
         "name": "debug 11",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
