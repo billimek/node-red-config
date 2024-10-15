@@ -2349,8 +2349,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
-        "y": 540,
+        "x": 1040,
+        "y": 560,
         "wires": []
     },
     {
@@ -2374,8 +2374,7 @@
         "y": 460,
         "wires": [
             [
-                "28e167bb7e364e56",
-                "c595033178a88d91"
+                "cd0b0d2f23b0023b"
             ]
         ]
     },
@@ -2391,8 +2390,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 640,
-        "y": 540,
+        "x": 840,
+        "y": 560,
         "wires": []
     },
     {
@@ -2400,7 +2399,7 @@
         "type": "debug",
         "z": "afb0f186.cfb0d",
         "name": "debug 12",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2410,6 +2409,27 @@
         "x": 420,
         "y": 540,
         "wires": []
+    },
+    {
+        "id": "cd0b0d2f23b0023b",
+        "type": "function",
+        "z": "afb0f186.cfb0d",
+        "name": "strip prefix",
+        "func": "msg.payload.event.entity_id = msg.payload.event.entity_id.replace('device_tracker.', ''); \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 460,
+        "wires": [
+            [
+                "28e167bb7e364e56",
+                "c595033178a88d91"
+            ]
+        ]
     },
     {
         "id": "807d53eb.e265b",
