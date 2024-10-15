@@ -2383,7 +2383,7 @@
         "type": "debug",
         "z": "afb0f186.cfb0d",
         "name": "debug 11",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2422,7 +2422,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
+        "x": 710,
         "y": 460,
         "wires": [
             [
