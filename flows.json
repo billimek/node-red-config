@@ -2363,7 +2363,7 @@
         "rules": [
             {
                 "t": "cont",
-                "v": "device_tracker.unifi",
+                "v": "device_tracker",
                 "vt": "str"
             }
         ],
