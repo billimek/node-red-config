@@ -2277,7 +2277,7 @@
         "server": "8b52884a.b76658",
         "version": 3,
         "exposeAsEntityConfig": "",
-        "eventType": "unifi_new_device",
+        "eventType": "unifi*",
         "eventData": "",
         "waitForRunning": true,
         "outputProperties": [
@@ -2294,7 +2294,7 @@
                 "valueType": "jsonata"
             }
         ],
-        "x": 190,
+        "x": 150,
         "y": 460,
         "wires": [
             [
