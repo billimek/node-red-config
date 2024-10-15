@@ -2298,32 +2298,6 @@
         "y": 460,
         "wires": [
             [
-                "dcd64f4c86b4d494",
-                "47d2882cca090260"
-            ]
-        ]
-    },
-    {
-        "id": "f0aa733bf83a1668",
-        "type": "switch",
-        "z": "afb0f186.cfb0d",
-        "name": "",
-        "property": "payload.event.action",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "create",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 470,
-        "y": 420,
-        "wires": [
-            [
                 "47d2882cca090260"
             ]
         ]
@@ -2367,7 +2341,7 @@
         "type": "debug",
         "z": "afb0f186.cfb0d",
         "name": "debug 10",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2409,7 +2383,7 @@
         "type": "debug",
         "z": "afb0f186.cfb0d",
         "name": "debug 11",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2417,22 +2391,6 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 640,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "dcd64f4c86b4d494",
-        "type": "debug",
-        "z": "afb0f186.cfb0d",
-        "name": "debug 12",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 440,
         "y": 540,
         "wires": []
     },
