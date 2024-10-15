@@ -2278,7 +2278,7 @@
         "version": 3,
         "exposeAsEntityConfig": "",
         "eventType": "entity_registry_updated",
-        "eventData": "",
+        "eventData": "{\"event.action\":\"create\"}",
         "waitForRunning": true,
         "outputProperties": [
             {
@@ -2298,26 +2298,10 @@
         "y": 460,
         "wires": [
             [
-                "bc72ead1b995a4a5",
-                "f0aa733bf83a1668"
+                "f0aa733bf83a1668",
+                "dcd64f4c86b4d494"
             ]
         ]
-    },
-    {
-        "id": "bc72ead1b995a4a5",
-        "type": "debug",
-        "z": "afb0f186.cfb0d",
-        "name": "debug 8",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 400,
-        "y": 560,
-        "wires": []
     },
     {
         "id": "f0aa733bf83a1668",
@@ -2340,26 +2324,9 @@
         "y": 460,
         "wires": [
             [
-                "a1c62b7c92a6bc2d",
                 "47d2882cca090260"
             ]
         ]
-    },
-    {
-        "id": "a1c62b7c92a6bc2d",
-        "type": "debug",
-        "z": "afb0f186.cfb0d",
-        "name": "debug 9",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 620,
-        "y": 560,
-        "wires": []
     },
     {
         "id": "28e167bb7e364e56",
@@ -2451,6 +2418,22 @@
         "statusType": "auto",
         "x": 860,
         "y": 560,
+        "wires": []
+    },
+    {
+        "id": "dcd64f4c86b4d494",
+        "type": "debug",
+        "z": "afb0f186.cfb0d",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 540,
         "wires": []
     },
     {
