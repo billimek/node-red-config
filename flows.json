@@ -2278,7 +2278,7 @@
         "version": 3,
         "exposeAsEntityConfig": "",
         "eventType": "entity_registry_updated",
-        "eventData": "{\"event.action\":\"create\"}",
+        "eventData": "{\"action\":\"create\"}",
         "waitForRunning": true,
         "outputProperties": [
             {
