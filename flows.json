@@ -2354,7 +2354,7 @@
             }
         ],
         "queue": "none",
-        "x": 960,
+        "x": 980,
         "y": 460,
         "wires": [
             [
@@ -2374,7 +2374,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1100,
+        "x": 860,
         "y": 540,
         "wires": []
     },
@@ -2395,7 +2395,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 710,
+        "x": 510,
         "y": 460,
         "wires": [
             [
@@ -2416,8 +2416,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
-        "y": 560,
+        "x": 640,
+        "y": 540,
         "wires": []
     },
     {
