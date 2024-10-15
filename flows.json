@@ -2270,6 +2270,148 @@
         ]
     },
     {
+        "id": "a769b959c008bd68",
+        "type": "server-events",
+        "z": "afb0f186.cfb0d",
+        "name": "",
+        "server": "8b52884a.b76658",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "eventType": "unifi_new_device",
+        "eventData": "",
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "$outputData(\"eventData\").event_type",
+                "valueType": "jsonata"
+            }
+        ],
+        "x": 190,
+        "y": 460,
+        "wires": [
+            [
+                "bc72ead1b995a4a5",
+                "f0aa733bf83a1668"
+            ]
+        ]
+    },
+    {
+        "id": "bc72ead1b995a4a5",
+        "type": "debug",
+        "z": "afb0f186.cfb0d",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "f0aa733bf83a1668",
+        "type": "switch",
+        "z": "afb0f186.cfb0d",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "unifi_new_device",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 470,
+        "y": 460,
+        "wires": [
+            [
+                "a1c62b7c92a6bc2d",
+                "28e167bb7e364e56"
+            ]
+        ]
+    },
+    {
+        "id": "a1c62b7c92a6bc2d",
+        "type": "debug",
+        "z": "afb0f186.cfb0d",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "28e167bb7e364e56",
+        "type": "api-call-service",
+        "z": "afb0f186.cfb0d",
+        "name": "notify jeff iOS",
+        "server": "8b52884a.b76658",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "notify",
+        "service": "mobile_app_jeffsphone",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\"title\":\"New Device Detected\",\"message\":\"A new device has joined the WiFi network: {{payload.event.data.name}}\"}",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "data"
+            }
+        ],
+        "queue": "none",
+        "x": 760,
+        "y": 460,
+        "wires": [
+            [
+                "b7b05e815c2e3f6a"
+            ]
+        ]
+    },
+    {
+        "id": "b7b05e815c2e3f6a",
+        "type": "debug",
+        "z": "afb0f186.cfb0d",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 540,
+        "wires": []
+    },
+    {
         "id": "807d53eb.e265b",
         "type": "function",
         "z": "ea946133.0085b",
