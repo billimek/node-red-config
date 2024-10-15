@@ -2329,7 +2329,7 @@
         "rules": [
             {
                 "t": "eq",
-                "v": "unifi_new_device",
+                "v": "create",
                 "vt": "str"
             }
         ],
