@@ -2324,7 +2324,7 @@
         "type": "switch",
         "z": "afb0f186.cfb0d",
         "name": "",
-        "property": "payload",
+        "property": "payload.event.data.action",
         "propertyType": "msg",
         "rules": [
             {
