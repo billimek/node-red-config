@@ -9187,9 +9187,7 @@
         "floorId": [],
         "areaId": [],
         "deviceId": [],
-        "entityId": [
-            "all"
-        ],
+        "entityId": [],
         "labelId": [],
         "data": "",
         "dataType": "json",
