@@ -12654,7 +12654,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "switch.",
+        "action": "switch.toggle",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -12678,7 +12678,7 @@
         "queue": "none",
         "blockInputOverrides": false,
         "domain": "switch",
-        "service": "",
+        "service": "toggle",
         "x": 940,
         "y": 1760,
         "wires": [
@@ -13076,6 +13076,35 @@
                 "b5ce153f.7eca98"
             ],
             []
+        ]
+    },
+    {
+        "id": "28ed88012d7edce3",
+        "type": "inject",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 1880,
+        "wires": [
+            [
+                "a407db7fca1f4b33"
+            ]
         ]
     },
     {
