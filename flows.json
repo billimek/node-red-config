@@ -8158,7 +8158,7 @@
         "id": "834f3964.92aed8",
         "type": "trigger-state",
         "z": "75b62c93.dd5d84",
-        "name": "tesla away (>200ft)",
+        "name": "tesla3 away (>200ft)",
         "server": "8b52884a.b76658",
         "version": 4,
         "inputs": 1,
@@ -8204,7 +8204,7 @@
         "id": "32d7f.835aa2818",
         "type": "trigger-state",
         "z": "75b62c93.dd5d84",
-        "name": "tesla home (<=200ft)",
+        "name": "tesla3 home (<=200ft)",
         "server": "8b52884a.b76658",
         "version": 4,
         "inputs": 1,
@@ -8248,7 +8248,7 @@
                 "value": ""
             }
         ],
-        "x": 120,
+        "x": 130,
         "y": 1340,
         "wires": [
             [
