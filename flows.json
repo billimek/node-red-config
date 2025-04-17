@@ -9217,7 +9217,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "notify.mobile_app_jennifers_xs_max",
+        "action": "notify.mobile_app_jensphone",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -9238,7 +9238,7 @@
         "queue": "none",
         "blockInputOverrides": false,
         "domain": "notify",
-        "service": "mobile_app_jennifers_xs_max",
+        "service": "mobile_app_jensphone",
         "x": 1160,
         "y": 1900,
         "wires": [
