@@ -10664,8 +10664,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 40,
+        "x": 710,
+        "y": 100,
         "wires": [
             [
                 "230d3ec9.e71a02"
@@ -10680,9 +10680,9 @@
         "events": "[{\"start\":{\"dow\":1,\"mod\":0},\"end\":{\"dow\":2,\"mod\":0}},{\"start\":{\"dow\":2,\"mod\":0},\"end\":{\"dow\":3,\"mod\":0}},{\"start\":{\"dow\":3,\"mod\":0},\"end\":{\"dow\":4,\"mod\":0}},{\"start\":{\"dow\":4,\"mod\":0},\"end\":{\"dow\":5,\"mod\":0}},{\"start\":{\"dow\":5,\"mod\":0},\"end\":{\"dow\":6,\"mod\":0}},{\"start\":{\"dow\":6,\"mod\":0},\"end\":{\"dow\":0,\"mod\":0}},{\"start\":{\"dow\":0,\"mod\":0},\"end\":{\"dow\":1,\"mod\":0}}]",
         "topic": "",
         "name": "dark? (full)",
-        "onPayload": "turn_on",
+        "onPayload": "\"action\": \"switch.turn_on\"",
         "onPayloadType": "str",
-        "offPayload": "turn_off",
+        "offPayload": "\"action\": \"switch.turn_off\"",
         "offPayloadType": "str",
         "onlyWhenDark": true,
         "scheduleRndMax": 0,
@@ -10693,7 +10693,7 @@
         "y": 40,
         "wires": [
             [
-                "39389ef1.9f2d62"
+                "230d3ec9.e71a02"
             ]
         ]
     },
@@ -11530,6 +11530,18 @@
         "type": "inject",
         "z": "af228686.65c8a8",
         "name": "trigger",
+        "props": [
+            {
+                "p": "payload",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
@@ -13138,8 +13150,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 100,
-        "y": 120,
+        "x": 120,
+        "y": 100,
         "wires": [
             [
                 "53aba614.8eed08"
