@@ -13118,6 +13118,35 @@
         ]
     },
     {
+        "id": "23dba8e223999653",
+        "type": "inject",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 120,
+        "wires": [
+            [
+                "53aba614.8eed08"
+            ]
+        ]
+    },
+    {
         "id": "f9971550.66b808",
         "type": "poll-state",
         "z": "2fad043e.317c8c",
