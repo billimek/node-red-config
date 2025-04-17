@@ -11795,7 +11795,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "light.",
+        "action": "light.toggle",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -11818,7 +11818,7 @@
         "queue": "none",
         "blockInputOverrides": false,
         "domain": "light",
-        "service": "",
+        "service": "toggle",
         "x": 950,
         "y": 1260,
         "wires": [
