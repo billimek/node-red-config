@@ -12833,64 +12833,6 @@
         ]
     },
     {
-        "id": "3b5af5b47e445f7d",
-        "type": "inject",
-        "z": "af228686.65c8a8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 700,
-        "y": 1340,
-        "wires": [
-            [
-                "83092d58.56334"
-            ]
-        ]
-    },
-    {
-        "id": "425c8e1a3d66601f",
-        "type": "inject",
-        "z": "af228686.65c8a8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 680,
-        "y": 1460,
-        "wires": [
-            [
-                "432fde78.07eef"
-            ]
-        ]
-    },
-    {
         "id": "f9971550.66b808",
         "type": "poll-state",
         "z": "2fad043e.317c8c",
