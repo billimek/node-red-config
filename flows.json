@@ -6508,13 +6508,13 @@
         "id": "657ac2d3f79ae577",
         "type": "trigger-state",
         "z": "9143c7f2.16df18",
-        "name": "tesla away (>200ft)",
+        "name": "tesla3 away (>200ft)",
         "server": "8b52884a.b76658",
         "version": 4,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "sensor.home_tesla_location_distance",
+        "entityId": "sensor.home_3_tesla_location_distance",
         "entityIdType": "exact",
         "debugEnabled": false,
         "constraints": [
@@ -6554,13 +6554,13 @@
         "id": "3cfdf42c3929d5b0",
         "type": "trigger-state",
         "z": "9143c7f2.16df18",
-        "name": "tesla home (<=200ft)",
+        "name": "tesla3 home (<=200ft)",
         "server": "8b52884a.b76658",
         "version": 4,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "sensor.home_tesla_location_distance",
+        "entityId": "sensor.home_3_tesla_location_distance",
         "entityIdType": "exact",
         "debugEnabled": false,
         "constraints": [
@@ -6598,7 +6598,7 @@
                 "value": ""
             }
         ],
-        "x": 250,
+        "x": 260,
         "y": 540,
         "wires": [
             [
