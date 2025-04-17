@@ -8164,7 +8164,7 @@
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "sensor.home_tesla_location_distance",
+        "entityId": "sensor.home_3_tesla_location_distance",
         "entityIdType": "exact",
         "debugEnabled": false,
         "constraints": [
@@ -8210,7 +8210,7 @@
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "sensor.home_tesla_location_distance",
+        "entityId": "sensor.home_3_tesla_location_distance",
         "entityIdType": "exact",
         "debugEnabled": false,
         "constraints": [
