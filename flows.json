@@ -10086,6 +10086,171 @@
         ]
     },
     {
+        "id": "857bc349e289b51c",
+        "type": "trigger-state",
+        "z": "75b62c93.dd5d84",
+        "name": "tesla3 away (>200ft)",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "inputs": 1,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "sensor.home_tesla3_location_distance",
+        "entityIdType": "exact",
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": ">",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "200"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
+                "comparatorType": "<=",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "200"
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": false,
+        "stateType": "num",
+        "enableInput": true,
+        "x": 510,
+        "y": 2500,
+        "wires": [
+            [
+                "64539590a2dc8db7"
+            ],
+            [
+                "e6e043fd3bd89d9e"
+            ]
+        ]
+    },
+    {
+        "id": "3a9540ac50294d71",
+        "type": "trigger-state",
+        "z": "75b62c93.dd5d84",
+        "name": "tesla3 home (<=200ft)",
+        "server": "8b52884a.b76658",
+        "version": 4,
+        "inputs": 1,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "sensor.home_tesla3_location_distance",
+        "entityIdType": "exact",
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": "<=",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "200"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
+                "comparatorType": ">",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "200"
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": false,
+        "stateType": "num",
+        "enableInput": true,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "x": 510,
+        "y": 2560,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4b8a6b15729a6f2a",
+        "type": "inject",
+        "z": "75b62c93.dd5d84",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 2360,
+        "wires": [
+            [
+                "857bc349e289b51c",
+                "3a9540ac50294d71"
+            ]
+        ]
+    },
+    {
+        "id": "64539590a2dc8db7",
+        "type": "debug",
+        "z": "75b62c93.dd5d84",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 2420,
+        "wires": []
+    },
+    {
+        "id": "e6e043fd3bd89d9e",
+        "type": "debug",
+        "z": "75b62c93.dd5d84",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 2580,
+        "wires": []
+    },
+    {
         "id": "b5ce153f.7eca98",
         "type": "api-call-service",
         "z": "af228686.65c8a8",
