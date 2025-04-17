@@ -6706,7 +6706,7 @@
         "exposeAsEntityConfig": "",
         "entities": {
             "entity": [
-                "sensor.home_3_tesla_location_distance"
+                "sensor.home_tesla3_location_distance"
             ],
             "substring": [],
             "regex": []
@@ -6757,7 +6757,7 @@
         "exposeAsEntityConfig": "",
         "entities": {
             "entity": [
-                "sensor.home_3_tesla_location_distance"
+                "sensor.home_tesla3_location_distance"
             ],
             "substring": [],
             "regex": []
