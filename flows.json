@@ -10119,7 +10119,7 @@
             }
         ],
         "customOutputs": [],
-        "outputInitially": false,
+        "outputInitially": true,
         "stateType": "num",
         "enableInput": true,
         "x": 510,
@@ -10167,7 +10167,7 @@
             }
         ],
         "customOutputs": [],
-        "outputInitially": false,
+        "outputInitially": true,
         "stateType": "num",
         "enableInput": true,
         "exposeToHomeAssistant": false,
@@ -10184,8 +10184,12 @@
         "x": 520,
         "y": 2640,
         "wires": [
-            [],
-            []
+            [
+                "91dfe08902bef16d"
+            ],
+            [
+                "53de8905e55557e9"
+            ]
         ]
     },
     {
@@ -10248,6 +10252,38 @@
         "statusType": "auto",
         "x": 760,
         "y": 2580,
+        "wires": []
+    },
+    {
+        "id": "91dfe08902bef16d",
+        "type": "debug",
+        "z": "75b62c93.dd5d84",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 2700,
+        "wires": []
+    },
+    {
+        "id": "53de8905e55557e9",
+        "type": "debug",
+        "z": "75b62c93.dd5d84",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 2860,
         "wires": []
     },
     {
