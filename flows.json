@@ -6232,9 +6232,7 @@
         "floorId": [],
         "areaId": [],
         "deviceId": [],
-        "entityId": [
-            "climate.upstairs"
-        ],
+        "entityId": [],
         "labelId": [],
         "data": "{\"resume_all\":\"true\"}",
         "dataType": "json",
