@@ -558,15 +558,16 @@
         "z": "43703bf3.b01b24",
         "name": "cabinet lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "switch",
-        "service": "",
+        "action": "switch.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "group.cabinet_lights"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -580,6 +581,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "switch",
+        "service": "",
         "x": 400,
         "y": 80,
         "wires": [
@@ -592,15 +596,16 @@
         "z": "43703bf3.b01b24",
         "name": "pool light",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "switch",
-        "service": "",
+        "action": "switch.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "switch.pool"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -614,6 +619,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "switch",
+        "service": "",
         "x": 380,
         "y": 140,
         "wires": [
@@ -626,15 +634,16 @@
         "z": "43703bf3.b01b24",
         "name": "deck lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "switch",
-        "service": "",
+        "action": "switch.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "switch.outlet_a"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -648,6 +657,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "switch",
+        "service": "",
         "x": 390,
         "y": 200,
         "wires": [
@@ -660,15 +672,16 @@
         "z": "43703bf3.b01b24",
         "name": "garage lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "switch",
-        "service": "",
+        "action": "switch.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "switch.garage"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -682,6 +695,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "switch",
+        "service": "",
         "x": 390,
         "y": 260,
         "wires": [
@@ -694,15 +710,16 @@
         "z": "43703bf3.b01b24",
         "name": "basement bedroom lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "switch",
-        "service": "",
+        "action": "switch.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "switch.bedroom"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -716,6 +733,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "switch",
+        "service": "",
         "x": 430,
         "y": 320,
         "wires": [
@@ -728,15 +748,16 @@
         "z": "43703bf3.b01b24",
         "name": "basement livingroom lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "switch",
-        "service": "",
+        "action": "switch.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "switch.livingroom"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -750,6 +771,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "switch",
+        "service": "",
         "x": 440,
         "y": 380,
         "wires": [
@@ -762,15 +786,16 @@
         "z": "43703bf3.b01b24",
         "name": "basement hallway lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "switch",
-        "service": "",
+        "action": "switch.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "switch.hallway"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -784,6 +809,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "switch",
+        "service": "",
         "x": 430,
         "y": 440,
         "wires": [
@@ -796,15 +824,16 @@
         "z": "43703bf3.b01b24",
         "name": "basement stairs lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "light",
-        "service": "",
+        "action": "light.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "light.stairs"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -818,6 +847,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "light",
+        "service": "",
         "x": 420,
         "y": 500,
         "wires": [
@@ -830,15 +862,16 @@
         "z": "43703bf3.b01b24",
         "name": "foyer stairs lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "light",
-        "service": "",
+        "action": "light.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "light.stairs2"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -852,6 +885,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "light",
+        "service": "",
         "x": 410,
         "y": 620,
         "wires": [
@@ -864,15 +900,16 @@
         "z": "43703bf3.b01b24",
         "name": "desk lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "switch",
-        "service": "",
+        "action": "switch.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "switch.outlet_e"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -886,6 +923,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "switch",
+        "service": "",
         "x": 390,
         "y": 560,
         "wires": [
@@ -898,15 +938,16 @@
         "z": "43703bf3.b01b24",
         "name": "camera lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "switch",
-        "service": "",
+        "action": "switch.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "switch.outlet_e_2"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -920,6 +961,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "switch",
+        "service": "",
         "x": 400,
         "y": 680,
         "wires": [
@@ -932,15 +976,16 @@
         "z": "43703bf3.b01b24",
         "name": "sunroom tree lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "light",
-        "service": "",
+        "action": "light.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "light.outlet_g"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -954,6 +999,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "light",
+        "service": "",
         "x": 410,
         "y": 800,
         "wires": [
@@ -966,15 +1014,16 @@
         "z": "43703bf3.b01b24",
         "name": "sunroom lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "light",
-        "service": "",
+        "action": "light.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "group.sunroom_lights"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -988,6 +1037,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "light",
+        "service": "",
         "x": 400,
         "y": 740,
         "wires": [
@@ -1698,15 +1750,16 @@
         "z": "afb0f186.cfb0d",
         "name": "Turn on Basement Fan",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "climate",
-        "service": "set_fan_mode",
+        "action": "climate.set_fan_mode",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "climate.basement"
         ],
+        "labelId": [],
         "data": "{\"fan_mode\":\"on\"}",
         "dataType": "json",
         "mergeContext": "",
@@ -1720,6 +1773,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "climate",
+        "service": "set_fan_mode",
         "x": 560,
         "y": 80,
         "wires": [
@@ -2026,15 +2082,16 @@
         "z": "afb0f186.cfb0d",
         "name": "arm alarm",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "alarm_control_panel",
-        "service": "alarm_arm_home",
+        "action": "alarm_control_panel.alarm_arm_home",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "alarm_control_panel.ser2sock_10000_alarm_panel"
         ],
+        "labelId": [],
         "data": "{\"code\":\"{{ alarm_code }}\"}",
         "dataType": "json",
         "mergeContext": "",
@@ -2048,6 +2105,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "alarm_control_panel",
+        "service": "alarm_arm_home",
         "x": 1180,
         "y": 180,
         "wires": [
@@ -2106,15 +2166,16 @@
         "z": "afb0f186.cfb0d",
         "name": "close jeff's garage door",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "cover",
-        "service": "close_cover",
+        "action": "cover.close_cover",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "cover.jeff_garage_door"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -2128,6 +2189,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "cover",
+        "service": "close_cover",
         "x": 1010,
         "y": 300,
         "wires": [
@@ -2186,15 +2250,16 @@
         "z": "afb0f186.cfb0d",
         "name": "close jen's garage door",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "cover",
-        "service": "close_cover",
+        "action": "cover.close_cover",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "cover.jen_garage_door"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -2208,6 +2273,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "cover",
+        "service": "close_cover",
         "x": 1010,
         "y": 360,
         "wires": [
@@ -2309,13 +2377,14 @@
         "z": "afb0f186.cfb0d",
         "name": "notify jeff iOS",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "notify",
-        "service": "mobile_app_jeffsphone",
+        "action": "notify.mobile_app_jeffsphone",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "{\"title\":\"New Device Detected\",\"message\":\"A new device has joined the WiFi network: {{payload.event.entity_id}}\"}",
         "dataType": "json",
         "mergeContext": "",
@@ -2329,6 +2398,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "notify",
+        "service": "mobile_app_jeffsphone",
         "x": 980,
         "y": 460,
         "wires": [
@@ -2901,11 +2973,16 @@
         "z": "ea946133.0085b",
         "name": "basement door open?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.ser2sock_10000_basement_door",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "binary_sensor.ser2sock_10000_basement_door"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "off",
@@ -3119,13 +3196,14 @@
         "d": true,
         "name": "Notify Jeff (ios)",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "notify",
-        "service": "mobile_app_jeffsphone",
+        "action": "notify.mobile_app_jeffsphone",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -3139,6 +3217,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "notify",
+        "service": "mobile_app_jeffsphone",
         "x": 1580,
         "y": 780,
         "wires": [
@@ -3956,13 +4037,14 @@
         "z": "4aedf9e8.044e08",
         "name": "notify jeff iOS",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "notify",
-        "service": "mobile_app_jeffsphone",
+        "action": "notify.mobile_app_jeffsphone",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -3976,6 +4058,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "notify",
+        "service": "mobile_app_jeffsphone",
         "x": 1260,
         "y": 660,
         "wires": [
@@ -3988,13 +4073,14 @@
         "z": "4aedf9e8.044e08",
         "name": "Notify Slack",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "notify",
-        "service": "slack",
+        "action": "notify.slack",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -4008,6 +4094,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "notify",
+        "service": "slack",
         "x": 1250,
         "y": 780,
         "wires": [
@@ -4034,13 +4123,14 @@
         "z": "4aedf9e8.044e08",
         "name": "notify jen iOS",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "notify",
-        "service": "mobile_app_jensphone",
+        "action": "notify.mobile_app_jensphone",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -4054,6 +4144,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "notify",
+        "service": "mobile_app_jensphone",
         "x": 1260,
         "y": 720,
         "wires": [
@@ -4066,11 +4159,16 @@
         "z": "4aedf9e8.044e08",
         "name": "Alarm Triggered",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "alarm_control_panel.ser2sock_10000_alarm_panel",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "alarm_control_panel.ser2sock_10000_alarm_panel"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "triggered",
@@ -4263,15 +4361,16 @@
         "z": "4aedf9e8.044e08",
         "name": "arm alarm",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "alarm_control_panel",
-        "service": "alarm_arm_home",
+        "action": "alarm_control_panel.alarm_arm_home",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "alarm_control_panel.ser2sock_10000_alarm_panel"
         ],
+        "labelId": [],
         "data": "{\"code\":\"{{ alarm_code }}\"}",
         "dataType": "json",
         "mergeContext": "",
@@ -4285,6 +4384,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "alarm_control_panel",
+        "service": "alarm_arm_home",
         "x": 1420,
         "y": 220,
         "wires": [
@@ -4362,15 +4464,16 @@
         "z": "4aedf9e8.044e08",
         "name": "disarm alarm",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "alarm_control_panel",
-        "service": "alarm_disarm",
+        "action": "alarm_control_panel.alarm_disarm",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "alarm_control_panel.ser2sock_10000_alarm_panel"
         ],
+        "labelId": [],
         "data": "{\"code\":\"{{ alarm_code }}\"}",
         "dataType": "json",
         "mergeContext": "",
@@ -4384,6 +4487,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "alarm_control_panel",
+        "service": "alarm_disarm",
         "x": 1430,
         "y": 540,
         "wires": [
@@ -4720,12 +4826,17 @@
         "z": "4aedf9e8.044e08",
         "name": "Alarm Disarmed",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "alarm_control_panel.ser2sock_10000_alarm_panel",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "alarm_control_panel.ser2sock_10000_alarm_panel"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -4766,12 +4877,17 @@
         "z": "4aedf9e8.044e08",
         "name": "Alarm Armed",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "alarm_control_panel.ser2sock_10000_alarm_panel",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "alarm_control_panel.ser2sock_10000_alarm_panel"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -4829,15 +4945,16 @@
         "z": "4aedf9e8.044e08",
         "name": "play on all speakers",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "media_player",
-        "service": "play_media",
+        "action": "media_player.play_media",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "all"
         ],
+        "labelId": [],
         "data": "{\"media_content_id\":\"https://hass.eviljungle.com/local/US-EN-Morgan-Freeman-Vacate-The-Premises.wav\",\"media_content_type\":\"audio/wav\"}",
         "dataType": "json",
         "mergeContext": "",
@@ -4851,6 +4968,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "media_player",
+        "service": "play_media",
         "x": 940,
         "y": 1120,
         "wires": [
@@ -5107,13 +5227,14 @@
         "z": "4aedf9e8.044e08",
         "name": "Notify discord",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "notify",
-        "service": "discord",
+        "action": "notify.discord",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -5127,6 +5248,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "notify",
+        "service": "discord",
         "x": 1260,
         "y": 840,
         "wires": [
@@ -5587,12 +5711,17 @@
         "z": "4aedf9e8.044e08",
         "name": "home -> not_home",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "zone.home",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "zone.home"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -5633,12 +5762,17 @@
         "z": "4aedf9e8.044e08",
         "name": "not_home -> home",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "zone.home",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "zone.home"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -5911,13 +6045,14 @@
         "z": "9143c7f2.16df18",
         "name": "notify jeff iOS",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "notify",
-        "service": "mobile_app_jeffsphone",
+        "action": "notify.mobile_app_jeffsphone",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -5931,6 +6066,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "notify",
+        "service": "mobile_app_jeffsphone",
         "x": 900,
         "y": 200,
         "wires": [
@@ -5963,13 +6101,14 @@
         "z": "9143c7f2.16df18",
         "name": "notify jen iOS",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "notify",
-        "service": "mobile_app_jensphone",
+        "action": "notify.mobile_app_jensphone",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -5983,6 +6122,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "notify",
+        "service": "mobile_app_jensphone",
         "x": 900,
         "y": 260,
         "wires": [
@@ -6053,21 +6195,25 @@
         "z": "9143c7f2.16df18",
         "name": "set ecobee away",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "climate",
-        "service": "set_preset_mode",
+        "action": "climate.set_preset_mode",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "climate.upstairs"
         ],
+        "labelId": [],
         "data": "{\"preset_mode\":\"Away\"}",
         "dataType": "json",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "climate",
+        "service": "set_preset_mode",
         "x": 590,
         "y": 720,
         "wires": [
@@ -6080,21 +6226,25 @@
         "z": "9143c7f2.16df18",
         "name": "set ecobee home",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "ecobee",
-        "service": "resume_program",
+        "action": "ecobee.resume_program",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "climate.upstairs"
         ],
+        "labelId": [],
         "data": "{\"resume_all\":\"true\"}",
         "dataType": "json",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "ecobee",
+        "service": "resume_program",
         "x": 590,
         "y": 780,
         "wires": [
@@ -6107,12 +6257,17 @@
         "z": "9143c7f2.16df18",
         "name": "doorbell ring",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 0,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.front_door_button_pressed",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "binary_sensor.front_door_button_pressed"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -6144,12 +6299,17 @@
         "z": "9143c7f2.16df18",
         "name": "doorbel - person detected",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 0,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.front_door_smart_motion_human",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "binary_sensor.front_door_smart_motion_human"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -6223,12 +6383,17 @@
         "d": true,
         "name": "doorbel - region detected",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 0,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.front_door_cross_region_detection",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "binary_sensor.front_door_cross_region_detection"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -6280,12 +6445,17 @@
         "z": "9143c7f2.16df18",
         "name": "home -> not_home",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "zone.home",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "zone.home"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -6326,12 +6496,17 @@
         "z": "9143c7f2.16df18",
         "name": "not_home -> home",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "zone.home",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "zone.home"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -6372,12 +6547,17 @@
         "z": "9143c7f2.16df18",
         "name": "not_home -> home",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "zone.home",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "zone.home"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -6418,12 +6598,17 @@
         "z": "9143c7f2.16df18",
         "name": "Jeff came home",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 0,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "person.jeff_billimek",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "person.jeff_billimek"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -6464,12 +6649,17 @@
         "z": "9143c7f2.16df18",
         "name": "Jen came home",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 0,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "person.jennifer_billimek",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "person.jennifer_billimek"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -6510,12 +6700,17 @@
         "z": "9143c7f2.16df18",
         "name": "tesla3 away (>200ft)",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "sensor.home_3_tesla_location_distance",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "sensor.home_3_tesla_location_distance"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -6556,12 +6751,17 @@
         "z": "9143c7f2.16df18",
         "name": "tesla3 home (<=200ft)",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "sensor.home_3_tesla_location_distance",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "sensor.home_3_tesla_location_distance"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -6613,12 +6813,17 @@
         "z": "9143c7f2.16df18",
         "name": "tesla2 away (>200ft)",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "sensor.home_tesla2_location_distance",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "sensor.home_tesla2_location_distance"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -6670,12 +6875,17 @@
         "z": "9143c7f2.16df18",
         "name": "tesla2 home (<=200m)",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "sensor.home_tesla2_location_distance",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "sensor.home_tesla2_location_distance"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -6727,13 +6937,14 @@
         "z": "75b62c93.dd5d84",
         "name": "notify jeff iOS",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "notify",
-        "service": "mobile_app_jeffsphone",
+        "action": "notify.mobile_app_jeffsphone",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -6747,6 +6958,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "notify",
+        "service": "mobile_app_jeffsphone",
         "x": 1440,
         "y": 100,
         "wires": [
@@ -6759,13 +6973,14 @@
         "z": "75b62c93.dd5d84",
         "name": "notify jen iOS",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "notify",
-        "service": "mobile_app_jensphone",
+        "action": "notify.mobile_app_jensphone",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -6779,6 +6994,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "notify",
+        "service": "mobile_app_jensphone",
         "x": 1440,
         "y": 280,
         "wires": [
@@ -7183,15 +7401,16 @@
         "z": "75b62c93.dd5d84",
         "name": "close jen's garage door",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "cover",
-        "service": "close_cover",
+        "action": "cover.close_cover",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "cover.jen_garage_door"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -7205,6 +7424,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "cover",
+        "service": "close_cover",
         "x": 1170,
         "y": 40,
         "wires": [
@@ -7263,15 +7485,16 @@
         "z": "75b62c93.dd5d84",
         "name": "close jeff's garage door",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "cover",
-        "service": "close_cover",
+        "action": "cover.close_cover",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "cover.jeff_garage_door"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -7285,6 +7508,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "cover",
+        "service": "close_cover",
         "x": 1170,
         "y": 220,
         "wires": [
@@ -7376,13 +7602,14 @@
         "z": "75b62c93.dd5d84",
         "name": "notify jeff iOS",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "notify",
-        "service": "mobile_app_jeffsphone",
+        "action": "notify.mobile_app_jeffsphone",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -7396,6 +7623,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "notify",
+        "service": "mobile_app_jeffsphone",
         "x": 1440,
         "y": 940,
         "wires": [
@@ -7571,13 +7801,14 @@
         "z": "75b62c93.dd5d84",
         "name": "notify jen iOS",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "notify",
-        "service": "mobile_app_jensphone",
+        "action": "notify.mobile_app_jensphone",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -7591,6 +7822,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "notify",
+        "service": "mobile_app_jensphone",
         "x": 1440,
         "y": 1000,
         "wires": [
@@ -7989,15 +8223,16 @@
         "z": "75b62c93.dd5d84",
         "name": "close jen's garage door",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "cover",
-        "service": "close_cover",
+        "action": "cover.close_cover",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "cover.jen_garage_door"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -8011,6 +8246,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "cover",
+        "service": "close_cover",
         "x": 1070,
         "y": 1280,
         "wires": [
@@ -8070,15 +8308,16 @@
         "z": "75b62c93.dd5d84",
         "name": "open jen's garage door",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "cover",
-        "service": "open_cover",
+        "action": "cover.open_cover",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "cover.jen_garage_door"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -8092,6 +8331,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "cover",
+        "service": "open_cover",
         "x": 1070,
         "y": 1340,
         "wires": [
@@ -8160,12 +8402,17 @@
         "z": "75b62c93.dd5d84",
         "name": "tesla3 away (>200ft)",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "sensor.home_tesla3_location_distance",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "sensor.home_tesla3_location_distance"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -8206,12 +8453,17 @@
         "z": "75b62c93.dd5d84",
         "name": "tesla3 home (<=200ft)",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "sensor.home_tesla3_location_distance",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "sensor.home_tesla3_location_distance"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -8440,15 +8692,16 @@
         "z": "75b62c93.dd5d84",
         "name": "wake teslamate",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "script",
-        "service": "turn_on",
+        "action": "script.turn_on",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "script.wake_teslamate"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -8462,6 +8715,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "script",
+        "service": "turn_on",
         "x": 1440,
         "y": 880,
         "wires": [
@@ -8889,13 +9145,14 @@
         "z": "75b62c93.dd5d84",
         "name": "notify jeff iOS",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "notify",
-        "service": "mobile_app_jeffsphone",
+        "action": "notify.mobile_app_jeffsphone",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -8909,6 +9166,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "notify",
+        "service": "mobile_app_jeffsphone",
         "x": 1160,
         "y": 1840,
         "wires": [
@@ -8921,15 +9181,16 @@
         "z": "75b62c93.dd5d84",
         "name": "",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "tts",
-        "service": "google_say",
+        "action": "tts.google_say",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "all"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -8943,6 +9204,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "tts",
+        "service": "google_say",
         "x": 1160,
         "y": 1960,
         "wires": [
@@ -8955,13 +9219,14 @@
         "z": "75b62c93.dd5d84",
         "name": "notify jen iOS",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "notify",
-        "service": "mobile_app_jennifers_xs_max",
+        "action": "notify.mobile_app_jennifers_xs_max",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -8975,6 +9240,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "notify",
+        "service": "mobile_app_jennifers_xs_max",
         "x": 1160,
         "y": 1900,
         "wires": [
@@ -8987,15 +9255,16 @@
         "z": "75b62c93.dd5d84",
         "name": "close jen's garage door",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "cover",
-        "service": "close_cover",
+        "action": "cover.close_cover",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "cover.jen_garage_door"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -9009,6 +9278,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "cover",
+        "service": "close_cover",
         "x": 830,
         "y": 1780,
         "wires": [
@@ -9021,15 +9293,16 @@
         "z": "75b62c93.dd5d84",
         "name": "close jeff's garage door",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "cover",
-        "service": "close_cover",
+        "action": "cover.close_cover",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "cover.jeff_garage_door"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -9043,6 +9316,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "cover",
+        "service": "close_cover",
         "x": 830,
         "y": 2080,
         "wires": [
@@ -9346,15 +9622,16 @@
         "z": "75b62c93.dd5d84",
         "name": "close jeff's garage door",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "cover",
-        "service": "close_cover",
+        "action": "cover.close_cover",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "cover.jeff_garage_door"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -9368,6 +9645,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "cover",
+        "service": "close_cover",
         "x": 1070,
         "y": 1500,
         "wires": [
@@ -9427,15 +9707,16 @@
         "z": "75b62c93.dd5d84",
         "name": "open jeff's garage door",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "cover",
-        "service": "open_cover",
+        "action": "cover.open_cover",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "cover.jeff_garage_door"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -9449,6 +9730,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "cover",
+        "service": "open_cover",
         "x": 1070,
         "y": 1560,
         "wires": [
@@ -9461,12 +9745,17 @@
         "z": "75b62c93.dd5d84",
         "name": "tesla2 away (>200ft)",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "sensor.home_tesla2_location_distance",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "sensor.home_tesla2_location_distance"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -9518,12 +9807,17 @@
         "z": "75b62c93.dd5d84",
         "name": "tesla2 home (<=200m)",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "sensor.home_tesla2_location_distance",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "sensor.home_tesla2_location_distance"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -9704,13 +9998,14 @@
         "z": "75b62c93.dd5d84",
         "name": "notify jen iOS",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "notify",
-        "service": "mobile_app_jensphone",
+        "action": "notify.mobile_app_jensphone",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -9724,6 +10019,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "notify",
+        "service": "mobile_app_jensphone",
         "x": 1160,
         "y": 2240,
         "wires": [
@@ -9736,13 +10034,14 @@
         "z": "75b62c93.dd5d84",
         "name": "notify jeff iOS",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "notify",
-        "service": "mobile_app_jeffsphone",
+        "action": "notify.mobile_app_jeffsphone",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -9756,6 +10055,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "notify",
+        "service": "mobile_app_jeffsphone",
         "x": 1160,
         "y": 2180,
         "wires": [
@@ -9856,12 +10158,17 @@
         "z": "75b62c93.dd5d84",
         "name": "home -> not_home",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "zone.home",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "zone.home"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -10091,15 +10398,16 @@
         "z": "af228686.65c8a8",
         "name": "cabinet lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "switch",
-        "service": "",
+        "action": "switch.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "group.cabinet_lights"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -10113,6 +10421,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "switch",
+        "service": "",
         "x": 940,
         "y": 280,
         "wires": [
@@ -10125,11 +10436,16 @@
         "z": "af228686.65c8a8",
         "name": "garage door open?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.ser2sock_10000_garage_door",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "binary_sensor.ser2sock_10000_garage_door"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "off",
@@ -10179,15 +10495,16 @@
         "z": "af228686.65c8a8",
         "name": "garage lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "switch",
-        "service": "",
+        "action": "switch.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "switch.garage"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -10201,6 +10518,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "switch",
+        "service": "",
         "x": 930,
         "y": 400,
         "wires": [
@@ -10271,15 +10591,16 @@
         "z": "af228686.65c8a8",
         "name": "porch light",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "switch",
-        "service": "",
+        "action": "switch.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "switch.porch"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -10293,6 +10614,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "switch",
+        "service": "",
         "x": 930,
         "y": 40,
         "wires": [
@@ -10477,11 +10801,16 @@
         "z": "af228686.65c8a8",
         "name": "basement water",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.water_sensor_a_water_alarm_water_leak_detected",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "binary_sensor.water_sensor_a_water_alarm_water_leak_detected"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "on",
@@ -10532,13 +10861,14 @@
         "z": "af228686.65c8a8",
         "name": "Notify Slack",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "notify",
-        "service": "slack",
+        "action": "notify.slack",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -10552,6 +10882,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "notify",
+        "service": "slack",
         "x": 930,
         "y": 940,
         "wires": [
@@ -10564,13 +10897,14 @@
         "z": "af228686.65c8a8",
         "name": "notify jeff iOS",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "notify",
-        "service": "mobile_app_jeffsphone",
+        "action": "notify.mobile_app_jeffsphone",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -10584,6 +10918,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "notify",
+        "service": "mobile_app_jeffsphone",
         "x": 940,
         "y": 820,
         "wires": [
@@ -10596,13 +10933,14 @@
         "z": "af228686.65c8a8",
         "name": "notify jen iOS",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "notify",
-        "service": "mobile_app_jensphone",
+        "action": "notify.mobile_app_jensphone",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -10616,6 +10954,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "notify",
+        "service": "mobile_app_jensphone",
         "x": 940,
         "y": 880,
         "wires": [
@@ -10709,15 +11050,16 @@
         "z": "af228686.65c8a8",
         "name": "deck lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "switch",
-        "service": "",
+        "action": "switch.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "switch.outlet_a"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -10731,6 +11073,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "switch",
+        "service": "",
         "x": 1350,
         "y": 1000,
         "wires": [
@@ -10743,11 +11088,16 @@
         "z": "af228686.65c8a8",
         "name": "sump pump water",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.water_sensor_b_water_alarm_water_leak_detected",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "binary_sensor.water_sensor_b_water_alarm_water_leak_detected"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "on",
@@ -10798,11 +11148,16 @@
         "z": "af228686.65c8a8",
         "name": "sliding door open?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.ser2sock_10000_sliding_door",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "binary_sensor.ser2sock_10000_sliding_door"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "off",
@@ -11035,15 +11390,16 @@
         "z": "af228686.65c8a8",
         "name": "foyer stairs lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "light",
-        "service": "",
+        "action": "light.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "light.stairs2"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -11057,6 +11413,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "light",
+        "service": "",
         "x": 950,
         "y": 340,
         "wires": [
@@ -11278,21 +11637,25 @@
         "z": "af228686.65c8a8",
         "name": "turn on desk lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "switch",
-        "service": "turn_on",
+        "action": "switch.turn_on",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "switch.outlet_e"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "switch",
+        "service": "turn_on",
         "x": 950,
         "y": 1420,
         "wires": [
@@ -11305,21 +11668,25 @@
         "z": "af228686.65c8a8",
         "name": "turn off desk lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "switch",
-        "service": "turn_off",
+        "action": "switch.turn_off",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "switch.outlet_e"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "switch",
+        "service": "turn_off",
         "x": 950,
         "y": 1540,
         "wires": [
@@ -11332,15 +11699,16 @@
         "z": "af228686.65c8a8",
         "name": "sunroom lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "light",
-        "service": "",
+        "action": "light.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "group.sunroom_lights"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -11354,6 +11722,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "light",
+        "service": "",
         "x": 940,
         "y": 220,
         "wires": [
@@ -11366,11 +11737,16 @@
         "z": "af228686.65c8a8",
         "name": "upstairs motion",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.ser2sock_10000_upstairs_motion",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "binary_sensor.ser2sock_10000_upstairs_motion"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "off",
@@ -11421,15 +11797,16 @@
         "z": "af228686.65c8a8",
         "name": "foyer stairs lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "light",
-        "service": "",
+        "action": "light.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "light.stairs2"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -11443,6 +11820,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "light",
+        "service": "",
         "x": 950,
         "y": 1260,
         "wires": [
@@ -11455,11 +11835,16 @@
         "z": "af228686.65c8a8",
         "name": "main motion",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.ser2sock_10000_main_motion",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "binary_sensor.ser2sock_10000_main_motion"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "off",
@@ -11849,16 +12234,17 @@
         "z": "af228686.65c8a8",
         "name": "foyer tree lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "switch",
-        "service": "",
+        "action": "switch.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "switch.outlet_f_2",
             "switch.outlet_f"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -11872,6 +12258,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "switch",
+        "service": "",
         "x": 940,
         "y": 100,
         "wires": [
@@ -11884,15 +12273,16 @@
         "z": "af228686.65c8a8",
         "name": "sunroom tree lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "light",
-        "service": "",
+        "action": "light.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "light.outlet_g"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -11906,6 +12296,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "light",
+        "service": "",
         "x": 950,
         "y": 160,
         "wires": [
@@ -12052,15 +12445,16 @@
         "z": "af228686.65c8a8",
         "name": "plant lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "switch",
-        "service": "",
+        "action": "switch.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "switch.outlet_d"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -12074,6 +12468,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "switch",
+        "service": "",
         "x": 930,
         "y": 1660,
         "wires": [
@@ -12259,16 +12656,17 @@
         "z": "af228686.65c8a8",
         "name": "foyer tree lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "switch",
-        "service": "",
+        "action": "switch.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "switch.outlet_f_2",
             "switch.outlet_f"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -12282,6 +12680,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "switch",
+        "service": "",
         "x": 940,
         "y": 1760,
         "wires": [
@@ -12294,15 +12695,16 @@
         "z": "af228686.65c8a8",
         "name": "sunroom tree lights",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "light",
-        "service": "",
+        "action": "light.",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "light.outlet_h"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -12316,6 +12718,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "light",
+        "service": "",
         "x": 950,
         "y": 1820,
         "wires": [
@@ -12328,12 +12733,17 @@
         "z": "af228686.65c8a8",
         "name": "person detected on porch",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 0,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.porch_person_occupancy",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "binary_sensor.porch_person_occupancy"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -12411,12 +12821,17 @@
         "z": "af228686.65c8a8",
         "name": "not_home -> home",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "zone.home",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "zone.home"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -12763,12 +13178,17 @@
         "z": "2fad043e.317c8c",
         "name": "jen's garage door open -> closed",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "cover.jen_garage_door",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "cover.jen_garage_door"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -12855,12 +13275,17 @@
         "z": "2fad043e.317c8c",
         "name": "jen's garage door closed?",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "cover.jen_garage_door",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "cover.jen_garage_door"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -12931,12 +13356,17 @@
         "z": "2fad043e.317c8c",
         "name": "jen's garage door closed -> open",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "cover.jen_garage_door",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "cover.jen_garage_door"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -13023,12 +13453,17 @@
         "z": "2fad043e.317c8c",
         "name": "jen's garage door open?",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "cover.jen_garage_door",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "cover.jen_garage_door"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -13099,12 +13534,17 @@
         "z": "2fad043e.317c8c",
         "name": "jeff's garage door open -> closed",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "cover.jeff_garage_door",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "cover.jeff_garage_door"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -13191,12 +13631,17 @@
         "z": "2fad043e.317c8c",
         "name": "jeff's garage door closed?",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "cover.jeff_garage_door",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "cover.jeff_garage_door"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -13267,12 +13712,17 @@
         "z": "2fad043e.317c8c",
         "name": "jeff's garage door closed -> open",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "cover.jeff_garage_door",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "cover.jeff_garage_door"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -13359,12 +13809,17 @@
         "z": "2fad043e.317c8c",
         "name": "jeff's garage door open?",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "cover.jeff_garage_door",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "cover.jeff_garage_door"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -13868,11 +14323,16 @@
         "z": "2fad043e.317c8c",
         "name": "Jen's Garage Door Opening",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "sensor.garage2_status",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "sensor.garage2_status"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "Opening",
@@ -13919,11 +14379,16 @@
         "z": "2fad043e.317c8c",
         "name": "Jeff's Garage Door Opening",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "sensor.garage_status",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "sensor.garage_status"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "Opening",
@@ -13970,11 +14435,16 @@
         "z": "2fad043e.317c8c",
         "name": "Jen's Garage Door Closing",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "sensor.garage2_status",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "sensor.garage2_status"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "Closing",
@@ -14021,11 +14491,16 @@
         "z": "2fad043e.317c8c",
         "name": "Jen's Garage Door Closing",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "sensor.garage2_status",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "sensor.garage2_status"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "Closing",
@@ -14087,12 +14562,17 @@
         "z": "2fad043e.317c8c",
         "name": "Alarm Disarmed 3",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "alarm_control_panel.alarm_panel",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "alarm_control_panel.alarm_panel"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -14150,12 +14630,17 @@
         "z": "2fad043e.317c8c",
         "name": "Alarm Armed 3",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "alarm_control_panel.alarm_panel",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "alarm_control_panel.alarm_panel"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -14198,11 +14683,16 @@
         "z": "2fad043e.317c8c",
         "name": "Alarm Disarmed 4",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "alarm_control_panel.alarm_panel",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "alarm_control_panel.alarm_panel"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "disarmed",
@@ -14251,11 +14741,16 @@
         "z": "2fad043e.317c8c",
         "name": "Alarm Armed 4",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "alarm_control_panel.alarm_panel",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "alarm_control_panel.alarm_panel"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "^armed.*",
@@ -14319,12 +14814,17 @@
         "z": "2fad043e.317c8c",
         "name": "Alarm Armed",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "sensor.alarm_status",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "sensor.alarm_status"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -14365,12 +14865,17 @@
         "z": "2fad043e.317c8c",
         "name": "Alarm Disarmed",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "sensor.alarm_status",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "sensor.alarm_status"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -14428,14 +14933,15 @@
         "z": "2fad043e.317c8c",
         "name": "close jen's garage door",
         "server": "8b52884a.b76658",
-        "version": 5,
-        "domain": "cover",
-        "service": "close_cover",
+        "version": 7,
+        "action": "cover.close_cover",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "cover.jen_garage_door"
         ],
+        "labelId": [],
         "data": "",
         "mergeContext": "",
         "outputProperties": [
@@ -14447,6 +14953,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "cover",
+        "service": "close_cover",
         "x": 1330,
         "y": 1780,
         "wires": [
@@ -14522,14 +15031,15 @@
         "z": "2fad043e.317c8c",
         "name": "close jeff's garage door",
         "server": "8b52884a.b76658",
-        "version": 5,
-        "domain": "cover",
-        "service": "close_cover",
+        "version": 7,
+        "action": "cover.close_cover",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "cover.jeff_garage_door"
         ],
+        "labelId": [],
         "data": "",
         "mergeContext": "",
         "outputProperties": [
@@ -14541,6 +15051,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "cover",
+        "service": "close_cover",
         "x": 1330,
         "y": 1900,
         "wires": [
@@ -14675,12 +15188,17 @@
         "z": "2fad043e.317c8c",
         "name": "jen's door open?",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "cover.jen_garage_door",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "cover.jen_garage_door"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -14739,12 +15257,17 @@
         "z": "2fad043e.317c8c",
         "name": "jeff's door open?",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "cover.jeff_garage_door",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "cover.jeff_garage_door"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -14803,12 +15326,17 @@
         "z": "2fad043e.317c8c",
         "name": "jen's door closed -> open",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "cover.jen_garage_door",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "cover.jen_garage_door"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -14865,12 +15393,17 @@
         "z": "2fad043e.317c8c",
         "name": "jeff's door closed -> open",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "cover.jeff_garage_door",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "cover.jeff_garage_door"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -14948,12 +15481,17 @@
         "z": "2fad043e.317c8c",
         "name": "jen's door open -> closed",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "cover.jen_garage_door",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "cover.jen_garage_door"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -14996,12 +15534,17 @@
         "z": "2fad043e.317c8c",
         "name": "jeff's door open -> closed",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "cover.jeff_garage_door",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "cover.jeff_garage_door"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -15086,12 +15629,17 @@
         "z": "2fad043e.317c8c",
         "name": "jeff's garage door closed -> open",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "cover.jeff_garage_door",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "cover.jeff_garage_door"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -15132,12 +15680,17 @@
         "z": "2fad043e.317c8c",
         "name": "jen's garage door closed -> open",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "cover.jen_garage_door",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "cover.jen_garage_door"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -15178,14 +15731,15 @@
         "z": "2fad043e.317c8c",
         "name": "save front snapshot",
         "server": "8b52884a.b76658",
-        "version": 5,
-        "domain": "camera",
-        "service": "snapshot",
+        "version": 7,
+        "action": "camera.snapshot",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "camera.front"
         ],
+        "labelId": [],
         "data": "{\"filename\":\"/config/www/camera/camera.front.jpg\"}",
         "mergeContext": "",
         "outputProperties": [
@@ -15197,6 +15751,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "camera",
+        "service": "snapshot",
         "x": 950,
         "y": 1440,
         "wires": [
@@ -15209,14 +15766,15 @@
         "z": "2fad043e.317c8c",
         "name": "save driveway snapshot",
         "server": "8b52884a.b76658",
-        "version": 5,
-        "domain": "camera",
-        "service": "snapshot",
+        "version": 7,
+        "action": "camera.snapshot",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "camera.driveway"
         ],
+        "labelId": [],
         "data": "{\"filename\":\"/config/www/camera/camera.driveway.jpg\"}",
         "mergeContext": "",
         "outputProperties": [
@@ -15228,6 +15786,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "camera",
+        "service": "snapshot",
         "x": 970,
         "y": 1500,
         "wires": [
@@ -15240,14 +15801,15 @@
         "z": "2fad043e.317c8c",
         "name": "save porch snapshot",
         "server": "8b52884a.b76658",
-        "version": 5,
-        "domain": "camera",
-        "service": "snapshot",
+        "version": 7,
+        "action": "camera.snapshot",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "camera.porch"
         ],
+        "labelId": [],
         "data": "{\"filename\":\"/config/www/camera/camera.porch.jpg\"}",
         "mergeContext": "",
         "outputProperties": [
@@ -15259,6 +15821,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "camera",
+        "service": "snapshot",
         "x": 960,
         "y": 1560,
         "wires": [
@@ -15271,14 +15836,15 @@
         "z": "2fad043e.317c8c",
         "name": "save pool snapshot",
         "server": "8b52884a.b76658",
-        "version": 5,
-        "domain": "camera",
-        "service": "snapshot",
+        "version": 7,
+        "action": "camera.snapshot",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "camera.pool"
         ],
+        "labelId": [],
         "data": "{\"filename\":\"/config/www/camera/camera.pool.jpg\"}",
         "mergeContext": "",
         "outputProperties": [
@@ -15290,6 +15856,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "camera",
+        "service": "snapshot",
         "x": 950,
         "y": 1620,
         "wires": [
@@ -15302,14 +15871,15 @@
         "z": "2fad043e.317c8c",
         "name": "save basement snapshot",
         "server": "8b52884a.b76658",
-        "version": 5,
-        "domain": "camera",
-        "service": "snapshot",
+        "version": 7,
+        "action": "camera.snapshot",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "camera.basement"
         ],
+        "labelId": [],
         "data": "{\"filename\":\"/config/www/camera/camera.basement.jpg\"}",
         "mergeContext": "",
         "outputProperties": [
@@ -15321,6 +15891,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "camera",
+        "service": "snapshot",
         "x": 970,
         "y": 1680,
         "wires": [
@@ -15333,12 +15906,17 @@
         "z": "2fad043e.317c8c",
         "name": "jeff's garage door closed -> open",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "cover.jeff_garage_door",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "cover.jeff_garage_door"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -15379,12 +15957,17 @@
         "z": "2fad043e.317c8c",
         "name": "jen's garage door closed -> open",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "cover.jen_garage_door",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "cover.jen_garage_door"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -15425,12 +16008,17 @@
         "z": "2fad043e.317c8c",
         "name": "jeff's garage open -> closed?",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "cover.jeff_garage_door",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "cover.jeff_garage_door"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -15471,12 +16059,17 @@
         "z": "2fad043e.317c8c",
         "name": "jen's garage open -> closed?",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "cover.jen_garage_door",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "cover.jen_garage_door"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -16057,14 +16650,15 @@
         "z": "2fad043e.317c8c",
         "name": "tree turn off",
         "server": "8b52884a.b76658",
-        "version": 5,
-        "domain": "switch",
-        "service": "turn_off",
+        "version": 7,
+        "action": "switch.turn_off",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "switch.portable_outlet_a_switch"
         ],
+        "labelId": [],
         "data": "",
         "mergeContext": "",
         "outputProperties": [
@@ -16076,6 +16670,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "switch",
+        "service": "turn_off",
         "x": 350,
         "y": 3240,
         "wires": [
@@ -16088,14 +16685,15 @@
         "z": "2fad043e.317c8c",
         "name": "cabinet lights turn off",
         "server": "8b52884a.b76658",
-        "version": 5,
-        "domain": "switch",
-        "service": "turn_off",
+        "version": 7,
+        "action": "switch.turn_off",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "switch.portable_outlet_b_switch"
         ],
+        "labelId": [],
         "data": "",
         "mergeContext": "",
         "outputProperties": [
@@ -16107,6 +16705,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "switch",
+        "service": "turn_off",
         "x": 380,
         "y": 3300,
         "wires": [
@@ -16336,12 +16937,17 @@
         "z": "2fad043e.317c8c",
         "name": "Tesla home -> not_home",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "device_tracker.tesla_location",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "device_tracker.tesla_location"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -16384,12 +16990,17 @@
         "z": "2fad043e.317c8c",
         "name": "Tesla not_home -> home",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "device_tracker.tesla_location",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "device_tracker.tesla_location"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -16460,12 +17071,17 @@
         "z": "2fad043e.317c8c",
         "name": "Jeff home -> not_home (phone)",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "device_tracker.jeffs_xs_2",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "device_tracker.jeffs_xs_2"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -16506,12 +17122,17 @@
         "z": "2fad043e.317c8c",
         "name": "Jeff not_home -> home (phone)",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "device_tracker.jeffs_xs_2",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "device_tracker.jeffs_xs_2"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -16552,12 +17173,17 @@
         "z": "2fad043e.317c8c",
         "name": "tesla away (>100m)",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "proximity.home_tesla",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "proximity.home_tesla"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -16598,12 +17224,17 @@
         "z": "2fad043e.317c8c",
         "name": "tesla home (<=100m)",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "proximity.home_tesla",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "proximity.home_tesla"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -17220,11 +17851,16 @@
         "z": "2fad043e.317c8c",
         "name": "basement door open?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.basement_door",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "binary_sensor.basement_door"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "off",
@@ -17638,11 +18274,16 @@
         "d": true,
         "name": "US coronavirus deaths",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 1,
         "exposeAsEntityConfig": "",
-        "entityId": "sensor.us_coronavirus_deaths",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "sensor.us_coronavirus_deaths"
+            ],
+            "regex": []
+        },
         "outputInitially": true,
         "stateType": "str",
         "ifState": "",
@@ -17709,15 +18350,16 @@
         "z": "2fad043e.317c8c",
         "name": "office speaker",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "tts",
-        "service": "google_say",
+        "action": "tts.google_say",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "media_player.office_speaker"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -17731,6 +18373,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "tts",
+        "service": "google_say",
         "x": 1020,
         "y": 4740,
         "wires": [
@@ -17808,15 +18453,16 @@
         "z": "2fad043e.317c8c",
         "name": "ansley speaker",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "tts",
-        "service": "google_say",
+        "action": "tts.google_say",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "media_player.sun_room_speaker"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -17830,6 +18476,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "tts",
+        "service": "google_say",
         "x": 1020,
         "y": 4800,
         "wires": [
@@ -17909,11 +18558,16 @@
         "z": "2fad043e.317c8c",
         "name": "light <= 50000 lux",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "sensor.smartweather_brightness_filtered",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "sensor.smartweather_brightness_filtered"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "outputInitially": true,
         "stateType": "num",
         "ifState": "50000",
@@ -18008,11 +18662,16 @@
         "z": "2fad043e.317c8c",
         "name": "light <= 7500 lux",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "sensor.smartweather_brightness_filtered",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "sensor.smartweather_brightness_filtered"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "outputInitially": true,
         "stateType": "num",
         "ifState": "7500",
@@ -18134,12 +18793,17 @@
         "z": "2fad043e.317c8c",
         "name": "home -> not_home",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "zone.home",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "zone.home"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -18181,12 +18845,17 @@
         "d": true,
         "name": "home -> not_home",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "sensor.anyone_home",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "sensor.anyone_home"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -18227,15 +18896,16 @@
         "z": "2fad043e.317c8c",
         "name": "",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "tts",
-        "service": "google_say",
+        "action": "tts.google_say",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "all"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -18249,6 +18919,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "tts",
+        "service": "google_say",
         "x": 880,
         "y": 4900,
         "wires": [
@@ -18261,15 +18934,16 @@
         "z": "2fad043e.317c8c",
         "name": "",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "tts",
-        "service": "google_say",
+        "action": "tts.google_say",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
             "all"
         ],
+        "labelId": [],
         "data": "",
         "dataType": "json",
         "mergeContext": "",
@@ -18283,6 +18957,9 @@
             }
         ],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "tts",
+        "service": "google_say",
         "x": 880,
         "y": 5080,
         "wires": [
@@ -18326,11 +19003,16 @@
         "z": "2fad043e.317c8c",
         "name": "sliding door open?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.sliding_door",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "binary_sensor.sliding_door"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "off",
@@ -18382,11 +19064,16 @@
         "z": "2fad043e.317c8c",
         "name": "sun-room door open?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.sun_room_door",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "binary_sensor.sun_room_door"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "off",
@@ -18438,11 +19125,16 @@
         "z": "2fad043e.317c8c",
         "name": "front door open?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.front_door",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "binary_sensor.front_door"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "off",
@@ -18494,11 +19186,16 @@
         "z": "2fad043e.317c8c",
         "name": "basement door open?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.basement_door",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "binary_sensor.basement_door"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "off",
@@ -18550,11 +19247,16 @@
         "z": "2fad043e.317c8c",
         "name": "garage door open?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.garage_door",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "binary_sensor.garage_door"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "off",
@@ -18738,11 +19440,16 @@
         "z": "2fad043e.317c8c",
         "name": "Jeff's phone (wifi) not_home?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "device_tracker.jeffs_phone_2",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "device_tracker.jeffs_phone_2"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "home",
@@ -18793,11 +19500,16 @@
         "z": "2fad043e.317c8c",
         "name": "Jen's phone (wifi) not_home?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "device_tracker.jens_phone2",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "device_tracker.jens_phone2"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "home",
@@ -18848,11 +19560,16 @@
         "z": "2fad043e.317c8c",
         "name": "Jeff's phone (gps) not_home?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "device_tracker.jeffsphone",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "device_tracker.jeffsphone"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "home",
@@ -18903,11 +19620,16 @@
         "z": "2fad043e.317c8c",
         "name": "Jen's phone (gps) not_home?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "device_tracker.jensphone",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "device_tracker.jensphone"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "home",
@@ -18958,11 +19680,16 @@
         "z": "2fad043e.317c8c",
         "name": "Jeff's phone (wifi) home?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "device_tracker.jeffs_phone_2",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "device_tracker.jeffs_phone_2"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "not_home",
@@ -19013,11 +19740,16 @@
         "z": "2fad043e.317c8c",
         "name": "Jen's phone (wifi) home?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "device_tracker.jens_phone2",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "device_tracker.jens_phone2"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "not_home",
@@ -19068,11 +19800,16 @@
         "z": "2fad043e.317c8c",
         "name": "Jeff's phone (gps) home?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "device_tracker.jeffsphone",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "device_tracker.jeffsphone"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "not_home",
@@ -19123,11 +19860,16 @@
         "z": "2fad043e.317c8c",
         "name": "Jen's phone (gps) home?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "device_tracker.jensphone",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "device_tracker.jensphone"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "not_home",
@@ -19284,11 +20026,16 @@
         "z": "2fad043e.317c8c",
         "name": "Ansley's phone (wifi) not_home?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "device_tracker.eye_phone",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "device_tracker.eye_phone"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "home",
@@ -19339,11 +20086,16 @@
         "z": "2fad043e.317c8c",
         "name": "Ansley's phone (gps) not_home?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "device_tracker.ansleys_xr_2",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "device_tracker.ansleys_xr_2"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "home",
@@ -19394,11 +20146,16 @@
         "z": "2fad043e.317c8c",
         "name": "Ansley's phone (wifi) home?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "device_tracker.eye_phone",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "device_tracker.eye_phone"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "not_home",
@@ -19449,11 +20206,16 @@
         "z": "2fad043e.317c8c",
         "name": "Ansley's phone (gps) home?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "device_tracker.ansleys_xr_2",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "device_tracker.ansleys_xr_2"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "not_home",
@@ -19536,11 +20298,16 @@
         "z": "2fad043e.317c8c",
         "name": "Brinley's phone (wifi) not_home?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "device_tracker.brinleythebest",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "device_tracker.brinleythebest"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "home",
@@ -19590,11 +20357,16 @@
         "z": "2fad043e.317c8c",
         "name": "Brinley's phone (gps) not_home?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "device_tracker.brinleythebest_2",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "device_tracker.brinleythebest_2"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "home",
@@ -19644,11 +20416,16 @@
         "z": "2fad043e.317c8c",
         "name": "Brinley's phone (wifi) home?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "device_tracker.brinleythebest",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "device_tracker.brinleythebest"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "not_home",
@@ -19698,11 +20475,16 @@
         "z": "2fad043e.317c8c",
         "name": "Brinley's phone (gps) home?",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 6,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "device_tracker.brinleythebest_2",
-        "entityIdType": "substring",
+        "entities": {
+            "entity": [],
+            "substring": [
+                "device_tracker.brinleythebest_2"
+            ],
+            "regex": []
+        },
         "outputInitially": false,
         "stateType": "str",
         "ifState": "not_home",
@@ -19752,12 +20534,17 @@
         "z": "2fad043e.317c8c",
         "name": "Jeff home -> not_home (bluetooth)",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "input_boolean.jeff_occupancy",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "input_boolean.jeff_occupancy"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -19804,12 +20591,17 @@
         "z": "2fad043e.317c8c",
         "name": "Jeff not_home -> home (bluetooth)",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "input_boolean.jeff_occupancy",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "input_boolean.jeff_occupancy"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -19878,19 +20670,23 @@
         "z": "2fad043e.317c8c",
         "name": "jeffs_phone_bt not_home",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "device_tracker",
-        "service": "see",
+        "action": "device_tracker.see",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "{\"dev_id\":\"jeffs_phone_bt\",\"location_name\":\"not_home\"}",
         "dataType": "json",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "device_tracker",
+        "service": "see",
         "x": 590,
         "y": 6920,
         "wires": [
@@ -19903,19 +20699,23 @@
         "z": "2fad043e.317c8c",
         "name": "jeffs_phone_bt home",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "device_tracker",
-        "service": "see",
+        "action": "device_tracker.see",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "{\"dev_id\":\"jeffs_phone_bt\",\"location_name\":\"home\"}",
         "dataType": "json",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "device_tracker",
+        "service": "see",
         "x": 580,
         "y": 6980,
         "wires": [
@@ -19928,12 +20728,17 @@
         "z": "2fad043e.317c8c",
         "name": "Jen home -> not_home (bluetooth)",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "input_boolean.jen_occupancy",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "input_boolean.jen_occupancy"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -19987,12 +20792,17 @@
         "z": "2fad043e.317c8c",
         "name": "Jen not_home -> home (bluetooth)",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "input_boolean.jen_occupancy",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "input_boolean.jen_occupancy"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -20042,19 +20852,23 @@
         "z": "2fad043e.317c8c",
         "name": "jens_phone_bt not_home",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "device_tracker",
-        "service": "see",
+        "action": "device_tracker.see",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "{\"dev_id\":\"jens_phone_bt\",\"location_name\":\"not_home\"}",
         "dataType": "json",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "device_tracker",
+        "service": "see",
         "x": 590,
         "y": 7040,
         "wires": [
@@ -20067,19 +20881,23 @@
         "z": "2fad043e.317c8c",
         "name": "jens_phone_bt home",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "device_tracker",
-        "service": "see",
+        "action": "device_tracker.see",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "{\"dev_id\":\"jens_phone_bt\",\"location_name\":\"home\"}",
         "dataType": "json",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "device_tracker",
+        "service": "see",
         "x": 580,
         "y": 7100,
         "wires": [
@@ -20092,19 +20910,23 @@
         "z": "2fad043e.317c8c",
         "name": "ansleys_phone_bt not_home",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "device_tracker",
-        "service": "see",
+        "action": "device_tracker.see",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "{\"dev_id\":\"ansleys_phone_bt\",\"location_name\":\"not_home\"}",
         "dataType": "json",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "device_tracker",
+        "service": "see",
         "x": 600,
         "y": 7160,
         "wires": [
@@ -20117,19 +20939,23 @@
         "z": "2fad043e.317c8c",
         "name": "ansleys_phone_bt home",
         "server": "8b52884a.b76658",
-        "version": 5,
+        "version": 7,
         "debugenabled": false,
-        "domain": "device_tracker",
-        "service": "see",
+        "action": "device_tracker.see",
+        "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [],
+        "labelId": [],
         "data": "{\"dev_id\":\"ansleys_phone_bt\",\"location_name\":\"home\"}",
         "dataType": "json",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "device_tracker",
+        "service": "see",
         "x": 590,
         "y": 7220,
         "wires": [
@@ -20142,12 +20968,17 @@
         "z": "2fad043e.317c8c",
         "name": "Ansley home -> not_home (bluetooth)",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "input_boolean.ansley_occupancy",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "input_boolean.ansley_occupancy"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -20201,12 +21032,17 @@
         "z": "2fad043e.317c8c",
         "name": "home -> not_home",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "zone.home",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "zone.home"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
@@ -20281,12 +21117,17 @@
         "z": "2fad043e.317c8c",
         "name": "not_home -> home",
         "server": "8b52884a.b76658",
-        "version": 4,
+        "version": 5,
         "inputs": 1,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "zone.home",
-        "entityIdType": "exact",
+        "entities": {
+            "entity": [
+                "zone.home"
+            ],
+            "substring": [],
+            "regex": []
+        },
         "debugEnabled": false,
         "constraints": [
             {
