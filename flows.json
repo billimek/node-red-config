@@ -12496,7 +12496,7 @@
         "type": "function",
         "z": "af228686.65c8a8",
         "name": "format",
-        "func": "var input = msg.payload\n\nif (input == \"ON\") {\n    msg.payload = {\n        // \"service\": \"turn_on\"\n        \"action\": \"light.turn_on\"\n    }\n}\nelse {\n   msg.payload = {\n        // \"service\": \"turn_off\"\n        \"action\": \"light.turn_off\"\n    } \n}\n\nreturn [ msg ];\n",
+        "func": "var input = msg.payload\n\nif (input == \"ON\") {\n    msg.payload = {\n        // \"service\": \"turn_on\"\n        \"action\": \"switch.turn_on\"\n    }\n}\nelse {\n   msg.payload = {\n        // \"service\": \"turn_off\"\n        \"action\": \"switch.turn_off\"\n    } \n}\n\nreturn [ msg ];\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -13157,6 +13157,35 @@
         "wires": [
             [
                 "53aba614.8eed08"
+            ]
+        ]
+    },
+    {
+        "id": "4da7992c37108726",
+        "type": "inject",
+        "z": "af228686.65c8a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 1960,
+        "wires": [
+            [
+                "2877b87527c56f10"
             ]
         ]
     },
