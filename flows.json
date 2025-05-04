@@ -157,6 +157,9 @@
                 "wires": [
                     {
                         "id": "6050e0f4.c5a5f"
+                    },
+                    {
+                        "id": "77a33286823b816c"
                     }
                 ]
             }
@@ -528,11 +531,15 @@
         "id": "6050e0f4.c5a5f",
         "type": "function",
         "z": "43703bf3.b01b24",
-        "name": "turn_off",
-        "func": "var service = \"turn_off\"\n\nmsg.payload = {\n    \"service\": service,\n}\nreturn [ msg ];\n",
+        "name": "switch.turn_off",
+        "func": "var service = \"turn_off\"\n\nmsg.payload = {\n    // \"service\": service,\n    \"action\": \"switch.turn_off\"\n}\nreturn [ msg ];",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
-        "x": 200,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
         "y": 80,
         "wires": [
             [
@@ -543,12 +550,8 @@
                 "39b8136a.8621ec",
                 "86d4f834.021e58",
                 "b520cc14.e3d0e",
-                "bb404911.ad8978",
-                "d0a97ae.0d59e88",
                 "cc4d6e76.6d591",
-                "ab752c4d.a1bdc",
-                "ea25edb9.d9596",
-                "10f1ece0.fa3373"
+                "ab752c4d.a1bdc"
             ]
         ]
     },
@@ -560,7 +563,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "switch.",
+        "action": "",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -584,7 +587,7 @@
         "blockInputOverrides": false,
         "domain": "switch",
         "service": "",
-        "x": 400,
+        "x": 520,
         "y": 80,
         "wires": [
             []
@@ -598,7 +601,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "switch.",
+        "action": "",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -622,7 +625,7 @@
         "blockInputOverrides": false,
         "domain": "switch",
         "service": "",
-        "x": 380,
+        "x": 500,
         "y": 140,
         "wires": [
             []
@@ -636,7 +639,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "switch.",
+        "action": "",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -660,7 +663,7 @@
         "blockInputOverrides": false,
         "domain": "switch",
         "service": "",
-        "x": 390,
+        "x": 510,
         "y": 200,
         "wires": [
             []
@@ -674,7 +677,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "switch.",
+        "action": "",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -698,7 +701,7 @@
         "blockInputOverrides": false,
         "domain": "switch",
         "service": "",
-        "x": 390,
+        "x": 510,
         "y": 260,
         "wires": [
             []
@@ -712,7 +715,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "switch.",
+        "action": "",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -736,7 +739,7 @@
         "blockInputOverrides": false,
         "domain": "switch",
         "service": "",
-        "x": 430,
+        "x": 550,
         "y": 320,
         "wires": [
             []
@@ -750,7 +753,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "switch.",
+        "action": "",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -774,7 +777,7 @@
         "blockInputOverrides": false,
         "domain": "switch",
         "service": "",
-        "x": 440,
+        "x": 560,
         "y": 380,
         "wires": [
             []
@@ -788,7 +791,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "switch.",
+        "action": "",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -812,7 +815,7 @@
         "blockInputOverrides": false,
         "domain": "switch",
         "service": "",
-        "x": 430,
+        "x": 550,
         "y": 440,
         "wires": [
             []
@@ -826,7 +829,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "light.",
+        "action": "",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -850,8 +853,8 @@
         "blockInputOverrides": false,
         "domain": "light",
         "service": "",
-        "x": 420,
-        "y": 500,
+        "x": 540,
+        "y": 920,
         "wires": [
             []
         ]
@@ -864,7 +867,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "light.",
+        "action": "",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -888,8 +891,8 @@
         "blockInputOverrides": false,
         "domain": "light",
         "service": "",
-        "x": 410,
-        "y": 620,
+        "x": 530,
+        "y": 860,
         "wires": [
             []
         ]
@@ -902,7 +905,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "switch.",
+        "action": "",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -926,8 +929,8 @@
         "blockInputOverrides": false,
         "domain": "switch",
         "service": "",
-        "x": 390,
-        "y": 560,
+        "x": 510,
+        "y": 500,
         "wires": [
             []
         ]
@@ -940,7 +943,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "switch.",
+        "action": "",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -964,8 +967,8 @@
         "blockInputOverrides": false,
         "domain": "switch",
         "service": "",
-        "x": 400,
-        "y": 680,
+        "x": 520,
+        "y": 560,
         "wires": [
             []
         ]
@@ -978,7 +981,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "light.",
+        "action": "",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -1002,7 +1005,7 @@
         "blockInputOverrides": false,
         "domain": "light",
         "service": "",
-        "x": 410,
+        "x": 530,
         "y": 800,
         "wires": [
             []
@@ -1016,7 +1019,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "light.",
+        "action": "",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -1040,10 +1043,33 @@
         "blockInputOverrides": false,
         "domain": "light",
         "service": "",
-        "x": 400,
+        "x": 520,
         "y": 740,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "77a33286823b816c",
+        "type": "function",
+        "z": "43703bf3.b01b24",
+        "name": "light.turn_off",
+        "func": "var service = \"turn_off\"\n\nmsg.payload = {\n    // \"service\": service,\n    \"action\": \"light.turn_off\"\n}\nreturn [ msg ];",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 740,
+        "wires": [
+            [
+                "ea25edb9.d9596",
+                "10f1ece0.fa3373",
+                "d0a97ae.0d59e88",
+                "bb404911.ad8978"
+            ]
         ]
     },
     {
