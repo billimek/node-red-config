@@ -156,13 +156,43 @@
                 "y": 80,
                 "wires": [
                     {
-                        "id": "6050e0f4.c5a5f"
-                    },
-                    {
-                        "id": "77a33286823b816c"
-                    },
-                    {
                         "id": "89834abb.4ef668"
+                    },
+                    {
+                        "id": "da8d24c5.0c87e8"
+                    },
+                    {
+                        "id": "510bee04.ba47c"
+                    },
+                    {
+                        "id": "10d4db91.a75214"
+                    },
+                    {
+                        "id": "39b8136a.8621ec"
+                    },
+                    {
+                        "id": "86d4f834.021e58"
+                    },
+                    {
+                        "id": "b520cc14.e3d0e"
+                    },
+                    {
+                        "id": "cc4d6e76.6d591"
+                    },
+                    {
+                        "id": "ab752c4d.a1bdc"
+                    },
+                    {
+                        "id": "ea25edb9.d9596"
+                    },
+                    {
+                        "id": "10f1ece0.fa3373"
+                    },
+                    {
+                        "id": "d0a97ae.0d59e88"
+                    },
+                    {
+                        "id": "bb404911.ad8978"
                     }
                 ]
             }
@@ -542,8 +572,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 220,
-        "y": 80,
+        "x": 100,
+        "y": 660,
         "wires": [
             [
                 "510bee04.ba47c",
@@ -603,7 +633,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "switch.turn_off",
+        "action": "homeassistant.turn_off",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -625,7 +655,7 @@
         ],
         "queue": "none",
         "blockInputOverrides": false,
-        "domain": "switch",
+        "domain": "homeassistant",
         "service": "turn_off",
         "x": 500,
         "y": 140,
@@ -641,7 +671,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "",
+        "action": "homeassistant.turn_off",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -663,8 +693,8 @@
         ],
         "queue": "none",
         "blockInputOverrides": false,
-        "domain": "switch",
-        "service": "",
+        "domain": "homeassistant",
+        "service": "turn_off",
         "x": 510,
         "y": 200,
         "wires": [
@@ -679,7 +709,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "",
+        "action": "homeassistant.turn_off",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -701,8 +731,8 @@
         ],
         "queue": "none",
         "blockInputOverrides": false,
-        "domain": "switch",
-        "service": "",
+        "domain": "homeassistant",
+        "service": "turn_off",
         "x": 510,
         "y": 260,
         "wires": [
@@ -755,7 +785,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "",
+        "action": "homeassistant.turn_off",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -777,8 +807,8 @@
         ],
         "queue": "none",
         "blockInputOverrides": false,
-        "domain": "switch",
-        "service": "",
+        "domain": "homeassistant",
+        "service": "turn_off",
         "x": 560,
         "y": 380,
         "wires": [
@@ -793,7 +823,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "",
+        "action": "homeassistant.turn_off",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -815,8 +845,8 @@
         ],
         "queue": "none",
         "blockInputOverrides": false,
-        "domain": "switch",
-        "service": "",
+        "domain": "homeassistant",
+        "service": "turn_off",
         "x": 550,
         "y": 440,
         "wires": [
@@ -831,7 +861,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "",
+        "action": "homeassistant.turn_off",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -853,8 +883,8 @@
         ],
         "queue": "none",
         "blockInputOverrides": false,
-        "domain": "light",
-        "service": "",
+        "domain": "homeassistant",
+        "service": "turn_off",
         "x": 540,
         "y": 920,
         "wires": [
@@ -869,7 +899,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "",
+        "action": "homeassistant.turn_off",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -891,8 +921,8 @@
         ],
         "queue": "none",
         "blockInputOverrides": false,
-        "domain": "light",
-        "service": "",
+        "domain": "homeassistant",
+        "service": "turn_off",
         "x": 530,
         "y": 860,
         "wires": [
@@ -907,7 +937,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "",
+        "action": "homeassistant.turn_off",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -929,8 +959,8 @@
         ],
         "queue": "none",
         "blockInputOverrides": false,
-        "domain": "switch",
-        "service": "",
+        "domain": "homeassistant",
+        "service": "turn_off",
         "x": 510,
         "y": 500,
         "wires": [
@@ -945,7 +975,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "",
+        "action": "homeassistant.turn_off",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -967,8 +997,8 @@
         ],
         "queue": "none",
         "blockInputOverrides": false,
-        "domain": "switch",
-        "service": "",
+        "domain": "homeassistant",
+        "service": "turn_off",
         "x": 520,
         "y": 560,
         "wires": [
@@ -983,7 +1013,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "",
+        "action": "homeassistant.turn_off",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -1005,8 +1035,8 @@
         ],
         "queue": "none",
         "blockInputOverrides": false,
-        "domain": "light",
-        "service": "",
+        "domain": "homeassistant",
+        "service": "turn_off",
         "x": 530,
         "y": 800,
         "wires": [
@@ -1021,7 +1051,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "",
+        "action": "homeassistant.turn_off",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -1043,8 +1073,8 @@
         ],
         "queue": "none",
         "blockInputOverrides": false,
-        "domain": "light",
-        "service": "",
+        "domain": "homeassistant",
+        "service": "turn_off",
         "x": 520,
         "y": 740,
         "wires": [
@@ -1063,8 +1093,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 210,
-        "y": 740,
+        "x": 130,
+        "y": 1040,
         "wires": [
             [
                 "ea25edb9.d9596",
