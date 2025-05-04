@@ -12650,7 +12650,7 @@
         "type": "function",
         "z": "af228686.65c8a8",
         "name": "format",
-        "func": "var input = msg.payload\n\nif (input == \"ON\") {\n    msg.payload = {\n        // \"service\": \"turn_on\"\n        \"action\": \"light.turn_on\"\n    }\n}\nelse {\n   msg.payload = {\n        // \"service\": \"turn_off\"\n        \"action\": \"light.turn_off\"\n    } \n}\n\nreturn [ msg ];\n",
+        "func": "var input = msg.payload\n\nif (input == \"ON\") {\n    msg.payload = {\n        // \"service\": \"turn_on\"\n        \"action\": \"switch.turn_on\"\n    }\n}\nelse {\n   msg.payload = {\n        // \"service\": \"turn_off\"\n        \"action\": \"switch.turn_off\"\n    } \n}\n\nreturn [ msg ];\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
