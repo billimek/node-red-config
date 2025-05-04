@@ -11422,7 +11422,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "light.",
+        "action": "",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
