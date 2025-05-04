@@ -12250,7 +12250,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "switch.",
+        "action": "",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -13157,35 +13157,6 @@
         "wires": [
             [
                 "53aba614.8eed08"
-            ]
-        ]
-    },
-    {
-        "id": "4da7992c37108726",
-        "type": "inject",
-        "z": "af228686.65c8a8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 1960,
-        "wires": [
-            [
-                "c975d5d8e0766551"
             ]
         ]
     },
