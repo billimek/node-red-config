@@ -563,7 +563,7 @@
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
-        "action": "",
+        "action": "switch.turn_off",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -586,7 +586,7 @@
         "queue": "none",
         "blockInputOverrides": false,
         "domain": "switch",
-        "service": "",
+        "service": "turn_off",
         "x": 520,
         "y": 80,
         "wires": [
