@@ -12507,11 +12507,11 @@
         "outtopic": "",
         "outpayload1": "ON",
         "outpayload2": "OFF",
-        "name": "6am-12am",
+        "name": "6:30am-12am",
         "comment": "",
         "lat": "33.94519",
         "lon": "-84.45379",
-        "starttime": "360",
+        "starttime": "390",
         "endtime": "0",
         "starttime2": 0,
         "endtime2": 0,
@@ -12624,7 +12624,7 @@
         "atstart": true,
         "odd": false,
         "even": false,
-        "x": 150,
+        "x": 160,
         "y": 1760,
         "wires": [
             [
