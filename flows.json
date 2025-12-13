@@ -11449,44 +11449,6 @@
         ]
     },
     {
-        "id": "700f243b.725e6c",
-        "type": "api-call-service",
-        "z": "af228686.65c8a8",
-        "name": "foyer stairs lights",
-        "server": "8b52884a.b76658",
-        "version": 7,
-        "debugenabled": false,
-        "action": "",
-        "floorId": [],
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "light.stairs2"
-        ],
-        "labelId": [],
-        "data": "",
-        "dataType": "json",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "data"
-            }
-        ],
-        "queue": "none",
-        "blockInputOverrides": false,
-        "domain": "light",
-        "service": "",
-        "x": 950,
-        "y": 340,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "73880f98.ecb8",
         "type": "mqtt out",
         "z": "af228686.65c8a8",
@@ -12309,45 +12271,6 @@
         ]
     },
     {
-        "id": "a391482ef40c1b75",
-        "type": "api-call-service",
-        "z": "af228686.65c8a8",
-        "name": "foyer tree lights",
-        "server": "8b52884a.b76658",
-        "version": 7,
-        "debugenabled": false,
-        "action": "",
-        "floorId": [],
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "switch.outlet_f_2",
-            "switch.outlet_f"
-        ],
-        "labelId": [],
-        "data": "",
-        "dataType": "json",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "data"
-            }
-        ],
-        "queue": "none",
-        "blockInputOverrides": false,
-        "domain": "switch",
-        "service": "",
-        "x": 940,
-        "y": 100,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "47b848e8ac632ede",
         "type": "api-call-service",
         "z": "af228686.65c8a8",
@@ -12736,7 +12659,7 @@
         "id": "91ed12a995f4bd7f",
         "type": "api-call-service",
         "z": "af228686.65c8a8",
-        "name": "foyer tree lights",
+        "name": "foyer lights",
         "server": "8b52884a.b76658",
         "version": 7,
         "debugenabled": false,
@@ -12765,7 +12688,7 @@
         "blockInputOverrides": false,
         "domain": "switch",
         "service": "toggle",
-        "x": 940,
+        "x": 930,
         "y": 1760,
         "wires": [
             []
