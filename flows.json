@@ -12504,6 +12504,7 @@
         "id": "8ade14719bcf7be2",
         "type": "bigtimer",
         "z": "af228686.65c8a8",
+        "d": true,
         "outtopic": "",
         "outpayload1": "ON",
         "outpayload2": "OFF",
