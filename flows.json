@@ -13111,9 +13111,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
+        "payload": "ON",
+        "payloadType": "str",
+        "x": 130,
         "y": 1880,
         "wires": [
             [
