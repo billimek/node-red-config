@@ -1806,6 +1806,7 @@
         "id": "738ad7f2.c345c8",
         "type": "api-call-service",
         "z": "afb0f186.cfb0d",
+        "d": true,
         "name": "Turn on Basement Fan",
         "server": "8b52884a.b76658",
         "version": 7,
