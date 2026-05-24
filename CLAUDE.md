@@ -8,7 +8,7 @@ Node-RED flow configuration for home automation, primarily integrating with Home
 
 ## Repository layout
 
-- `flows.json` — single source of truth for all flows, nodes, and subflows (~587KB flat JSON array)
+- `flows.json` — single source of truth for all flows, nodes, and subflows (~316KB flat JSON array)
 - `flows_cred.json` — AES-encrypted credentials blob, decrypted by Node-RED at runtime via a `credentialSecret`; never store or commit secrets in cleartext
 - `package.json` — minimal; just tells Node-RED the filenames for the two files above
 
@@ -36,12 +36,12 @@ jq . flows.json > /dev/null
 | Tab | Purpose |
 |-----|---------|
 | Home Assistant | General HA automations that don't fit a specific category |
-| Cameras | Blue Iris integration + ML model triggers (Frigate) |
 | Alarm | House alarm system control and notifications |
 | Presence | Arrival/departure detection and reactions |
 | Garage | Garage door control and observability |
 | zwave | Z-Wave device automations |
-| Pending Deprecation | Flows being phased out |
+
+Frigate/camera automations (including the `frigate camera` subflow) now live within the remaining tabs rather than a dedicated Cameras tab.
 
 ### Subflows (reusable logic)
 
@@ -49,12 +49,12 @@ jq . flows.json > /dev/null
 
 ### Integration node types
 
-- **Home Assistant**: `api-current-state`, `api-call-service`, `trigger-state`, `server-state-changed`, `poll-state` — these reference the single `server` config node named "Home Assistant"
+- **Home Assistant**: `api-current-state`, `api-call-service`, `trigger-state`, `server-state-changed` — these reference the single `server` config node named "Home Assistant"
 - **MQTT**: `mqtt in` / `mqtt out` against broker `10.0.6.50:1883`
-- **Notifications**: `pushover api` (uses `pushover-keys` credentials node)
+- **Notifications**: HA `notify` domain via `api-call-service` (a `pushover-keys` credentials node still exists but is no longer connected to any active nodes)
 - **Scheduling**: `bigtimer`, `time-range-switch`, `weekday`, `light-scheduler`
 - **Calendar**: `ical-upcoming` (uses `ical-config` node)
-- **Logic**: 126 `function` nodes carrying custom JavaScript; `switch`, `trigger`, `delay`, `rbe`
+- **Logic**: 65 `function` nodes carrying custom JavaScript; `switch`, `trigger`, `delay`, `rbe`
 
 ## Inspecting flows with jq
 
