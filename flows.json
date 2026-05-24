@@ -389,14 +389,6 @@
         "futureWeeks": "4"
     },
     {
-        "id": "cb57e78563048d9e",
-        "type": "ai-provider-config",
-        "name": "Claude",
-        "provider": "anthropic",
-        "model": "claude-sonnet-4-6",
-        "baseUrl": ""
-    },
-    {
         "id": "3dd8d850f01e1a97",
         "type": "ai-provider-config",
         "name": "claude",
