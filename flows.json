@@ -354,11 +354,6 @@
         "willPayload": ""
     },
     {
-        "id": "1be7789.845ca87",
-        "type": "pushover-keys",
-        "name": ""
-    },
-    {
         "id": "f26da246.74a7f",
         "type": "light-scheduler-settings",
         "name": "home",
