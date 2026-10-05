@@ -2168,6 +2168,7 @@
         "id": "a769b959c008bd68",
         "type": "server-events",
         "z": "afb0f186.cfb0d",
+        "d": true,
         "name": "entity events",
         "server": "8b52884a.b76658",
         "version": 3,
