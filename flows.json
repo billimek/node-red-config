@@ -2906,6 +2906,7 @@
         "id": "3700839b.3d543c",
         "type": "server-state-changed",
         "z": "4aedf9e8.044e08",
+        "d": true,
         "name": "Alarm Triggered",
         "server": "8b52884a.b76658",
         "version": 6,
@@ -2936,7 +2937,7 @@
             {
                 "property": "payload",
                 "propertyType": "msg",
-                "value": "",
+                "value": "string",
                 "valueType": "entityState"
             },
             {
@@ -3573,6 +3574,7 @@
         "id": "1ab168ac.d3e527",
         "type": "trigger-state",
         "z": "4aedf9e8.044e08",
+        "d": true,
         "name": "Alarm Disarmed",
         "server": "8b52884a.b76658",
         "version": 5,
@@ -3624,6 +3626,7 @@
         "id": "cea06a40.728948",
         "type": "trigger-state",
         "z": "4aedf9e8.044e08",
+        "d": true,
         "name": "Alarm Armed",
         "server": "8b52884a.b76658",
         "version": 5,
