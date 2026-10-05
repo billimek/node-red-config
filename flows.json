@@ -9570,6 +9570,7 @@
         "id": "4bc4ffe.2810b",
         "type": "server-state-changed",
         "z": "af228686.65c8a8",
+        "d": true,
         "name": "basement water",
         "server": "8b52884a.b76658",
         "version": 6,
@@ -9600,7 +9601,7 @@
             {
                 "property": "payload",
                 "propertyType": "msg",
-                "value": "",
+                "value": "string",
                 "valueType": "entityState"
             },
             {
@@ -9857,6 +9858,7 @@
         "id": "5574530a.93fa3c",
         "type": "server-state-changed",
         "z": "af228686.65c8a8",
+        "d": true,
         "name": "sump pump water",
         "server": "8b52884a.b76658",
         "version": 6,
@@ -9887,7 +9889,7 @@
             {
                 "property": "payload",
                 "propertyType": "msg",
-                "value": "",
+                "value": "string",
                 "valueType": "entityState"
             },
             {
